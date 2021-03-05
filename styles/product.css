@@ -1,0 +1,49 @@
+.product2ndContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productsMainTitle {
+    font-size: 300%;
+    font-weight: 400;
+}
+
+.productsMainText {
+    width: 50%;
+    font-size: 125%;
+    font-weight: 400;
+}
+
+.individualProducts {
+    width: 100%;
+    display: flex;
+    margin-top: 1.5%;
+}
+
+.individualProductsImage {
+    width: 50%;
+    height: 50vh;
+}
+
+.individualProductsDescription {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.individualProductsTitle {
+    font-size: 200%;
+    font-weight: 300;
+    border-bottom: solid 1px black;
+}
+
+.individualProductsText {
+    width: 80%;
+    line-height: 150%;
+    margin-top: 0;
+    font-size: 120%;
+    font-weight: 300;
+}
