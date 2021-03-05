@@ -67,13 +67,13 @@ showMenu(event) {
         <div className="product2ndContainer">
           <h1 className="productsMainTitle">Metal Roofing and Side Panels</h1>
           <p className="productsMainText">Jays Metal Products offers a wide range of high-end affordle metal roofing and side panels. Their durable and advanced fastener systems allow for aesthetically pleasing finishes which makes them ideal for both commercial and residential projects.</p>   
-          <div className="individualProducts">
+          <a href="/diamondrib"><div className="individualProducts">
             <img className="individualProductsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/products%2Fdiamond%20rib%20630.png?alt=media&token=cc562406-f66b-4620-a0dc-62cbbfba89af"></img>
             <div className="individualProductsDescription">
               <h3 className="individualProductsTitle">Diamond Rib 630</h3>
               <p className="individualProductsText">The Diamond Rib 630 is a strong metal panel that can be used for a variety of roofing and siding applications. Utilizing multiple strength ribs this profile offers a pleasant appearance while maintaining the strength and durability that is required on commercial applications.</p>
             </div>
-          </div>
+          </div></a>
           <div className="individualProducts">
             <img className="individualProductsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/products%2Fvalurib-630.png?alt=media&token=10fb7fba-fafa-4c74-bf09-6ed5104df974"></img>
             <div className="individualProductsDescription">

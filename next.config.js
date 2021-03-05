@@ -7,6 +7,7 @@ module.exports = {
         '/forms' : { page: '/forms'},
         '/contact' : { page: '/contact'},
         '/amc' : { page: '/amc'},
+        '/diamondrib' : { page: '/diamondrib'}
       }
     }
   };
