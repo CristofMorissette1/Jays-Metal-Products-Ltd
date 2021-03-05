@@ -1,0 +1,51 @@
+.mainHeader {
+    display: flex;
+    width: 100%;
+}
+
+.logo {
+    width: 10%;
+}
+
+.link_container {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.links {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.linkContainerSmall {
+    width: 10%;
+}
+
+.links:hover {
+    color: #07cdd9;
+    transition: 0.5s;
+}
+
+.navMenu {
+    position: absolute;
+    margin-top: 0.5%;
+}
+
+.navMenuLinks {
+    display: flex;
+    flex-direction: column;
+    background-color: #292929;
+    padding-bottom: 7%;
+    width: 140%;
+    align-items: center;
+}
+
+.navLinks {
+    font-size: 90%;
+    font-weight: 500;
+    color: #666;
+    margin-top: 4%;
+}
