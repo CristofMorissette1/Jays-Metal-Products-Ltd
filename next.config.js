@@ -14,7 +14,7 @@ module.exports = {
         '/master' : { page: '/master'},
         '/grand' : { page: '/grand'},
         '/corrugated' : { page: '/corrugated'},
-        '/lowrib' : { page: '/lowrid'},
+        '/lowrib' : { page: '/lowrib'},
         '/standingseam' : { page: '/standingseam'},
         '/standingseam2' : { page: '/standingseam2'},
         '/snaplock' : { page: '/snaplock'},
