@@ -69,42 +69,42 @@ class Contact extends Component {
               </div>
             <Form onSubmit={this.handleSumbit}>
               <p className="contactTitle">Please share your information with us for a detailed response:</p>
-              <FormGroup>
+              <FormGroup className="contactForm">
                 <Input 
                   type="text"
                   name="firstName" 
                   placeholder="First Name"
                   onChange={this.handleChange} />
               </FormGroup>
-              <FormGroup>
+              <FormGroup className="contactForm">
                 <Input 
                   type="text"
                   name="lastName"
                   placeholder="Last Name"
                   onChange={this.handleChange} />
               </FormGroup>
-              <FormGroup>
+              <FormGroup className="contactForm">
                 <Input 
                   type="phone"
                   name="phone"
                   placeholder="Phone Number"
                   onChange={this.handleChange} />
               </FormGroup>
-              <FormGroup>
+              <FormGroup className="contactForm">
                 <Input 
                   type="email"
                   name="email"
                   placeholder="Email Address"
                   onChange={this.handleChange} />
               </FormGroup>
-              <FormGroup>
+              <FormGroup className="contactForm">
                 <Input 
                   type="text"
                   name="organizationName"
                   placeholder="Organization Name"
                   onChange={this.handleChange} />
               </FormGroup>
-              <FormGroup>
+              <FormGroup className="contactForm">
                 <Input 
                   type="text"
                   name="organizationWebsite"

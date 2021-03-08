@@ -5,7 +5,7 @@ import Footer from '../components/footer';
 import { Form, FormGroup, Input, Button, Label, CustomInput } from 'reactstrap'
 import axios from 'axios'
 
-class Diamondrib extends Component{
+class Valurib extends Component{
     constructor(){
         super()
         this.state = {
@@ -108,13 +108,13 @@ class Diamondrib extends Component{
                 <div className="productPageLandingContainer">
                     <img className="productPageLandingImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
                     <div className="productPage2ndContainer">
-                    <h1 className="productPageMainTitle">Diamond Rib 630</h1>
-                    <p className="productPageMainText">The Diamond Rib 630 is a strong metal panel that can be used for a variety of roofing and siding applications. Utilizing multiple strength ribs this profile offers a pleasant appearance while maintaining the strength and durability that is required on commercial applications.</p>
+                    <h1 className="productPageMainTitle">ValuRib 630</h1>
+                    <p className="productPageMainText">The ValuRib 630 profile further increases our line of metal roofing and siding panels. The ValuRib 630 Panel profile is a great solution for metal roofing and siding panels as it can be secured to the building by fasteners through the panel ribs, it is an ideal application for agricultural and light commercial buildings.</p>
                     </div>
                 </div>
                 <div className="productPage3rdContainer">
-                    <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/products%2Fdiamond%20rib%20630.png?alt=media&token=cc562406-f66b-4620-a0dc-62cbbfba89af"></img>
-                    <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/productsPages%2Fdiamondrib630specs.png?alt=media&token=ec76792f-12d2-42fb-a3e6-5c9e504010fe"></img>
+                    <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/products%2Fvalurib-630.png?alt=media&token=10fb7fba-fafa-4c74-bf09-6ed5104df974"></img>
+                    <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/productsPages%2Fvaluribspecs.png?alt=media&token=3dd9990e-c1c0-4bba-96b8-6b8ae48b071d"></img>
                 </div>
                 <div className="productsPage4thContainer">
                     <div className="productsPage4thContainerHeader">
@@ -237,7 +237,7 @@ class Diamondrib extends Component{
                             <div className="orderOptionsContent">
                                 <Form className="orderOptionsContentForm" onSubmit={this.handleSumbit}>
                                     <div className="orderOptionsTextForm">
-                                        <h2 className="orderOptionsTextFormTitle">Diamond Rib 630</h2>
+                                        <h2 className="orderOptionsTextFormTitle">Valu Rib 630</h2>
                                         <FormGroup className="orderOptionsTextFormSmall">
                                             <Input 
                                                 type="text"
@@ -723,4 +723,4 @@ class Diamondrib extends Component{
     }
 }
 
-export default Diamondrib;
+export default Valurib;

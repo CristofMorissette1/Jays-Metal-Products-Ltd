@@ -1,0 +1,192 @@
+.productPageLandingContainer {
+    width: 100%;
+}
+
+.productPageLandingImage {
+    width: 100%;
+    height: 57vh;
+}
+
+.productPage2ndContainer {
+width: 50%;
+position: absolute;
+top: 30%;
+left: 25%;
+background: rgba(33, 138, 0, 0.5);
+color: #fff;
+text-shadow: 2px 2px 4px #000000;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.productPageMainTitle {
+    font-size: 325%;
+    font-weight: 400;
+}
+
+.productPageMainText {
+    font-size: 125%;
+    font-weight: 300;
+    margin-top: 0;
+    width: 90%;
+}
+
+.productPage3rdContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.productPageImage {
+    width: 45%;
+}
+
+.productsPage4thContainer {
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 1.5%;
+}
+
+.productsPage4thContainerHeader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.headerOptions {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    background-color: #333;
+    color: #0D7BFF;
+    margin-left: 1.5%;
+    cursor: pointer;
+    padding: 1% 0;
+    font-size: 150%;
+    font-weight: 400;
+}
+
+.headerOptions:hover {
+    background-color: black;
+}
+
+.colorOptionsContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.colorOptionsContainer1 {
+    background-color: #333;
+    color: #fff;
+    width: 81.5%;
+    margin-left: 1.3%;
+    margin-top: 2%;
+}
+
+.colorOptionsTitle1 {
+    margin-left: 3%;
+    font-weight: 300;
+    font-size: 225%;
+}
+
+.colorOptionsText1 {
+    margin-left: 3%;
+    font-size: 135%;
+    font-weight: 300;
+    border-bottom: 1px solid #fff;
+    width: 94%;
+}
+
+.colorOptionsContainer2 {
+    background-color: #333;
+    width: 81.5%;
+    margin-left: 1.3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.colorOptionsContainerImage {
+    width: 21%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.orderOptionsContent {
+    width: 100%;
+}
+
+.orderOptionsContentForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.orderOptionsTextForm {
+    background-color: #333;
+    width: 81.5%;
+    padding-top: 1%;
+    margin-left: 1.5%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 2%;
+}
+
+.orderOptionsTitle {
+    font-size: 250%;
+    font-weight: 300;
+}
+
+.orderOptionsTextFormSmall {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.orderOptionsTextFormTitle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 200%;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.orderOptionsTextInput {
+    width: 80%;
+    height: 5vh;
+    margin-top: 2%;
+}
+
+.orderOptionsFlashingsMainContainer {
+    width: 100%;
+}
+
+.orderOptionsFlashingsContainerSmall {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.orderOptionsFlashingsContainer {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1%;
+}
+
+.orderOptionsFlashingsImage {
+    width: 80%;
+}
+
+.orderOptionsFlashingsInput {
+    width: 8%;
+    position: absolute;
+    margin-top: 14.5%;
+}

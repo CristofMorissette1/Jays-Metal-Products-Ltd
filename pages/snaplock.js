@@ -5,7 +5,7 @@ import Footer from '../components/footer';
 import { Form, FormGroup, Input, Button, Label, CustomInput } from 'reactstrap'
 import axios from 'axios'
 
-class Diamondrib extends Component{
+class Snaplock extends Component{
     constructor(){
         super()
         this.state = {
@@ -108,13 +108,13 @@ class Diamondrib extends Component{
                 <div className="productPageLandingContainer">
                     <img className="productPageLandingImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
                     <div className="productPage2ndContainer">
-                    <h1 className="productPageMainTitle">Diamond Rib 630</h1>
-                    <p className="productPageMainText">The Diamond Rib 630 is a strong metal panel that can be used for a variety of roofing and siding applications. Utilizing multiple strength ribs this profile offers a pleasant appearance while maintaining the strength and durability that is required on commercial applications.</p>
+                    <h1 className="productPageMainTitle">SL 100</h1>
+                    <p className="productPageMainText">SL100 panels are designed with efficiency in mind. With a similar aesthetic to the Standing Seam panel, the Snap lock panel is another excellent option engineered to be installed without the specialized tight-seaming clips, which the Standing Seam panel utilizes. The Snap lock panel snaps down on one side and is screwed down through its fabricated pleated edge on the other. At Jay's Metal Products, we manufacture both a 1" as well as a 1 1/2" design.</p>
                     </div>
                 </div>
                 <div className="productPage3rdContainer">
-                    <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/products%2Fdiamond%20rib%20630.png?alt=media&token=cc562406-f66b-4620-a0dc-62cbbfba89af"></img>
-                    <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/productsPages%2Fdiamondrib630specs.png?alt=media&token=ec76792f-12d2-42fb-a3e6-5c9e504010fe"></img>
+                    <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/products%2Fsnaplock-100.png?alt=media&token=a9892d5c-55f9-4ce4-97e2-f15c7e051d79"></img>
+                    <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/products%2Fsnaplockspecs.png?alt=media&token=f8e35429-5251-4d6f-a06c-6ee18d184b31"></img>
                 </div>
                 <div className="productsPage4thContainer">
                     <div className="productsPage4thContainerHeader">
@@ -237,7 +237,7 @@ class Diamondrib extends Component{
                             <div className="orderOptionsContent">
                                 <Form className="orderOptionsContentForm" onSubmit={this.handleSumbit}>
                                     <div className="orderOptionsTextForm">
-                                        <h2 className="orderOptionsTextFormTitle">Diamond Rib 630</h2>
+                                        <h2 className="orderOptionsTextFormTitle">SL 100</h2>
                                         <FormGroup className="orderOptionsTextFormSmall">
                                             <Input 
                                                 type="text"
@@ -723,4 +723,4 @@ class Diamondrib extends Component{
     }
 }
 
-export default Diamondrib;
+export default Snaplock;
