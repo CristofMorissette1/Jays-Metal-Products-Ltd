@@ -16,6 +16,18 @@ class Diamondrib extends Component{
             po: '',
             email: '',
             address: '',
+            ga: '',
+            color: '',
+            roofpitch: '',
+            finish: '',
+            totallinearfeet: '',
+            totalsquarefeet: '',
+            qty: 0,
+            inch: 0,
+            mm: '',
+            tag: '',
+            linearfeet: 0,
+            sqft: '',
             drip1: '',
             drip2: '',
             gabbleRake1: '',
@@ -83,7 +95,12 @@ class Diamondrib extends Component{
         this.setState({
           [e.target.name]: e.target.value
         })
-        console.log(e.target.value)
+        let qtyNum = this.state.qty;
+        let size = this.state.inch;
+        let linearFeet = qtyNum * size;
+        this.setState({
+            linearfeet: linearFeet
+        })
       }
     
       handleSumbit(e) {
@@ -101,7 +118,9 @@ class Diamondrib extends Component{
         e.target.reset();
       }
 
+
     render(){
+        console.log(this.state.linearfeet)
         return (
             <div className="diamondMainContainer">
                 <Header/>
@@ -278,6 +297,67 @@ class Diamondrib extends Component{
                                                 placeholder="Customer Address"
                                                 onChange={this.handleChange} />
                                         </FormGroup>
+                                    </div>
+                                    <div className="orderOptionsSpecsForm">
+                                        <div className="orderOptionsSpecsFormTitle">
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>GA</label>
+                                                <Input type="select" className="orderOptionsSpecsInput" name="GA" onChange={this.handleChange}>
+                                                    <option>29</option>
+                                                    <option>26</option>
+                                                    <option>24</option>
+                                                    <option>22</option>
+                                                </Input>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Color</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="color" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>Roof Pitch</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="roofpitch" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Finish</label>
+                                                <Input type="select" className="orderOptionsSpecsInput" name="finish" onChange={this.handleChange} >
+                                                    <option>30"</option>
+                                                </Input>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Total Linear Feet</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="totallinearfeet" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Total SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="totalsquarefeet" onChange={this.handleChange} />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="number" className="orderOptionsSpecsInput" name="qty" />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="number" className="orderOptionsSpecsInput" name="inch"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="mm" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="tag" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="number" className="orderOptionsSpecsInput" name="linearfeet" placeholder={this.state.linearfeet}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet" onChange={this.handleChange} />
+                                            </FormGroup>
+                                        </div>
                                     </div>
                                     <div className="orderOptionsFlashingsMainContainer">
                                         <h2 className="orderOptionsTitle">FLASHINGS:</h2>

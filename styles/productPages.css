@@ -136,6 +136,34 @@ align-items: center;
     padding-bottom: 2%;
 }
 
+.orderOptionsSpecsForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.orderOptionsSpecsFormTitle {
+    display: flex;
+    justify-content: center;
+}
+
+.orderOptionsSpecsSmall {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.orderOptionsSpecsInput {
+    width: 100%;
+    height: 4vh;
+}
+
+.orderOptionsSpecsFG {
+    display: flex;
+    flex-direction: column;
+    width: 16%;
+}
+
 .orderOptionsTitle {
     font-size: 250%;
     font-weight: 300;
