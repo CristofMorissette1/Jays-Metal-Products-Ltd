@@ -2,7 +2,6 @@ module.exports = {
     exportPathMap: function () {
       return {
         '/': { page: '/' },
-        '/warranty': { page: '/warranty'},
         '/products': { page: '/products'},
         '/forms' : { page: '/forms'},
         '/contact' : { page: '/contact'},
@@ -18,7 +17,8 @@ module.exports = {
         '/standingseam' : { page: '/standingseam'},
         '/standingseam2' : { page: '/standingseam2'},
         '/snaplock' : { page: '/snaplock'},
-        '/snaplock2' : { page: '/snaplock2'}
+        '/snaplock2' : { page: '/snaplock2'},
+        '/accessories' : { page: '/accessories'}
       }
     }
   };

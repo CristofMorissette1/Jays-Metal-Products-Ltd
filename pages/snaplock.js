@@ -16,6 +16,18 @@ class Snaplock extends Component{
             po: '',
             email: '',
             address: '',
+            ga: '',
+            color: '',
+            protectivefilm: '',
+            finish: '',
+            totallinearfeet: '',
+            totalsquarefeet: '',
+            qty: 0,
+            inch: 0,
+            mm: '',
+            tag: '',
+            linearfeet: 0,
+            sqft: '',
             drip1: '',
             drip2: '',
             gabbleRake1: '',
@@ -52,6 +64,7 @@ class Snaplock extends Component{
         this.orderOptions = this.orderOptions.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSumbit = this.handleSumbit.bind(this);
+        this.printPage = this.printPage.bind(this);
     }
 
     colorOptions(event) {
@@ -79,12 +92,22 @@ class Snaplock extends Component{
         }
     }
 
+    printPage = e => {
+        e.preventDefault();
+        window.print();
+    }
+
     handleChange = e => {
         this.setState({
           [e.target.name]: e.target.value
         })
-        console.log(e.target.value)
-      }
+        let qtyNum = this.state.qty;
+        let size = this.state.inch;
+        let linearFeet = qtyNum * size;
+        this.setState({
+            linearfeet: linearFeet
+        })
+    }
     
       handleSumbit(e) {
         e.preventDefault();
@@ -118,8 +141,8 @@ class Snaplock extends Component{
                 </div>
                 <div className="productsPage4thContainer">
                     <div className="productsPage4thContainerHeader">
-                        <a className="headerOptions" onClick={this.colorOptions}>Color Options</a>
                         <a className="headerOptions" onClick={this.orderOptions}>Order Now</a>
+                        <a className="headerOptions" onClick={this.colorOptions}>Color Options</a>
                     </div>
                     {
                         this.state.colorOptions
@@ -278,6 +301,68 @@ class Snaplock extends Component{
                                                 placeholder="Customer Address"
                                                 onChange={this.handleChange} />
                                         </FormGroup>
+                                    </div>
+                                    <div className="orderOptionsSpecsForm">
+                                    <div className="orderOptionsSpecsFormTitle">
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>GA</label>
+                                                <Input type="select" className="orderOptionsSpecsInput" name="GA" onChange={this.handleChange}>
+                                                    <option>29</option>
+                                                    <option>26</option>
+                                                    <option>24</option>
+                                                    <option>22</option>
+                                                </Input>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Color</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="color" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Total Linear Feet</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="totallinearfeet" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>Protective film</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="protectivefilm" onChange={this.handleChange} />
+                                                <p className="protectiveFilmDisclaimer">10cents extra per sq/ft</p>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Finish</label>
+                                                <Input type="select" className="orderOptionsSpecsInput" name="finish" onChange={this.handleChange} >
+                                                    <option>30"</option>
+                                                </Input>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Total SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="totalsquarefeet" onChange={this.handleChange} />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="number" className="orderOptionsSpecsInput" name="qty" />
+                                        </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="number" className="orderOptionsSpecsInput" name="inch"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="mm" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="tag" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="number" className="orderOptionsSpecsInput" name="linearfeet" placeholder={this.state.linearfeet}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet" onChange={this.handleChange} />
+                                            </FormGroup>
+                                        </div>
                                     </div>
                                     <div className="orderOptionsFlashingsMainContainer">
                                         <h2 className="orderOptionsTitle">FLASHINGS:</h2>
@@ -709,6 +794,7 @@ class Snaplock extends Component{
                                             </FormGroup>
                                         </div>
                                     </div>
+                                    <Button className="contactButton" onClick={this.printPage}><p className="contactButtonText">Print Page</p></Button>
                                     <Button className="contactButton"><p className="contactButtonText">Submit</p></Button>
                                 </Form>
                             </div>

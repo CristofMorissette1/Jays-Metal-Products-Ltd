@@ -1,0 +1,79 @@
+.formMainContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formsTitle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 300%;
+    font-weight: 400;
+}
+
+.formsMenu {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.formsMenuOptions {
+    width: 22%;
+    background-color: #333;
+    color: #0D7BFF;
+    margin-left: 1.5%;
+    cursor: pointer;
+    padding: 1% 0;
+    font-size: 150%;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
+
+.productWarrantyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.productWarrantyMainForm {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.productWarrantyFG{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1.5%;
+}
+
+.productWarrantyInput {
+    height: 4vh;
+    width: 100%;
+    display: flex;
+}
+
+.creditCardAuthorizationContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.creditCardAuthorizationForm {
+    width: 100%;
+}
+
+.customerApplicationContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.customerApplicationForm {
+    width: 60%;
+}

@@ -1,0 +1,17 @@
+.accessoriesMainContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.accessories2ndContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.accessoriesImage {
+    width: 27%;
+    margin-top: 2%;
+}

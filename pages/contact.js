@@ -33,7 +33,7 @@ class Contact extends Component {
 
     const { firstName, lastName, phone, email, message} = this.state;
 
-    const form = axios.post( {
+    const form = axios.post('http://localhost:3001/api/form', {
       firstName,
       lastName,
       phone,
@@ -67,7 +67,7 @@ class Contact extends Component {
                   <p className="contactText">9:00am - 5:00pm</p>
                 </div>
               </div>
-            <Form onSubmit={this.handleSumbit}>
+            <Form className="mainContactForm" onSubmit={this.handleSumbit}>
               <p className="contactTitle">Please share your information with us for a detailed response:</p>
               <FormGroup className="contactForm">
                 <Input 

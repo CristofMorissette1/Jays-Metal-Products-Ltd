@@ -7,20 +7,35 @@ class Home extends Component {
   constructor(){
     super()
     this.state={
-        showMenu: false
+        showContactMenu: false,
+        showServicesMenu: false
     }
-    this.showMenu = this.showMenu.bind(this);
+    this.showContactMenu = this.showContactMenu.bind(this);
+    this.showServicesMenu = this.showServicesMenu.bind(this);
 }
 
-showMenu(event) {
+showContactMenu(event) {
     event.preventDefault();
-      if (this.state.showMenu == false) {
+      if (this.state.showContactMenu == false) {
       this.setState({
-        showMenu: true,
+        showContactMenu: true,
       });
     } else {
       this.setState({
-        showMenu: false,
+        showContactMenu: false,
+      });
+    }
+  }
+
+  showServicesMenu(event) {
+    event.preventDefault();
+      if (this.state.showServicesMenu == false) {
+      this.setState({
+        showServicesMenu: true,
+      });
+    } else {
+      this.setState({
+        showServicesMenu: false,
       });
     }
   }
@@ -36,20 +51,56 @@ showMenu(event) {
                         <a className="linksHome" href="/"><p>Home</p></a>
                     </div>
                     <div className="linkContainerSmall">
-                        <a className="linksHome" href="/products"><p>Products</p></a>
-                    </div>
-                    <div className="linkContainerSmall">
-                        <a className="linksHome" href="/amc"><p>AMC Panels</p></a>
-                    </div>
-                    <div className="linkContainerSmall">
-                        <a className="linksHome" onClick={this.showMenu}><p>Contact <b>↓</b></p></a>
+                        <a className="linksHome" onClick={this.showServicesMenu}><p>Products<b>↓</b></p></a>
                         {
-                            this.state.showMenu
+                          this.state.showServicesMenu ?
+                          (
+                            <div className="navMenu">
+                            <div className="navMenuLinks">
+                                <a className="navLinks" href="/products">Products</a>
+                                <a className="navLinks" href="/diamondrib">Diamond Rib 630</a>
+                                <a className="navLinks" href="/valurib">ValuRib 630</a>
+                                <a className="navLinks" href="/duraclad">Duraclad 936</a>
+                                <a className="navLinks" href="/ultraclad">Ultraclad 936</a>
+                                <a className="navLinks" href="/master">Master 1236</a>
+                                <a className="navLinks" href="/grand">Grand 1236</a>
+                                <a className="navLinks" href="/corrugated">Corrugated 7/8</a>
+                                <a className="navLinks" href="/lowrib">Low Rib</a>
+                                <a className="navLinks" href="/standingseam">Standing Seam 100</a>
+                                <a className="navLinks" href="/standingseam2">Standing Seam 150</a>
+                                <a className="navLinks" href="/snaplock">Snap Lock 100</a>
+                                <a className="navLinks" href="/snaplock">Snap Lock 150</a>
+                            </div>
+                        </div>
+                          ) :
+                          (
+                            null
+                          )
+                        }
+                    </div>
+                    <div className="linkContainerSmall">
+                        <a className="linksHome" href="/standardflashings"><p>Standard Flashings</p></a>
+                    </div>
+                    <div className="linkContainerSmall">
+                        <a className="linksHome" href="/amc"><p>ACM Panels</p></a>
+                    </div>
+                    <div className="linkContainerSmall">
+                        <a className="linksHome" href="/deliveryservices"><p>Delivery Services</p></a>
+                    </div>
+                      <div className="linkContainerSmall">
+                        <a className="linksHome" href="/colors"><p>Colors</p></a>
+                      </div>
+                    <div className="linkContainerSmall">
+                        <a className="linksHome" href="/accessories"><p>Accessories</p></a>
+                    </div>
+                    <div className="linkContainerSmall">
+                        <a className="linksHome" onClick={this.showContactMenu}><p>Contact <b>↓</b></p></a>
+                        {
+                            this.state.showContactMenu
                         ? (
                         <div className="navMenu">
                             <div className="navMenuLinks">
                                 <a className="navLinks" href="/forms">Forms & Resources</a>
-                                <a className="navLinks" href="/warranty">Warranty Registration</a>
                                 <a className="navLinks" href="/contact">Contact</a>
                             </div>
                         </div>

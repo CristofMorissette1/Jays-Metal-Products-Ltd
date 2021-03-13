@@ -5,6 +5,11 @@ import '../styles/footer.css';
 import '../styles/contact.css';
 import '../styles/product.css';
 import '../styles/productPages.css';
+import '../styles/accessories.css';
+import '../styles/forms.css';
+import '../styles/standardflashings.css';
+import '../styles/colors.css';
+import '../styles/deliveryservices.css';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

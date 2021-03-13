@@ -117,6 +117,7 @@ align-items: center;
 
 .orderOptionsContent {
     width: 100%;
+    margin-top: 2%;
 }
 
 .orderOptionsContentForm {
@@ -217,4 +218,10 @@ align-items: center;
     width: 8%;
     position: absolute;
     margin-top: 14.5%;
+}
+
+.protectiveFilmDisclaimer {
+    margin-top: 0%;
+    font-size: 55%;
+    color: #999;
 }

@@ -18,7 +18,7 @@ class Diamondrib extends Component{
             address: '',
             ga: '',
             color: '',
-            roofpitch: '',
+            protectivefilm: '',
             finish: '',
             totallinearfeet: '',
             totalsquarefeet: '',
@@ -64,6 +64,7 @@ class Diamondrib extends Component{
         this.orderOptions = this.orderOptions.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSumbit = this.handleSumbit.bind(this);
+        this.printPage = this.printPage.bind(this);
     }
 
     colorOptions(event) {
@@ -102,6 +103,11 @@ class Diamondrib extends Component{
             linearfeet: linearFeet
         })
       }
+
+    printPage = e => {
+        e.preventDefault();
+        window.print();
+    }
     
       handleSumbit(e) {
         e.preventDefault();
@@ -137,8 +143,8 @@ class Diamondrib extends Component{
                 </div>
                 <div className="productsPage4thContainer">
                     <div className="productsPage4thContainerHeader">
-                        <a className="headerOptions" onClick={this.colorOptions}>Color Options</a>
                         <a className="headerOptions" onClick={this.orderOptions}>Order Now</a>
+                        <a className="headerOptions" onClick={this.colorOptions}>Color Options</a>
                     </div>
                     {
                         this.state.colorOptions
@@ -314,18 +320,19 @@ class Diamondrib extends Component{
                                                 <Input type="text" className="orderOptionsSpecsInput" name="color" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Label>Roof Pitch</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="roofpitch" onChange={this.handleChange} />
+                                                <label>Total Linear Feet</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="totallinearfeet" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>Protective film</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="protectivefilm" onChange={this.handleChange} />
+                                                <p className="protectiveFilmDisclaimer">10cents extra per sq/ft</p>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Finish</label>
                                                 <Input type="select" className="orderOptionsSpecsInput" name="finish" onChange={this.handleChange} >
                                                     <option>30"</option>
                                                 </Input>
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Total Linear Feet</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="totallinearfeet" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total SQFT.</label>
@@ -789,6 +796,8 @@ class Diamondrib extends Component{
                                             </FormGroup>
                                         </div>
                                     </div>
+                                    <disclaimer>disclaimer</disclaimer>
+                                    <Button className="contactButton" onClick={this.printPage}><p className="contactButtonText">Print Page</p></Button>
                                     <Button className="contactButton"><p className="contactButtonText">Submit</p></Button>
                                 </Form>
                             </div>

@@ -1,0 +1,18 @@
+.metallicColorsMainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.metallicColors {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    flex-wrap: wrap;
+    margin-top: 1%;
+}
+
+.metallicColorsImage {
+    margin-top: 1%;
+}

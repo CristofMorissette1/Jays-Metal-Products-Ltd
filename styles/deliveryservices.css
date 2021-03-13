@@ -1,0 +1,44 @@
+.deliveryMainContainer {
+    width: 100%;
+}
+
+.deliveryContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1%;
+}
+
+.deliveryMainImage {
+    width: 100%;
+}
+
+.supplierContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 98%;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    margin-top: 1%;
+}
+
+.supplierContainer:hover {
+    background-color: #0D7BFF;
+}
+
+.supplierTitle {
+    margin: 0%;
+    font-weight: 400;
+}
+
+.supplierLogo {
+    border-radius: 50%;
+    width: 20%;
+}
+
+.supplierText {
+    font-size: 115%;
+    font-weight: 400;
+    margin-bottom: 0%;
+}
