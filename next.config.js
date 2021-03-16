@@ -18,7 +18,8 @@ module.exports = {
         '/standingseam2' : { page: '/standingseam2'},
         '/snaplock' : { page: '/snaplock'},
         '/snaplock2' : { page: '/snaplock2'},
-        '/accessories' : { page: '/accessories'}
+        '/accessories' : { page: '/accessories'},
+        '/deliveryservices' : { page: '/deliveryservices'}
       }
     }
   };
