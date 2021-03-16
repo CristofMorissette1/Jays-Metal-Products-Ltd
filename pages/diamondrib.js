@@ -12,6 +12,7 @@ class Diamondrib extends Component{
             colorOptions: false,
             orderOptions: false,
             customerName: '',
+            productname: '',
             phone: '',
             po: '',
             email: '',
@@ -112,14 +113,58 @@ class Diamondrib extends Component{
       handleSumbit(e) {
         e.preventDefault();
     
-        const { customerName, phone, po, email, address} = this.state;
+        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, linearfeet, sqft, drip1, drip2, gabbleRake1, gabbleRake2, wall1, wall2, wall3, wall4, endWall1, endWall2, hip1, ridge1, hip2, ridge2, transition1, transition2, snowStop1, snowStop2, vValley, Wvalley, baseWall, wallTransition, header1, header2, jTrim1, jTrim2, outsideCorner1, outsideCorner2, insideCorner1, insideCorner2, perforatedJ} = this.state;
     
-        const form = axios.post('', {
-          customerName,
-          phone,
-          po,
-          email,
-          address
+        const form = axios.post('http://localhost:3001/api/form', {
+            customerName,
+            productname,
+            phone,
+            po,
+            email,
+            address,
+            ga,
+            color,
+            protectivefilm,
+            finish,
+            totallinearfeet,
+            totalsquarefeet,
+            qty,
+            inch,
+            mm,
+            tag,
+            linearfeet,
+            sqft,
+            drip1,
+            drip2,
+            gabbleRake1,
+            gabbleRake2,
+            wall1,
+            wall2,
+            wall3,
+            wall4,
+            endWall1,
+            endWall2,
+            hip1,
+            ridge1,
+            hip2,
+            ridge2,
+            transition1,
+            transition2,
+            snowStop1,
+            snowStop2,
+            vValley,
+            Wvalley,
+            baseWall,
+            wallTransition,
+            header1,
+            header2,
+            jTrim1,
+            jTrim2,
+            outsideCorner1,
+            outsideCorner2,
+            insideCorner1,
+            insideCorner2,
+            perforatedJ
         })
         e.target.reset();
       }
@@ -269,7 +314,8 @@ class Diamondrib extends Component{
                                                 className="orderOptionsTextInput"
                                                 name="customerName" 
                                                 placeholder="Customer Name"
-                                                onChange={this.handleChange} />
+                                                onChange={this.handleChange}
+                                                required />
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
                                             <Input 
@@ -277,7 +323,8 @@ class Diamondrib extends Component{
                                                 className="orderOptionsTextInput"
                                                 name="phone"
                                                 placeholder="Phone Number"
-                                                onChange={this.handleChange} />
+                                                onChange={this.handleChange} 
+                                                required />
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
                                             <Input 
@@ -285,7 +332,8 @@ class Diamondrib extends Component{
                                                 className="orderOptionsTextInput"
                                                 name="po"
                                                 placeholder="PO"
-                                                onChange={this.handleChange} />
+                                                onChange={this.handleChange}
+                                                required />
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
                                             <Input 
@@ -293,7 +341,8 @@ class Diamondrib extends Component{
                                                 className="orderOptionsTextInput"
                                                 name="email"
                                                 placeholder="Email Address"
-                                                onChange={this.handleChange} />
+                                                onChange={this.handleChange}
+                                                required />
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
                                             <Input 
@@ -301,14 +350,25 @@ class Diamondrib extends Component{
                                                 className="orderOptionsTextInput"
                                                 name="address"
                                                 placeholder="Customer Address"
-                                                onChange={this.handleChange} />
+                                                onChange={this.handleChange} 
+                                                required />
+                                        </FormGroup>
+                                        <FormGroup className="orderOptionsTextFormSmall">
+                                            <Input 
+                                                type="text"
+                                                className="orderOptionsTextInput"
+                                                name="productname"
+                                                placeholder="Product Name"
+                                                onChange={this.handleChange} 
+                                                required />
                                         </FormGroup>
                                     </div>
                                     <div className="orderOptionsSpecsForm">
                                         <div className="orderOptionsSpecsFormTitle">
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>GA</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" name="GA" onChange={this.handleChange}>
+                                                <Input type="select" className="orderOptionsSpecsInput" name="ga" onChange={this.handleChange} required>
+                                                    <option>-</option>
                                                     <option>29</option>
                                                     <option>26</option>
                                                     <option>24</option>
@@ -317,11 +377,11 @@ class Diamondrib extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Color</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="color" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="color" onChange={this.handleChange} required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total Linear Feet</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="totallinearfeet" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="totallinearfeet" onChange={this.handleChange} readOnly />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>Protective film</Label>
@@ -330,23 +390,24 @@ class Diamondrib extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Finish</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" name="finish" onChange={this.handleChange} >
+                                                <Input type="select" className="orderOptionsSpecsInput" name="finish" onChange={this.handleChange} required >
+                                                    <option>-</option>
                                                     <option>30"</option>
                                                 </Input>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="totalsquarefeet" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="totalsquarefeet" onChange={this.handleChange} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="number" className="orderOptionsSpecsInput" name="qty" />
+                                                <Input type="number" className="orderOptionsSpecsInput" name="qty" required />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="number" className="orderOptionsSpecsInput" name="inch"  />
+                                                <Input type="number" className="orderOptionsSpecsInput" name="inch" required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -362,7 +423,7 @@ class Diamondrib extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet" onChange={this.handleChange} readOnly />
                                             </FormGroup>
                                         </div>
                                     </div>
@@ -375,7 +436,6 @@ class Diamondrib extends Component{
                                                     className="orderOptionsFlashingsInput" 
                                                     name="drip1"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     onChange={this.handleChange}
                                                     />
@@ -385,7 +445,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="drip2"
                                                     onChange={this.handleChange} />
@@ -395,9 +454,8 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
-                                                    name="gableRake1"
+                                                    name="gabbleRake1"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer">
@@ -405,7 +463,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="gabbleRake2"
                                                     onChange={this.handleChange} />
@@ -415,7 +472,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="wall1"
                                                     onChange={this.handleChange} />
@@ -425,7 +481,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="wall2"
                                                     onChange={this.handleChange} />
@@ -435,7 +490,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="wall3"
                                                     onChange={this.handleChange} />
@@ -445,7 +499,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="wall4"
                                                     onChange={this.handleChange} />
@@ -455,7 +508,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="endWall1"
                                                     onChange={this.handleChange} />
@@ -465,7 +517,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="endWall2"
                                                     onChange={this.handleChange} />
@@ -475,7 +526,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="hip1"
                                                     onChange={this.handleChange} />
@@ -485,7 +535,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="ridge1"
                                                     onChange={this.handleChange} />
@@ -495,7 +544,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="hip2"
                                                     onChange={this.handleChange} />
@@ -505,7 +553,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="ridge2"
                                                     onChange={this.handleChange} />
@@ -515,7 +562,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="transition1"
                                                     onChange={this.handleChange} />
@@ -525,7 +571,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="transition2"
                                                     onChange={this.handleChange} />
@@ -535,7 +580,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="snowStop1"
                                                     onChange={this.handleChange} />
@@ -545,7 +589,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="snowStop2"
                                                     onChange={this.handleChange} />
@@ -555,7 +598,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="vValley"
                                                     onChange={this.handleChange} />
@@ -565,7 +607,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="Wvalley"
                                                     onChange={this.handleChange} />
@@ -575,7 +616,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="baseWall"
                                                     onChange={this.handleChange} />
@@ -585,7 +625,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="wallTransition"
                                                     onChange={this.handleChange} />
@@ -595,7 +634,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="header1"
                                                     onChange={this.handleChange} />
@@ -605,7 +643,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="header2"
                                                     onChange={this.handleChange} />
@@ -615,7 +652,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="jTrim1"
                                                     onChange={this.handleChange} />
@@ -625,7 +661,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="jTrim2"
                                                     onChange={this.handleChange} />
@@ -635,7 +670,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="outsideCorner1"
                                                     onChange={this.handleChange} />
@@ -645,7 +679,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="outsideCorner2"
                                                     onChange={this.handleChange} />
@@ -655,7 +688,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="insideCorner1"
                                                     onChange={this.handleChange} />
@@ -665,7 +697,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="insideCorner2"
                                                     onChange={this.handleChange} />
@@ -675,7 +706,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="perforatedJ"
                                                     onChange={this.handleChange} />
@@ -689,7 +719,6 @@ class Diamondrib extends Component{
                                                     className="orderOptionsFlashingsInput" 
                                                     name="metalDrillScrews"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     onChange={this.handleChange}
                                                     />
@@ -699,7 +728,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="woodGripScrews"
                                                     onChange={this.handleChange} />
@@ -709,7 +737,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="syntheticHighTempCover"
                                                     onChange={this.handleChange} />
@@ -719,7 +746,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="peel&StickHighTempCover"
                                                     onChange={this.handleChange} />
@@ -729,7 +755,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="tubeSealant"
                                                     onChange={this.handleChange} />
@@ -739,7 +764,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="butylTape"
                                                     onChange={this.handleChange} />
@@ -749,7 +773,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="plumbingBoots"
                                                     onChange={this.handleChange} />
@@ -759,7 +782,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="flexOVent"
                                                     onChange={this.handleChange} />
@@ -769,7 +791,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="profileOuterClosure"
                                                     onChange={this.handleChange} />
@@ -779,7 +800,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="profileInnerClosure"
                                                     onChange={this.handleChange} />
@@ -789,7 +809,6 @@ class Diamondrib extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="lowProfileRidgeVent"
                                                     onChange={this.handleChange} />

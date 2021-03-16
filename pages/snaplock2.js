@@ -114,14 +114,58 @@ class Snaplock2 extends Component{
       handleSumbit(e) {
         e.preventDefault();
     
-        const { customerName, phone, po, email, address} = this.state;
+        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, linearfeet, sqft, drip1, drip2, gabbleRake1, gabbleRake2, wall1, wall2, wall3, wall4, endWall1, endWall2, hip1, ridge1, hip2, ridge2, transition1, transition2, snowStop1, snowStop2, vValley, Wvalley, baseWall, wallTransition, header1, header2, jTrim1, jTrim2, outsideCorner1, outsideCorner2, insideCorner1, insideCorner2, perforatedJ} = this.state;
     
-        const form = axios.post('', {
-          customerName,
-          phone,
-          po,
-          email,
-          address
+        const form = axios.post('http://localhost:3001/api/form', {
+            customerName,
+            productname,
+            phone,
+            po,
+            email,
+            address,
+            ga,
+            color,
+            protectivefilm,
+            finish,
+            totallinearfeet,
+            totalsquarefeet,
+            qty,
+            inch,
+            mm,
+            tag,
+            linearfeet,
+            sqft,
+            drip1,
+            drip2,
+            gabbleRake1,
+            gabbleRake2,
+            wall1,
+            wall2,
+            wall3,
+            wall4,
+            endWall1,
+            endWall2,
+            hip1,
+            ridge1,
+            hip2,
+            ridge2,
+            transition1,
+            transition2,
+            snowStop1,
+            snowStop2,
+            vValley,
+            Wvalley,
+            baseWall,
+            wallTransition,
+            header1,
+            header2,
+            jTrim1,
+            jTrim2,
+            outsideCorner1,
+            outsideCorner2,
+            insideCorner1,
+            insideCorner2,
+            perforatedJ
         })
         e.target.reset();
       }
@@ -269,7 +313,8 @@ class Snaplock2 extends Component{
                                                 className="orderOptionsTextInput"
                                                 name="customerName" 
                                                 placeholder="Customer Name"
-                                                onChange={this.handleChange} />
+                                                onChange={this.handleChange}
+                                                required />
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
                                             <Input 
@@ -277,7 +322,8 @@ class Snaplock2 extends Component{
                                                 className="orderOptionsTextInput"
                                                 name="phone"
                                                 placeholder="Phone Number"
-                                                onChange={this.handleChange} />
+                                                onChange={this.handleChange} 
+                                                required />
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
                                             <Input 
@@ -285,7 +331,8 @@ class Snaplock2 extends Component{
                                                 className="orderOptionsTextInput"
                                                 name="po"
                                                 placeholder="PO"
-                                                onChange={this.handleChange} />
+                                                onChange={this.handleChange}
+                                                required />
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
                                             <Input 
@@ -293,7 +340,8 @@ class Snaplock2 extends Component{
                                                 className="orderOptionsTextInput"
                                                 name="email"
                                                 placeholder="Email Address"
-                                                onChange={this.handleChange} />
+                                                onChange={this.handleChange}
+                                                required />
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
                                             <Input 
@@ -301,14 +349,25 @@ class Snaplock2 extends Component{
                                                 className="orderOptionsTextInput"
                                                 name="address"
                                                 placeholder="Customer Address"
-                                                onChange={this.handleChange} />
+                                                onChange={this.handleChange} 
+                                                required />
+                                        </FormGroup>
+                                        <FormGroup className="orderOptionsTextFormSmall">
+                                            <Input 
+                                                type="text"
+                                                className="orderOptionsTextInput"
+                                                name="productname"
+                                                placeholder="Product Name"
+                                                onChange={this.handleChange} 
+                                                required />
                                         </FormGroup>
                                     </div>
                                     <div className="orderOptionsSpecsForm">
-                                    <div className="orderOptionsSpecsFormTitle">
+                                        <div className="orderOptionsSpecsFormTitle">
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>GA</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" name="GA" onChange={this.handleChange}>
+                                                <Input type="select" className="orderOptionsSpecsInput" name="ga" onChange={this.handleChange} required>
+                                                    <option>-</option>
                                                     <option>29</option>
                                                     <option>26</option>
                                                     <option>24</option>
@@ -317,11 +376,11 @@ class Snaplock2 extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Color</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="color" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="color" onChange={this.handleChange} required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total Linear Feet</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="totallinearfeet" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="totallinearfeet" onChange={this.handleChange} readOnly />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>Protective film</Label>
@@ -330,23 +389,24 @@ class Snaplock2 extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Finish</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" name="finish" onChange={this.handleChange} >
+                                                <Input type="select" className="orderOptionsSpecsInput" name="finish" onChange={this.handleChange} required >
+                                                    <option>-</option>
                                                     <option>30"</option>
                                                 </Input>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="totalsquarefeet" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="totalsquarefeet" onChange={this.handleChange} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="number" className="orderOptionsSpecsInput" name="qty" />
-                                        </FormGroup>
+                                                <Input type="number" className="orderOptionsSpecsInput" name="qty" required />
+                                            </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="number" className="orderOptionsSpecsInput" name="inch"  />
+                                                <Input type="number" className="orderOptionsSpecsInput" name="inch" required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -362,7 +422,7 @@ class Snaplock2 extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet" onChange={this.handleChange} readOnly />
                                             </FormGroup>
                                         </div>
                                     </div>
@@ -375,7 +435,6 @@ class Snaplock2 extends Component{
                                                     className="orderOptionsFlashingsInput" 
                                                     name="drip1"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     onChange={this.handleChange}
                                                     />
@@ -385,7 +444,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="drip2"
                                                     onChange={this.handleChange} />
@@ -395,9 +453,8 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
-                                                    name="gableRake1"
+                                                    name="gabbleRake1"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer">
@@ -405,7 +462,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="gabbleRake2"
                                                     onChange={this.handleChange} />
@@ -415,7 +471,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="wall1"
                                                     onChange={this.handleChange} />
@@ -425,7 +480,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="wall2"
                                                     onChange={this.handleChange} />
@@ -435,7 +489,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="wall3"
                                                     onChange={this.handleChange} />
@@ -445,7 +498,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="wall4"
                                                     onChange={this.handleChange} />
@@ -455,7 +507,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="endWall1"
                                                     onChange={this.handleChange} />
@@ -465,7 +516,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="endWall2"
                                                     onChange={this.handleChange} />
@@ -475,7 +525,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="hip1"
                                                     onChange={this.handleChange} />
@@ -485,7 +534,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="ridge1"
                                                     onChange={this.handleChange} />
@@ -495,7 +543,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="hip2"
                                                     onChange={this.handleChange} />
@@ -505,7 +552,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="ridge2"
                                                     onChange={this.handleChange} />
@@ -515,7 +561,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="transition1"
                                                     onChange={this.handleChange} />
@@ -525,7 +570,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="transition2"
                                                     onChange={this.handleChange} />
@@ -535,7 +579,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="snowStop1"
                                                     onChange={this.handleChange} />
@@ -545,7 +588,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="snowStop2"
                                                     onChange={this.handleChange} />
@@ -555,7 +597,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="vValley"
                                                     onChange={this.handleChange} />
@@ -565,7 +606,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="Wvalley"
                                                     onChange={this.handleChange} />
@@ -575,7 +615,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="baseWall"
                                                     onChange={this.handleChange} />
@@ -585,7 +624,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="wallTransition"
                                                     onChange={this.handleChange} />
@@ -595,7 +633,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="header1"
                                                     onChange={this.handleChange} />
@@ -605,7 +642,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="header2"
                                                     onChange={this.handleChange} />
@@ -615,7 +651,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="jTrim1"
                                                     onChange={this.handleChange} />
@@ -625,7 +660,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="jTrim2"
                                                     onChange={this.handleChange} />
@@ -635,7 +669,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="outsideCorner1"
                                                     onChange={this.handleChange} />
@@ -645,7 +678,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="outsideCorner2"
                                                     onChange={this.handleChange} />
@@ -655,7 +687,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="insideCorner1"
                                                     onChange={this.handleChange} />
@@ -665,7 +696,6 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="insideCorner2"
                                                     onChange={this.handleChange} />
@@ -675,123 +705,8 @@ class Snaplock2 extends Component{
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
-                                                    id="annoying"
                                                     placeholder="QTY"
                                                     name="perforatedJ"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>
-                                        </div>
-                                        <h2 className="orderOptionsTitle">ACCESSORIES:</h2>
-                                        <div className="orderOptionsFlashingsContainerSmall">
-                                            <FormGroup className="orderOptionsFlashingsContainer"> 
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fmetal%20drill%20screws.png?alt=media&token=def7c31f-bab7-430a-aac1-c6686b9eb621"/>
-                                                <CustomInput
-                                                    className="orderOptionsFlashingsInput" 
-                                                    name="metalDrillScrews"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    onChange={this.handleChange}
-                                                    />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fwoodgrip%20screws.png?alt=media&token=bedb64c8-3ace-4697-8bd6-10e6b6ee4db2"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="woodGripScrews"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fsynthetic%20high%20temp%20cover.png?alt=media&token=175a4dbb-40b2-43b5-92f2-eb31cb839e7c"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="syntheticHighTempCover"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fpeel%20%26%20stick%20high%20temp%20cover.png?alt=media&token=7bfec47d-cb9b-40c3-b843-b93811e530f2"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="peel&StickHighTempCover"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Ftube%20sealant.png?alt=media&token=bf1baf8a-beac-461e-af91-7fa9c12695e6"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="tubeSealant"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fbutyl%20tape.png?alt=media&token=24398d7f-af89-4872-82fd-d9286875a3cb"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="butylTape"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fplumbing%20boots.png?alt=media&token=1db3c74a-c476-4596-b4b6-0c286a1cc006"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="plumbingBoots"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fflex-o-vent.png?alt=media&token=c1e81e0f-c6a2-48fd-84be-6952ba69aadf"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="flexOVent"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fprofile%20outer%20closure.png?alt=media&token=836d6b46-1e94-45a5-aea2-6ce4c69d37a3"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="profileOuterClosure"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fprofile%20inner%20closure.png?alt=media&token=a799aa5a-55a3-41d9-9a47-a4565e06e6c5"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="profileInnerClosure"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Flow%20profile%20ridge%20vent.png?alt=media&token=18d4aaaf-d88f-4cda-96ee-1addef31a649"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="lowProfileRidgeVent"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                         </div>
