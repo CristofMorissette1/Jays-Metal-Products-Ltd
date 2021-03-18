@@ -12,12 +12,31 @@ class Amc extends Component {
       panelA: true,
       panelB: false,
       panelC: false,
+      extrusions: '',
+      reveals: '',
+      starter: '',
+      linears: '',
+      panelname: '',
+      acmpanels: '',
+      acmaccessories: '',
+      acmpaneloption1: '',
+      acmpaneloption2: '',
+      parapetcapflashing: '',
+      acmparapetcap: '',
+      acmpaneljoints: '',
+      acminsidecorner: '',
+      acmoutsidecorner: '',
+      acmupperwindowdrip: '',
+      acmsidewindow: '',
+      acmlowerwindowdrip: '',
+      acmpanelendwall: ''
     }
     this.panelA = this.panelA.bind(this);
     this.panelB = this.panelB.bind(this);
     this.panelC = this.panelC.bind(this);
     this.printPage = this.printPage.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleSumbit = this.handleSumbit.bind(this);
   }
 
   panelA(event) {
@@ -71,6 +90,34 @@ printPage = e => {
   window.print();
 }
 
+handleSumbit(e) {
+  e.preventDefault();
+
+  const { extrusions, reveals, starter, linears, panelname, acmpanels, acmaccessories, acmpaneloption1, acmpaneloption2, parapetcapflashing, acmparapetcap, acmpaneljoints, acminsidecorner, acmoutsidecorner, acmupperwindowdrip, acmsidewindow, acmlowerwindowdrip, acmpanelendwall} = this.state;
+
+  const form = axios.post('http://localhost:3001/api/form', {
+    extrusions,
+    reveals,
+    starter,
+    linears,
+    panelname,
+    acmpanels,
+    acmaccessories,
+    acmpaneloption1,
+    acmpaneloption2,
+    parapetcapflashing,
+    acmparapetcap,
+    acmpaneljoints,
+    acminsidecorner,
+    acmoutsidecorner,
+    acmupperwindowdrip,
+    acmsidewindow,
+    acmlowerwindowdrip,
+    acmpanelendwall
+  })
+  e.target.reset();
+}
+
   render() {
     return (
       <div className="amcMainContainer">
@@ -82,10 +129,32 @@ printPage = e => {
           <a className="acmHeaderOptions" onClick={this.panelC}>Panel C<img className="acmMenuImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/products%2Flowrib.png?alt=media&token=acf1ad55-b554-4870-a481-27be1983eeeb"/></a>
         </div>
         <Form className="orderOptionsContentForm" onSubmit={this.handleSumbit}>
+        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Extrusions</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="extrusions" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Reveals</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="reveals" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>Starter</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="starter" onChange={this.handleChange} required/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linears</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="linears" onChange={this.handleChange} required/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Panel Name</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="panelname" onChange={this.handleChange} required/>
+                                            </FormGroup>
+                                        </div>
         {
           this.state.panelA ? (
             <div className="orderOptionsFlashingsMainContainer">
-            <h2 className="orderOptionsTitle">FLASHINGS:</h2>
+            <h2 className="orderOptionsTitle">Panel A SPECS:</h2>
             <div className="acmFlashingsContainerSmall">
                 <FormGroup className="acmOrderOptionsFG"> 
                     <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/acm%2Facm%20panel1.jpg?alt=media&token=d111811e-f11d-408a-a3d5-490b6648e33c"/>
@@ -130,7 +199,7 @@ printPage = e => {
                         className="orderOptionsFlashingsInput"
                         type="text"
                         placeholder="QTY"
-                        name="Parapet Cap Flashing"
+                        name="parapetcapflashing"
                         onChange={this.handleChange} />
                 </FormGroup>
                 <FormGroup className="acmOrderOptionsFG">
@@ -175,7 +244,7 @@ printPage = e => {
                         className="orderOptionsFlashingsInput"
                         type="text"
                         placeholder="QTY"
-                        name="acmupperwindergrip"
+                        name="acmupperwindowdrip"
                         onChange={this.handleChange} />
                 </FormGroup>
                 <FormGroup className="acmOrderOptionsFG">
@@ -193,7 +262,7 @@ printPage = e => {
                         className="orderOptionsFlashingsInput"
                         type="text"
                         placeholder="QTY"
-                        name="acmlowerwinderdrip"
+                        name="acmlowerwindowdrip"
                         onChange={this.handleChange} />
                 </FormGroup>
                 <FormGroup className="acmOrderOptionsFG">
@@ -215,7 +284,7 @@ printPage = e => {
         {
           this.state.panelB ? (
             <div className="orderOptionsFlashingsMainContainer">
-            <h2 className="orderOptionsTitle">FLASHINGS:</h2>
+            <h2 className="orderOptionsTitle">Panel B SPECS:</h2>
             <div className="acmFlashingsContainerSmall">
                 <FormGroup className="acmOrderOptionsFG"> 
                     <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/acm%2Facm%20panel1.jpg?alt=media&token=d111811e-f11d-408a-a3d5-490b6648e33c"/>
@@ -305,7 +374,7 @@ printPage = e => {
                         className="orderOptionsFlashingsInput"
                         type="text"
                         placeholder="QTY"
-                        name="acmupperwindergrip"
+                        name="acmupperwindowdrip"
                         onChange={this.handleChange} />
                 </FormGroup>
                 <FormGroup className="acmOrderOptionsFG">
@@ -323,7 +392,7 @@ printPage = e => {
                         className="orderOptionsFlashingsInput"
                         type="text"
                         placeholder="QTY"
-                        name="acmlowerwinderdrip"
+                        name="acmlowerwindowdrip"
                         onChange={this.handleChange} />
                 </FormGroup>
                 <FormGroup className="acmOrderOptionsFG">
@@ -345,7 +414,7 @@ printPage = e => {
         {
           this.state.panelC ? (
             <div className="orderOptionsFlashingsMainContainer">
-            <h2 className="orderOptionsTitle">FLASHINGS:</h2>
+            <h2 className="orderOptionsTitle">Panel C SPECS:</h2>
             <div className="acmFlashingsContainerSmall">
                 <FormGroup className="acmOrderOptionsFG"> 
                     <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/acm%2Facm%20panel1.jpg?alt=media&token=d111811e-f11d-408a-a3d5-490b6648e33c"/>
@@ -435,7 +504,7 @@ printPage = e => {
                         className="orderOptionsFlashingsInput"
                         type="text"
                         placeholder="QTY"
-                        name="acmupperwindergrip"
+                        name="acmupperwindowdrip"
                         onChange={this.handleChange} />
                 </FormGroup>
                 <FormGroup className="acmOrderOptionsFG">
@@ -453,7 +522,7 @@ printPage = e => {
                         className="orderOptionsFlashingsInput"
                         type="text"
                         placeholder="QTY"
-                        name="acmlowerwinderdrip"
+                        name="acmlowerwindowdrip"
                         onChange={this.handleChange} />
                 </FormGroup>
                 <FormGroup className="acmOrderOptionsFG">

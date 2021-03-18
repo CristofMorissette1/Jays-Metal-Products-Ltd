@@ -21,7 +21,8 @@ module.exports = {
         '/accessories' : { page: '/accessories'},
         '/deliveryservices' : { page: '/deliveryservices'},
         '/accessories' : { page: '/accessories'},
-        '/colors' : { page: '/colors'}
+        '/colors' : { page: '/colors'},
+        '/standardflashings' : { page: '/standardflashings'}
       }
     }
   };
