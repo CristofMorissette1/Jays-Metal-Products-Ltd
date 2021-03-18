@@ -9,8 +9,8 @@
 
 .link_container {
     display: flex;
-    width: 80%;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-evenly;
     align-items: center;
 }
 

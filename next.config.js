@@ -19,7 +19,9 @@ module.exports = {
         '/snaplock' : { page: '/snaplock'},
         '/snaplock2' : { page: '/snaplock2'},
         '/accessories' : { page: '/accessories'},
-        '/deliveryservices' : { page: '/deliveryservices'}
+        '/deliveryservices' : { page: '/deliveryservices'},
+        '/accessories' : { page: '/accessories'},
+        '/colors' : { page: '/colors'}
       }
     }
   };

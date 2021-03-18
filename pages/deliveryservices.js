@@ -1,29 +1,39 @@
 import Head from 'next/head'
 import { Component } from 'react';
 import Header from '../components/header';
+import Footer from '../components/footer';
 
 class DeliveryServices extends Component {
     render(){
         return (
             <div className="deliveryMainContainer">
                 <Header/>
-                <img className="deliveryMainImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Delivery%20Services%2Fdelivery%20services%20landing%20image.png?alt=media&token=aaf8d979-efb7-488e-841c-4b4c171ed799"></img>
+                <img className="deliveryMainImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
+                <h1 className="deliveryServicesTitle">Please refer to our partnered delivery services below:</h1>
                 <div className="deliveryContainer">
                     <div className="supplierContainer">
-                        <img className="supplierLogo" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Delivery%20Services%2Froofmart.png?alt=media&token=d2ba9e3d-42d1-4455-a5b6-762d2dfd4d33"></img>
-                        <h1 className="supplierTitle">Roofmart Alberta Inc. (North Calgary)</h1>
-                        <p className="supplierText">4080, 6A Street N.E., Calgary, AB T2G 4B1</p>
-                        <p className="supplierText">403-277-9641</p>
-                        <a className="supplierText" href="/www.roofmart.ca">www.roofmart.ca</a>
+                        <h1 className="supplierTitle">Richard Kenney</h1>
+                        <p className="supplierText">(403)-971-2332</p>
+                        <p className="supplierText">Bed Size: Accommodates up to 40’</p>
+                        <p className="supplierText">Maximum Weight Capacity: 18,000lb</p>
                     </div>
                     <div className="supplierContainer">
-                        <img className="supplierLogo" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Delivery%20Services%2Froofmart.png?alt=media&token=d2ba9e3d-42d1-4455-a5b6-762d2dfd4d33"></img>
-                        <h1 className="supplierTitle">Roofmart Alberta Inc. (South Calgary)</h1>
-                        <p className="supplierText">7127 Fairmont Drive S.E., Calgary, AB T2H 0X6</p>
-                        <p className="supplierText">403-253-7553</p>
-                        <a className="supplierText" href="/www.roofmart.ca">www.roofmart.ca</a>
+                        <h1 className="supplierTitle">Dan Huynh</h1>
+                        <p className="supplierText">(403)-815-7630</p>
+                        <p className="supplierText">ND XPRESS</p>
+                        <p className="supplierText">Bed Size: Accommodates 10’ wide and 33’ long</p>
+                        <p className="supplierText">Maximum Weight Capacity: 15,000lb </p>
+                    </div>
+                    <div className="supplierContainer">
+                        <h1 className="supplierTitle">Chico’s Transport</h1>
+                        <p className="supplierText">(403)-888-7630</p>
+                        <p className="supplierText">Bed Size: Accommodates up to 24’</p>
+                        <p className="supplierText">Maximum Weight Capacity: 30,000lb</p>
+                        <p className="supplierText">Crane Reach: Up to 60’ </p>
+                        <p className="supplierText">Crane Capacity: 1900-8000lb</p>
                     </div>
                 </div>
+                <Footer/>
             </div>
         )
     }

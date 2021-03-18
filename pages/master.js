@@ -25,6 +25,7 @@ class Master extends Component{
             qty: 0,
             inch: 0,
             mm: '',
+            specialcrating: '',
             tag: '',
             linearfeet: 0,
             sqft: '',
@@ -111,7 +112,7 @@ class Master extends Component{
       handleSumbit(e) {
         e.preventDefault();
     
-        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, linearfeet, sqft, drip1, drip2, gabbleRake1, gabbleRake2, wall1, wall2, wall3, wall4, endWall1, endWall2, hip1, ridge1, hip2, ridge2, transition1, transition2, snowStop1, snowStop2, vValley, Wvalley, baseWall, wallTransition, header1, header2, jTrim1, jTrim2, outsideCorner1, outsideCorner2, insideCorner1, insideCorner2, perforatedJ} = this.state;
+        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, sqft, drip1, drip2, gabbleRake1, gabbleRake2, wall1, wall2, wall3, wall4, endWall1, endWall2, hip1, ridge1, hip2, ridge2, transition1, transition2, snowStop1, snowStop2, vValley, Wvalley, baseWall, wallTransition, header1, header2, jTrim1, jTrim2, outsideCorner1, outsideCorner2, insideCorner1, insideCorner2, perforatedJ} = this.state;
     
         const form = axios.post('http://localhost:3001/api/form', {
             customerName,
@@ -129,6 +130,7 @@ class Master extends Component{
             qty,
             inch,
             mm,
+            specialcrating,
             tag,
             linearfeet,
             sqft,
@@ -408,6 +410,15 @@ class Master extends Component{
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="mm" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Special Crating</label>
+                                                <Input type="select" className="orderOptionsSpecsInput" name="specialcrating" onChange={this.handleChange}>
+                                                    <option>-</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </Input>
+                                                <p className="protectiveFilmDisclaimer">At extra cost</p>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Tag</label>
@@ -708,6 +719,10 @@ class Master extends Component{
                                             </FormGroup>
                                         </div>
                                     </div>
+                                    <FormGroup className="productDisclaimerFG">
+                                        <CustomInput type="checkbox" className="productDisclaimer"/>
+                                        <Label>I accept terms and services</Label>
+                                    </FormGroup>
                                     <Button className="contactButton" onClick={this.printPage}><p className="contactButtonText">Print Page</p></Button>
                                     <Button className="contactButton"><p className="contactButtonText">Submit</p></Button>
                                 </Form>

@@ -13,6 +13,14 @@
     width: 100%;
 }
 
+.deliveryServicesTitle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 250%;
+    font-weight: 400;
+}
+
 .supplierContainer {
     display: flex;
     flex-direction: column;
