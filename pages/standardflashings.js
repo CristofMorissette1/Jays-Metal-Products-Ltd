@@ -11,6 +11,10 @@ class StandardFlashings extends Component {
         this.state={
             showRoofFlashings: true,
             showWindowFlashings: false,
+            customerName: '',
+            phone: '',
+            email: '',
+            address: '',
             R01: '',
             R02: '',
             R03: '',
@@ -77,18 +81,22 @@ class StandardFlashings extends Component {
       handleRoofFlashingSubmit(e) {
         e.preventDefault();
     
-        const {R01, R02, R03, R04, R05, R06, R07, R08, R09 } = this.state;
+        const {R01, R02, R03, R04, R05, R06, R07, R08, R09, customerName, phone, email, address, } = this.state;
     
         const form = axios.post('http://localhost:3001/api/form', {
-          R01,
-          R02,
-          R03,
-          R04,
-          R05,
-          R06,
-          R07,
-          R08,
-          R09
+            R01,
+            R02,
+            R03,
+            R04,
+            R05,
+            R06,
+            R07,
+            R08,
+            R09,
+            customerName,
+            phone,
+            email,
+            address,
         })
         e.target.reset();
       }
@@ -96,7 +104,7 @@ class StandardFlashings extends Component {
       handleSideFlashingSubmit(e) {
         e.preventDefault();
     
-        const {WF01, WF02, WF03, WF04, WF05, WF06, WF07, WF08, WF09, WF10, WF11, WF12, WF13, WF14, WF15, WF16, WF17, WF18, WF19, WF20 } = this.state;
+        const {WF01, WF02, WF03, WF04, WF05, WF06, WF07, WF08, WF09, WF10, WF11, WF12, WF13, WF14, WF15, WF16, WF17, WF18, WF19, WF20, customerName, phone, email, address } = this.state;
     
         const form = axios.post('http://localhost:3001/api/form', {
             WF01,
@@ -118,7 +126,11 @@ class StandardFlashings extends Component {
             WF17,
             WF18,
             WF19,
-            WF20
+            WF20,
+            customerName,
+            phone,
+            email,
+            address,
         })
         e.target.reset();
       }
@@ -135,6 +147,44 @@ class StandardFlashings extends Component {
                     this.state.showRoofFlashings ?
                     (
                         <Form onSubmit={this.handleRoofFlashingSubmit} className="flashingsContainerRoof">
+                            <div className="orderOptionsTextForm">
+                                <FormGroup className="orderOptionsTextFormSmall">
+                                    <Input 
+                                        type="text"
+                                        className="orderOptionsTextInput"
+                                        name="customerName" 
+                                        placeholder="Customer Name"
+                                        onChange={this.handleChange}
+                                        required />
+                                </FormGroup>
+                                <FormGroup className="orderOptionsTextFormSmall">
+                                    <Input 
+                                        type="phone"
+                                        className="orderOptionsTextInput"
+                                        name="phone"
+                                        placeholder="Phone Number"
+                                        onChange={this.handleChange} 
+                                        required />
+                                </FormGroup>
+                                <FormGroup className="orderOptionsTextFormSmall">
+                                    <Input 
+                                        type="email"
+                                        className="orderOptionsTextInput"
+                                        name="email"
+                                        placeholder="Email Address"
+                                        onChange={this.handleChange}
+                                        required />
+                                </FormGroup>
+                                <FormGroup className="orderOptionsTextFormSmall">
+                                    <Input 
+                                        type="text"
+                                        className="orderOptionsTextInput"
+                                        name="address"
+                                        placeholder="Customer Address"
+                                        onChange={this.handleChange} 
+                                        required />
+                                </FormGroup>
+                            </div>
                             <h1 className="roofFlashingsTitle">Standard Roof Flashings</h1>
                             <FormGroup className="standardFlashingsRoofFG"> 
                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR01.jpg?alt=media&token=00d07b31-23cd-451b-abd6-2477e7f64306"/>
@@ -218,6 +268,19 @@ class StandardFlashings extends Component {
                                     name="R09"
                                     onChange={this.handleChange} />
                             </FormGroup>
+                            <FormGroup className="productDisclaimerFG">
+                                <p className="disclaimerTitle">Please note by placing an order with Jay’s Metal Products Ltd. you (THE CUSTOMER) are agreeing to the following terms and conditions:</p>
+                                    <ul>
+                                        <li>Jay’s Metal Products Ltd. recommends that prior to the installation of panels, the protective film is removed from the panel to prevent any accidents.</li>
+                                        <li>ALL orders are custom therefore are considered final sale.</li>
+                                        <li>Please refer to our delivery page for partnered delivery services.</li>
+                                        <li>If special crating is required, it may be subject to additional costs.</li>
+                                        <li>Customers are responsible for ensuring that products are deemed acceptable to their standards before removing the product from the facility. Upon removal from Jay’s Metal Products facility, damages incurred to the product are not covered by Jay’s Metal Products Ltd.</li>
+                                        <li>Jay’s Metal Products Ltd. is not responsible for defects to the product during installation.</li>
+                                    </ul>
+                                    <CustomInput type="checkbox" className="productDisclaimer"/>
+                                    <Label>I accept terms and services</Label>
+                            </FormGroup>
                             <Button className="roofFlashingsButton"><p className="contactButtonText">Submit</p></Button>
                         </Form>
                     )
@@ -230,6 +293,44 @@ class StandardFlashings extends Component {
                     this.state.showWindowFlashings ?
                     (
                         <Form onSubmit={this.handleSideFlashingSubmit} className="flashingsContainerRoof">
+                            <div className="orderOptionsTextForm">
+                                <FormGroup className="orderOptionsTextFormSmall">
+                                    <Input 
+                                        type="text"
+                                        className="orderOptionsTextInput"
+                                        name="customerName" 
+                                        placeholder="Customer Name"
+                                        onChange={this.handleChange}
+                                        required />
+                                </FormGroup>
+                                <FormGroup className="orderOptionsTextFormSmall">
+                                    <Input 
+                                        type="phone"
+                                        className="orderOptionsTextInput"
+                                        name="phone"
+                                        placeholder="Phone Number"
+                                        onChange={this.handleChange} 
+                                        required />
+                                </FormGroup>
+                                <FormGroup className="orderOptionsTextFormSmall">
+                                    <Input 
+                                        type="email"
+                                        className="orderOptionsTextInput"
+                                        name="email"
+                                        placeholder="Email Address"
+                                        onChange={this.handleChange}
+                                        required />
+                                </FormGroup>
+                                <FormGroup className="orderOptionsTextFormSmall">
+                                    <Input 
+                                        type="text"
+                                        className="orderOptionsTextInput"
+                                        name="address"
+                                        placeholder="Customer Address"
+                                        onChange={this.handleChange} 
+                                        required />
+                                </FormGroup>
+                            </div>
                             <h1 className="roofFlashingsTitle">Siding & Stucco</h1>
                             <FormGroup className="standardFlashingsRoofFG"> 
                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FWF01.jpg?alt=media&token=b67a6b22-77a7-408a-8d1d-923b5dbdf73b"/>
@@ -411,6 +512,19 @@ class StandardFlashings extends Component {
                                     placeholder="Color, Quantity"
                                     name="WF20"
                                     onChange={this.handleChange} />
+                            </FormGroup>
+                            <FormGroup className="productDisclaimerFG">
+                                <p className="disclaimerTitle">Please note by placing an order with Jay’s Metal Products Ltd. you (THE CUSTOMER) are agreeing to the following terms and conditions:</p>
+                                    <ul>
+                                        <li>Jay’s Metal Products Ltd. recommends that prior to the installation of panels, the protective film is removed from the panel to prevent any accidents.</li>
+                                        <li>ALL orders are custom therefore are considered final sale.</li>
+                                        <li>Please refer to our delivery page for partnered delivery services.</li>
+                                        <li>If special crating is required, it may be subject to additional costs.</li>
+                                        <li>Customers are responsible for ensuring that products are deemed acceptable to their standards before removing the product from the facility. Upon removal from Jay’s Metal Products facility, damages incurred to the product are not covered by Jay’s Metal Products Ltd.</li>
+                                        <li>Jay’s Metal Products Ltd. is not responsible for defects to the product during installation.</li>
+                                    </ul>
+                                    <CustomInput type="checkbox" className="productDisclaimer"/>
+                                    <Label>I accept terms and services</Label>
                             </FormGroup>
                             <Button className="roofFlashingsButton"><p className="contactButtonText">Submit</p></Button>
                         </Form>

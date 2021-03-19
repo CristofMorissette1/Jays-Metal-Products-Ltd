@@ -12,6 +12,10 @@ class Amc extends Component {
       panelA: true,
       panelB: false,
       panelC: false,
+      customerName: '',
+      phone: '',
+      email: '',
+      address: '',
       extrusions: '',
       reveals: '',
       starter: '',
@@ -93,7 +97,7 @@ printPage = e => {
 handleSumbit(e) {
   e.preventDefault();
 
-  const { extrusions, reveals, starter, linears, panelname, acmpanels, acmaccessories, acmpaneloption1, acmpaneloption2, parapetcapflashing, acmparapetcap, acmpaneljoints, acminsidecorner, acmoutsidecorner, acmupperwindowdrip, acmsidewindow, acmlowerwindowdrip, acmpanelendwall} = this.state;
+  const { extrusions, reveals, starter, linears, panelname, acmpanels, acmaccessories, acmpaneloption1, acmpaneloption2, parapetcapflashing, acmparapetcap, acmpaneljoints, acminsidecorner, acmoutsidecorner, acmupperwindowdrip, acmsidewindow, acmlowerwindowdrip, acmpanelendwall, customerName, phone, email, address,} = this.state;
 
   const form = axios.post('http://localhost:3001/api/form', {
     extrusions,
@@ -113,7 +117,11 @@ handleSumbit(e) {
     acmupperwindowdrip,
     acmsidewindow,
     acmlowerwindowdrip,
-    acmpanelendwall
+    acmpanelendwall,
+    customerName,
+    phone,
+    email,
+    address,
   })
   e.target.reset();
 }
@@ -129,28 +137,68 @@ handleSumbit(e) {
           <a className="acmHeaderOptions" onClick={this.panelC}>Panel C<img className="acmMenuImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/products%2Flowrib.png?alt=media&token=acf1ad55-b554-4870-a481-27be1983eeeb"/></a>
         </div>
         <Form className="orderOptionsContentForm" onSubmit={this.handleSumbit}>
-        <div className="orderOptionsSpecsSmall">
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>Extrusions</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="extrusions" required />
-                                            </FormGroup>
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>Reveals</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="reveals" required />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Label>Starter</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="starter" onChange={this.handleChange} required/>
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Linears</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="linears" onChange={this.handleChange} required/>
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Panel Name</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="panelname" onChange={this.handleChange} required/>
-                                            </FormGroup>
-                                        </div>
+          <div className="acmOptionsSpecsSmall">
+            <div className="orderOptionsTextForm">
+              <FormGroup className="orderOptionsTextFormSmall">
+                  <Input 
+                      type="text"
+                      className="orderOptionsTextInput"
+                      name="customerName" 
+                      placeholder="Customer Name"
+                      onChange={this.handleChange}
+                      required />
+              </FormGroup>
+              <FormGroup className="orderOptionsTextFormSmall">
+                  <Input 
+                      type="phone"
+                      className="orderOptionsTextInput"
+                      name="phone"
+                      placeholder="Phone Number"
+                      onChange={this.handleChange} 
+                      required />
+              </FormGroup>
+              <FormGroup className="orderOptionsTextFormSmall">
+                  <Input 
+                      type="email"
+                      className="orderOptionsTextInput"
+                      name="email"
+                      placeholder="Email Address"
+                      onChange={this.handleChange}
+                      required />
+              </FormGroup>
+              <FormGroup className="orderOptionsTextFormSmall">
+                  <Input 
+                      type="text"
+                      className="orderOptionsTextInput"
+                      name="address"
+                      placeholder="Customer Address"
+                      onChange={this.handleChange} 
+                      required />
+              </FormGroup>
+            </div>
+            <div className="acmInfoSmall">
+              <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                      <label>Extrusions</label>
+                      <Input type="text" className="orderOptionsSpecsInput" name="extrusions" required />
+                  </FormGroup>
+              <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                      <label>Reveals</label>
+                      <Input type="text" className="orderOptionsSpecsInput" name="reveals" required />
+                  </FormGroup>
+                  <FormGroup className="orderOptionsSpecsFG">
+                      <Label>Starter</Label>
+                      <Input type="text" className="orderOptionsSpecsInput" name="starter" onChange={this.handleChange} required/>
+                  </FormGroup>
+                  <FormGroup className="orderOptionsSpecsFG">
+                      <label>Linears</label>
+                      <Input type="text" className="orderOptionsSpecsInput" name="linears" onChange={this.handleChange} required/>
+                  </FormGroup>
+                  <FormGroup className="orderOptionsSpecsFG">
+                      <label>Panel Name</label>
+                      <Input type="text" className="orderOptionsSpecsInput" name="panelname" onChange={this.handleChange} required/>
+                  </FormGroup>
+                </div>
+            </div>
         {
           this.state.panelA ? (
             <div className="orderOptionsFlashingsMainContainer">

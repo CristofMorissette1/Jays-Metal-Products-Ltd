@@ -721,6 +721,15 @@ class Snaplock extends Component{
                                         </div>
                                     </div>
                                     <FormGroup className="productDisclaimerFG">
+                                    <p className="disclaimerTitle">Please note by placing an order with Jay’s Metal Products Ltd. you (THE CUSTOMER) are agreeing to the following terms and conditions:</p>
+                                        <ul>
+                                            <li>Jay’s Metal Products Ltd. recommends that prior to the installation of panels, the protective film is removed from the panel to prevent any accidents.</li>
+                                            <li>ALL orders are custom therefore are considered final sale.</li>
+                                            <li>Please refer to our delivery page for partnered delivery services.</li>
+                                            <li>If special crating is required, it may be subject to additional costs.</li>
+                                            <li>Customers are responsible for ensuring that products are deemed acceptable to their standards before removing the product from the facility. Upon removal from Jay’s Metal Products facility, damages incurred to the product are not covered by Jay’s Metal Products Ltd.</li>
+                                            <li>Jay’s Metal Products Ltd. is not responsible for defects to the product during installation.</li>
+                                        </ul>
                                         <CustomInput type="checkbox" className="productDisclaimer"/>
                                         <Label>I accept terms and services</Label>
                                     </FormGroup>

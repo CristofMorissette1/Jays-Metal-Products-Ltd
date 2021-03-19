@@ -1,27 +1,31 @@
 .mainHeader {
     display: flex;
     width: 100%;
+    border-bottom: 1px solid grey;
+    box-shadow: 0.35em 0.35em 0.35em rgba(0,0,0,0.135);
 }
 
 .logo {
     width: 25vh;
+    margin-right: 4%;
 }
 
 .link_container {
     display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
 }
-
 
 .links {
     font-weight: 500;
     cursor: pointer;
 }
 
+.mainHeaderLinkText {
+    width: 60%;
+    margin: 0%;
+}
+
 .linkContainerSmall {
-    width: 10%;
+    width: 5%;
 }
 
 .links:hover {
@@ -31,7 +35,13 @@
 
 .navMenu {
     position: absolute;
-    margin-top: 0.5%;
+    margin-top: 1.6%;
+    width: 7%;
+}
+
+.navMenuProducts {
+    position: absolute;
+    margin-top: 1.6%;
     width: 10%;
 }
 

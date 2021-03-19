@@ -16,3 +16,32 @@
 .metallicColorsImage {
     margin-top: 1%;
 }
+
+.acmColors {
+    width: 100%;
+}
+
+.acmColorsSmall {
+    width: 20%;
+    margin-right: 1%;
+    margin-top: 0.5%;
+}
+
+.acmColorsName {
+    position: absolute;
+    width: 14%;
+    background-color: #252525;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 125%;
+    font-weight: 300;
+}
+
+.metallicColorsHeader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
