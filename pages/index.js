@@ -124,34 +124,52 @@ showContactMenu(event) {
         <img className="homeImage1" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
         <div className="home2ndContainer">
           <h1 className="homeMainTitle">We Manufacture Precision-Made Metal Components</h1>
-          <p className="homeFirstText">Jays Metal Products custom manufactures quality, precision-made metal components. We have earned a solid reputation for providing top-of-the-line products to our customers.</p>
+          <p className="homeFirstText">Jay’s Metal Products Ltd. is a Canadian owned and operated metal fabrication manufacturer located in Calgary, Alberta. Our key focus is providing custom metal work service, specializing in exterior and interior roof and wall systems. The main focus at Jay’s Metal is delivering the highest quality products in the construction industry; we endeavor to provide our customers with the best standards. We work with our clients from start to finish, bringing their vision to life.</p>
         </div>
         <div className="home3rdContainer">
           <div className="servicesHomeContainer">
             <a href="/products"><img className="servicesHomeImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2FResidential.jpg?alt=media&token=c447a217-c7f1-4f47-afef-c13f254e5288"></img></a>
             <div className="servicesHomeTextContainer">
               <h3 className="servicesHomeTitle">Residential</h3>
-              <p className="servicesHomeText">Jays Metal Products has the equipment to accommodate demanding production requirements. The heart of our plant is our robotic Flexible Manufacturing Cell. We complete each job with accuracy and precision.</p>
+              <p className="servicesHomeText">We believe that home truly is where the heart is. At Jay’s Metal Products, we want to help you build your custom project in an economic and affordable way. We have a range of products, from accent pieces to bold luxury design. We are custom focused and meet unique manufacturing requirements without compromising product integrity or consistency.</p>
           </div>
           </div>
           <div className="servicesHomeContainer">
             <a href="/products"><img className="servicesHomeImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fagricultural.jpg?alt=media&token=263e4f33-9a0f-4300-a733-4354e5d38b0b"></img></a>
             <div className="servicesHomeTextContainer">
               <h3 className="servicesHomeTitle">Agricultural</h3>
-              <p className="servicesHomeText">Jays Metal Products is "custom" focused. We meet unique manufacturing requirements without compromising product integrity or consistency. We listen to customers and then develop a program to meet their needs.</p>
+              <p className="servicesHomeText">With durability and versatility in mind, we aim to create the longest lasting products possible for your agricultural projects. Check out our products for your future projects.</p>
             </div>
           </div>
           <div className="servicesHomeContainer">
             <a href="/products"><img className="servicesHomeImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fcommercial.jpg?alt=media&token=42a49fd0-9c14-4825-9592-0a572187dc0a"></img></a>
             <div className="servicesHomeTextContainer">
               <h3 className="servicesHomeTitle">Commercial</h3>
-              <p className="servicesHomeText">Our head office is located in Calgary, Alberta. We are looking forward to serve you.</p>
+              <p className="servicesHomeText">Jay’s Metal Products works with many builders, architects and contractors to bring their commercial projects to life. Ranging from dental centres to large scale apartment complexes we have done it all. Our plant has a variety of equipment to accommodate production requirements, the heart of our plan is our robotic flexible manufacturing cell. We are committed to completing each project with accuracy and precision.</p>
             </div>
           </div>
           <div className="home2ndContainer">
-          <h1 className="homeMainTitle">Why chose metal for your next project</h1>
-          <p className="homeFirstText">Jays Metal Products custom manufactures quality, precision-made metal components. We have earned a solid reputation for providing top-of-the-line products to our customers.</p>
+          <h1 className="homeMainTitle">Why Chose Metal for your next Project</h1>
+          <p className="homeFirstText">Jay’s Metal Products Ltd. is a Canadian owned and operated metal fabrication manufacturer located in Calgary, Alberta. Our key focus is providing custom metal work service, specializing in exterior and interior roof and wall systems. The main focus at Jay’s Metal is delivering the highest quality products in the construction industry; we endeavor to provide our customers with the best standards. We work with our clients from start to finish, bringing their vision to life.</p>
         </div>
+        <div className="servicesFeatureContainer">
+            <h2 className="homeFeaturesTitle">Durable</h2>
+            <div className="servicesHomeTextContainer">
+              <p className="servicesHomeFeaturesText">With durability and versatility in mind, we aim to create the longest lasting products possible for your agricultural projects. Check out our products for your future projects.</p>
+            </div>
+          </div>
+          <div className="servicesFeatureContainer">
+            <h2 className="homeFeaturesTitle">Flexibility</h2>
+            <div className="servicesHomeTextContainer">
+              <p className="servicesHomeFeaturesText">With durability and versatility in mind, we aim to create the longest lasting products possible for your agricultural projects. Check out our products for your future projects.</p>
+            </div>
+          </div>
+          <div className="servicesFeatureContainer">
+            <h2 className="homeFeaturesTitle">Light-Weight</h2>
+            <div className="servicesHomeTextContainer">
+              <p className="servicesHomeFeaturesText">With durability and versatility in mind, we aim to create the longest lasting products possible for your agricultural projects. Check out our products for your future projects.</p>
+            </div>
+          </div>
           <div className="aaraLogoContainer">
             <img src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/aara%20logo.png?alt=media&token=7e1b46f6-a698-461b-8084-ed8bfd541fde" className="aaraLogo"/>
           </div>
