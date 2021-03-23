@@ -178,7 +178,13 @@ class Snaplock extends Component{
                     <img className="productPageLandingImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
                     <div className="productPage2ndContainer">
                     <h1 className="productPageMainTitle">SL 100</h1>
-                    <p className="productPageMainText">SL100 panels are designed with efficiency in mind. With a similar aesthetic to the Standing Seam panel, the Snap lock panel is another excellent option engineered to be installed without the specialized tight-seaming clips, which the Standing Seam panel utilizes. The Snap lock panel snaps down on one side and is screwed down through its fabricated pleated edge on the other. At Jay's Metal Products, we manufacture both a 1" as well as a 1 1/2" design.</p>
+                    <p className="productPageMainText">The Interlock 100 is designed for its ease of installation. Interlock 100 is an excellent choice for metal siding as it is engineered to be installed without specialized tight-seaming clips. The Interlock panel snaps down on one side and is screwed down through its fabricated pleated edges on the other side.<br/>
+                    <ul>
+                        <li>No seaming tools are necessary for installation</li>
+                        <li>Seamless appearance due to concealed clip system</li>
+                        <li>Cut to a variety of lengths</li>
+                    </ul>
+                    </p>
                     </div>
                 </div>
                 <div className="productPage3rdContainer">

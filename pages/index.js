@@ -58,7 +58,8 @@ showContactMenu(event) {
                             <div className="navMenu">
                             <div className="navMenuLinks">
                                 <a className="navLinks" href="/products">Products</a>
-                                <a className="navLinks" href="/diamondrib">Aluore 454 System (ACM)</a>
+                                <a className="navLinks" href="/amc">Aluore 454 System (ACM)</a>
+                                <a className="navLinks" href="/corrugated">Icon Panel</a>
                                 <a className="navLinks" href="/corrugated">Corrugated 7/8</a>
                                 <a className="navLinks" href="/corrugated">Vivo 300 System</a>
                                 <a className="navLinks" href="/corrugated">Curved Panel System</a>
@@ -67,9 +68,9 @@ showContactMenu(event) {
                                 <a className="navLinks" href="/standingseam2">Standing Seam 200</a>
                                 <a className="navLinks" href="/standingseam2">AR-24 Roof System</a>
                                 <a className="navLinks" href="/snaplock">Interlock 100</a>
-                                <a className="navLinks" href="/snaplock">Interlock 150</a>
+                                <a className="navLinks" href="/snaplock2">Interlock 150</a>
                                 <a className="navLinks" href="/snaplock">Qr1200-F</a>
-                                <a className="navLinks" href="/snaplock">Q1200-R</a>
+                                <a className="navLinks" href="/snaplock">Qr1200-R</a>
                                 <a className="navLinks" href="/snaplock">UCAD Panel</a>
                                 <a className="navLinks" href="/master">Master 1236</a>
                                 <a className="navLinks" href="/grand">Grand 1236</a>
@@ -77,7 +78,6 @@ showContactMenu(event) {
                                 <a className="navLinks" href="/ultraclad">Ultraclad 936</a>
                                 <a className="navLinks" href="/diamondrib">Diamond Rib 630</a>
                                 <a className="navLinks" href="/valurib">ValuRib 630</a>
-                                <a className="navLinks" href="/lowrib">Low Rib</a>
                             </div>
                         </div>
                           ) :
@@ -148,6 +148,10 @@ showContactMenu(event) {
               <p className="servicesHomeText">Our head office is located in Calgary, Alberta. We are looking forward to serve you.</p>
             </div>
           </div>
+          <div className="home2ndContainer">
+          <h1 className="homeMainTitle">Why chose metal for your next project</h1>
+          <p className="homeFirstText">Jays Metal Products custom manufactures quality, precision-made metal components. We have earned a solid reputation for providing top-of-the-line products to our customers.</p>
+        </div>
           <div className="aaraLogoContainer">
             <img src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/aara%20logo.png?alt=media&token=7e1b46f6-a698-461b-8084-ed8bfd541fde" className="aaraLogo"/>
           </div>

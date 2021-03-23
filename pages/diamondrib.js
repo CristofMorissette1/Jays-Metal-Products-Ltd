@@ -181,7 +181,15 @@ class Diamondrib extends Component{
                     <img className="productPageLandingImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
                     <div className="productPage2ndContainer">
                     <h1 className="productPageMainTitle">Diamond Rib 630</h1>
-                    <p className="productPageMainText">The Diamond Rib 630 is a strong metal panel that can be used for a variety of roofing and siding applications. Utilizing multiple strength ribs this profile offers a pleasant appearance while maintaining the strength and durability that is required on commercial applications.</p>
+                    <p className="productPageMainText">The Diamond Rib 630 is a strong metal panel that can be used for a variety of roofing and siding applications. Utilizing multiple strength ribs this profile offers a pleasant appearance while maintaining the strength and durability that is required on commercial applications.<br/>
+                    <ul>
+                        <li>Unique aesthetic finish</li>
+                        <li>Environmental and Economic</li>
+                        <li>Durable</li>
+                        <li>Easy Installation</li>
+                        <li>Paint covered up to 40 years under warranty</li>
+                    </ul>
+                    </p>
                     </div>
                 </div>
                 <div className="productPage3rdContainer">

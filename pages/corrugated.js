@@ -178,7 +178,13 @@ class Corrugated extends Component{
                     <img className="productPageLandingImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
                     <div className="productPage2ndContainer">
                     <h1 className="productPageMainTitle">Corrugated 7/8</h1>
-                    <p className="productPageMainText">This is a timeless panel, with a long history of proven use in the industry. We offer this panel in an assortment of color finishing’s, including galvalume. This panel is utilized for projects on schools, supermarkets and shopping malls.</p>
+                    <p className="productPageMainText">Our Corrugated ⅞” panels are a unique cladding product, the wave-like corrugations cause any residential or commercial building to stand out. The panels are 37” wide and available in 22, 24, 26 or 29 gauge. The corrugations are only 2.66” from crest to crest which gives beautiful symmetry to the panel.<br/>
+                        <ul>
+                            <li>Essentially Leak-proof</li>
+                            <li>Superior energy conservation</li>
+                            <li>Aesthetic versatility</li>
+                        </ul>
+                    </p>
                     </div>
                 </div>
                 <div className="productPage3rdContainer">

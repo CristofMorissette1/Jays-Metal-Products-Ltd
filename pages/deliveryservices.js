@@ -12,12 +12,6 @@ class DeliveryServices extends Component {
                 <h1 className="deliveryServicesTitle">Please refer to our partnered delivery services below:</h1>
                 <div className="deliveryContainer">
                     <div className="supplierContainer">
-                        <h1 className="supplierTitle">Richard Kenney</h1>
-                        <p className="supplierText">(403)-971-2332</p>
-                        <p className="supplierText">Bed Size: Accommodates up to 40’</p>
-                        <p className="supplierText">Maximum Weight Capacity: 18,000lb</p>
-                    </div>
-                    <div className="supplierContainer">
                         <h1 className="supplierTitle">Dan Huynh</h1>
                         <p className="supplierText">(403)-815-7630</p>
                         <p className="supplierText">ND XPRESS</p>

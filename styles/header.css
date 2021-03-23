@@ -56,10 +56,14 @@
 .navLinks {
     font-size: 90%;
     font-weight: 500;
-    color: #666;
+    color: #fff;
     margin-top: 4%;
     border-bottom: 1px solid white;
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.navLinks:hover {
+    font-size: 125%;
 }

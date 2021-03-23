@@ -178,7 +178,15 @@ class Grand extends Component{
                     <img className="productPageLandingImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
                     <div className="productPage2ndContainer">
                     <h1 className="productPageMainTitle">Grand 1236</h1>
-                    <p className="productPageMainText">The Grand 1236 profile is an excellent choice for exterior walls on pre-engineered, insulated metal buildings. The unique inverted profile allows the panel to compress any pre-engineered drape insulation, while causing minimal distortion to the panel itself.</p>
+                    <p className="productPageMainText">The Grand 1236 profile is an excellent choice for exterior walls on pre-engineered, insulated metal buildings. The unique inverted profile allows the panel to compress any pre-engineered drape insulation, while causing minimal distortion to the panel itself.<br/>
+                        <ul>
+                            <li>Long lasting and Economical</li>
+                            <li>Low installation and Maintenance Costs</li>
+                            <li>Durable</li>
+                            <li>Inverted profile</li>
+                            <li>Paint covered up to 40 years under warranty</li>
+                        </ul>
+                    </p>
                     </div>
                 </div>
                 <div className="productPage3rdContainer">

@@ -178,7 +178,14 @@ class Valurib extends Component{
                     <img className="productPageLandingImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
                     <div className="productPage2ndContainer">
                     <h1 className="productPageMainTitle">ValuRib 630</h1>
-                    <p className="productPageMainText">The ValuRib 630 profile further increases our line of metal roofing and siding panels. The ValuRib 630 Panel profile is a great solution for metal roofing and siding panels as it can be secured to the building by fasteners through the panel ribs, it is an ideal application for agricultural and light commercial buildings.</p>
+                    <p className="productPageMainText">The ValuRib 630 profile further increases our line of metal roofing and siding panels. The ValuRib 630 Panel profile is a great solution for metal roofing and siding panels as it can be secured to the building by fasteners through the panel ribs, it is an ideal application for agricultural and light commercial buildings.<br/>
+                    <ul>
+                        <li>Ideal for Agricultural Applications</li>
+                        <li>Easy Installation</li>
+                        <li>Easy to transport</li>
+                        <li>Paint covered up to 40 years under warranty</li>
+                    </ul>
+                    </p>
                     </div>
                 </div>
                 <div className="productPage3rdContainer">

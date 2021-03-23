@@ -177,7 +177,13 @@ class Master extends Component{
                     <img className="productPageLandingImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
                     <div className="productPage2ndContainer">
                     <h1 className="productPageMainTitle">Master 1236</h1>
-                    <p className="productPageMainText">Strength, clean design, and color diversity allows the Master 1236 profile to be the choice on new construction, renovations and in particular, pre-engineered steel buildings.</p>
+                    <p className="productPageMainText">Strength, clean design, and color diversity allows the Master 1236 profile to be the choice on new construction, renovations and in particular, pre-engineered steel buildings.<br/>
+                        <ul>
+                        <li>Lightweight and easy to install</li>
+                        <li>Durable and low maintenance</li>
+                        <li>Paint covered up to 40 years under warranty</li>
+                        </ul>
+                    </p>
                     </div>
                 </div>
                 <div className="productPage3rdContainer">

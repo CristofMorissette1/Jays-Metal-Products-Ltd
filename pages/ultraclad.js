@@ -176,7 +176,13 @@ class Ultraclad extends Component{
                     <img className="productPageLandingImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
                     <div className="productPage2ndContainer">
                     <h1 className="productPageMainTitle">Ultraclad 936</h1>
-                    <p className="productPageMainText">The Ultraclad 936 Profile can be utilized the same way as the Duraclad 936 panel. The Ultraclad 936 profile provides a unique visual appeal, making it a popular choice for both roofing and siding applications.</p>
+                    <p className="productPageMainText">The Ultraclad 936 Profile can be utilized the same way as the Duraclad 936 panel. The Ultraclad 936 profile provides a unique visual appeal, making it a popular choice for both roofing and siding applications.<br/>
+                    <ul>
+                        <li>Flexible between roof and wall applications</li>
+                        <li>Comes in ⅜” ribs</li>
+                        <li>Paint covered up to 40 years under warranty</li>
+                    </ul>
+                    </p>
                     </div>
                 </div>
                 <div className="productPage3rdContainer">

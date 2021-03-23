@@ -178,7 +178,15 @@ class Standingseam extends Component{
                     <img className="productPageLandingImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
                     <div className="productPage2ndContainer">
                     <h1 className="productPageMainTitle">SS 100</h1>
-                    <p className="productPageMainText">The SS100 panel is a high end steel roofing panel; with its hidden fastener system it provides a desired aesthetic appeal. It can be manufactured in 1 inch or 1 ½ inch designs depending on the application. The specialized design clip fastening system allows for each panel to cover up the fastening of the previous panel thus providing a fantastic looking roof that provides a long lasting impression in residential and commercial environments.</p>
+                    <p className="productPageMainText">Our mechanically standing seam system is the perfect complement to any exterior of commercial or residential buildings. MSS 100 provides a clean visual appearance due to the hidden fastener system, this allows for a seamless look. The 1” panel is ideal for residential applications with a slope greater than 3:12, this will assist against the elements and will be aesthetically pleasing as the roof is a focal point of a building.<br/>
+                    <ul>
+                        <li>Single-lock</li>
+                        <li>Cooling and energy reduction due to reflective steel reflective properties</li>
+                        <li>Low maintenance</li>
+                        <li>Varying seam heights</li>
+                        <li>Paint covered up to 40 years under warranty</li>
+                    </ul>
+                    </p>
                     </div>
                 </div>
                 <div className="productPage3rdContainer">

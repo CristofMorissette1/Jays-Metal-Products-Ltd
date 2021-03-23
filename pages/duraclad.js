@@ -178,7 +178,13 @@ class Duraclad extends Component{
                     <img className="productPageLandingImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
                     <div className="productPage2ndContainer">
                     <h1 className="productPageMainTitle">Duraclad 936</h1>
-                    <p className="productPageMainText">The Duraclad 936 is well suited for wall or roof applications. This panel offers strength and an anti-syphon side-lap design, an economic solution that provides peace of mind. Available in a wide range of gauges and finishes, Duraclad is one of our most popular panels.</p>
+                    <p className="productPageMainText">The Duraclad 936 is well suited for wall or roof applications. This panel offers strength and an anti-syphon side-lap design, an economic solution that provides peace of mind. Available in a wide range of gauges and finishes, Duraclad is one of our most popular panels.<br/>
+                    <ul>
+                        <li>Cut to custom lengths</li>
+                        <li>Maintenance free</li>
+                        <li>Paint covered up to 40 years under warranty</li>
+                    </ul>
+                    </p>
                     </div>
                 </div>
                 <div className="productPage3rdContainer">

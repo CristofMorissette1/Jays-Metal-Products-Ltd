@@ -179,7 +179,15 @@ class Standingseam2 extends Component{
                     <img className="productPageLandingImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
                     <div className="productPage2ndContainer">
                     <h1 className="productPageMainTitle">SS 150</h1>
-                    <p className="productPageMainText">The SS150 panel is a high end steel roofing panel; with its hidden fastener system it provides a desired aesthetic appeal. It can be manufactured in 1 inch or 1 ½ inch designs depending on the application. The specialized design clip fastening system allows for each panel to cover up the fastening of the previous panel thus providing a fantastic looking roof that provides a long lasting impression in residential and commercial environments.</p>
+                    <p className="productPageMainText">MSS 150 provides a clean visual appearance due to the hidden fastener system. With characteristics like the MSS 100 panel, the MSS 150 panel is ideal for commercial roofs when combined with a slope of ½ :12. This will allow for lower costs due to a low sloping roof needing fewer materials. The panels are available in the SMP pre-painted steel along with PVDF premium.<br/>
+                    <ul>
+                        <li>Single-lock</li>
+                        <li>Cooling and energy reduction due to reflective steel reflective properties</li>
+                        <li>Low maintenance</li>
+                        <li>Varying seam heights</li>
+                        <li>Paint covered up to 40 years under warranty</li>
+                    </ul>
+                    </p>
                     </div>
                 </div>
                 <div className="productPage3rdContainer">
