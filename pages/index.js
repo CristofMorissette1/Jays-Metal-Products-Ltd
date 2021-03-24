@@ -59,7 +59,7 @@ showContactMenu(event) {
                             <div className="navMenuLinks">
                                 <a className="navLinks" href="/products">Products</a>
                                 <a className="navLinks" href="/amc">Aluore 454 System (ACM)</a>
-                                <a className="navLinks" href="/corrugated">Icon Panel</a>
+                                <a className="navLinks" href="/iconpanels">Icon Panel</a>
                                 <a className="navLinks" href="/corrugated">Corrugated 7/8</a>
                                 <a className="navLinks" href="/corrugated">Vivo 300 System</a>
                                 <a className="navLinks" href="/corrugated">Curved Panel System</a>
@@ -69,8 +69,8 @@ showContactMenu(event) {
                                 <a className="navLinks" href="/standingseam2">AR-24 Roof System</a>
                                 <a className="navLinks" href="/snaplock">Interlock 100</a>
                                 <a className="navLinks" href="/snaplock2">Interlock 150</a>
-                                <a className="navLinks" href="/snaplock">Qr1200-F</a>
-                                <a className="navLinks" href="/snaplock">Qr1200-R</a>
+                                <a className="navLinks" href="/snaplock">QR1200-F</a>
+                                <a className="navLinks" href="/snaplock">QR1200-R</a>
                                 <a className="navLinks" href="/snaplock">UCAD Panel</a>
                                 <a className="navLinks" href="/master">Master 1236</a>
                                 <a className="navLinks" href="/grand">Grand 1236</a>
@@ -148,7 +148,7 @@ showContactMenu(event) {
               <p className="servicesHomeText">Jay’s Metal Products works with many builders, architects and contractors to bring their commercial projects to life. Ranging from dental centres to large scale apartment complexes we have done it all. Our plant has a variety of equipment to accommodate production requirements, the heart of our plan is our robotic flexible manufacturing cell. We are committed to completing each project with accuracy and precision.</p>
             </div>
           </div>
-          <div className="home2ndContainer">
+          <div className="home4thContainer">
           <h1 className="homeMainTitle">Why Chose Metal for your next Project</h1>
           <p className="homeFirstText">Jay’s Metal Products Ltd. is a Canadian owned and operated metal fabrication manufacturer located in Calgary, Alberta. Our key focus is providing custom metal work service, specializing in exterior and interior roof and wall systems. The main focus at Jay’s Metal is delivering the highest quality products in the construction industry; we endeavor to provide our customers with the best standards. We work with our clients from start to finish, bringing their vision to life.</p>
         </div>

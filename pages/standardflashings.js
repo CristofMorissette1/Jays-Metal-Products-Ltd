@@ -147,6 +147,33 @@ class StandardFlashings extends Component {
                     this.state.showRoofFlashings ?
                     (
                         <Form onSubmit={this.handleRoofFlashingSubmit} className="flashingsContainerRoof">
+                            <FormGroup className="standardFlashingsRoofFG"> 
+                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR01.jpg?alt=media&token=00d07b31-23cd-451b-abd6-2477e7f64306"/>
+                            </FormGroup>
+                            <FormGroup className="standardFlashingsRoofFG">
+                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR02.jpg?alt=media&token=d3b437cc-67a9-4f54-a042-11941d0b720d"/>
+                            </FormGroup>
+                            <FormGroup className="standardFlashingsRoofFG">
+                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR03.jpg?alt=media&token=525814df-4f4f-4b69-b01c-5c3c0186a979"/>
+                            </FormGroup>
+                            <FormGroup className="standardFlashingsRoofFG">
+                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR04.jpg?alt=media&token=4b6f68d0-890b-41f9-9192-c524c10a1606"/>
+                            </FormGroup>
+                            <FormGroup className="standardFlashingsRoofFG">
+                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR05.jpg?alt=media&token=69e28a4b-5a36-4812-861f-8d279abe6756"/>
+                            </FormGroup>
+                            <FormGroup className="standardFlashingsRoofFG">
+                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR06.jpg?alt=media&token=b95dc21c-aa12-49af-a1e4-79a8e00241b5"/>
+                            </FormGroup>
+                            <FormGroup className="standardFlashingsRoofFG">
+                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR07.jpg?alt=media&token=2408f5aa-dbe6-4377-8ee4-389cbd6c5d60"/>
+                            </FormGroup>
+                            <FormGroup className="standardFlashingsRoofFG">
+                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR08.jpg?alt=media&token=f6215c3c-d839-4928-af63-76a7dc217766"/>
+                            </FormGroup>
+                            <FormGroup className="standardFlashingsRoofFG">
+                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR09.jpg?alt=media&token=6d81dd65-d5b3-4600-9fd7-ab4c884b7f40"/>
+                            </FormGroup>
                             <div className="orderOptionsTextForm">
                             <h2 className="orderOptionsTextFormTitle">Standard Roof Flashings</h2>
                                 <FormGroup className="orderOptionsTextFormSmall">
@@ -186,33 +213,6 @@ class StandardFlashings extends Component {
                                         required />
                                 </FormGroup>
                             </div>
-                            <FormGroup className="standardFlashingsRoofFG"> 
-                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR01.jpg?alt=media&token=00d07b31-23cd-451b-abd6-2477e7f64306"/>
-                            </FormGroup>
-                            <FormGroup className="standardFlashingsRoofFG">
-                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR02.jpg?alt=media&token=d3b437cc-67a9-4f54-a042-11941d0b720d"/>
-                            </FormGroup>
-                            <FormGroup className="standardFlashingsRoofFG">
-                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR03.jpg?alt=media&token=525814df-4f4f-4b69-b01c-5c3c0186a979"/>
-                            </FormGroup>
-                            <FormGroup className="standardFlashingsRoofFG">
-                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR04.jpg?alt=media&token=4b6f68d0-890b-41f9-9192-c524c10a1606"/>
-                            </FormGroup>
-                            <FormGroup className="standardFlashingsRoofFG">
-                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR05.jpg?alt=media&token=69e28a4b-5a36-4812-861f-8d279abe6756"/>
-                            </FormGroup>
-                            <FormGroup className="standardFlashingsRoofFG">
-                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR06.jpg?alt=media&token=b95dc21c-aa12-49af-a1e4-79a8e00241b5"/>
-                            </FormGroup>
-                            <FormGroup className="standardFlashingsRoofFG">
-                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR07.jpg?alt=media&token=2408f5aa-dbe6-4377-8ee4-389cbd6c5d60"/>
-                            </FormGroup>
-                            <FormGroup className="standardFlashingsRoofFG">
-                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR08.jpg?alt=media&token=f6215c3c-d839-4928-af63-76a7dc217766"/>
-                            </FormGroup>
-                            <FormGroup className="standardFlashingsRoofFG">
-                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FR09.jpg?alt=media&token=6d81dd65-d5b3-4600-9fd7-ab4c884b7f40"/>
-                            </FormGroup>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
@@ -272,7 +272,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color2" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color2">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>Brown</option>
@@ -284,7 +284,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size2" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size2" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>8'</option>
                                         <option>10'</option>
@@ -292,13 +292,13 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity2" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity2" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products3" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products3">
                                         <option>-</option>
                                             <option>R01</option>
                                             <option>R02</option>
@@ -313,7 +313,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color3" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color3">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>Brown</option>
@@ -325,7 +325,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size3" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size3" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>8'</option>
                                         <option>10'</option>
@@ -333,13 +333,13 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity3" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity3" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products4" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products4">
                                         <option>-</option>
                                             <option>R01</option>
                                             <option>R02</option>
@@ -354,7 +354,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color4" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color4">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>Brown</option>
@@ -366,7 +366,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size4" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size4" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>8'</option>
                                         <option>10'</option>
@@ -374,13 +374,13 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity4" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity4" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products5" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products5">
                                         <option>-</option>
                                             <option>R01</option>
                                             <option>R02</option>
@@ -395,7 +395,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color5" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color5">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>Brown</option>
@@ -407,7 +407,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size5" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size5" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>8'</option>
                                         <option>10'</option>
@@ -415,13 +415,13 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity5" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity5" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products6" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products6">
                                         <option>-</option>
                                             <option>R01</option>
                                             <option>R02</option>
@@ -436,7 +436,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color6" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color6">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>Brown</option>
@@ -448,7 +448,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size6" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size6" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>8'</option>
                                         <option>10'</option>
@@ -456,13 +456,13 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity6" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity6" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products7" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products7">
                                         <option>-</option>
                                             <option>R01</option>
                                             <option>R02</option>
@@ -477,7 +477,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color7" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color7">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>Brown</option>
@@ -489,7 +489,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size7" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size7" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>8'</option>
                                         <option>10'</option>
@@ -497,13 +497,13 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity7" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity7" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products8" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products8">
                                         <option>-</option>
                                             <option>R01</option>
                                             <option>R02</option>
@@ -518,7 +518,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color8" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color8">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>Brown</option>
@@ -530,7 +530,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size8" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size8" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>8'</option>
                                         <option>10'</option>
@@ -538,13 +538,13 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity8" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity8" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products9" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products9">
                                         <option>-</option>
                                             <option>R01</option>
                                             <option>R02</option>
@@ -559,7 +559,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color9" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color9">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>Brown</option>
@@ -571,7 +571,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size9" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size9" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>8'</option>
                                         <option>10'</option>
@@ -579,7 +579,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity9" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity9" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <FormGroup className="productDisclaimerFG">
@@ -607,45 +607,6 @@ class StandardFlashings extends Component {
                     this.state.showWindowFlashings ?
                     (
                         <Form onSubmit={this.handleSideFlashingSubmit} className="flashingsContainerRoof">
-                            <div className="orderOptionsTextForm">
-                            <h2 className="orderOptionsTextFormTitle">Siding & Stucco Flashings</h2>
-                                <FormGroup className="orderOptionsTextFormSmall">
-                                    <Input 
-                                        type="text"
-                                        className="orderOptionsTextInput"
-                                        name="customerName" 
-                                        placeholder="Customer Name"
-                                        onChange={this.handleChange}
-                                        required />
-                                </FormGroup>
-                                <FormGroup className="orderOptionsTextFormSmall">
-                                    <Input 
-                                        type="phone"
-                                        className="orderOptionsTextInput"
-                                        name="phone"
-                                        placeholder="Phone Number"
-                                        onChange={this.handleChange} 
-                                        required />
-                                </FormGroup>
-                                <FormGroup className="orderOptionsTextFormSmall">
-                                    <Input 
-                                        type="text"
-                                        className="orderOptionsTextInput"
-                                        name="po"
-                                        placeholder="PO"
-                                        onChange={this.handleChange} 
-                                        required />
-                                </FormGroup>
-                                <FormGroup className="orderOptionsTextFormSmall">
-                                    <Input 
-                                        type="email"
-                                        className="orderOptionsTextInput"
-                                        name="email"
-                                        placeholder="Email Address"
-                                        onChange={this.handleChange}
-                                        required />
-                                </FormGroup>
-                            </div>
                             <FormGroup className="standardFlashingsRoofFG"> 
                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FWF01.jpg?alt=media&token=b67a6b22-77a7-408a-8d1d-923b5dbdf73b"/>
                             </FormGroup>
@@ -706,6 +667,45 @@ class StandardFlashings extends Component {
                             <FormGroup className="standardFlashingsRoofFG">
                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standard%20Flashings%2FWF20.jpg?alt=media&token=bd2758c2-00df-4715-bf7c-9a039777dbf1"/>
                             </FormGroup>
+                            <div className="orderOptionsTextForm">
+                            <h2 className="orderOptionsTextFormTitle">Siding & Stucco Flashings</h2>
+                                <FormGroup className="orderOptionsTextFormSmall">
+                                    <Input 
+                                        type="text"
+                                        className="orderOptionsTextInput"
+                                        name="customerName" 
+                                        placeholder="Customer Name"
+                                        onChange={this.handleChange}
+                                        required />
+                                </FormGroup>
+                                <FormGroup className="orderOptionsTextFormSmall">
+                                    <Input 
+                                        type="phone"
+                                        className="orderOptionsTextInput"
+                                        name="phone"
+                                        placeholder="Phone Number"
+                                        onChange={this.handleChange} 
+                                        required />
+                                </FormGroup>
+                                <FormGroup className="orderOptionsTextFormSmall">
+                                    <Input 
+                                        type="text"
+                                        className="orderOptionsTextInput"
+                                        name="po"
+                                        placeholder="PO"
+                                        onChange={this.handleChange} 
+                                        required />
+                                </FormGroup>
+                                <FormGroup className="orderOptionsTextFormSmall">
+                                    <Input 
+                                        type="email"
+                                        className="orderOptionsTextInput"
+                                        name="email"
+                                        placeholder="Email Address"
+                                        onChange={this.handleChange}
+                                        required />
+                                </FormGroup>
+                            </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
@@ -757,7 +757,7 @@ class StandardFlashings extends Component {
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products2" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products2">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -783,7 +783,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color2" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color2">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -792,20 +792,20 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size2" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size2" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity2" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity2" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products3" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products3">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -831,7 +831,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color3" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color3">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -840,20 +840,20 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size3" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size3" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity3" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity3" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products4" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products4">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -879,7 +879,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color4" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color4">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -888,20 +888,20 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size4" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size4" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity4" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity4" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products5" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products5">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -927,7 +927,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color5" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color5">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -936,20 +936,20 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size5" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size5" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity5" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity5" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products6" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products6">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -975,7 +975,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color6" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color6">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -984,20 +984,20 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size6" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size6" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity6" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity6" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products7" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products7">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -1023,7 +1023,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color7" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color7">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -1032,20 +1032,20 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size7" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size7" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity7" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity7" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products8" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products8">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -1071,7 +1071,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color8" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color8">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -1080,20 +1080,20 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size8" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size8" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity8" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity8" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products9" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products9">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -1119,7 +1119,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color9" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color9">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -1128,20 +1128,20 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size9" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size9" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity9" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity9" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products10" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products10">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -1167,7 +1167,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color10" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color10">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -1176,20 +1176,20 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size10" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size10" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity10" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity10" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products11" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products11">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -1215,7 +1215,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color11" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color11">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -1224,20 +1224,20 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size11" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size11" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity11" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity11" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products12" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products12">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -1263,7 +1263,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color12" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color12">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -1272,20 +1272,20 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size12" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size12" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity12" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity12" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products13" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products13">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -1311,7 +1311,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color13" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color13">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -1320,20 +1320,20 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size13" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size13" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity13" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity13" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products14" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products14">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -1359,7 +1359,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color14" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color14">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -1368,20 +1368,20 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size14" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size14" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity14" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity14" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products15" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products15">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -1407,7 +1407,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color15" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color15">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -1416,20 +1416,20 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size15" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size15" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity15" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity15" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products16" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products16">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -1455,7 +1455,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color16" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color16">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -1464,20 +1464,20 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size16" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size16" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity16" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity16" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products17" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products17">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -1503,7 +1503,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color17" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color17">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -1512,20 +1512,20 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size17" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size17" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity17" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity17" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products18" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products18">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -1551,7 +1551,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color18" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color18">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -1560,20 +1560,20 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size18" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size18" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity18" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity18" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products19" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products19">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -1599,7 +1599,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color19" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color19">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -1608,20 +1608,20 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size19" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size19" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity19" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity19" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <div className="acmInfoSmall">
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Products</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="products20" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="products20">
                                             <option>-</option>
                                             <option>WF01</option>
                                             <option>WF02</option>
@@ -1647,7 +1647,7 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                 <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                         <label>Color</label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="color20" required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="color20">
                                         <option>-</option>
                                         <option>Black</option>
                                         <option>White</option>
@@ -1656,14 +1656,14 @@ class StandardFlashings extends Component {
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <Label>Size</Label>
-                                        <Input type="select" className="orderOptionsSpecsInput" name="size20" onChange={this.handleChange} required>
+                                        <Input type="select" className="orderOptionsSpecsInput" name="size20" onChange={this.handleChange}>
                                         <option>-</option>
                                         <option>10'</option>
                                         </Input>
                                     </FormGroup>
                                     <FormGroup className="orderOptionsSpecsFG">
                                         <label>Quantity</label>
-                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity20" onChange={this.handleChange} required/>
+                                        <Input type="text" className="orderOptionsSpecsInput" name="quantity20" onChange={this.handleChange}/>
                                     </FormGroup>
                             </div>
                             <FormGroup className="productDisclaimerFG">

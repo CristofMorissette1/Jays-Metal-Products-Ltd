@@ -388,7 +388,11 @@ class Ultraclad extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>Protective film</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="protectivefilm" onChange={this.handleChange} />
+                                                <Input type="select" className="orderOptionsSpecsInput" name="protectivefilm" onChange={this.handleChange}>
+                                                    <option>-</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </Input>
                                                 <p className="protectiveFilmDisclaimer">10cents extra per sq/ft</p>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">

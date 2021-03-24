@@ -60,7 +60,7 @@ showContactMenu(event) {
                             <div className="navMenuLinks">
                                 <a className="navLinks" href="/products">Products</a>
                                 <a className="navLinks" href="/amc">Aluore 454 System (ACM)</a>
-                                <a className="navLinks" href="/corrugated">Icon Panel</a>
+                                <a className="navLinks" href="/iconpanels">Icon Panel</a>
                                 <a className="navLinks" href="/corrugated">Corrugated 7/8</a>
                                 <a className="navLinks" href="/corrugated">Vivo 300 System</a>
                                 <a className="navLinks" href="/corrugated">Curved Panel System</a>
@@ -70,8 +70,8 @@ showContactMenu(event) {
                                 <a className="navLinks" href="/standingseam2">AR-24 Roof System</a>
                                 <a className="navLinks" href="/snaplock">Interlock 100</a>
                                 <a className="navLinks" href="/snaplock2">Interlock 150</a>
-                                <a className="navLinks" href="/snaplock">Qr1200-F</a>
-                                <a className="navLinks" href="/snaplock">Qr1200-R</a>
+                                <a className="navLinks" href="/snaplock">QR1200-F</a>
+                                <a className="navLinks" href="/snaplock">QR1200-R</a>
                                 <a className="navLinks" href="/snaplock">UCAD Panel</a>
                                 <a className="navLinks" href="/master">Master 1236</a>
                                 <a className="navLinks" href="/grand">Grand 1236</a>
