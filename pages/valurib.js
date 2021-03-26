@@ -356,8 +356,7 @@ class Valurib extends Component{
                                                 className="orderOptionsTextInput"
                                                 name="address"
                                                 placeholder="Customer Address"
-                                                onChange={this.handleChange} 
-                                                required />
+                                                onChange={this.handleChange} />
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
                                             <Input 
