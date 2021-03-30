@@ -22,12 +22,12 @@ class Duraclad extends Component{
             finish: '',
             totallinearfeet: '',
             totalsquarefeet: '',
-            qty: 0,
-            inch: 0,
+            qty: '',
+            inch: '',
             mm: '',
             specialcrating: '',
             tag: '',
-            linearfeet: 0,
+            linearfeet: '',
             sqft: '',
             drip1: '',
             drip2: '',
@@ -104,9 +104,16 @@ class Duraclad extends Component{
         })
         let qtyNum = this.state.qty;
         let size = this.state.inch;
-        let linearFeet = qtyNum * size;
+        let linearFeet = (qtyNum * size) / 12;
+        let mmSize = size * 25.4;
+        let sqft = linearFeet * (this.state.finish / 12);
+        console.log(mmSize)
         this.setState({
-            linearfeet: linearFeet
+            linearfeet: linearFeet,
+            mm: mmSize,
+            squarefeet: sqft,
+            totallinearfeet: linearFeet,
+            totalsquarefeet: sqft
         })
       }
     
@@ -385,7 +392,7 @@ class Duraclad extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total Linear Feet</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="totallinearfeet" onChange={this.handleChange} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="totallinearfeet" placeholder={this.state.totallinearfeet} readOnly />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>Protective film</Label>
@@ -400,26 +407,26 @@ class Duraclad extends Component{
                                                 <label>Finish</label>
                                                 <Input type="select" className="orderOptionsSpecsInput" name="finish" onChange={this.handleChange} required >
                                                     <option>-</option>
-                                                    <option>30"</option>
+                                                    <option>30</option>
                                                 </Input>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="totalsquarefeet" onChange={this.handleChange} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="totalsquarefeet" placeholder={this.state.totalsquarefeet} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="number" className="orderOptionsSpecsInput" name="qty" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="qty" required />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="number" className="orderOptionsSpecsInput" name="inch" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="inch" required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="mm" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="mm" placeholder={this.state.mm} readOnly />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Special Crating</label>
@@ -436,11 +443,11 @@ class Duraclad extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Linear Feet</label>
-                                                <Input readOnly type="number" className="orderOptionsSpecsInput" name="linearfeet" placeholder={this.state.linearfeet}/>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet" placeholder={this.state.linearfeet}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet" onChange={this.handleChange} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet" placeholder={this.state.totalsquarefeet} readOnly />
                                             </FormGroup>
                                         </div>
                                     </div>

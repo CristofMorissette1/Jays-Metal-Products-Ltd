@@ -22,20 +22,20 @@ class Iconpanels extends Component{
             finish: '',
             totallinearfeet: '',
             totalsquarefeet: '',
-            qty: 0,
-            inch: 0,
+            qty: '',
+            inch: '',
             mm: '',
             specialcrating: '',
             tag: '',
-            linearfeet: 0,
+            linearfeet: '',
             sqft: '',
             i101: '',
             i102: '',
+            i103: '',
             i104: '',
             i106: '',
             i107: '',
             i108: '',
-            i109: '',
             i111: '',
             i113: '',
             i112: '',
@@ -53,7 +53,6 @@ class Iconpanels extends Component{
             i129: '',
             i130: '',
             i131: '',
-            i132: '',
             vvalley1: '',
             snowstop1: '',
             cleat: '',
@@ -132,16 +131,23 @@ class Iconpanels extends Component{
         })
         let qtyNum = this.state.qty;
         let size = this.state.inch;
-        let linearFeet = qtyNum * size;
+        let linearFeet = (qtyNum * size) / 12;
+        let mmSize = size * 25.4;
+        let sqft = linearFeet * (this.state.finish / 12);
+        console.log(mmSize)
         this.setState({
-            linearfeet: linearFeet
+            linearfeet: linearFeet,
+            mm: mmSize,
+            squarefeet: sqft,
+            totallinearfeet: linearFeet,
+            totalsquarefeet: sqft
         })
     }
     
       handleSumbit(e) {
         e.preventDefault();
     
-        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, sqft, i101, i102, i104, i106, i107, i108, i109, i111, i113, i112, i116, i117, i118, i119, i114, i115, i120, i121, i122, i123, i128, i129, i130, i131, i132, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
+        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, sqft, i101, i102, i103, i104, i106, i107, i108, i111, i113, i112, i116, i117, i118, i119, i114, i115, i120, i121, i122, i123, i128, i129, i130, i131, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
     
         const form = axios.post('http://localhost:3001/api/form', {
             customerName,
@@ -165,11 +171,11 @@ class Iconpanels extends Component{
             sqft,
             i101,
             i102,
+            i103,
             i104,
             i106,
             i107,
             i108,
-            i109,
             i111,
             i113,
             i112,
@@ -187,7 +193,6 @@ class Iconpanels extends Component{
             i129,
             i130,
             i131,
-            i132,
             vvalley1,
             snowstop1,
             cleat,
@@ -442,7 +447,7 @@ class Iconpanels extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total Linear Feet</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="totallinearfeet" onChange={this.handleChange} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="totallinearfeet" placeholder={this.state.totallinearfeet} readOnly />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>Protective film</Label>
@@ -457,26 +462,26 @@ class Iconpanels extends Component{
                                                 <label>Finish</label>
                                                 <Input type="select" className="orderOptionsSpecsInput" name="finish" onChange={this.handleChange} required >
                                                     <option>-</option>
-                                                    <option>30"</option>
+                                                    <option>30</option>
                                                 </Input>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="totalsquarefeet" onChange={this.handleChange} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="totalsquarefeet" placeholder={this.state.totalsquarefeet} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="number" className="orderOptionsSpecsInput" name="qty" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="qty" required />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="number" className="orderOptionsSpecsInput" name="inch" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="inch" required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="mm" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="mm" placeholder={this.state.mm} readOnly />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Special Crating</label>
@@ -493,11 +498,11 @@ class Iconpanels extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Linear Feet</label>
-                                                <Input readOnly type="number" className="orderOptionsSpecsInput" name="linearfeet" placeholder={this.state.linearfeet}/>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet" placeholder={this.state.linearfeet}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet" onChange={this.handleChange} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet" placeholder={this.state.squarefeet} readOnly />
                                             </FormGroup>
                                         </div>
                                     </div>
@@ -505,9 +510,9 @@ class Iconpanels extends Component{
                                         <h2 className="orderOptionsTitle">FLASHINGS:</h2>
                                         <div className="orderOptionsFlashingsContainerSmall">
                                             <FormGroup className="orderOptionsFlashingsContainer2"> 
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F101.jpg?alt=media&token=7f07ce3e-2b78-4de5-bc2e-1c6f378a6868"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F101.jpg?alt=media&token=8bffe047-361f-467d-b54d-79873721fb7b"/>
                                                 <CustomInput
-                                                    className="orderOptionsFlashingsInput" 
+                                                    className="orderOptionsFlashingsInput2" 
                                                     name="i101"
                                                     type="text"
                                                     placeholder="QTY"
@@ -515,219 +520,210 @@ class Iconpanels extends Component{
                                                     />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F102.jpg?alt=media&token=4aa2c059-b2ed-4ac9-a1fe-6feb8d1ddef7"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F102.jpg?alt=media&token=1a1089f9-b2cc-476d-9405-cf79fda0ceee"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i102"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F104.jpg?alt=media&token=414614ee-9204-40a2-9873-c7483ab7da95"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F103.jpg?alt=media&token=9e17a1c1-a515-49fd-92e3-9c1a5de10a4e"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="i103"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F104.jpg?alt=media&token=1621b1c6-2da6-4b81-873c-573ac49527da"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i104"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F106.jpg?alt=media&token=87f04840-e420-4a09-aa6b-0fa37d1b0c15"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F106.jpg?alt=media&token=b8ef318d-25c3-47c8-b904-7fa377656077"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i106"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F107.jpg?alt=media&token=26a2a3cd-01a1-4f3b-8603-acca94175bdb"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F107.jpg?alt=media&token=86f2835b-ce37-46ac-b2c4-6f0c18d8a7cb"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i107"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F108.jpg?alt=media&token=8a2f7419-4c0c-43d8-af80-201aff4bf40e"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F108.jpg?alt=media&token=9f8d26df-edfe-4578-b22d-027c316abf0a"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i108"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F109.jpg?alt=media&token=6f87b868-9bf6-4c7b-9e87-4779aba45715"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F111.jpg?alt=media&token=f6f40da4-59e1-44fa-a58e-56e1ffb04ac1"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i109"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F111.jpg?alt=media&token=8d562346-3bd1-4707-9b0c-0462ae9dfdce"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i111"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F112.jpg?alt=media&token=12b5fd5f-8957-4886-8f09-202bd4989b22"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F112.jpg?alt=media&token=8addf58e-a0a3-4fa1-99ae-b5c827d91d22"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i112"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F113.jpg?alt=media&token=087d129a-d6b5-4fe2-aaa4-508ebeb68be7"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F113.jpg?alt=media&token=86b9bc9d-fdc5-43a5-9797-06ff8d54054b"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i113"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F114.jpg?alt=media&token=6ce6ebad-258f-457b-99a1-304dd75ce550"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F114.jpg?alt=media&token=6c8b8c8d-38ca-48b1-a325-33d0aec83a7d"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i114"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F115.jpg?alt=media&token=d59c680a-c0b6-4d59-b6b3-2094bcb4cec2"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F115.jpg?alt=media&token=9252d05c-2720-4416-abaf-4eae552de636"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i115"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F116.jpg?alt=media&token=61eee547-9dea-4539-893f-57eb9d6b246d"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F116.jpg?alt=media&token=1f93d521-2daf-4f39-88da-f41b475f45b1"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i116"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F117.jpg?alt=media&token=32414092-c78b-46c5-b33f-ead8269044d1"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F117.jpg?alt=media&token=62be0f92-9e90-43e9-8189-abeacd259fa2"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i117"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F118.jpg?alt=media&token=54c71b34-a3f2-456f-b8a6-cf49737cdeb6"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F118.jpg?alt=media&token=3dd781c8-5993-484f-83a9-f4f77eac3fa4"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i118"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F119.jpg?alt=media&token=be9398f8-81ca-4482-acfe-72a45e8898dd"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F119.jpg?alt=media&token=20914689-0cdd-4203-831c-7d376503deb9"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i119"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F120.jpg?alt=media&token=abcf5705-58a3-47ff-98d5-4048b3bb6de2"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F120.jpg?alt=media&token=8cfd4fe2-a94b-445a-8aa9-0906b9e2147e"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i120"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F121.jpg?alt=media&token=0c06f076-5f66-48cf-a2da-4e7890c4b0e9"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F121.jpg?alt=media&token=cecf7570-2e4e-4501-83e3-2eb7f6434602"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i121"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F122.jpg?alt=media&token=a8e708d9-5c43-478e-9037-fa808593cd97"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F122.jpg?alt=media&token=91e8e0a4-a547-4009-8c48-78f1e95f94c5"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i122"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F123.jpg?alt=media&token=393fdb11-8408-4458-a209-5333d061d89c"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F123.jpg?alt=media&token=25fb14b8-6894-46c4-88e6-79eb361dd401"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i123"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F128.jpg?alt=media&token=d88cf0bd-1fb6-4f37-b525-f619bf709257"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F128.jpg?alt=media&token=8a8eaa5a-2546-48c0-b241-ed18ba350b38"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i128"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F129.jpg?alt=media&token=06c07d27-ca9a-4875-ae26-7edd6837d851"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F129.jpg?alt=media&token=09641c07-fe20-42a6-991e-cbf36d5eead2"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i129"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F130.jpg?alt=media&token=0b1d5cc3-a68b-4d5f-9839-36550d7f3468"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F130.jpg?alt=media&token=20d182b1-8002-4be7-bf95-4bcf54e30955"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i130"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F131.jpg?alt=media&token=0c17cec7-ce8f-4aa3-bf0e-d505910c2389"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F131.jpg?alt=media&token=e71f40d0-29c7-4c16-8e62-5eaccaa884cd"/>
                                                 <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
+                                                    className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="i131"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F132.jpg?alt=media&token=3c3888a5-2f0b-4976-af17-eb576e4f00e9"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i132"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                         </div>

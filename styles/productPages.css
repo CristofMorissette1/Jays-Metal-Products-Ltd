@@ -230,6 +230,13 @@ align-items: center;
     margin-top: 16.35%;
 }
 
+.orderOptionsFlashingsInput2 {
+    width: 8%;
+    position: absolute;
+    margin-top: 15.50%;
+    margin-left: 2%;
+}
+
 .protectiveFilmDisclaimer {
     margin-top: 0%;
     font-size: 55%;
