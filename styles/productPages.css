@@ -230,6 +230,12 @@ align-items: center;
     margin-top: 16.35%;
 }
 
+.orderOptionsAccessoriesInput {
+    width: 8%;
+    position: absolute;
+    margin-top: 15.35%;
+}
+
 .orderOptionsFlashingsInput2 {
     width: 8%;
     position: absolute;

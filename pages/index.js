@@ -62,7 +62,7 @@ showContactMenu(event) {
                                 <a className="navLinks" href="/iconpanels">Icon Panel</a>
                                 <a className="navLinks" href="/corrugated">Corrugated 7/8</a>
                                 <a className="navLinks" href="/corrugated">Vivo 300 System</a>
-                                <a className="navLinks" href="/corrugated">Curved Panel System</a>
+                                <a className="navLinks" href="/curvedpanelsystem">Curved Panel System</a>
                                 <a className="navLinks" href="/standingseam">Standing Seam 100</a>
                                 <a className="navLinks" href="/standingseam2">Standing Seam 150</a>
                                 <a className="navLinks" href="/standingseam2">Standing Seam 200</a>
@@ -149,25 +149,31 @@ showContactMenu(event) {
             </div>
           </div>
           <div className="home4thContainer">
-          <h1 className="homeMainTitle">Why Chose Metal for your next Project</h1>
-          <p className="homeFirstText">Jay’s Metal Products Ltd. is a Canadian owned and operated metal fabrication manufacturer located in Calgary, Alberta. Our key focus is providing custom metal work service, specializing in exterior and interior roof and wall systems. The main focus at Jay’s Metal is delivering the highest quality products in the construction industry; we endeavor to provide our customers with the best standards. We work with our clients from start to finish, bringing their vision to life.</p>
+          <h1 className="homeMainTitle">Why choose Steel for your next Project</h1>
+          <p className="homeFirstText">Steel is innovative and used in a vast majority of engineering and construction projects. When used in construction, it has many quality features, such as it is completely recyclable, it is durable, cost effective, longevity and low maintenance.</p>
         </div>
+        <div className="servicesFeatureContainer">
+            <h2 className="homeFeaturesTitle">Low Maintenance</h2>
+            <div className="servicesHomeTextContainer">
+              <p className="servicesHomeFeaturesText">Once installed, metal roofing and cladding has relatively no maintenance. Our products are pre-painted with SMP standard and PVDF premium paints, this superior coating allows for fade resistance of colour and dirt resistance. Unlike traditional wood-framed buildings, steel will resist environmental factors such as rust and mold, allowing for minimal replacements needed.</p>
+            </div>
+          </div>
         <div className="servicesFeatureContainer">
             <h2 className="homeFeaturesTitle">Durable</h2>
             <div className="servicesHomeTextContainer">
-              <p className="servicesHomeFeaturesText">With durability and versatility in mind, we aim to create the longest lasting products possible for your agricultural projects. Check out our products for your future projects.</p>
+              <p className="servicesHomeFeaturesText">Metal roofing and cladding is durable, it is designed to withstand environment and man-made conditions. Steel is incredibly durable, it resists fire, rust and rot. Compared to wood-framed buildings, steel is resistant to rot due to it being inorganic.</p>
             </div>
           </div>
           <div className="servicesFeatureContainer">
-            <h2 className="homeFeaturesTitle">Flexibility</h2>
+            <h2 className="homeFeaturesTitle">Cost Effective</h2>
             <div className="servicesHomeTextContainer">
               <p className="servicesHomeFeaturesText">With durability and versatility in mind, we aim to create the longest lasting products possible for your agricultural projects. Check out our products for your future projects.</p>
             </div>
           </div>
           <div className="servicesFeatureContainer">
-            <h2 className="homeFeaturesTitle">Light-Weight</h2>
+            <h2 className="homeFeaturesTitle">Versatile</h2>
             <div className="servicesHomeTextContainer">
-              <p className="servicesHomeFeaturesText">With durability and versatility in mind, we aim to create the longest lasting products possible for your agricultural projects. Check out our products for your future projects.</p>
+              <p className="servicesHomeFeaturesText">Steel is very versatile. It is able to be roll-formed into any shape, the strength and durability allows it to be used in a variety of projects, ranging from indoor arenas to exteriors of warehouses. We provide 18 products that are able to be combined with one another to create the most complex appearances.</p>
             </div>
           </div>
           <div className="aaraLogoContainer">

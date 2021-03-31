@@ -399,6 +399,15 @@ class Diamondrib extends Component{
                                                 <Input type="text" className="orderOptionsSpecsInput" name="totallinearfeet" placeholder={this.state.totallinearfeet} readOnly />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Special Crating</label>
+                                                <Input type="select" className="orderOptionsSpecsInput" name="specialcrating" onChange={this.handleChange}>
+                                                    <option>-</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </Input>
+                                                <p className="protectiveFilmDisclaimer">At extra cost</p>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>Protective film</Label>
                                                 <Input type="select" className="orderOptionsSpecsInput" name="protectivefilm" onChange={this.handleChange} required>
                                                 <option>-</option>
@@ -431,15 +440,6 @@ class Diamondrib extends Component{
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" name="mm" placeholder={this.state.mm} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Special Crating</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" name="specialcrating" onChange={this.handleChange}>
-                                                    <option>-</option>
-                                                    <option>Yes</option>
-                                                    <option>No</option>
-                                                </Input>
-                                                <p className="protectiveFilmDisclaimer">At extra cost</p>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Tag</label>
@@ -843,6 +843,120 @@ class Diamondrib extends Component{
                                             </FormGroup>
                                         </div>
                                     </div>
+                                    <h2 className="orderOptionsTitle">ACCESSORIES:</h2>
+                                        <div className="orderOptionsFlashingsContainerSmall">
+                                            <FormGroup className="orderOptionsFlashingsContainer"> 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fmetal%20drill%20screws.png?alt=media&token=def7c31f-bab7-430a-aac1-c6686b9eb621"/>
+                                                <CustomInput
+                                                    className="orderOptionsAccessoriesInput" 
+                                                    name="metalDrillScrews"
+                                                    type="text"
+                                                    id="annoying"
+                                                    placeholder="QTY"
+                                                    onChange={this.handleChange}
+                                                    />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fwoodgrip%20screws.png?alt=media&token=bedb64c8-3ace-4697-8bd6-10e6b6ee4db2"/>
+                                                <CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    placeholder="QTY"
+                                                    name="woodGripScrews"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fsynthetic%20high%20temp%20cover.png?alt=media&token=175a4dbb-40b2-43b5-92f2-eb31cb839e7c"/>
+                                                <CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    placeholder="QTY"
+                                                    name="syntheticHighTempCover"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fpeel%20%26%20stick%20high%20temp%20cover.png?alt=media&token=7bfec47d-cb9b-40c3-b843-b93811e530f2"/>
+                                                <CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    placeholder="QTY"
+                                                    name="peel&StickHighTempCover"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Ftube%20sealant.png?alt=media&token=bf1baf8a-beac-461e-af91-7fa9c12695e6"/>
+                                                <CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    placeholder="QTY"
+                                                    name="tubeSealant"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fbutyl%20tape.png?alt=media&token=24398d7f-af89-4872-82fd-d9286875a3cb"/>
+                                                <CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    placeholder="QTY"
+                                                    name="butylTape"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fplumbing%20boots.png?alt=media&token=1db3c74a-c476-4596-b4b6-0c286a1cc006"/>
+                                                <CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    placeholder="QTY"
+                                                    name="plumbingBoots"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fflex-o-vent.png?alt=media&token=c1e81e0f-c6a2-48fd-84be-6952ba69aadf"/>
+                                                <CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    placeholder="QTY"
+                                                    name="flexOVent"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fprofile%20outer%20closure.png?alt=media&token=836d6b46-1e94-45a5-aea2-6ce4c69d37a3"/>
+                                                <CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    placeholder="QTY"
+                                                    name="profileOuterClosure"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fprofile%20inner%20closure.png?alt=media&token=a799aa5a-55a3-41d9-9a47-a4565e06e6c5"/>
+                                                <CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    placeholder="QTY"
+                                                    name="profileInnerClosure"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Flow%20profile%20ridge%20vent.png?alt=media&token=18d4aaaf-d88f-4cda-96ee-1addef31a649"/>
+                                                <CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    placeholder="QTY"
+                                                    name="lowProfileRidgeVent"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                        </div>
                                     <FormGroup className="productDisclaimerFG">
                                         <p className="disclaimerTitle">Please note by placing an order with Jay’s Metal Products Ltd. you (THE CUSTOMER) are agreeing to the following terms and conditions:</p>
                                         <ul>

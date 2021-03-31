@@ -58,7 +58,7 @@ class Header extends Component {
                                             <a className="navLinks" href="/iconpanels">Icon Panel</a>
                                             <a className="navLinks" href="/corrugated">Corrugated 7/8</a>
                                             <a className="navLinks" href="/corrugated">Vivo 300 System</a>
-                                            <a className="navLinks" href="/corrugated">Curved Panel System</a>
+                                            <a className="navLinks" href="/curvedpanelsystem">Curved Panel System</a>
                                             <a className="navLinks" href="/standingseam">Standing Seam 100</a>
                                             <a className="navLinks" href="/standingseam2">Standing Seam 150</a>
                                             <a className="navLinks" href="/standingseam2">Standing Seam 200</a>

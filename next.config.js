@@ -22,7 +22,8 @@ module.exports = {
         '/accessories' : { page: '/accessories'},
         '/colors' : { page: '/colors'},
         '/standardflashings' : { page: '/standardflashings'},
-        '/iconpanels' : { page: '/iconpanels'}
+        '/iconpanels' : { page: '/iconpanels'},
+        '/curvedpanelsystem' : { page: '/curvedpanelsystem'}
       }
     }
   };
