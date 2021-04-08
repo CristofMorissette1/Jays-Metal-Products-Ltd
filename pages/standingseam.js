@@ -29,37 +29,65 @@ class Standingseam extends Component{
             tag: '',
             linearfeet: 0,
             sqft: '',
-            drip1: '',
-            drip2: '',
-            gabbleRake1: '',
-            gabbleRake2: '',
-            wall1: '',
-            wall2: '',
-            wall3: '',
-            wall4: '',
-            endWall1: '',
-            endWall2: '',
-            hip1: '',
-            ridge1: '',
-            hip2: '',
-            ridge2: '',
-            transition1: '',
-            transition2: '',
-            snowStop1: '',
-            snowStop2: '',
-            vValley: '',
-            Wvalley: '',
-            baseWall: '',
-            wallTransition: '',
-            header1: '',
-            header2: '',
-            jTrim1: '',
-            jTrim2: '',
-            outsideCorner1: '',
-            outsideCorner2: '',
-            insideCorner1: '',
-            insideCorner2: '',
-            perforatedJ: ''
+            sa101: '',
+            sa102: '',
+            sa104: '',
+            sa105: '',
+            sa106: '',
+            sa108: '',
+            sa109: '',
+            sa112: '',
+            sa113: '',
+            sa114: '',
+            sa117: '',
+            sa118: '',
+            sa119: '',
+            sa122: '',
+            sa123: '',
+            sa126: '',
+            sa127: '',
+            sa128: '',
+            sa131: '',
+            sa132: '',
+            sa133: '',
+            sa134: '',
+            sa137: '',
+            sa138: '',
+            sa139: '',
+            sa140: '',
+            sa143: '',
+            sa144: '',
+            sa147: '',
+            sa150: '',
+            sa151: '',
+            sa152: '',
+            sa153: '',
+            sa154: '',
+            sa155: '',
+            sa160: '',
+            sa161: '',
+            sa162: '',
+            sa165: '',
+            sa166: '',
+            sa169: '',
+            sa171: '',
+            sa172: '',
+            sa173: '',
+            sa175: '',
+            sa180: '',
+            sa181: '',
+            sa182: '',
+            sa183: '',
+            sa184: '',
+            sa185: '',
+            sa186: '',
+            sa187: '',
+            sa190: '',
+            sa191: '',
+            sa192: '',
+            sa193: '',
+            sa194: '',
+            sa195: ''
         }
         this.colorOptions = this.colorOptions.bind(this);
         this.orderOptions = this.orderOptions.bind(this);
@@ -113,7 +141,7 @@ class Standingseam extends Component{
       handleSumbit(e) {
         e.preventDefault();
     
-        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, sqft, drip1, drip2, gabbleRake1, gabbleRake2, wall1, wall2, wall3, wall4, endWall1, endWall2, hip1, ridge1, hip2, ridge2, transition1, transition2, snowStop1, snowStop2, vValley, Wvalley, baseWall, wallTransition, header1, header2, jTrim1, jTrim2, outsideCorner1, outsideCorner2, insideCorner1, insideCorner2, perforatedJ} = this.state;
+        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, sqft, sa101, sa102, sa104, sa105, sa106, sa108, sa109, sa112, sa113, sa114, sa117, sa118, sa119, sa122, sa123, sa126, sa127, sa128, sa131, sa132, sa133, sa134, sa137, sa138, sa139, sa140, sa143, sa144, sa147, sa150, sa151, sa152, sa153, sa154, sa155, sa160, sa161, sa162, sa165, sa166, sa169, sa171, sa172, sa173, sa175, sa180, sa181, sa182, sa183, sa184, sa185, sa186, sa187, sa190, sa191, sa192, sa193, sa194, sa195} = this.state;
     
         const form = axios.post('http://localhost:3001/api/form', {
             customerName,
@@ -135,37 +163,65 @@ class Standingseam extends Component{
             tag,
             linearfeet,
             sqft,
-            drip1,
-            drip2,
-            gabbleRake1,
-            gabbleRake2,
-            wall1,
-            wall2,
-            wall3,
-            wall4,
-            endWall1,
-            endWall2,
-            hip1,
-            ridge1,
-            hip2,
-            ridge2,
-            transition1,
-            transition2,
-            snowStop1,
-            snowStop2,
-            vValley,
-            Wvalley,
-            baseWall,
-            wallTransition,
-            header1,
-            header2,
-            jTrim1,
-            jTrim2,
-            outsideCorner1,
-            outsideCorner2,
-            insideCorner1,
-            insideCorner2,
-            perforatedJ
+            sa101,
+            sa102,
+            sa104,
+            sa105,
+            sa106,
+            sa108,
+            sa109,
+            sa112,
+            sa113,
+            sa114,
+            sa117,
+            sa118,
+            sa119,
+            sa122,
+            sa123,
+            sa126,
+            sa127,
+            sa128,
+            sa131,
+            sa132,
+            sa133,
+            sa134,
+            sa137,
+            sa138,
+            sa139,
+            sa140,
+            sa143,
+            sa144,
+            sa147,
+            sa150,
+            sa151,
+            sa152,
+            sa153,
+            sa154,
+            sa155,
+            sa160,
+            sa161,
+            sa162,
+            sa165,
+            sa166,
+            sa169,
+            sa171,
+            sa172,
+            sa173,
+            sa175,
+            sa180,
+            sa181,
+            sa182,
+            sa183,
+            sa184,
+            sa185,
+            sa186,
+            sa187,
+            sa190,
+            sa191,
+            sa192,
+            sa193,
+            sa194,
+            sa195
         })
         e.target.reset();
       }
@@ -449,291 +505,552 @@ class Standingseam extends Component{
                                     <div className="orderOptionsFlashingsMainContainer">
                                         <h2 className="orderOptionsTitle">FLASHINGS:</h2>
                                         <div className="orderOptionsFlashingsContainerSmall">
-                                            <FormGroup className="orderOptionsFlashingsContainer"> 
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/productsPages%2Fdrip1.png?alt=media&token=60766d51-05b2-4e24-8e57-bfc7c8415b18"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2"> 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F101.jpg?alt=media&token=64c9587d-e7e3-4531-8473-f19d4890eb5a"/>
                                                 <CustomInput
                                                     className="orderOptionsFlashingsInput" 
-                                                    name="drip1"
+                                                    name="sa101"
                                                     type="text"
                                                     placeholder="QTY"
                                                     onChange={this.handleChange}
                                                     />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/productsPages%2Fdrip2.png?alt=media&token=fd192372-830b-4662-8297-ed814db7b01c"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F102.jpg?alt=media&token=3aa8605c-fbb5-45df-a02b-981d6517ea95"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="drip2"
+                                                    name="sa102"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/productsPages%2Fgable%20rake1.png?alt=media&token=094ad578-1f0d-43c2-a302-e55068a6f063"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F104.jpg?alt=media&token=19fe9ad5-91ca-4266-a3c2-f858e4ff84e3"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="gabbleRake1"
+                                                    name="sa104"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/productsPages%2Fgable%20rake2.png?alt=media&token=98dd3a17-cbb0-436b-bbfc-a077413e66cd"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F105.jpg?alt=media&token=7be981b4-3a74-4c37-8058-29415440e906"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="gabbleRake2"
+                                                    name="sa105"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fwall1.png?alt=media&token=e3dd9f8a-2ca4-4523-a0ed-1ba6c92c1486"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F106.jpg?alt=media&token=542cf440-e597-4f00-9f2a-6fb7bfbde114"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="wall1"
+                                                    name="sa106"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fwall2.png?alt=media&token=20cb2f86-5ec0-4962-a9bf-9d4c820257b8"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F108.jpg?alt=media&token=cd662a88-879a-43a0-9e80-0d7fc2d4010c"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="wall2"
+                                                    name="sa108"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fwall3.png?alt=media&token=7169a09a-e050-4576-ac88-b05bdc324bd6"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F109.jpg?alt=media&token=fb96c910-c1da-4e7d-a055-41af52ec0673"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="wall3"
+                                                    name="sa109"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fwall4.png?alt=media&token=d5369c28-7c55-4653-be86-7ccfc42477a9"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F112.jpg?alt=media&token=2e728d82-d930-457a-ab80-a4c897caeca6"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="wall4"
+                                                    name="sa112"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fend%20wall1.png?alt=media&token=02043948-9c27-4913-b707-c9b9d79c65b3"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F113.jpg?alt=media&token=0b3e4158-a8f6-4675-a591-07525a95cb5e"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="endWall1"
+                                                    name="sa113"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fend%20wall2.png?alt=media&token=8bd705ca-cdf6-4675-923d-d6345c57ed7c"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F114.jpg?alt=media&token=102d6938-7612-4f6c-8ec5-862ccf4c4954"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="endWall2"
+                                                    name="sa114"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fhip1.png?alt=media&token=78a3c295-8d37-4782-b0f9-2ab687102d68"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F117.jpg?alt=media&token=5fdc68a2-75a5-439f-a651-03851d1172e3"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="hip1"
+                                                    name="sa117"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fridge1.png?alt=media&token=ddbf03b3-d11c-4df4-9094-b53e9fec4a23"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F118.jpg?alt=media&token=3ecae168-9c22-4da4-8a8c-aac2c7a1dca6"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="ridge1"
+                                                    name="sa118"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fhip2.png?alt=media&token=b5776749-d91e-4417-8f1e-b7a9856d2a3a"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F119.jpg?alt=media&token=9c31cb8f-b95e-43ec-b654-e5cd6ffda59d"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="hip2"
+                                                    name="sa119"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fridge2.png?alt=media&token=62e4d06c-ce7d-4740-97ae-ef8b415cf265"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F121.jpg?alt=media&token=5b59e207-cac5-4ad1-84af-4e0ff81afb0c"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="ridge2"
+                                                    name="sa121"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Ftransition1.png?alt=media&token=3a5c6c16-c5d9-45b1-8bbd-b785e030c573"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F122.jpg?alt=media&token=53f535b9-230c-4180-bb64-49a4b04d2e04"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="transition1"
+                                                    name="sa122"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Ftransition2.png?alt=media&token=90f3ce5a-01c2-4535-b9df-a3c33226758d"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F123.jpg?alt=media&token=dc6baf56-5bd1-4051-8e08-753db3c492a5"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="transition2"
+                                                    name="sa123"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fsnow%20stop1.png?alt=media&token=c0436311-1ea5-4518-b8e5-a103bf83c47a"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F126.jpg?alt=media&token=cdb09e80-828c-41e7-bbad-73a1d96c4873"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="snowStop1"
+                                                    name="sa126"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fsnow%20stop2.png?alt=media&token=9c2c709f-e2a2-4ed7-90c5-8097160274e3"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F127.jpg?alt=media&token=ae6040db-1154-441f-81b9-3162a8965739"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="snowStop2"
+                                                    name="sa127"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fv%20valley.png?alt=media&token=9d1e5f63-9613-4c38-90a8-91261e330a70"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F128.jpg?alt=media&token=e91d01f4-d0a7-412c-8968-76cfdb2953c1"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="vValley"
+                                                    name="sa128"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fw%20valley.png?alt=media&token=e9dfabbb-4e00-48e0-8b7f-3da206dd83a7"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F131.jpg?alt=media&token=326f742a-9b07-46f7-92ac-d1e2c82ca34f"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="Wvalley"
+                                                    name="sa131"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fbase%20wall.png?alt=media&token=771b46ea-b691-43f9-9067-31e21d546e7e"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F132.jpg?alt=media&token=20d67532-d29d-4635-9760-69bc7fdeaddf"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="baseWall"
+                                                    name="sa132"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fwall%20transition.png?alt=media&token=27976f10-4e40-4b08-83a4-3da5db545d1b"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F133.jpg?alt=media&token=ba6280ac-6167-43da-a905-3205d43e4d17"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="wallTransition"
+                                                    name="sa133"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fheader1.png?alt=media&token=e9168626-3b04-4aa0-9a28-5aca1c4ce7b5"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F134.jpg?alt=media&token=22bda750-963f-43ca-9feb-6d5b772eac19"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="header1"
+                                                    name="sa134"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fheader2.png?alt=media&token=6739976e-4c3d-42bb-8678-b918f4fae5e0"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F137.jpg?alt=media&token=328a7468-5ecd-440f-9936-7b022175f48a"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="header2"
+                                                    name="sa137"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fj%20trim1.png?alt=media&token=d516efd9-f803-4e24-a1f4-0e72f5bd1bc0"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F138.jpg?alt=media&token=80d374c6-4e76-46e2-a058-41e30e246cfa"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="jTrim1"
+                                                    name="sa138"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fj%20trim2.png?alt=media&token=3f07acbb-b8d5-49ae-9901-9890a30342cb"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F139.jpg?alt=media&token=fc21e6cd-d137-473f-bbc8-8d393ab1322d"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="jTrim2"
+                                                    name="sa139"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Foutside%20corner1.png?alt=media&token=2faf60de-6091-4eee-ace2-a589adceb90a"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F140.jpg?alt=media&token=909da43f-e75f-451d-8c65-b572afc2fb43"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="outsideCorner1"
+                                                    name="sa140"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Foutside%20corner2.png?alt=media&token=fe868102-898a-4dcc-8e8e-0f2acbe3395d"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F143.jpg?alt=media&token=42d33f07-67d1-4718-b81f-f163c40ece41"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="outsideCorner2"
+                                                    name="sa143"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Finside%20corner1.png?alt=media&token=cc2e1a78-ed7f-4e21-9cd9-6293d6ad6be8"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F144.jpg?alt=media&token=1b7457b8-8a1e-4802-913a-0b22e63a35a0"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="insideCorner1"
+                                                    name="sa144"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Finside%20corner2.png?alt=media&token=99636ff1-ab3e-4903-b3b0-18a37f243c36"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F147.jpg?alt=media&token=de45732a-9bbb-4677-bddc-b27f8dc57a62"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="insideCorner2"
+                                                    name="sa147"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fperforated%20j.png?alt=media&token=4b026d8a-dc6f-4a05-bc67-59f49492f7ec"/>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F150.jpg?alt=media&token=bcb2e87a-d08d-401a-b31a-a0f4d5adfc79"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
-                                                    name="perforatedJ"
+                                                    name="sa150"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F151.jpg?alt=media&token=790d8e81-9f43-43e0-a894-29b3f596c7be"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa151"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F152.jpg?alt=media&token=d25a4c69-1d22-4975-b4b4-35f4646bb991"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa152"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F153.jpg?alt=media&token=25af4d81-cf85-41ab-80c7-02b5510a8900"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa153"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F154.jpg?alt=media&token=d04f658e-7b70-46cf-9115-6f84a28d3d4c"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa154"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F155.jpg?alt=media&token=7e6b4c55-15d5-4875-ab7a-e9bd17d0a657"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa155"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F160.jpg?alt=media&token=2a7a0ba9-cb23-4891-8e5d-ef349644aae6"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa160"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F161.jpg?alt=media&token=45ce9566-95bf-4776-b54f-9b3436c60834"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa161"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F162.jpg?alt=media&token=f6bb3f32-4de5-4f84-affd-48911746ca2b"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa162"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F165.jpg?alt=media&token=1a43bf35-7690-4456-b692-409d75f21c78"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa165"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F166.jpg?alt=media&token=851c441a-f3a1-43a4-accf-22c0ddaefafe"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa166"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F169.jpg?alt=media&token=e67d1af4-5d8f-4aa9-aaab-2e67516ec4d2"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa169"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F171.jpg?alt=media&token=d89547ba-5b90-4804-bda6-a4071bb97ba0"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa171"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F172.jpg?alt=media&token=ed629ba7-3c41-44f0-9cfa-fd5006c67b34"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa172"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F173.jpg?alt=media&token=729bbd10-c459-404b-93d6-e795835b0356"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa173"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F175.jpg?alt=media&token=ad0d74de-00e1-488f-9ff3-e6a65265c64f"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa175"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F180.jpg?alt=media&token=9aed4033-57dc-4f7e-9d61-4ae116b6fc2b"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa180"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F181.jpg?alt=media&token=fedb892d-227d-4880-8f54-f2f33f3dd7c9"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa181"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F182.jpg?alt=media&token=b53225cd-c180-4542-88e4-725796706eec"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa182"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F183.jpg?alt=media&token=d93f4574-a169-49dc-a77d-33abe0cc090e"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa183"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F184.jpg?alt=media&token=74d048d8-5336-44db-b4f3-75cf7a59fec1"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa184"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F185.jpg?alt=media&token=a8a76acc-64b3-4287-a071-b1adaf3a7bb3"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa185"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F186.jpg?alt=media&token=8e5087d7-fa86-45a4-ae1d-06f1484bad35"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa186"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F187.jpg?alt=media&token=16b9200d-bf0f-476d-b076-ac211f3711af"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa187"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F190.jpg?alt=media&token=def9a9dd-ef01-4c49-a63b-1dcdab0c2001"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa190"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F191.jpg?alt=media&token=9ca9350a-c4f3-4591-a254-aed4c63923c5"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa191"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F192.jpg?alt=media&token=2f9e1eb4-9e59-473f-bb43-b912de391c88"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa192"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F193.jpg?alt=media&token=140f6a22-9acf-4ef3-9c05-97191b80966a"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa193"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F194.jpg?alt=media&token=43c8cef7-4f01-4128-b064-31b5cda9e9df"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa194"
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F195.jpg?alt=media&token=b92902e7-be6e-476c-a825-b6a250aae1f0"/>
+                                                <CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="sa195"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                         </div>
                                     </div>
                                     <h2 className="orderOptionsTitle">ACCESSORIES:</h2>
                                         <div className="orderOptionsFlashingsContainerSmall">
-                                            <FormGroup className="orderOptionsFlashingsContainer"> 
+                                            <FormGroup className="orderOptionsFlashingsContainer2"> 
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fmetal%20drill%20screws.png?alt=media&token=def7c31f-bab7-430a-aac1-c6686b9eb621"/>
                                                 <CustomInput
                                                     className="orderOptionsAccessoriesInput" 
@@ -744,7 +1061,7 @@ class Standingseam extends Component{
                                                     onChange={this.handleChange}
                                                     />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fwoodgrip%20screws.png?alt=media&token=bedb64c8-3ace-4697-8bd6-10e6b6ee4db2"/>
                                                 <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
@@ -754,7 +1071,7 @@ class Standingseam extends Component{
                                                     name="woodGripScrews"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fsynthetic%20high%20temp%20cover.png?alt=media&token=175a4dbb-40b2-43b5-92f2-eb31cb839e7c"/>
                                                 <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
@@ -764,7 +1081,7 @@ class Standingseam extends Component{
                                                     name="syntheticHighTempCover"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fpeel%20%26%20stick%20high%20temp%20cover.png?alt=media&token=7bfec47d-cb9b-40c3-b843-b93811e530f2"/>
                                                 <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
@@ -774,7 +1091,7 @@ class Standingseam extends Component{
                                                     name="peel&StickHighTempCover"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Ftube%20sealant.png?alt=media&token=bf1baf8a-beac-461e-af91-7fa9c12695e6"/>
                                                 <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
@@ -784,7 +1101,7 @@ class Standingseam extends Component{
                                                     name="tubeSealant"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fbutyl%20tape.png?alt=media&token=24398d7f-af89-4872-82fd-d9286875a3cb"/>
                                                 <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
@@ -794,7 +1111,7 @@ class Standingseam extends Component{
                                                     name="butylTape"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fplumbing%20boots.png?alt=media&token=1db3c74a-c476-4596-b4b6-0c286a1cc006"/>
                                                 <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
@@ -804,7 +1121,7 @@ class Standingseam extends Component{
                                                     name="plumbingBoots"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fflex-o-vent.png?alt=media&token=c1e81e0f-c6a2-48fd-84be-6952ba69aadf"/>
                                                 <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
@@ -814,7 +1131,7 @@ class Standingseam extends Component{
                                                     name="flexOVent"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fprofile%20outer%20closure.png?alt=media&token=836d6b46-1e94-45a5-aea2-6ce4c69d37a3"/>
                                                 <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
@@ -824,7 +1141,7 @@ class Standingseam extends Component{
                                                     name="profileOuterClosure"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fprofile%20inner%20closure.png?alt=media&token=a799aa5a-55a3-41d9-9a47-a4565e06e6c5"/>
                                                 <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
@@ -834,7 +1151,7 @@ class Standingseam extends Component{
                                                     name="profileInnerClosure"
                                                     onChange={this.handleChange} />
                                             </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Flow%20profile%20ridge%20vent.png?alt=media&token=18d4aaaf-d88f-4cda-96ee-1addef31a649"/>
                                                 <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
