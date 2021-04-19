@@ -4,10 +4,10 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import { Form, FormGroup, Input, Button, Label, CustomInput } from 'reactstrap'
 import axios from 'axios'
-import Standingseam2Print from '../printComponents/curvedpanelsystem';
+import Standingseam2Print from '../printComponents/standingseam2';
 import ReactToPrint, { PrintContextConsumer } from 'react-to-print';
 
-class CurvedPanelSystem extends Component{
+class Standingseam2 extends Component{
     constructor(){
         super()
         this.state = {
@@ -25,13 +25,68 @@ class CurvedPanelSystem extends Component{
             finish: '',
             totallinearfeet: '',
             totalsquarefeet: '',
-            qty: 0,
-            inch: 0,
+            weight: '',
+            qty: '',
+            inch: '',
             mm: '',
             specialcrating: '',
             tag: '',
-            linearfeet: 0,
-            sqft: '',
+            linearfeet: '',
+            squarefeet: '',
+            qty2: '',
+            inch2: '',
+            mm2: '',
+            tag2: '',
+            linearfeet2: '',
+            squarefeet2: '',
+            qty3: '',
+            inch3: '',
+            mm3: '',
+            tag3: '',
+            linearfeet3: '',
+            squarefeet3: '',
+            qty4: '',
+            inch4: '',
+            mm4: '',
+            tag4: '',
+            linearfeet4: '',
+            squarefeet4: '',
+            qty5: '',
+            inch5: '',
+            mm5: '',
+            tag5: '',
+            linearfeet5: '',
+            squarefeet5: '',
+            qty6: '',
+            inch6: '',
+            mm6: '',
+            tag6: '',
+            linearfeet6: '',
+            squarefeet6: '',
+            qty7: '',
+            inch7: '',
+            mm7: '',
+            tag7: '',
+            linearfeet7: '',
+            squarefeet7: '',
+            qty8: '',
+            inch8: '',
+            mm8: '',
+            tag8: '',
+            linearfeet8: '',
+            squarefeet8: '',
+            qty9: '',
+            inch9: '',
+            mm9: '',
+            tag9: '',
+            linearfeet9: '',
+            squarefeet9: '',
+            qty10: '',
+            inch10: '',
+            mm10: '',
+            tag10: '',
+            linearfeet10: '',
+            squarefeet10: '',
             hookdrip1: '',
             hookdripsteppitch: '',
             gabbleRake1: '',
@@ -125,10 +180,15 @@ class CurvedPanelSystem extends Component{
 
     printPage = e => {
         e.preventDefault();
+        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, squarefeet, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gablerake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
         // window.print();
-        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, sqft, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gablerake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
-        this.state.status = false
-        this.forceUpdate();
+        console.log(customerName, productname,phone);
+        // componentDidMount(
+            this.state.status = false
+            this.forceUpdate();
+        // )
+        console.log(this.state.status);
+        // <Standingseam2Print handle={this.handle} />
     }
 
 
@@ -136,18 +196,141 @@ class CurvedPanelSystem extends Component{
         this.setState({
           [e.target.name]: e.target.value
         })
-        let qtyNum = this.state.qty;
-        let size = this.state.inch;
-        let linearFeet = qtyNum * size;
+        // console.log([e.target.name], this.customerName);
+        let linearFeet1 = (this.state.qty * this.state.inch) / 12;
+        let mmSize1 = this.state.inch * 25.4;
+        let sqft1 = (this.state.mm / 12) * this.state.linearfeet;
+        let linearFeet2 = (this.state.qty2 * this.state.inch2) / 12;
+        let mmSize2 = this.state.inch2 * 25.4;
+        let sqft2 = (this.state.mm2 / 12) * this.state.linearfeet2;
+        let linearFeet3 = (this.state.qty3 * this.state.inch3) / 12;
+        let mmSize3 = this.state.inch3 * 25.4;
+        let sqft3 = (this.state.mm3 / 12) * this.state.linearfeet3;
+        let linearFeet4 = (this.state.qty4 * this.state.inch4) / 12;
+        let mmSize4 = this.state.inch4 * 25.4;
+        let sqft4 = (this.state.mm4 / 12) * this.state.linearfeet4;
+        let linearFeet5 = (this.state.qty5 * this.state.inch5) / 12;
+        let mmSize5 = this.state.inch5 * 25.4;
+        let sqft5 = (this.state.mm5 / 12) * this.state.linearfeet5;
+        let linearFeet6 = (this.state.qty6 * this.state.inch6) / 12;
+        let mmSize6 = this.state.inch6 * 25.4;
+        let sqft6 = (this.state.mm6 / 12) * this.state.linearfeet6;
+        let linearFeet7 = (this.state.qty7 * this.state.inch7) / 12;
+        let mmSize7= this.state.inch7 * 25.4;
+        let sqft7 = (this.state.mm7 / 12) * this.state.linearfeet7;
+        let linearFeet8 = (this.state.qty8 * this.state.inch8) / 12;
+        let mmSize8 = this.state.inch8 * 25.4;
+        let sqft8 = (this.state.mm8 / 12) * this.state.linearfeet8;
+        let linearFeet9 = (this.state.qty9 * this.state.inch9) / 12;
+        let mmSize9 = this.state.inch9 * 25.4;
+        let sqft9 = (this.state.mm9 / 12) * this.state.linearfeet9;
+        let linearFeet10 = (this.state.qty10 * this.state.inch10) / 12;
+        let mmSize10 = this.state.inch10 * 25.4;
+        let sqft10 = (this.state.mm10 / 12) * this.state.linearfeet10;
+        let sqft = sqft1 + sqft2 + sqft3 + sqft4 + sqft5 + sqft6 + sqft7 + sqft8 + sqft9 + sqft10;
+        let totalLinear = linearFeet1 + linearFeet2 + linearFeet3 + linearFeet4 + linearFeet5 + linearFeet6 + linearFeet7 + linearFeet8 + linearFeet9 + linearFeet10;
         this.setState({
-            linearfeet: linearFeet
+            linearfeet: linearFeet1.toFixed(2),
+            mm: mmSize1.toFixed(2),
+            squarefeet: sqft1.toFixed(2),
+            linearfeet2: linearFeet2.toFixed(2),
+            mm2: mmSize2.toFixed(2),
+            squarefeet2: sqft2.toFixed(2),
+            linearfeet3: linearFeet3.toFixed(2),
+            mm3: mmSize3.toFixed(2),
+            squarefeet3: sqft3.toFixed(2),
+            linearfeet4: linearFeet4.toFixed(2),
+            mm4: mmSize4.toFixed(2),
+            squarefeet4: sqft4.toFixed(2),
+            linearfeet5: linearFeet5.toFixed(2),
+            mm5: mmSize5.toFixed(2),
+            squarefeet5: sqft5.toFixed(2),
+            linearfeet6: linearFeet6.toFixed(2),
+            mm6: mmSize6.toFixed(2),
+            squarefeet6: sqft6.toFixed(2),
+            linearfeet7: linearFeet7.toFixed(2),
+            mm7: mmSize7.toFixed(2),
+            squarefeet7: sqft7.toFixed(2),
+            linearfeet8: linearFeet8.toFixed(2),
+            mm8: mmSize8.toFixed(2),
+            squarefeet8: sqft8.toFixed(2),
+            linearfeet9: linearFeet9.toFixed(2),
+            mm9: mmSize9.toFixed(2),
+            squarefeet9: sqft9.toFixed(2),
+            linearfeet10: linearFeet10.toFixed(2),
+            mm10: mmSize10.toFixed(2),
+            squarefeet10: sqft10.toFixed(2),
+            totallinearfeet: totalLinear.toFixed(2),
+            totalsquarefeet: sqft.toFixed(2)
         })
-    }
+        console.log(this.state.squarefeet, "name")
+        if (this.state.ga == 29 && this.state.finish == 12) {
+            let weightCal = this.state.totalsquarefeet * 0.688;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 29 && this.state.finish == 16) {
+            let weightCal = this.state.totalsquarefeet * 0.86;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 29 && this.state.finish == 20) {
+            let weightCal = this.state.totalsquarefeet * 1.032;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 26 && this.state.finish == 12) {
+            let weightCal = this.state.totalsquarefeet * 1.008;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 26 && this.state.finish == 16) {
+            let weightCal = this.state.totalsquarefeet * 1.26;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 26 && this.state.finish == 20) {
+            let weightCal = this.state.totalsquarefeet * 1.512;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 24 && this.state.finish == 12) {
+            let weightCal = this.state.totalsquarefeet * 1.28;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 24 && this.state.finish == 16) {
+            let weightCal = this.state.totalsquarefeet * 1.6;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 24 && this.state.finish == 20) {
+            let weightCal = this.state.totalsquarefeet * 1.92;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 22 && this.state.finish == 12) {
+            let weightCal = this.state.totalsquarefeet * 1.6;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 22 && this.state.finish == 16) {
+            let weightCal = this.state.totalsquarefeet * 1.98;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 22 && this.state.finish == 20) {
+            let weightCal = this.state.totalsquarefeet * 2.376;
+            this.setState({
+                weight: weightCal
+            })
+        }
+      }
     
       handleSumbit(e) {
         e.preventDefault();
-    
-        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, sqft, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gablerake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
+    console.log(customerName, productname);
+        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, squarefeet, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gablerake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
     
         const form = axios.post('http://localhost:3001/api/form', {
             customerName,
@@ -168,7 +351,7 @@ class CurvedPanelSystem extends Component{
             specialcrating,
             tag,
             linearfeet,
-            sqft,
+            squarefeet,
             hookdrip1,
             hookdripsteppitch,
             gabbleRake1,
@@ -230,15 +413,16 @@ class CurvedPanelSystem extends Component{
         })
         e.target.reset();
       }
-
+    //   console.log(this.state)
     render(){
         return (
             <div>{this.state.status==true?(<div className="diamondMainContainer">
+                
                 <Header/>
                 <div className="productPageLandingContainer">
                     <img className="productPageLandingImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
                     <div className="productPage2ndContainer">
-                    <h1 className="productPageMainTitle">Curved Panel System</h1>
+                    <h1 className="productPageMainTitle">SS 150</h1>
                     <p className="productPageMainText">SS 150 provides a clean visual appearance due to the hidden fastener system. With characteristics like the SS 100 panel, the SS 150 panel is ideal for commercial roofs when combined with a slope of ½ :12. This will allow for lower costs due to a low sloping roof needing fewer materials. The panels are available in the SMP pre-painted steel along with PVDF premium.<br/>
                     <ul>
                         <li>Single-lock</li>
@@ -375,7 +559,7 @@ class CurvedPanelSystem extends Component{
                             <div className="orderOptionsContent">
                                 <Form className="orderOptionsContentForm" onSubmit={this.handleSumbit}>
                                     <div className="orderOptionsTextForm">
-                                        <h2 className="orderOptionsTextFormTitle">Curved Panel System</h2>
+                                        <h2 className="orderOptionsTextFormTitle">SS 150</h2>
                                         <FormGroup className="orderOptionsTextFormSmall">
                                             {this.state.customerName?<Input 
                                                 type="text"
@@ -491,7 +675,7 @@ class CurvedPanelSystem extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total Linear Feet</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.totallinearfeet} name="totallinearfeet" onChange={this.handleChange} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.totallinearfeet} name="totallinearfeet" placeholder={this.state.totallinearfeet} readOnly />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Special Crating</label>
@@ -515,26 +699,28 @@ class CurvedPanelSystem extends Component{
                                                 <label>Finish</label>
                                                 <Input type="select" className="orderOptionsSpecsInput" value={this.state.finish} name="finish" onChange={this.handleChange} required >
                                                     <option>-</option>
-                                                    <option>30"</option>
+                                                    <option>12</option>
+                                                    <option>16</option>
+                                                    <option>20</option>
                                                 </Input>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.totalsquarefeet} name="totalsquarefeet" onChange={this.handleChange} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="totalsquarefeet" value={this.state.totalsquarefeet} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="number" className="orderOptionsSpecsInput" value={this.state.qty} name="qty" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty} name="qty" required />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="number" className="orderOptionsSpecsInput" value={this.state.inch} name="inch" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch} name="inch" required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm} name="mm" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm} name="mm" placeholder={this.state.mm} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Tag</label>
@@ -542,11 +728,245 @@ class CurvedPanelSystem extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Linear Feet</label>
-                                                <Input readOnly type="number" className="orderOptionsSpecsInput" value={this.state.linearfeet} name="linearfeet" onChange={this.handleChange} />
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet} name="linearfeet" placeholder={this.state.linearfeet}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet} name="squarefeet" onChange={this.handleChange} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet} name="squarefeet" placeholder={this.state.squarefeet} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty2} name="qty2" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch2} name="inch2" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm2} name="mm2" placeholder={this.state.mm2} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag2} name="tag2" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet2} name="linearfeet2" placeholder={this.state.linearfeet2}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet2} name="squarefeet2" placeholder={this.state.squarefeet2} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty3} name="qty3" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch3} name="inch3" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm3} name="mm3" placeholder={this.state.mm3} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag3} name="tag3" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet3} name="linearfeet3" placeholder={this.state.linearfeet3}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet3} name="squarefeet3" placeholder={this.state.squarefeet3} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty4} name="qty4" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch4} name="inch4" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm4} name="mm4" placeholder={this.state.mm4} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag4} name="tag4" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet4} name="linearfeet4" placeholder={this.state.linearfeet4}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet4} name="squarefeet4" placeholder={this.state.squarefeet4} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty5} name="qty5" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch5} name="inch5" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm5} name="mm5" placeholder={this.state.mm5} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag5} name="tag5" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet5} name="linearfeet5" placeholder={this.state.linearfeet5}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet5} name="squarefeet5" placeholder={this.state.squarefeet5} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty6} name="qty6" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch6} name="inch6" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm6} name="mm6" placeholder={this.state.mm6} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag6} name="tag6" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet6} name="linearfeet6" placeholder={this.state.linearfeet6}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet6} name="squarefeet6" placeholder={this.state.squarefeet6} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty7} name="qty7" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch7} name="inch7" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm7} name="mm7" placeholder={this.state.mm7} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag7} name="tag7" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet7} name="linearfeet7" placeholder={this.state.linearfeet7}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet7} name="squarefeet7" placeholder={this.state.squarefeet7} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty8} name="qty8" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch8} name="inch8" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm8} name="mm8" placeholder={this.state.mm8} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag8} name="tag8" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet8} name="linearfeet8" placeholder={this.state.linearfeet8}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet8} name="squarefeet8" placeholder={this.state.squarefeet8} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty9} name="qty9" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch9} name="inch9" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm9} name="mm9" placeholder={this.state.mm9} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag9} name="tag9" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet9} name="linearfeet9" placeholder={this.state.linearfeet9}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet9} name="squarefeet9" placeholder={this.state.squarefeet9} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty10} name="qty10" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch10} name="inch10" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm10} name="mm10" placeholder={this.state.mm10} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag10} name="tag10" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet10} name="linearfeet10" placeholder={this.state.linearfeet10}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet10} name="squarefeet10" placeholder={this.state.squarefeet10} readOnly />
                                             </FormGroup>
                                         </div>
                                     </div>
@@ -1007,11 +1427,11 @@ class CurvedPanelSystem extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fperforated%20j%20under%20panel.jpg?alt=media&token=1054ddc7-a74b-463b-a798-ad667fab8587"/>
-                                                {this.state.perforatedjoverbarrel?<CustomInput 
+                                                {this.state.perforatedjunderbarrel?<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.perforatedjoverbarrel}
+                                                    value={this.state.perforatedjunderbarrel}
                                                     name="perforatedjunderbarrel"
                                                     onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
@@ -1467,12 +1887,12 @@ class CurvedPanelSystem extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fsynthetic%20high%20temp%20cover.png?alt=media&token=175a4dbb-40b2-43b5-92f2-eb31cb839e7c"/>
-                                                {this.state.syntheticHighTempCorner?<CustomInput 
+                                                {this.state.syntheticHighTempCover?<CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     // placeholder="QTY"
-                                                    value={this.state.syntheticHighTempCorner}
+                                                    value={this.state.syntheticHighTempCover}
                                                     name="syntheticHighTempCover"
                                                     onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsAccessoriesInput"
@@ -1626,7 +2046,8 @@ class CurvedPanelSystem extends Component{
                                         <Label>I accept terms and services</Label>
                                     </FormGroup>
                                     <Button className="contactButton" onClick={this.printPage}><p className="contactButtonText">Go To Print Page</p></Button>
-                                    <Button className="contactButton"><p className="contactButtonText">Submit</p></Button>
+                                    <Button onClick={() => {console.log(this.state)}} className="contactButton"><p className="contactButtonText">Submit</p></Button>
+                                    
                                 </Form>
                             </div>
                         ) : (
@@ -1635,7 +2056,8 @@ class CurvedPanelSystem extends Component{
                     }
                 </div>
                 <Footer/>
-            </div>):<div>
+            </div>):
+            <div>
                 <button onClick={() => {this.state.status = true; this.state = this.state; this.forceUpdate()}}>Back</button>
                 <ReactToPrint content={() => this.componentRef}>
                 <PrintContextConsumer>
@@ -1650,4 +2072,4 @@ class CurvedPanelSystem extends Component{
     }
 }
 
-export default CurvedPanelSystem;
+export default Standingseam2;

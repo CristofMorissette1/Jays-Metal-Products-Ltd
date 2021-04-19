@@ -4,111 +4,107 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import { Form, FormGroup, Input, Button, Label, CustomInput } from 'reactstrap'
 import axios from 'axios'
-import Standingseam2Print from '../printComponents/iconpanels';
-import ReactToPrint, { PrintContextConsumer } from 'react-to-print';
 var a = '';
-class Iconpanels extends Component{
-   
+class IconpanelsPrint extends Component{
     constructor(){
         super()
-        this.state = {
-            status: true,
-            colorOptions: false,
-            orderOptions: false,
-            customerName: '',
-            phone: '',
-            po: '',
-            email: '',
-            address: '',
-            ga: '',
-            color: '',
-            protectivefilm: '',
-            finish: '',
-            totallinearfeet: '',
-            totalsquarefeet: '',
-            qty: '',
-            inch: '',
-            mm: '',
-            specialcrating: '',
-            tag: '',
-            linearfeet: '',
-            sqft: '',
-            i101: '',
-            i102: '',
-            i103: '',
-            i104: '',
-            i106: '',
-            i107: '',
-            i108: '',
-            i111: '',
-            i113: '',
-            i112: '',
-            i116: '',
-            i117: '',
-            i118: '',
-            i119: '',
-            i114: '',
-            i115: '',
-            i120: '',
-            i121: '',
-            i122: '',
-            i123: '',
-            i128: '',
-            i129: '',
-            i130: '',
-            i131: '',
-            vvalley1: '',
-            snowstop1: '',
-            cleat: '',
-            junderbarrel: '',
-            zbaroverbarrel: '',
-            perforatedjoverbarrel: '',
-            perforatedzbaroverbarrel: '',
-            backpan5: '',
-            backpan10: '',
-            base1: '',
-            base2: '',
-            base3: '',
-            windowheader: '',
-            windowreverse: '',
-            walltransition: '',
-            jtrim1: '',
-            jtrim2: '',
-            jtrim3: '',
-            transition: '',
-            outsidecorner1: '',
-            insidecorner1: '',
-            outsidecorner2: '',
-            insidecorner2: '',
-            outsidecorner3: '',
-            insidecorner3: '',
-            outsidecorner4: '',
-            insidecorner4: '',
-            standing290: '',
-            standing291: '',
-            standing292: '',
-            standing293: '',
-            standing294: '',
-            standing295: ''
-        }
-        this.colorOptions = this.colorOptions.bind(this);
-        this.orderOptions = this.orderOptions.bind(this);
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSumbit = this.handleSumbit.bind(this);
-        this.printPage = this.printPage.bind(this);
+        // this.state = {
+        //     colorOptions: false,
+        //     orderOptions: false,
+        //     customerName: '',
+        //     phone: '',
+        //     po: '',
+        //     email: '',
+        //     address: '',
+        //     ga: '',
+        //     color: '',
+        //     protectivefilm: '',
+        //     finish: '',
+        //     totallinearfeet: '',
+        //     totalsquarefeet: '',
+        //     qty: '',
+        //     inch: '',
+        //     mm: '',
+        //     specialcrating: '',
+        //     tag: '',
+        //     linearfeet: '',
+        //     sqft: '',
+        //     i101: '',
+        //     i102: '',
+        //     i103: '',
+        //     i104: '',
+        //     i106: '',
+        //     i107: '',
+        //     i108: '',
+        //     i111: '',
+        //     i113: '',
+        //     i112: '',
+        //     i116: '',
+        //     i117: '',
+        //     i118: '',
+        //     i119: '',
+        //     i114: '',
+        //     i115: '',
+        //     i120: '',
+        //     i121: '',
+        //     i122: '',
+        //     i123: '',
+        //     i128: '',
+        //     i129: '',
+        //     i130: '',
+        //     i131: '',
+        //     vvalley1: '',
+        //     snowstop1: '',
+        //     cleat: '',
+        //     junderbarrel: '',
+        //     zbaroverbarrel: '',
+        //     perforatedjoverbarrel: '',
+        //     perforatedzbaroverbarrel: '',
+        //     backpan5: '',
+        //     backpan10: '',
+        //     base1: '',
+        //     base2: '',
+        //     base3: '',
+        //     windowheader: '',
+        //     windowreverse: '',
+        //     walltransition: '',
+        //     jtrim1: '',
+        //     jtrim2: '',
+        //     jtrim3: '',
+        //     transition: '',
+        //     outsidecorner1: '',
+        //     insidecorner1: '',
+        //     outsidecorner2: '',
+        //     insidecorner2: '',
+        //     outsidecorner3: '',
+        //     insidecorner3: '',
+        //     outsidecorner4: '',
+        //     insidecorner4: '',
+        //     standing290: '',
+        //     standing291: '',
+        //     standing292: '',
+        //     standing293: '',
+        //     standing294: '',
+        //     standing295: ''
+        // }
+        // this.colorOptions = this.colorOptions.bind(this);
+        // this.orderOptions = this.orderOptions.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
+        // this.handleSumbit = this.handleSumbit.bind(this);
+        // this.printPage = this.printPage.bind(this);
     }
 
-    colorOptions(event) {
-        event.preventDefault();
-          if (this.state.colorOptions == false) {
-          this.setState({
-            colorOptions: true,
-            orderOptions: false
-          });
-        } else {
-          null;
-        }
-    }
+    // colorOptions(event) {
+    //     event.preventDefault();
+    //       if (this.state.colorOptions == false) {
+    //       this.setState({
+    //         colorOptions: true,
+    //         orderOptions: false
+    //       });
+    //     } else {
+    //       null;
+    //     }
+    // }
 
 
     orderOptions(event) {
@@ -125,31 +121,28 @@ class Iconpanels extends Component{
 
     printPage = e => {
         e.preventDefault();
-        // window.print();
-        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, sqft, i101, i102, i103, i104, i106, i107, i108, i111, i113, i112, i116, i117, i118, i119, i114, i115, i120, i121, i122, i123, i128, i129, i130, i131, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
-        this.state.status = false
-        this.forceUpdate();
+        window.print();
     }
 
 
-    handleChange = e => {
-        this.setState({
-          [e.target.name]: e.target.value
-        })
-        let qtyNum = this.state.qty;
-        let size = this.state.inch;
-        let linearFeet = (qtyNum * size) / 12;
-        let mmSize = size * 25.4;
-        let sqft = linearFeet * (this.state.finish / 12);
-        console.log(mmSize)
-        this.setState({
-            linearfeet: linearFeet,
-            mm: mmSize,
-            squarefeet: sqft,
-            totallinearfeet: linearFeet,
-            totalsquarefeet: sqft
-        })
-    }
+    // handleChange = e => {
+    //     this.setState({
+    //       [e.target.name]: e.target.value
+    //     })
+    //     let qtyNum = this.state.qty;
+    //     let size = this.state.inch;
+    //     let linearFeet = (qtyNum * size) / 12;
+    //     let mmSize = size * 25.4;
+    //     let sqft = linearFeet * (this.state.finish / 12);
+    //     console.log(mmSize)
+    //     this.setState({
+    //         linearfeet: linearFeet,
+    //         mm: mmSize,
+    //         squarefeet: sqft,
+    //         totallinearfeet: linearFeet,
+    //         totalsquarefeet: sqft
+    //     })
+    // }
     
       handleSumbit(e) {
         e.preventDefault();
@@ -234,13 +227,15 @@ class Iconpanels extends Component{
             standing294,
             standing295
         })
+        console.log(form);
         e.target.reset();
       }
+
     render(){
         return (
-            <div>{this.state.status==true?(<div className="diamondMainContainer">
-                <Header/>
-                <div className="productPageLandingContainer">
+            <div className="diamondMainContainer">
+                {/* <Header/> */}
+                {/* <div className="productPageLandingContainer">
                     <img className="productPageLandingImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
                     <div className="productPage2ndContainer">
                     <h1 className="productPageMainTitle">Icon Panels</h1>
@@ -254,17 +249,17 @@ class Iconpanels extends Component{
                     </ul>
                     </p>
                     </div>
-                </div>
-                <div className="productPage3rdContainer">
+                </div> */}
+                {/* <div className="productPage3rdContainer">
                     <img className="productPageImage2" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2Ficon.jpg?alt=media&token=3f523f76-d0d2-4a10-9972-b6af61348fca"></img>
                     <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/productsPages%2Fss150specs.png?alt=media&token=81fdb78d-1915-4964-8337-0566669eb4cb"></img>
-                </div>
+                </div> */}
                 <div className="productsPage4thContainer">
-                    <div className="productsPage4thContainerHeader">
-                        <a className="headerOptions" onClick={this.orderOptions}>Order Now</a>
-                        <a className="headerOptions" onClick={this.colorOptions}>Color Options</a>
-                    </div>
-                    {
+                    {/* <div className="productsPage4thContainerHeader"> */}
+                        {/* <a className="headerOptions" onClick={this.orderOptions}>Order Now</a>
+                        <a className="headerOptions" onClick={this.colorOptions}>Color Options</a> */}
+                    {/* </div> */}
+                    {/* {
                         this.state.colorOptions
                         ? (
                             <div className="colorOptionsContent">
@@ -373,116 +368,139 @@ class Iconpanels extends Component{
                         ) : (
                             null
                         )
-                    }
-                    {
+                    } */}
+                    {/* {
                         this.state.orderOptions
-                        ? (
+                        ? ( */}
                             <div className="orderOptionsContent">
                                 <Form className="orderOptionsContentForm" onSubmit={this.handleSumbit}>
                                     <div className="orderOptionsTextForm">
                                         <h2 className="orderOptionsTextFormTitle">SS 150</h2>
                                         <FormGroup className="orderOptionsTextFormSmall">
-                                            {this.state.customerName?<Input 
+                                            {this.props.obj.customerName?
+                                            <Input 
                                                 type="text"
                                                 className="orderOptionsTextInput"
                                                 name="customerName" 
                                                 // placeholder="Customer Name"
-                                                value={this.state.customerName}
-                                                onChange={this.handleChange}
-                                                required 
-                                                 />:<Input 
-                                                 type="text"
-                                                 className="orderOptionsTextInput"
-                                                 name="customerName" 
-                                                 placeholder="Customer Name"
-                                                 onChange={this.handleChange}
-                                                 required 
-                                                  />}
+                                                // onChange={this.handleChange}
+                                                // required 
+                                                value={this.props.obj.customerName}
+                                                />:
+                                                <Input 
+                                                type="text"
+                                                className="orderOptionsTextInput"
+                                                name="customerName" 
+                                                placeholder="Customer Name"
+                                                // onChange={this.handleChange}
+                                                // required 
+                                                // value={this.props.obj.customerName}
+                                                />}
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
-                                        {this.state.phone?<Input 
+                                            {this.props.obj.phone?<Input 
                                                 type="phone"
                                                 className="orderOptionsTextInput"
                                                 name="phone"
                                                 // placeholder="Phone Number"
-                                                value={this.state.phone}
-                                                onChange={this.handleChange} 
-                                                required />:<Input 
+                                                value={this.props.obj.phone}
+                                                // onChange={this.handleChange} 
+                                                // required 
+                                                />:
+                                            <Input 
                                                 type="phone"
                                                 className="orderOptionsTextInput"
                                                 name="phone"
                                                 placeholder="Phone Number"
-                                                onChange={this.handleChange} 
-                                                required />}
+                                                // value={this.props.obj.phone}
+                                                // onChange={this.handleChange} 
+                                                // required 
+                                                />}
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
-                                            {this.state.po?<Input 
+                                            {this.props.obj.po?
+                                            <Input 
                                                 type="text"
                                                 className="orderOptionsTextInput"
-                                                name="po"
+                                                // name="po"
                                                 // placeholder="PO"
-                                                value={this.state.po}
-                                                onChange={this.handleChange}
-                                                required />:<Input 
+                                                // onChange={this.handleChange}
+                                                // required 
+                                                value={this.props.obj.po}
+                                                />:<Input 
                                                 type="text"
                                                 className="orderOptionsTextInput"
-                                                name="po"
+                                                // name="po"
                                                 placeholder="PO"
-                                                onChange={this.handleChange}
-                                                required />}
+                                                // onChange={this.handleChange}
+                                                // required 
+                                                // value={this.props.obj.po}
+                                                />}
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
-                                            {this.state.email?<Input 
+                                            {this.props.obj.email?
+                                            <Input 
                                                 type="email"
                                                 className="orderOptionsTextInput"
-                                                name="email"
+                                                // name="email"
                                                 // placeholder="Email Address"
-                                                value={this.state.email}
-                                                onChange={this.handleChange}
-                                                required />:<Input 
+                                                // onChange={this.handleChange}
+                                                // required 
+                                                value={this.props.obj.email}
+                                                />:<Input 
                                                 type="email"
                                                 className="orderOptionsTextInput"
-                                                name="email"
+                                                // name="email"
                                                 placeholder="Email Address"
-                                                onChange={this.handleChange}
-                                                required />}
+                                                // onChange={this.handleChange}
+                                                // required 
+                                                // value={this.props.obj.email}
+                                                />}
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
-                                            {this.state.address?<Input 
+                                            {this.props.obj.address?
+                                            <Input 
                                                 type="text"
                                                 className="orderOptionsTextInput"
-                                                name="address"
+                                                // name="address"
                                                 // placeholder="Customer Address"
-                                                value={this.state.address}
-                                                onChange={this.handleChange} />:<Input 
+                                                // onChange={this.handleChange} 
+                                                value={this.props.obj.address}
+                                                />:<Input 
                                                 type="text"
                                                 className="orderOptionsTextInput"
-                                                name="address"
+                                                // name="address"
                                                 placeholder="Customer Address"
-                                                onChange={this.handleChange} />}
+                                                // onChange={this.handleChange} 
+                                                // value={this.props.obj.address}
+                                                />}
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
-                                            {this.state.productname?<Input 
+                                            {this.props.obj.productname?
+                                            <Input 
                                                 type="text"
                                                 className="orderOptionsTextInput"
                                                 name="productname"
                                                 // placeholder="Product Name"
-                                                value={this.state.productname}
-                                                onChange={this.handleChange} 
-                                                required />:<Input 
+                                                // onChange={this.handleChange} 
+                                                // required 
+                                                value={this.props.obj.productname}
+                                                />:<Input 
                                                 type="text"
                                                 className="orderOptionsTextInput"
                                                 name="productname"
                                                 placeholder="Product Name"
-                                                onChange={this.handleChange} 
-                                                required />}
+                                                // onChange={this.handleChange} 
+                                                // required 
+                                                // value={this.props.obj.productName}
+                                                />}
                                         </FormGroup>
                                     </div>
                                     <div className="orderOptionsSpecsForm">
                                         <div className="orderOptionsSpecsFormTitle">
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>GA</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" value={this.state.ga} name="ga" onChange={this.handleChange} required>
+                                                <Input type="select" className="orderOptionsSpecsInput" value={this.props.obj.ga} name="ga" onChange={this.handleChange} required>
                                                     <option>-</option>
                                                     <option>29</option>
                                                     <option>26</option>
@@ -492,15 +510,15 @@ class Iconpanels extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Color</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.color}  name="color" onChange={this.handleChange} required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.color} name="color" onChange={this.handleChange} required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total Linear Feet</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.totallinearfeet} name="totallinearfeet" placeholder={this.state.totallinearfeet} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.totallinearfeet} name="totallinearfeet" readOnly />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Special Crating</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" value={this.state.specialcrating} name="specialcrating" onChange={this.handleChange}>
+                                                <Input type="select" className="orderOptionsSpecsInput" value={this.props.obj.specialcrating} name="specialcrating" onChange={this.handleChange}>
                                                     <option>-</option>
                                                     <option>Yes</option>
                                                     <option>No</option>
@@ -509,7 +527,7 @@ class Iconpanels extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>Protective film</Label>
-                                                <Input type="select" className="orderOptionsSpecsInput" value={this.state.protectivefilm} name="protectivefilm" onChange={this.handleChange}>
+                                                <Input type="select" className="orderOptionsSpecsInput" value={this.props.obj.protectivefilm} name="protectivefilm" onChange={this.handleChange}>
                                                     <option>-</option>
                                                     <option>Yes</option>
                                                     <option>No</option>
@@ -518,604 +536,416 @@ class Iconpanels extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Finish</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" value={this.state.finish} name="finish" onChange={this.handleChange} required >
+                                                <Input type="select" className="orderOptionsSpecsInput" value={this.props.obj.finish} name="finish" onChange={this.handleChange} required >
                                                     <option>-</option>
                                                     <option>30</option>
                                                 </Input>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.totalsquarefeet} name="totalsquarefeet" placeholder={this.state.totalsquarefeet} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.totalsquarefeet} name="totalsquarefeet" readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty} name="qty" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty} name="qty" required />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch} name="inch" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch} name="inch" required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm} name="mm" placeholder={this.state.mm} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm} name="mm" readOnly />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Tag</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag} name="tag" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag} name="tag" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Linear Feet</label>
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet} name="linearfeet" placeholder={this.state.linearfeet}/>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet} name="linearfeet" />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet} name="squarefeet" placeholder={this.state.squarefeet} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet} name="squarefeet" readOnly />
                                             </FormGroup>
                                         </div>
                                     </div>
                                     <div className="orderOptionsFlashingsMainContainer">
                                         <h2 className="orderOptionsTitle">FLASHINGS:</h2>
                                         <div className="orderOptionsFlashingsContainerSmall">
-                                            <FormGroup className="orderOptionsFlashingsContainer2"> 
+                                            {this.props.obj.i101?<FormGroup className="orderOptionsFlashingsContainer2"> 
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F101.jpg?alt=media&token=8bffe047-361f-467d-b54d-79873721fb7b"/>
-                                                {this.state.i101?<CustomInput
+                                                <CustomInput
                                                     className="orderOptionsFlashingsInput2" 
                                                     name="i101"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value = {this.state.i101}
+                                                    value={this.props.obj.i101}
                                                     onChange={this.handleChange}
-                                                    />:<CustomInput
-                                                    className="orderOptionsFlashingsInput2" 
-                                                    name="i101"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    onChange={this.handleChange}
-                                                    />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i102?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F102.jpg?alt=media&token=1a1089f9-b2cc-476d-9405-cf79fda0ceee"/>
-                                                {this.state.i102?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i102}
+                                                    value={this.props.obj.i102}
                                                     name="i102"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i102"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i103?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F103.jpg?alt=media&token=9e17a1c1-a515-49fd-92e3-9c1a5de10a4e"/>
-                                                {this.state.i103?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i103}
+                                                    value={this.props.obj.i103}
                                                     name="i103"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i103"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i104?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F104.jpg?alt=media&token=1621b1c6-2da6-4b81-873c-573ac49527da"/>
-                                                {this.state.i104?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i104}
+                                                    value={this.props.obj.i104}
                                                     name="i104"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i104"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i106?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F106.jpg?alt=media&token=b8ef318d-25c3-47c8-b904-7fa377656077"/>
-                                                {this.state.i106?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i106}
+                                                    value={this.props.obj.i106}
                                                     name="i106"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i106"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i107?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F107.jpg?alt=media&token=86f2835b-ce37-46ac-b2c4-6f0c18d8a7cb"/>
-                                                {this.state.i107?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i107}
+                                                    value={this.props.obj.i107}
                                                     name="i107"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i107"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i108?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F108.jpg?alt=media&token=9f8d26df-edfe-4578-b22d-027c316abf0a"/>
-                                                {this.state.i108?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i108}
+                                                    value={this.props.obj.i108}
                                                     name="i108"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i108"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i111?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F111.jpg?alt=media&token=f6f40da4-59e1-44fa-a58e-56e1ffb04ac1"/>
-                                                {this.state.i111?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i111}
+                                                    value={this.props.obj.i111}
                                                     name="i111"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i111"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i112?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F112.jpg?alt=media&token=8addf58e-a0a3-4fa1-99ae-b5c827d91d22"/>
-                                                {this.state.i112?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i112}
+                                                    value={this.props.obj.i112}
                                                     name="i112"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i112"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i113?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F113.jpg?alt=media&token=86b9bc9d-fdc5-43a5-9797-06ff8d54054b"/>
-                                                {this.state.i113?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i113}
+                                                    value={this.props.obj.i113}
                                                     name="i113"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i113"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i114?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F114.jpg?alt=media&token=6c8b8c8d-38ca-48b1-a325-33d0aec83a7d"/>
-                                                {this.state.i114?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i114}
+                                                    value={this.props.obj.i114}
                                                     name="i114"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i114"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i115?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F115.jpg?alt=media&token=9252d05c-2720-4416-abaf-4eae552de636"/>
-                                                {this.state.i115?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i115}
+                                                    value={this.props.obj.i115}
                                                     name="i115"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i115"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i116?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F116.jpg?alt=media&token=1f93d521-2daf-4f39-88da-f41b475f45b1"/>
-                                                {this.state.i116?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i116}
+                                                    value={this.props.obj.i116}
                                                     name="i116"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i116"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i117?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F117.jpg?alt=media&token=62be0f92-9e90-43e9-8189-abeacd259fa2"/>
-                                                {this.state.i117?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i117}
+                                                    value={this.props.obj.i117}
                                                     name="i117"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i117"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i118?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F118.jpg?alt=media&token=3dd781c8-5993-484f-83a9-f4f77eac3fa4"/>
-                                                {this.state.i118?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i118}
+                                                    value={this.props.obj.i118}
                                                     name="i118"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i118"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i119?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F119.jpg?alt=media&token=20914689-0cdd-4203-831c-7d376503deb9"/>
-                                                {this.state.i119?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i119}
+                                                    value={this.props.obj.i119}
                                                     name="i119"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i119"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i120?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F120.jpg?alt=media&token=8cfd4fe2-a94b-445a-8aa9-0906b9e2147e"/>
-                                                {this.state.i120?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i120}
+                                                    value={this.props.obj.i120}
                                                     name="i120"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i120"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i121?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F121.jpg?alt=media&token=cecf7570-2e4e-4501-83e3-2eb7f6434602"/>
-                                                {this.state.i121?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i121}
+                                                    value={this.props.obj.i121}
                                                     name="i121"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i121"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i122?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F122.jpg?alt=media&token=91e8e0a4-a547-4009-8c48-78f1e95f94c5"/>
-                                                {this.state.i122?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i122}
+                                                    value={this.props.obj.i122}
                                                     name="i122"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i122"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i123?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F123.jpg?alt=media&token=25fb14b8-6894-46c4-88e6-79eb361dd401"/>
-                                                {this.state.i123?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i123}
+                                                    value={this.props.obj.i123}
                                                     name="i123"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i123"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i128?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F128.jpg?alt=media&token=8a8eaa5a-2546-48c0-b241-ed18ba350b38"/>
-                                                {this.state.i128?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i128}
+                                                    value={this.props.obj.i128}
                                                     name="i128"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i128"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i129?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F129.jpg?alt=media&token=09641c07-fe20-42a6-991e-cbf36d5eead2"/>
-                                                {this.state.i129?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i129}
+                                                    value={this.props.obj.i129}
                                                     name="i129"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i129"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i130?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F130.jpg?alt=media&token=20d182b1-8002-4be7-bf95-4bcf54e30955"/>
-                                                {this.state.i130?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i130}
+                                                    value={this.props.obj.i130}
                                                     name="i130"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i130"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.i131?<FormGroup className="orderOptionsFlashingsContainer2">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F131.jpg?alt=media&token=e71f40d0-29c7-4c16-8e62-5eaccaa884cd"/>
-                                                {this.state.i131?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsFlashingsInput2"
                                                     type="text"
                                                     // placeholder="QTY"
-                                                    value={this.state.i131}
+                                                    value={this.props.obj.i131}
                                                     name="i131"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsFlashingsInput2"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="i131"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
                                         </div>
                                     </div>
                                     <h2 className="orderOptionsTitle">ACCESSORIES:</h2>
                                         <div className="orderOptionsFlashingsContainerSmall">
-                                            <FormGroup className="orderOptionsFlashingsContainer"> 
+                                        {this.props.obj.metalDrillScrews?<FormGroup className="orderOptionsFlashingsContainer"> 
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fmetal%20drill%20screws.png?alt=media&token=def7c31f-bab7-430a-aac1-c6686b9eb621"/>
-                                                {this.state.metalDrillScrews?<CustomInput
+                                                <CustomInput
                                                     className="orderOptionsAccessoriesInput" 
                                                     name="metalDrillScrews"
                                                     type="text"
                                                     id="annoying"
                                                     // placeholder="QTY"
-                                                    value={this.state.metalDrillScrews}
+                                                    value={this.props.obj.metalDrillScrews}
                                                     onChange={this.handleChange}
-                                                    />:<CustomInput
-                                                    className="orderOptionsAccessoriesInput" 
-                                                    name="metalDrillScrews"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    onChange={this.handleChange}
-                                                    />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                    />
+                                            </FormGroup>:''}
+                                            {this.props.obj.woodGripScrews?<FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fwoodgrip%20screws.png?alt=media&token=bedb64c8-3ace-4697-8bd6-10e6b6ee4db2"/>
-                                                {this.state.woodGripScrews?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     // placeholder="QTY"
-                                                    value={this.state.woodGripScrews}
+                                                    value={this.props.obj.woodGripScrews}
                                                     name="woodGripScrews"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="woodGripScrews"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.syntheticHighTempCover?<FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fsynthetic%20high%20temp%20cover.png?alt=media&token=175a4dbb-40b2-43b5-92f2-eb31cb839e7c"/>
-                                                {this.state.syntheticHighTempCover?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     // placeholder="QTY"
-                                                    value={this.state.syntheticHighTempCover}
+                                                    value={this.props.obj.syntheticHighTempCover}
                                                     name="syntheticHighTempCover"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="syntheticHighTempCover"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {/* {a = 'peel&StickTempCover'} */}
+                                            {/* {this.props.obj.a?<FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fpeel%20%26%20stick%20high%20temp%20cover.png?alt=media&token=7bfec47d-cb9b-40c3-b843-b93811e530f2"/>
-                                                {a= "peel&StickHighTempCover"}
-                                                {this.state.a?<CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    // placeholder="QTY"
-                                                    value={this.state.a}
-                                                    name="peel&StickHighTempCover"
-                                                    onChange={this.handleChange} />:<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     placeholder="QTY"
+                                                    value={this.props.obj.a}
                                                     name="peel&StickHighTempCover"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''} */}
+                                            {this.props.obj.tubeSealant?<FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Ftube%20sealant.png?alt=media&token=bf1baf8a-beac-461e-af91-7fa9c12695e6"/>
-                                                {this.state.tubeSealant?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     // placeholder="QTY"
-                                                    value={this.state.tubeSealant}
+                                                    value={this.props.obj.tubeSealant}
                                                     name="tubeSealant"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="tubeSealant"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.butylTape?<FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fbutyl%20tape.png?alt=media&token=24398d7f-af89-4872-82fd-d9286875a3cb"/>
-                                                {this.state.butylTape?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     // placeholder="QTY"
-                                                    value={this.state.butylTape}
+                                                    value={this.props.obj.butylTape}
                                                     name="butylTape"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="butylTape"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.plumbingBoots?<FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fplumbing%20boots.png?alt=media&token=1db3c74a-c476-4596-b4b6-0c286a1cc006"/>
-                                                {this.state.plumbingBoots?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     // placeholder="QTY"
-                                                    value={this.state.plumbingBoots}
+                                                    value={this.props.obj.plumbingBoots}
                                                     name="plumbingBoots"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="plumbingBoots"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.flexOVent?<FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fflex-o-vent.png?alt=media&token=c1e81e0f-c6a2-48fd-84be-6952ba69aadf"/>
-                                                {this.state.flexOvent?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     // placeholder="QTY"
-                                                    value={this.state.flexOvent}
+                                                    value={this.props.obj.flexOVent}
                                                     name="flexOVent"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="flexOVent"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.profileOuterClosure?<FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fprofile%20outer%20closure.png?alt=media&token=836d6b46-1e94-45a5-aea2-6ce4c69d37a3"/>
-                                                {this.state.profileOuterClosure?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     // placeholder="QTY"
-                                                    value={this.state.profileOuterClosure}
+                                                    value={this.props.obj.profileOuterClosure}
                                                     name="profileOuterClosure"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="profileOuterClosure"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.profileInnerClosure?<FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fprofile%20inner%20closure.png?alt=media&token=a799aa5a-55a3-41d9-9a47-a4565e06e6c5"/>
-                                                {this.state.profileInnerClosure?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     // placeholder="QTY"
-                                                    value={this.state.profileInnerClosure}
+                                                    value={this.props.obj.profileInnerClosure}
                                                     name="profileInnerClosure"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="profileInnerClosure"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer">
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
+                                            {this.props.obj.lowProfileRidgeVent?<FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Flow%20profile%20ridge%20vent.png?alt=media&token=18d4aaaf-d88f-4cda-96ee-1addef31a649"/>
-                                                {this.state.lowProfileRidgeVent?<CustomInput 
+                                                <CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     // placeholder="QTY"
-                                                    value={this.state.lowProfileRidgeVent}
+                                                    value={this.props.obj.lowProfileRidgeVent}
                                                     name="lowProfileRidgeVent"
-                                                    onChange={this.handleChange} />:<CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="lowProfileRidgeVent"
-                                                    onChange={this.handleChange} />}
-                                            </FormGroup>
+                                                    onChange={this.handleChange} />
+                                            </FormGroup>:''}
                                         </div>
-                                    <FormGroup className="productDisclaimerFG">
+                                    {/* <FormGroup className="productDisclaimerFG">
                                     <p className="disclaimerTitle">Please note by placing an order with Jay’s Metal Products Ltd. you (THE CUSTOMER) are agreeing to the following terms and conditions:</p>
                                         <ul>
                                             <li>Jay’s Metal Products Ltd. recommends that prior to the installation of panels, the protective film is removed from the panel to prevent any accidents.</li>
@@ -1127,30 +957,20 @@ class Iconpanels extends Component{
                                         </ul>
                                         <CustomInput type="checkbox" className="productDisclaimer"/>
                                         <Label>I accept terms and services</Label>
-                                    </FormGroup>
-                                    <Button className="contactButton" onClick={this.printPage}><p className="contactButtonText">Go To Print Page</p></Button>
-                                    <Button className="contactButton"><p className="contactButtonText">Submit</p></Button>
+                                    </FormGroup> */}
+                                    {/* <Button className="contactButton" onClick={this.printPage}><p className="contactButtonText">Print Page</p></Button>
+                                    <Button className="contactButton"><p className="contactButtonText">Submit</p></Button> */}
                                 </Form>
                             </div>
-                        ) : (
+                        {/* ) : (
                             null
                         )
-                    }
+                    } */}
                 </div>
-                <Footer/>
-            </div>):<div>
-                <button onClick={() => {this.state.status = true; this.state = this.state; this.forceUpdate()}}>Back</button>
-                <ReactToPrint content={() => this.componentRef}>
-                <PrintContextConsumer>
-                    {({ handlePrint }) => (
-                    <button style={{width: '80%', margin: '10px auto', padding: '10px', fontWeight: 'bold', fontSize: 18}} onClick={handlePrint} className="contactButton" >Print Page</button>
-                    )}
-                </PrintContextConsumer>
-                </ReactToPrint>
-                <Standingseam2Print obj = {this.state} ref={el => (this.componentRef = el)} />
-            </div>}</div>
+                {/* <Footer/> */}
+            </div>
         )
     }
 }
 
-export default Iconpanels;
+export default IconpanelsPrint;
