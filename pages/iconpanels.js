@@ -1139,11 +1139,10 @@ class Iconpanels extends Component{
                 </div>
                 <Footer/>
             </div>):<div>
-                <button onClick={() => {this.state.status = true; this.state = this.state; this.forceUpdate()}}>Back</button>
                 <ReactToPrint content={() => this.componentRef}>
                 <PrintContextConsumer>
                     {({ handlePrint }) => (
-                    <button style={{width: '80%', margin: '10px auto', padding: '10px', fontWeight: 'bold', fontSize: 18}} onClick={handlePrint} className="contactButton" >Print Page</button>
+                    <button style={{width: '80%', margin: '10px auto', padding: '10px', fontWeight: 'bold', fontSize: 18, visibility: 'hidden'}} onClick={handlePrint} className="contactButton" >Print Page</button>
                     )}
                 </PrintContextConsumer>
                 </ReactToPrint>
