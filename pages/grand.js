@@ -12,6 +12,7 @@ class Grand extends Component{
             colorOptions: false,
             orderOptions: false,
             customerName: '',
+            productname: '',
             phone: '',
             po: '',
             email: '',

@@ -4,9 +4,8 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import { Form, FormGroup, Input, Button, Label, CustomInput } from 'reactstrap'
 import axios from 'axios'
-import Snaplock from './snaplock';
 
-class Snaplock2 extends Component{
+class StandingSeam3 extends Component{
     constructor(){
         super()
         this.state = {
@@ -24,13 +23,14 @@ class Snaplock2 extends Component{
             finish: '',
             totallinearfeet: '',
             totalsquarefeet: '',
-            qty: 0,
-            inch: 0,
+            weight: '',
+            qty: '',
+            inch: '',
             mm: '',
             specialcrating: '',
             tag: '',
-            linearfeet: 0,
-            sqft: '',
+            linearfeet: '',
+            squarefeet: '',
             qty2: '',
             inch2: '',
             mm2: '',
@@ -252,12 +252,73 @@ class Snaplock2 extends Component{
             totallinearfeet: totalLinear.toFixed(2),
             totalsquarefeet: sqft.toFixed(2)
         })
-    }
+        if (this.state.ga == 29 && this.state.finish == 12) {
+            let weightCal = this.state.totalsquarefeet * 0.688;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 29 && this.state.finish == 16) {
+            let weightCal = this.state.totalsquarefeet * 0.86;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 29 && this.state.finish == 20) {
+            let weightCal = this.state.totalsquarefeet * 1.032;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 26 && this.state.finish == 12) {
+            let weightCal = this.state.totalsquarefeet * 1.008;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 26 && this.state.finish == 16) {
+            let weightCal = this.state.totalsquarefeet * 1.26;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 26 && this.state.finish == 20) {
+            let weightCal = this.state.totalsquarefeet * 1.512;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 24 && this.state.finish == 12) {
+            let weightCal = this.state.totalsquarefeet * 1.28;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 24 && this.state.finish == 16) {
+            let weightCal = this.state.totalsquarefeet * 1.6;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 24 && this.state.finish == 20) {
+            let weightCal = this.state.totalsquarefeet * 1.92;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 22 && this.state.finish == 12) {
+            let weightCal = this.state.totalsquarefeet * 1.6;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 22 && this.state.finish == 16) {
+            let weightCal = this.state.totalsquarefeet * 1.98;
+            this.setState({
+                weight: weightCal
+            })
+        } else if(this.state.ga == 22 && this.state.finish == 20) {
+            let weightCal = this.state.totalsquarefeet * 2.376;
+            this.setState({
+                weight: weightCal
+            })
+        }
+      }
     
       handleSumbit(e) {
         e.preventDefault();
     
-        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, sqft, qty2, inch2, mm2, tag2, linearfeet2, squarefeet2, qty3, inch3, mm3, tag3, linearfeet3, squarefeet3, qty4, inch4, mm4, tag4, linearfeet4, squarefeet4, qty5, inch5, mm5, tag5, linearfeet5, squarefeet5, qty6, inch6, mm6, tag6, linearfeet6, squarefeet6, qty7, inch7, mm7, tag7, linearfeet7, squarefeet7, qty8, inch8, mm8, tag8, linearfeet8, squarefeet8, qty9, inch9, mm9, tag9, linearfeet9, squarefeet9, qty10, inch10, mm10, tag10, linearfeet10, squarefeet10, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gablerake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
+        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, squarefeet, qty2, inch2, mm2, tag2, linearfeet2, squarefeet2, qty3, inch3, mm3, tag3, linearfeet3, squarefeet3, qty4, inch4, mm4, tag4, linearfeet4, squarefeet4, qty5, inch5, mm5, tag5, linearfeet5, squarefeet5, qty6, inch6, mm6, tag6, linearfeet6, squarefeet6, qty7, inch7, mm7, tag7, linearfeet7, squarefeet7, qty8, inch8, mm8, tag8, linearfeet8, squarefeet8, qty9, inch9, mm9, tag9, linearfeet9, squarefeet9, qty10, inch10, mm10, tag10, linearfeet10, squarefeet10, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gablerake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
     
         const form = axios.post('http://localhost:3001/api/form', {
             customerName,
@@ -278,7 +339,7 @@ class Snaplock2 extends Component{
             specialcrating,
             tag,
             linearfeet,
-            sqft,
+            squarefeet,
             qty2,
             inch2,
             mm2,
@@ -402,13 +463,21 @@ class Snaplock2 extends Component{
                 <div className="productPageLandingContainer">
                     <img className="productPageLandingImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
                     <div className="productPage2ndContainer">
-                    <h1 className="productPageMainTitle">SL 150</h1>
-                    <p className="productPageMainText">SL150 panels are designed with efficiency in mind. With a similar aesthetic to the Standing Seam panel, the Snap lock panel is another excellent option engineered to be installed without the specialized tight-seaming clips, which the Standing Seam panel utilizes. The Snap lock panel snaps down on one side and is screwed down through its fabricated pleated edge on the other. At Jay's Metal Products, we manufacture both a 1" as well as a 1 1/2" design.</p>
+                    <h1 className="productPageMainTitle">SS 200</h1>
+                    <p className="productPageMainText">SS 150 provides a clean visual appearance due to the hidden fastener system. With characteristics like the SS 100 panel, the SS 150 panel is ideal for commercial roofs when combined with a slope of ½ :12. This will allow for lower costs due to a low sloping roof needing fewer materials. The panels are available in the SMP pre-painted steel along with PVDF premium.<br/>
+                    <ul>
+                        <li>Single-lock</li>
+                        <li>Cooling and energy reduction due to reflective steel reflective properties</li>
+                        <li>Low maintenance</li>
+                        <li>Varying seam heights</li>
+                        <li>Paint covered up to 40 years under warranty</li>
+                    </ul>
+                    </p>
                     </div>
                 </div>
                 <div className="productPage3rdContainer">
-                    <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/products%2Fsnaplock-150.png?alt=media&token=539d0eb9-b969-4bb1-859c-ec3a0a8fb57e"></img>
-                    <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/productsPages%2Fsnaplock2specs.png?alt=media&token=55269307-9c96-4138-ac2f-665dff7e723c"></img>
+                    <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2FStanding%20seam%20200.png?alt=media&token=4be38546-d3e3-43f2-a3ef-89bfba23a44d"></img>
+                    <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/productsPages%2Fss150specs.png?alt=media&token=81fdb78d-1915-4964-8337-0566669eb4cb"></img>
                 </div>
                 <div className="productsPage4thContainer">
                     <div className="productsPage4thContainerHeader">
@@ -531,7 +600,7 @@ class Snaplock2 extends Component{
                             <div className="orderOptionsContent">
                                 <Form className="orderOptionsContentForm" onSubmit={this.handleSumbit}>
                                     <div className="orderOptionsTextForm">
-                                        <h2 className="orderOptionsTextFormTitle">SL 150</h2>
+                                        <h2 className="orderOptionsTextFormTitle">SS 200</h2>
                                         <FormGroup className="orderOptionsTextFormSmall">
                                             <Input 
                                                 type="text"
@@ -628,7 +697,9 @@ class Snaplock2 extends Component{
                                                 <label>Finish</label>
                                                 <Input type="select" className="orderOptionsSpecsInput" name="finish" onChange={this.handleChange} required >
                                                     <option>-</option>
-                                                    <option>30"</option>
+                                                    <option>12</option>
+                                                    <option>16</option>
+                                                    <option>20</option>
                                                 </Input>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
@@ -639,15 +710,15 @@ class Snaplock2 extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="number" className="orderOptionsSpecsInput" name="qty" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="qty" required />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="number" className="orderOptionsSpecsInput" name="inch" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="inch" required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="mm" placeholder={this.state.mm} />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="mm" placeholder={this.state.mm} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Tag</label>
@@ -655,7 +726,7 @@ class Snaplock2 extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Linear Feet</label>
-                                                <Input readOnly type="number" className="orderOptionsSpecsInput" name="linearfeet" placeholder={this.state.linearfeet}/>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet" placeholder={this.state.linearfeet}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
@@ -901,7 +972,7 @@ class Snaplock2 extends Component{
                                         <h2 className="orderOptionsTitle">FLASHINGS:</h2>
                                         <div className="orderOptionsFlashingsContainerSmall">
                                         <FormGroup className="orderOptionsFlashingsContainer2"> 
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FHook%20Drip.jpg?alt=media&token=128c0549-17d9-45a3-b2a7-bc365f5884de"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fhook%20drip.jpg?alt=media&token=70711190-0093-4dd7-a85e-fb153bb13267"/>
                                                 <CustomInput
                                                     className="orderOptionsFlashingsInput" 
                                                     name="hookdrip1"
@@ -911,7 +982,7 @@ class Snaplock2 extends Component{
                                                     />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FHook%20Drip%20for%20Step%20Pitch.jpg?alt=media&token=f65e7428-d232-44d5-a98c-575772c14c33"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fhook%20drip%20for%20step%20pitch.jpg?alt=media&token=4890e24f-0247-4ec7-99e2-a0594496f8d3"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -920,7 +991,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FGable%20Rake%201.jpg?alt=media&token=2168f699-830a-44fd-9436-b723263b012f"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fgabble%20rake1.jpg?alt=media&token=123239cc-4cd5-44b3-8575-a275b34b5db9"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -929,7 +1000,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FGable%20Rake%202.jpg?alt=media&token=bb75ffd9-207c-47f4-bd34-9da4b7e2c639"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fgabble%20rake2.jpg?alt=media&token=bb036fd8-345f-4f84-984a-96836d7c53ca"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -938,7 +1009,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FGable%20Rake3.jpg?alt=media&token=136150c3-5ebe-478d-9047-f3c252b61610"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fgabble%20rake3.jpg?alt=media&token=a27e2b6c-9110-4e4e-94aa-aed72a13c08e"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -947,7 +1018,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FSide%20Wall1.jpg?alt=media&token=976350de-e6df-448e-ac75-c01286d7a46f"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fside%20wall1.jpg?alt=media&token=711ed774-5431-42e2-931b-17e6e9a8d2dc"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -956,7 +1027,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FSide%20Wall2.jpg?alt=media&token=738b3bd2-35cb-4d21-89c4-d0abc76d1095"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fside%20wall2.jpg?alt=media&token=7367fec5-0f8b-40f0-a70f-a7e612b9661e"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -965,7 +1036,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FEnd%20Wall1.jpg?alt=media&token=5b64a623-4628-41df-b181-c79a38337da2"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fend%20wall1.jpg?alt=media&token=e9b2e85b-f1d9-457f-a387-b1e214bd4a56"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -974,7 +1045,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FEnd%20Wall2.jpg?alt=media&token=7f97894b-5d52-40e4-b7e6-618c9b6c936f"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fend%20wall2.jpg?alt=media&token=0d587631-27c3-4b09-a833-09eb400f64ff"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -983,7 +1054,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FEnd%20Wall3.jpg?alt=media&token=26ec8677-267b-4db0-8f3a-1698501391be"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fend%20wall3.jpg?alt=media&token=57034de2-9baf-4b74-8bbb-7cf18a40a47c"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -992,7 +1063,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FTransition1.jpg?alt=media&token=34056558-c020-4562-892c-fd66e759def0"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Ftransition1.jpg?alt=media&token=8419ef7a-e396-4cf8-af9a-bcb7ae1deb94"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1001,7 +1072,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FTransition2.jpg?alt=media&token=a5e7befb-9a90-415a-81bc-c5fdb15c2242"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Ftransition2.jpg?alt=media&token=a6a48a26-a768-4fb6-8e9b-39ac6273937b"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1010,7 +1081,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FTransition3.jpg?alt=media&token=966d4436-fb81-491d-ab8b-f30b976224f8"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Ftransition3.jpg?alt=media&token=f9c81a42-faf7-40d1-b871-d730bb6c0938"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1019,7 +1090,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FPeak%20Cap1.jpg?alt=media&token=c14face5-939d-4285-ba3e-50bc28c90575"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fpeak%20cap1.jpg?alt=media&token=6a872100-5ce7-403e-b726-755991f85dea"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1028,7 +1099,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FPeak%20Cap2.jpg?alt=media&token=adec41f4-5187-465c-81ee-63d11bb3289e"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fpeak%20cap2.jpg?alt=media&token=7e2000bf-5fb5-4d97-bdc3-70e50b861528"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1037,7 +1108,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FPeak%20Cap3.jpg?alt=media&token=79a3bc42-e526-4153-9c33-178d3f9c7739"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fpeak%20cap3.jpg?alt=media&token=748d08be-f8d8-4962-bee6-b0f480d8314d"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1046,7 +1117,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FHIP1.jpg?alt=media&token=170717c2-e8b9-4217-a7af-aaac85fd64dd"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fhip1.jpg?alt=media&token=b012c160-1085-45ca-bcc7-bc7a0de8457e"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1055,7 +1126,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fhip2.jpg?alt=media&token=74c1af7f-f804-4478-a3e3-eb9669f76828"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fhip2.jpg?alt=media&token=8ef290c2-7271-4bbc-94d5-2862ef2fb253"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1064,7 +1135,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fhip3.jpg?alt=media&token=d50c0ad5-953b-44e0-ba35-b003326b2952"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fhip3.jpg?alt=media&token=848ace7d-7083-4202-92f9-4f87a22f3543"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1073,7 +1144,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fridge1.jpg?alt=media&token=981f9517-2c82-40a9-beb7-cf69ba5bc4ec"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fridge1.jpg?alt=media&token=70334f37-67e3-4de6-8f8f-74d49df9d2b7"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1082,7 +1153,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fridge2.jpg?alt=media&token=42040d63-9ae0-439b-8d51-9f0095cc6c33"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fridge2.jpg?alt=media&token=87e7c07b-3dff-4710-a00c-e090ec4ef5a8"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1091,7 +1162,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FRidge3.jpg?alt=media&token=c2d35282-ed62-4b16-b814-3e399d172c13"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fridge3.jpg?alt=media&token=260382ab-c7c1-4863-b89a-3083b89bf697"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1100,7 +1171,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fridge4.jpg?alt=media&token=fd08e06e-d95b-4af2-8c48-77249f122131"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fridge4.jpg?alt=media&token=93bbef5e-47d5-4180-a391-c08673418c24"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1109,7 +1180,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fw%20valley1.jpg?alt=media&token=8c8d4a97-bc5d-49fc-87db-e932a50d4840"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fw%20valley1.jpg?alt=media&token=fe27a41f-5822-4cef-8405-b70ecab0433a"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1118,7 +1189,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fw%20valley%202.jpg?alt=media&token=5d48576e-9425-46b3-9034-9340d8e1a3d9"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fw%20valley2.jpg?alt=media&token=adf53e43-b25a-454c-b3a1-e0e9bcd8c2e8"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1127,7 +1198,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fv%20valley1.jpg?alt=media&token=6119c876-4cf3-4bb5-bde6-6cec23327350"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fv%20valley1.jpg?alt=media&token=2e5d3bf3-8529-4242-bf57-65b878bf8018"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1136,7 +1207,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FSnow%20Stop1.jpg?alt=media&token=2facc5b6-33fc-4478-a8c4-38118003f67a"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fsnow%20stop1.jpg?alt=media&token=48125644-b7f9-4206-be39-16a956d53ab3"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1145,7 +1216,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FCleat.jpg?alt=media&token=906047c9-a6c6-4da3-847a-dfc3c431f989"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fcleat.jpg?alt=media&token=734b69ed-039c-4cc4-8b32-cc5a99f261db"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1154,7 +1225,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FJ%20-%20Under%20panel.jpg?alt=media&token=ce96a89a-53c9-48e8-baa0-e34700ee517d"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fj%20under%20panel.jpg?alt=media&token=29855359-d0cc-49c7-aa8c-fbc3ad8d4c85"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1163,7 +1234,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fz%20bar%20-%20over%20panel.jpg?alt=media&token=77f0411b-b731-484b-978d-205f25583889"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fz%20bar%20over%20panel.jpg?alt=media&token=00f69b80-5f5f-402c-992c-e8cf750976ad"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1172,7 +1243,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fperforated%20j%20under%20panel.jpg?alt=media&token=1054ddc7-a74b-463b-a798-ad667fab8587"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fperforated%20under%20panel.jpg?alt=media&token=6ab8af11-fab8-4911-baf9-16da3aacc1fc"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1181,7 +1252,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fperforated%20z%20bar%20over%20panel.jpg?alt=media&token=ebf74b6d-62e8-431f-bf19-5be893850b0e"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fperforated%20over%20panel.jpg?alt=media&token=c3e7ae14-fef6-4cdf-b330-cc4bab49c139"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1190,7 +1261,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fback%20pan%205'.jpg?alt=media&token=473c5f91-c50a-4cc1-b09d-b05eeec907bb"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fback%20pan5.jpg?alt=media&token=d154ea8e-069d-4750-bd92-58f8e1516f33"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1199,7 +1270,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fback%20pan%2010'.jpg?alt=media&token=e4ee0ccb-3c4f-4171-9dd0-85affbbb6983"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fback%20pan10.jpg?alt=media&token=e8945d3e-6f09-4aa5-95c3-da6693b479de"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1208,7 +1279,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fbase1.jpg?alt=media&token=7380e3f3-febe-4850-b44c-3487c570d593"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fbase1.jpg?alt=media&token=4faaf402-3901-480e-8316-804af79969c4"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1217,7 +1288,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fbase2.jpg?alt=media&token=799df40c-cb74-4f4c-9be0-43f771c44adb"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fbase2.jpg?alt=media&token=f30fb682-4dd1-45ab-a0f1-76a714f08549"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1226,7 +1297,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fbase3.jpg?alt=media&token=97107a41-d31b-4ef8-91c0-ce95afac08d9"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fbase3.jpg?alt=media&token=632390cf-ab64-42bf-9a5c-fa3392066c63"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1235,7 +1306,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fwindow%20header.jpg?alt=media&token=e129e120-0493-4b39-bcc6-6f43fd743714"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fwindow%20header.jpg?alt=media&token=d4e393ef-9fa8-4f57-95f3-f8487a3c32ec"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1244,7 +1315,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fwindow%20reverse.jpg?alt=media&token=46cde2e8-b918-415b-aef6-92ea65c45988"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fwindow%20reverse.jpg?alt=media&token=3e02ebc8-1d5d-4c42-b052-3d4957d9f322"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1253,7 +1324,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fwall%20transition.jpg?alt=media&token=8d8a0c06-26ae-4882-89db-ae0dea8dd7e9"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fwall%20transition.jpg?alt=media&token=fdce57fa-6d7d-424e-a97c-41602d4dbfe3"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1262,7 +1333,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fj%20trim1.jpg?alt=media&token=44dbbede-3e6d-4e34-a0de-ae21918f4172"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fjtrim1.jpg?alt=media&token=7f347959-ba36-43da-ae7c-8bfdfea2baf5"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1271,7 +1342,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fj%20trim2.jpg?alt=media&token=0aae4a79-370e-45b2-96e6-8ce6e18d2a92"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fjtrim2.jpg?alt=media&token=cb9f01fe-cbfd-42d3-970e-8db7de720ee0"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1280,7 +1351,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F2%20piece%20jtrim3.jpg?alt=media&token=756efa31-2396-4d91-97d2-4be22e4f8bcd"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fjtrim3.jpg?alt=media&token=02492014-5506-43f3-bd77-82d4041610d3"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1289,7 +1360,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Ftransition.jpg?alt=media&token=42c3faae-0e29-4d10-9bfd-63bbd842ea9f"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Ftransition.jpg?alt=media&token=be4a6b63-4eb0-479a-a62d-43416d747712"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1298,7 +1369,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Foutside%20corner1.jpg?alt=media&token=02b739c0-bbf2-49bc-9b7d-bb223cbf2b26"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Foutside%20corner1.jpg?alt=media&token=e2f38cec-bafa-424d-90cc-f48505d9235b"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1307,7 +1378,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Finside%20corner1.jpg?alt=media&token=882c02f5-ea61-4ca3-beb3-745e1043599d"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Finside%20corner1.jpg?alt=media&token=48835e6b-7dd3-45c4-b48b-b9aa08aad94c"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1316,7 +1387,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Foutisde%20corner2.jpg?alt=media&token=151ca8a2-a7d7-4f05-87cc-d0f523996f3f"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Foutside%20corner2.jpg?alt=media&token=ea07d5b4-39c7-48e0-ba19-afff86823f5d"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1325,7 +1396,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Finside%20corner%202.jpg?alt=media&token=43d76f94-970c-4389-a0fe-3acf2b433ea3"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Finside%20corner2.jpg?alt=media&token=574c044b-ac83-4fb8-8948-a8ea927ee11e"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1334,7 +1405,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Foutside%20corner3.jpg?alt=media&token=d93d7683-5b29-4ac8-a19b-3ba3ab2f7315"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Foutside%20corner3.jpg?alt=media&token=03214f39-b4de-4191-918b-763faab3e92c"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1343,7 +1414,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Finside%20corner%203.jpg?alt=media&token=f1794e40-01aa-4b20-bda9-bfbda9613cf1"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Finside%20corner3.jpg?alt=media&token=66155ca4-b0d3-4f65-afd7-c280fa160d21"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1352,25 +1423,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F2%20piece%20outside%20corner%204.jpg?alt=media&token=0f7b3af5-4dfe-4aa2-89b4-ba3e7dd7372c"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="outsidecorner4"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F2%20piece%20inside%20corner%204.jpg?alt=media&token=51b3c95b-eb40-4842-8fc6-1e980c084437"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="insidecorner4"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F%23290.jpg?alt=media&token=6c68de20-0c63-4945-889e-e23a542e79f1"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fss290.jpg?alt=media&token=2d7672f5-830c-43a4-8fce-be684b74c113"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1379,7 +1432,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F%23291.jpg?alt=media&token=1cf9db98-49c0-428e-939e-c7e6580b254c"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fss291.jpg?alt=media&token=d9e60d17-efc9-4dae-9f98-c967dd7ce537"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1388,7 +1441,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F292.jpg?alt=media&token=3ed2147e-208e-44fc-84d9-f86b405f2c15"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fss292.jpg?alt=media&token=a5f0d93a-52a4-46c3-8c07-bf1dbe78913e"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1397,7 +1450,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F293.jpg?alt=media&token=620e55ed-13f2-4a99-9fae-762cd5fcba37"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fss293.jpg?alt=media&token=ed475e7f-0412-4bdd-8029-c3a8c8c12c3a"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1406,7 +1459,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F294.jpg?alt=media&token=111aa019-7325-40c0-bf5b-879d8e0b31ab"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fss294.jpg?alt=media&token=03872080-63c4-47e8-8828-d03b4246bc0b"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1415,7 +1468,7 @@ class Snaplock2 extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F295.jpg?alt=media&token=013a0246-9ad8-49e1-b8f5-a353e8f2f05a"/>
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fss295.jpg?alt=media&token=c23d0e40-9046-4cf6-9dc5-1150c69ab941"/>
                                                 <CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
@@ -1567,4 +1620,4 @@ class Snaplock2 extends Component{
     }
 }
 
-export default Snaplock2;
+export default StandingSeam3;

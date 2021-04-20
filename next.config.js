@@ -15,6 +15,7 @@ module.exports = {
         '/corrugated' : { page: '/corrugated'},
         '/standingseam' : { page: '/standingseam'},
         '/standingseam2' : { page: '/standingseam2'},
+        '/standingseam3' : { page: '/standingseam3'},
         '/snaplock' : { page: '/snaplock'},
         '/snaplock2' : { page: '/snaplock2'},
         '/accessories' : { page: '/accessories'},

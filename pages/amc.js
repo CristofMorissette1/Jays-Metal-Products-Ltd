@@ -270,9 +270,9 @@ handleSumbit(e) {
           <Header/>
           <img className="acmLandingImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/productsPages%2Facm%20landing.jpg?alt=media&token=2fb558d6-7abb-450e-b1b1-88dddbd3961b"/>
         <div className="acmMenuOptions">         
-          <a className="acmHeaderOptions" onClick={this.panelA}>Panel A<img className="acmMenuImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/products%2Flowrib.png?alt=media&token=acf1ad55-b554-4870-a481-27be1983eeeb"/></a>
-          <a className="acmHeaderOptions" onClick={this.panelB}>Panel B<img className="acmMenuImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/products%2Flowrib.png?alt=media&token=acf1ad55-b554-4870-a481-27be1983eeeb"/></a>
-          <a className="acmHeaderOptions" onClick={this.panelC}>Panel C<img className="acmMenuImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/products%2Flowrib.png?alt=media&token=acf1ad55-b554-4870-a481-27be1983eeeb"/></a>
+          <a className="acmHeaderOptions" onClick={this.panelA}>Panel A<img className="acmMenuImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/acm%2FPanel%20A.jpg?alt=media&token=16bdb42a-9efc-48dd-9020-2ea97de7b96c"/></a>
+          <a className="acmHeaderOptions" onClick={this.panelB}>Panel B<img className="acmMenuImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/acm%2Fpanel%20b.jpg?alt=media&token=04156903-4fa3-4997-9ee4-8995dfb12d35"/></a>
+          <a className="acmHeaderOptions" onClick={this.panelC}>Panel C<img className="acmMenuImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/acm%2Fpanel%20c.jpg?alt=media&token=e8b8db88-40bc-47d2-bf68-79ef24d86367"/></a>
         </div>
         <Form className="orderOptionsContentForm" onSubmit={this.handleSumbit}>
         {
@@ -791,7 +791,6 @@ handleSumbit(e) {
             null
           )
         }
-        <Button className="contactButton" onClick={this.printPage}><p className="contactButtonText">Print Page</p></Button>
         <Button className="contactButton"><p className="contactButtonText">Submit</p></Button>
         </Form>
         <Footer/>

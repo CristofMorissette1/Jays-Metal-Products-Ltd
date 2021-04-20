@@ -12,6 +12,7 @@ class Standingseam2 extends Component{
             colorOptions: false,
             orderOptions: false,
             customerName: '',
+            productname: '',
             phone: '',
             po: '',
             email: '',
@@ -251,7 +252,6 @@ class Standingseam2 extends Component{
             totallinearfeet: totalLinear.toFixed(2),
             totalsquarefeet: sqft.toFixed(2)
         })
-        console.log(this.state.squarefeet, "name")
         if (this.state.ga == 29 && this.state.finish == 12) {
             let weightCal = this.state.totalsquarefeet * 0.688;
             this.setState({
@@ -318,7 +318,7 @@ class Standingseam2 extends Component{
       handleSumbit(e) {
         e.preventDefault();
     
-        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, squarefeet, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gablerake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
+        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, squarefeet, qty2, inch2, mm2, tag2, linearfeet2, squarefeet2, qty3, inch3, mm3, tag3, linearfeet3, squarefeet3, qty4, inch4, mm4, tag4, linearfeet4, squarefeet4, qty5, inch5, mm5, tag5, linearfeet5, squarefeet5, qty6, inch6, mm6, tag6, linearfeet6, squarefeet6, qty7, inch7, mm7, tag7, linearfeet7, squarefeet7, qty8, inch8, mm8, tag8, linearfeet8, squarefeet8, qty9, inch9, mm9, tag9, linearfeet9, squarefeet9, qty10, inch10, mm10, tag10, linearfeet10, squarefeet10, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gablerake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
     
         const form = axios.post('http://localhost:3001/api/form', {
             customerName,
@@ -340,6 +340,60 @@ class Standingseam2 extends Component{
             tag,
             linearfeet,
             squarefeet,
+            qty2,
+            inch2,
+            mm2,
+            tag2,
+            linearfeet2,
+            squarefeet2,
+            qty3,
+            inch3,
+            mm3,
+            tag3,
+            linearfeet3,
+            squarefeet3,
+            qty4,
+            inch4,
+            mm4,
+            tag4,
+            linearfeet4,
+            squarefeet4,
+            qty5,
+            inch5,
+            mm5,
+            tag5,
+            linearfeet5,
+            squarefeet5,
+            qty6,
+            inch6,
+            mm6,
+            tag6,
+            linearfeet6,
+            squarefeet6,
+            qty7,
+            inch7,
+            mm7,
+            tag7,
+            linearfeet7,
+            squarefeet7,
+            qty8,
+            inch8,
+            mm8,
+            tag8,
+            linearfeet8,
+            squarefeet8,
+            qty9,
+            inch9,
+            mm9,
+            tag9,
+            linearfeet9,
+            squarefeet9,
+            qty10,
+            inch10,
+            mm10,
+            tag10,
+            linearfeet10,
+            squarefeet10,
             hookdrip1,
             hookdripsteppitch,
             gabbleRake1,
