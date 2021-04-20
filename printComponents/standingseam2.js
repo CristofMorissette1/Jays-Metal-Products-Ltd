@@ -8,146 +8,146 @@ import axios from 'axios'
 class Standingseam2Print extends Component{
     constructor(){
         super()
-        // this.state = {
-        //     colorOptions: false,
-        //     orderOptions: false,
-        //     customerName: '',
-        //     phone: '',
-        //     po: '',
-        //     email: '',
-        //     address: '',
-        //     ga: '',
-        //     color: '',
-        //     protectivefilm: '',
-        //     finish: '',
-        //     totallinearfeet: '',
-        //     totalsquarefeet: '',
-        //     weight: '',
-        //     qty: '',
-        //     inch: '',
-        //     mm: '',
-        //     specialcrating: '',
-        //     tag: '',
-        //     linearfeet: '',
-        //     squarefeet: '',
-        //     qty2: '',
-        //     inch2: '',
-        //     mm2: '',
-        //     tag2: '',
-        //     linearfeet2: '',
-        //     squarefeet2: '',
-        //     qty3: '',
-        //     inch3: '',
-        //     mm3: '',
-        //     tag3: '',
-        //     linearfeet3: '',
-        //     squarefeet3: '',
-        //     qty4: '',
-        //     inch4: '',
-        //     mm4: '',
-        //     tag4: '',
-        //     linearfeet4: '',
-        //     squarefeet4: '',
-        //     qty5: '',
-        //     inch5: '',
-        //     mm5: '',
-        //     tag5: '',
-        //     linearfeet5: '',
-        //     squarefeet5: '',
-        //     qty6: '',
-        //     inch6: '',
-        //     mm6: '',
-        //     tag6: '',
-        //     linearfeet6: '',
-        //     squarefeet6: '',
-        //     qty7: '',
-        //     inch7: '',
-        //     mm7: '',
-        //     tag7: '',
-        //     linearfeet7: '',
-        //     squarefeet7: '',
-        //     qty8: '',
-        //     inch8: '',
-        //     mm8: '',
-        //     tag8: '',
-        //     linearfeet8: '',
-        //     squarefeet8: '',
-        //     qty9: '',
-        //     inch9: '',
-        //     mm9: '',
-        //     tag9: '',
-        //     linearfeet9: '',
-        //     squarefeet9: '',
-        //     qty10: '',
-        //     inch10: '',
-        //     mm10: '',
-        //     tag10: '',
-        //     linearfeet10: '',
-        //     squarefeet10: '',
-        //     hookdrip1: '',
-        //     hookdripsteppitch: '',
-        //     gabbleRake1: '',
-        //     gabbleRake2: '',
-        //     gablerake3: '',
-        //     sidewall1: '',
-        //     sidewall2: '',
-        //     endwall1: '',
-        //     endwall3: '',
-        //     endWall2: '',
-        //     transition3: '',
-        //     peakcap1: '',
-        //     peakcap2: '',
-        //     peakcap3: '',
-        //     transition1: '',
-        //     transition2: '',
-        //     hip1: '',
-        //     hip2: '',
-        //     hip3: '',
-        //     ridge1: '',
-        //     ridge2: '',
-        //     ridge3: '',
-        //     ridge4: '',
-        //     wvalley1: '',
-        //     wvalley2: '',
-        //     vvalley1: '',
-        //     snowstop1: '',
-        //     cleat: '',
-        //     junderbarrel: '',
-        //     zbaroverbarrel: '',
-        //     perforatedjoverbarrel: '',
-        //     perforatedzbaroverbarrel: '',
-        //     backpan5: '',
-        //     backpan10: '',
-        //     base1: '',
-        //     base2: '',
-        //     base3: '',
-        //     windowheader: '',
-        //     windowreverse: '',
-        //     walltransition: '',
-        //     jtrim1: '',
-        //     jtrim2: '',
-        //     jtrim3: '',
-        //     transition: '',
-        //     outsidecorner1: '',
-        //     insidecorner1: '',
-        //     outsidecorner2: '',
-        //     insidecorner2: '',
-        //     outsidecorner3: '',
-        //     insidecorner3: '',
-        //     outsidecorner4: '',
-        //     insidecorner4: '',
-        //     standing290: '',
-        //     standing291: '',
-        //     standing292: '',
-        //     standing293: '',
-        //     standing294: '',
-        //     standing295: ''
-        // }
+        this.state = {
+            colorOptions: false,
+            orderOptions: false,
+            customerName: '',
+            phone: '',
+            po: '',
+            email: '',
+            address: '',
+            ga: '',
+            color: '',
+            protectivefilm: '',
+            finish: '',
+            totallinearfeet: '',
+            totalsquarefeet: '',
+            weight: '',
+            qty: '',
+            inch: '',
+            mm: '',
+            specialcrating: '',
+            tag: '',
+            linearfeet: '',
+            squarefeet: '',
+            qty2: '',
+            inch2: '',
+            mm2: '',
+            tag2: '',
+            linearfeet2: '',
+            squarefeet2: '',
+            qty3: '',
+            inch3: '',
+            mm3: '',
+            tag3: '',
+            linearfeet3: '',
+            squarefeet3: '',
+            qty4: '',
+            inch4: '',
+            mm4: '',
+            tag4: '',
+            linearfeet4: '',
+            squarefeet4: '',
+            qty5: '',
+            inch5: '',
+            mm5: '',
+            tag5: '',
+            linearfeet5: '',
+            squarefeet5: '',
+            qty6: '',
+            inch6: '',
+            mm6: '',
+            tag6: '',
+            linearfeet6: '',
+            squarefeet6: '',
+            qty7: '',
+            inch7: '',
+            mm7: '',
+            tag7: '',
+            linearfeet7: '',
+            squarefeet7: '',
+            qty8: '',
+            inch8: '',
+            mm8: '',
+            tag8: '',
+            linearfeet8: '',
+            squarefeet8: '',
+            qty9: '',
+            inch9: '',
+            mm9: '',
+            tag9: '',
+            linearfeet9: '',
+            squarefeet9: '',
+            qty10: '',
+            inch10: '',
+            mm10: '',
+            tag10: '',
+            linearfeet10: '',
+            squarefeet10: '',
+            hookdrip1: '',
+            hookdripsteppitch: '',
+            gabbleRake1: '',
+            gabbleRake2: '',
+            gablerake3: '',
+            sidewall1: '',
+            sidewall2: '',
+            endwall1: '',
+            endwall3: '',
+            endWall2: '',
+            transition3: '',
+            peakcap1: '',
+            peakcap2: '',
+            peakcap3: '',
+            transition1: '',
+            transition2: '',
+            hip1: '',
+            hip2: '',
+            hip3: '',
+            ridge1: '',
+            ridge2: '',
+            ridge3: '',
+            ridge4: '',
+            wvalley1: '',
+            wvalley2: '',
+            vvalley1: '',
+            snowstop1: '',
+            cleat: '',
+            junderbarrel: '',
+            zbaroverbarrel: '',
+            perforatedjoverbarrel: '',
+            perforatedzbaroverbarrel: '',
+            backpan5: '',
+            backpan10: '',
+            base1: '',
+            base2: '',
+            base3: '',
+            windowheader: '',
+            windowreverse: '',
+            walltransition: '',
+            jtrim1: '',
+            jtrim2: '',
+            jtrim3: '',
+            transition: '',
+            outsidecorner1: '',
+            insidecorner1: '',
+            outsidecorner2: '',
+            insidecorner2: '',
+            outsidecorner3: '',
+            insidecorner3: '',
+            outsidecorner4: '',
+            insidecorner4: '',
+            standing290: '',
+            standing291: '',
+            standing292: '',
+            standing293: '',
+            standing294: '',
+            standing295: ''
+        }
         // this.colorOptions = this.colorOptions.bind(this);
         // this.orderOptions = this.orderOptions.bind(this);
         // this.handleChange = this.handleChange.bind(this);
-        // this.handleSumbit = this.handleSumbit.bind(this);
-        // this.printPage = this.printPage.bind(this);
+        this.handleSumbit = this.handleSumbit.bind(this);
+        this.printPage = this.printPage.bind(this);
     }
 
     // colorOptions(event) {
@@ -182,232 +182,232 @@ class Standingseam2Print extends Component{
 
 
     // handleChange = e => {
-        // this.setState({
-        //   [e.target.name]: e.target.value
-        // })
-        // let linearFeet1 = (this.state.qty * this.state.inch) / 12;
-        // let mmSize1 = this.state.inch * 25.4;
-        // let sqft1 = (this.state.mm / 12) * this.state.linearfeet;
-        // let linearFeet2 = (this.state.qty2 * this.state.inch2) / 12;
-        // let mmSize2 = this.state.inch2 * 25.4;
-        // let sqft2 = (this.state.mm2 / 12) * this.state.linearfeet2;
-        // let linearFeet3 = (this.state.qty3 * this.state.inch3) / 12;
-        // let mmSize3 = this.state.inch3 * 25.4;
-        // let sqft3 = (this.state.mm3 / 12) * this.state.linearfeet3;
-        // let linearFeet4 = (this.state.qty4 * this.state.inch4) / 12;
-        // let mmSize4 = this.state.inch4 * 25.4;
-        // let sqft4 = (this.state.mm4 / 12) * this.state.linearfeet4;
-        // let linearFeet5 = (this.state.qty5 * this.state.inch5) / 12;
-        // let mmSize5 = this.state.inch5 * 25.4;
-        // let sqft5 = (this.state.mm5 / 12) * this.state.linearfeet5;
-        // let linearFeet6 = (this.state.qty6 * this.state.inch6) / 12;
-        // let mmSize6 = this.state.inch6 * 25.4;
-        // let sqft6 = (this.state.mm6 / 12) * this.state.linearfeet6;
-        // let linearFeet7 = (this.state.qty7 * this.state.inch7) / 12;
-        // let mmSize7= this.state.inch7 * 25.4;
-        // let sqft7 = (this.state.mm7 / 12) * this.state.linearfeet7;
-        // let linearFeet8 = (this.state.qty8 * this.state.inch8) / 12;
-        // let mmSize8 = this.state.inch8 * 25.4;
-        // let sqft8 = (this.state.mm8 / 12) * this.state.linearfeet8;
-        // let linearFeet9 = (this.state.qty9 * this.state.inch9) / 12;
-        // let mmSize9 = this.state.inch9 * 25.4;
-        // let sqft9 = (this.state.mm9 / 12) * this.state.linearfeet9;
-        // let linearFeet10 = (this.state.qty10 * this.state.inch10) / 12;
-        // let mmSize10 = this.state.inch10 * 25.4;
-        // let sqft10 = (this.state.mm10 / 12) * this.state.linearfeet10;
-        // let sqft = sqft1 + sqft2 + sqft3 + sqft4 + sqft5 + sqft6 + sqft7 + sqft8 + sqft9 + sqft10;
-        // let totalLinear = linearFeet1 + linearFeet2 + linearFeet3 + linearFeet4 + linearFeet5 + linearFeet6 + linearFeet7 + linearFeet8 + linearFeet9 + linearFeet10;
-        // this.setState({
-        //     linearfeet: linearFeet1.toFixed(2),
-        //     mm: mmSize1.toFixed(2),
-        //     squarefeet: sqft1.toFixed(2),
-        //     linearfeet2: linearFeet2.toFixed(2),
-        //     mm2: mmSize2.toFixed(2),
-        //     squarefeet2: sqft2.toFixed(2),
-        //     linearfeet3: linearFeet3.toFixed(2),
-        //     mm3: mmSize3.toFixed(2),
-        //     squarefeet3: sqft3.toFixed(2),
-        //     linearfeet4: linearFeet4.toFixed(2),
-        //     mm4: mmSize4.toFixed(2),
-        //     squarefeet4: sqft4.toFixed(2),
-        //     linearfeet5: linearFeet5.toFixed(2),
-        //     mm5: mmSize5.toFixed(2),
-        //     squarefeet5: sqft5.toFixed(2),
-        //     linearfeet6: linearFeet6.toFixed(2),
-        //     mm6: mmSize6.toFixed(2),
-        //     squarefeet6: sqft6.toFixed(2),
-        //     linearfeet7: linearFeet7.toFixed(2),
-        //     mm7: mmSize7.toFixed(2),
-        //     squarefeet7: sqft7.toFixed(2),
-        //     linearfeet8: linearFeet8.toFixed(2),
-        //     mm8: mmSize8.toFixed(2),
-        //     squarefeet8: sqft8.toFixed(2),
-        //     linearfeet9: linearFeet9.toFixed(2),
-        //     mm9: mmSize9.toFixed(2),
-        //     squarefeet9: sqft9.toFixed(2),
-        //     linearfeet10: linearFeet10.toFixed(2),
-        //     mm10: mmSize10.toFixed(2),
-        //     squarefeet10: sqft10.toFixed(2),
-        //     totallinearfeet: totalLinear.toFixed(2),
-        //     totalsquarefeet: sqft.toFixed(2)
-        // })
-        // console.log(this.state.squarefeet, "name")
-        // if (this.state.ga == 29 && this.state.finish == 12) {
-        //     let weightCal = this.state.totalsquarefeet * 0.688;
-        //     this.setState({
-        //         weight: weightCal
-        //     })
-        // } else if(this.state.ga == 29 && this.state.finish == 16) {
-        //     let weightCal = this.state.totalsquarefeet * 0.86;
-        //     this.setState({
-        //         weight: weightCal
-        //     })
-        // } else if(this.state.ga == 29 && this.state.finish == 20) {
-        //     let weightCal = this.state.totalsquarefeet * 1.032;
-        //     this.setState({
-        //         weight: weightCal
-        //     })
-        // } else if(this.state.ga == 26 && this.state.finish == 12) {
-        //     let weightCal = this.state.totalsquarefeet * 1.008;
-        //     this.setState({
-        //         weight: weightCal
-        //     })
-        // } else if(this.state.ga == 26 && this.state.finish == 16) {
-        //     let weightCal = this.state.totalsquarefeet * 1.26;
-        //     this.setState({
-        //         weight: weightCal
-        //     })
-        // } else if(this.state.ga == 26 && this.state.finish == 20) {
-        //     let weightCal = this.state.totalsquarefeet * 1.512;
-        //     this.setState({
-        //         weight: weightCal
-        //     })
-        // } else if(this.state.ga == 24 && this.state.finish == 12) {
-        //     let weightCal = this.state.totalsquarefeet * 1.28;
-        //     this.setState({
-        //         weight: weightCal
-        //     })
-        // } else if(this.state.ga == 24 && this.state.finish == 16) {
-        //     let weightCal = this.state.totalsquarefeet * 1.6;
-        //     this.setState({
-        //         weight: weightCal
-        //     })
-        // } else if(this.state.ga == 24 && this.state.finish == 20) {
-        //     let weightCal = this.state.totalsquarefeet * 1.92;
-        //     this.setState({
-        //         weight: weightCal
-        //     })
-        // } else if(this.state.ga == 22 && this.state.finish == 12) {
-        //     let weightCal = this.state.totalsquarefeet * 1.6;
-        //     this.setState({
-        //         weight: weightCal
-        //     })
-        // } else if(this.state.ga == 22 && this.state.finish == 16) {
-        //     let weightCal = this.state.totalsquarefeet * 1.98;
-        //     this.setState({
-        //         weight: weightCal
-        //     })
-        // } else if(this.state.ga == 22 && this.state.finish == 20) {
-        //     let weightCal = this.state.totalsquarefeet * 2.376;
-        //     this.setState({
-        //         weight: weightCal
-        //     })
-        // }
-    //   }
-    
-    //   handleSumbit(e) {
-    //     e.preventDefault();
-    
-    //     const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, squarefeet, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gablerake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
-    
-    //     const form = axios.post('http://localhost:3001/api/form', {
-    //         customerName,
-    //         productname,
-    //         phone,
-    //         po,
-    //         email,
-    //         address,
-    //         ga,
-    //         color,
-    //         protectivefilm,
-    //         finish,
-    //         totallinearfeet,
-    //         totalsquarefeet,
-    //         qty,
-    //         inch,
-    //         mm,
-    //         specialcrating,
-    //         tag,
-    //         linearfeet,
-    //         squarefeet,
-    //         hookdrip1,
-    //         hookdripsteppitch,
-    //         gabbleRake1,
-    //         gabbleRake2,
-    //         gablerake3,
-    //         sidewall1,
-    //         sidewall2,
-    //         endwall1,
-    //         endwall3,
-    //         endWall2,
-    //         transition3,
-    //         peakcap1,
-    //         peakcap2,
-    //         peakcap3,
-    //         transition1,
-    //         transition2,
-    //         hip1,
-    //         hip2,
-    //         hip3,
-    //         ridge1,
-    //         ridge2,
-    //         ridge3,
-    //         ridge4,
-    //         wvalley1,
-    //         wvalley2,
-    //         vvalley1,
-    //         snowstop1,
-    //         cleat,
-    //         junderbarrel,
-    //         zbaroverbarrel,
-    //         perforatedjoverbarrel,
-    //         perforatedzbaroverbarrel,
-    //         backpan5,
-    //         backpan10,
-    //         base1,
-    //         base2,
-    //         base3,
-    //         windowheader,
-    //         windowreverse,
-    //         walltransition,
-    //         jtrim1,
-    //         jtrim2,
-    //         jtrim3,
-    //         transition,
-    //         outsidecorner1,
-    //         insidecorner1,
-    //         outsidecorner2,
-    //         insidecorner2,
-    //         outsidecorner3,
-    //         insidecorner3,
-    //         outsidecorner4,
-    //         insidecorner4,
-    //         standing290,
-    //         standing291,
-    //         standing292,
-    //         standing293,
-    //         standing294,
-    //         standing295
+    //     this.setState({
+    //       [e.target.name]: e.target.value
     //     })
-    //     e.target.reset();
+    //     let linearFeet1 = (this.state.qty * this.state.inch) / 12;
+    //     let mmSize1 = this.state.inch * 25.4;
+    //     let sqft1 = (this.state.mm / 12) * this.state.linearfeet;
+    //     let linearFeet2 = (this.state.qty2 * this.state.inch2) / 12;
+    //     let mmSize2 = this.state.inch2 * 25.4;
+    //     let sqft2 = (this.state.mm2 / 12) * this.state.linearfeet2;
+    //     let linearFeet3 = (this.state.qty3 * this.state.inch3) / 12;
+    //     let mmSize3 = this.state.inch3 * 25.4;
+    //     let sqft3 = (this.state.mm3 / 12) * this.state.linearfeet3;
+    //     let linearFeet4 = (this.state.qty4 * this.state.inch4) / 12;
+    //     let mmSize4 = this.state.inch4 * 25.4;
+    //     let sqft4 = (this.state.mm4 / 12) * this.state.linearfeet4;
+    //     let linearFeet5 = (this.state.qty5 * this.state.inch5) / 12;
+    //     let mmSize5 = this.state.inch5 * 25.4;
+    //     let sqft5 = (this.state.mm5 / 12) * this.state.linearfeet5;
+    //     let linearFeet6 = (this.state.qty6 * this.state.inch6) / 12;
+    //     let mmSize6 = this.state.inch6 * 25.4;
+    //     let sqft6 = (this.state.mm6 / 12) * this.state.linearfeet6;
+    //     let linearFeet7 = (this.state.qty7 * this.state.inch7) / 12;
+    //     let mmSize7= this.state.inch7 * 25.4;
+    //     let sqft7 = (this.state.mm7 / 12) * this.state.linearfeet7;
+    //     let linearFeet8 = (this.state.qty8 * this.state.inch8) / 12;
+    //     let mmSize8 = this.state.inch8 * 25.4;
+    //     let sqft8 = (this.state.mm8 / 12) * this.state.linearfeet8;
+    //     let linearFeet9 = (this.state.qty9 * this.state.inch9) / 12;
+    //     let mmSize9 = this.state.inch9 * 25.4;
+    //     let sqft9 = (this.state.mm9 / 12) * this.state.linearfeet9;
+    //     let linearFeet10 = (this.state.qty10 * this.state.inch10) / 12;
+    //     let mmSize10 = this.state.inch10 * 25.4;
+    //     let sqft10 = (this.state.mm10 / 12) * this.state.linearfeet10;
+    //     let sqft = sqft1 + sqft2 + sqft3 + sqft4 + sqft5 + sqft6 + sqft7 + sqft8 + sqft9 + sqft10;
+    //     let totalLinear = linearFeet1 + linearFeet2 + linearFeet3 + linearFeet4 + linearFeet5 + linearFeet6 + linearFeet7 + linearFeet8 + linearFeet9 + linearFeet10;
+    //     this.setState({
+    //         linearfeet: linearFeet1.toFixed(2),
+    //         mm: mmSize1.toFixed(2),
+    //         squarefeet: sqft1.toFixed(2),
+    //         linearfeet2: linearFeet2.toFixed(2),
+    //         mm2: mmSize2.toFixed(2),
+    //         squarefeet2: sqft2.toFixed(2),
+    //         linearfeet3: linearFeet3.toFixed(2),
+    //         mm3: mmSize3.toFixed(2),
+    //         squarefeet3: sqft3.toFixed(2),
+    //         linearfeet4: linearFeet4.toFixed(2),
+    //         mm4: mmSize4.toFixed(2),
+    //         squarefeet4: sqft4.toFixed(2),
+    //         linearfeet5: linearFeet5.toFixed(2),
+    //         mm5: mmSize5.toFixed(2),
+    //         squarefeet5: sqft5.toFixed(2),
+    //         linearfeet6: linearFeet6.toFixed(2),
+    //         mm6: mmSize6.toFixed(2),
+    //         squarefeet6: sqft6.toFixed(2),
+    //         linearfeet7: linearFeet7.toFixed(2),
+    //         mm7: mmSize7.toFixed(2),
+    //         squarefeet7: sqft7.toFixed(2),
+    //         linearfeet8: linearFeet8.toFixed(2),
+    //         mm8: mmSize8.toFixed(2),
+    //         squarefeet8: sqft8.toFixed(2),
+    //         linearfeet9: linearFeet9.toFixed(2),
+    //         mm9: mmSize9.toFixed(2),
+    //         squarefeet9: sqft9.toFixed(2),
+    //         linearfeet10: linearFeet10.toFixed(2),
+    //         mm10: mmSize10.toFixed(2),
+    //         squarefeet10: sqft10.toFixed(2),
+    //         totallinearfeet: totalLinear.toFixed(2),
+    //         totalsquarefeet: sqft.toFixed(2)
+    //     })
+    //     console.log(this.state.squarefeet, "name")
+    //     if (this.state.ga == 29 && this.state.finish == 12) {
+    //         let weightCal = this.state.totalsquarefeet * 0.688;
+    //         this.setState({
+    //             weight: weightCal
+    //         })
+    //     } else if(this.state.ga == 29 && this.state.finish == 16) {
+    //         let weightCal = this.state.totalsquarefeet * 0.86;
+    //         this.setState({
+    //             weight: weightCal
+    //         })
+    //     } else if(this.state.ga == 29 && this.state.finish == 20) {
+    //         let weightCal = this.state.totalsquarefeet * 1.032;
+    //         this.setState({
+    //             weight: weightCal
+    //         })
+    //     } else if(this.state.ga == 26 && this.state.finish == 12) {
+    //         let weightCal = this.state.totalsquarefeet * 1.008;
+    //         this.setState({
+    //             weight: weightCal
+    //         })
+    //     } else if(this.state.ga == 26 && this.state.finish == 16) {
+    //         let weightCal = this.state.totalsquarefeet * 1.26;
+    //         this.setState({
+    //             weight: weightCal
+    //         })
+    //     } else if(this.state.ga == 26 && this.state.finish == 20) {
+    //         let weightCal = this.state.totalsquarefeet * 1.512;
+    //         this.setState({
+    //             weight: weightCal
+    //         })
+    //     } else if(this.state.ga == 24 && this.state.finish == 12) {
+    //         let weightCal = this.state.totalsquarefeet * 1.28;
+    //         this.setState({
+    //             weight: weightCal
+    //         })
+    //     } else if(this.state.ga == 24 && this.state.finish == 16) {
+    //         let weightCal = this.state.totalsquarefeet * 1.6;
+    //         this.setState({
+    //             weight: weightCal
+    //         })
+    //     } else if(this.state.ga == 24 && this.state.finish == 20) {
+    //         let weightCal = this.state.totalsquarefeet * 1.92;
+    //         this.setState({
+    //             weight: weightCal
+    //         })
+    //     } else if(this.state.ga == 22 && this.state.finish == 12) {
+    //         let weightCal = this.state.totalsquarefeet * 1.6;
+    //         this.setState({
+    //             weight: weightCal
+    //         })
+    //     } else if(this.state.ga == 22 && this.state.finish == 16) {
+    //         let weightCal = this.state.totalsquarefeet * 1.98;
+    //         this.setState({
+    //             weight: weightCal
+    //         })
+    //     } else if(this.state.ga == 22 && this.state.finish == 20) {
+    //         let weightCal = this.state.totalsquarefeet * 2.376;
+    //         this.setState({
+    //             weight: weightCal
+    //         })
+    //     }
     //   }
+    
+      handleSumbit(e) {
+        e.preventDefault();
+    
+        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, squarefeet, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gablerake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
+    
+        const form = axios.post('http://localhost:3001/api/form', {
+            customerName,
+            productname,
+            phone,
+            po,
+            email,
+            address,
+            ga,
+            color,
+            protectivefilm,
+            finish,
+            totallinearfeet,
+            totalsquarefeet,
+            qty,
+            inch,
+            mm,
+            specialcrating,
+            tag,
+            linearfeet,
+            squarefeet,
+            hookdrip1,
+            hookdripsteppitch,
+            gabbleRake1,
+            gabbleRake2,
+            gablerake3,
+            sidewall1,
+            sidewall2,
+            endwall1,
+            endwall3,
+            endWall2,
+            transition3,
+            peakcap1,
+            peakcap2,
+            peakcap3,
+            transition1,
+            transition2,
+            hip1,
+            hip2,
+            hip3,
+            ridge1,
+            ridge2,
+            ridge3,
+            ridge4,
+            wvalley1,
+            wvalley2,
+            vvalley1,
+            snowstop1,
+            cleat,
+            junderbarrel,
+            zbaroverbarrel,
+            perforatedjoverbarrel,
+            perforatedzbaroverbarrel,
+            backpan5,
+            backpan10,
+            base1,
+            base2,
+            base3,
+            windowheader,
+            windowreverse,
+            walltransition,
+            jtrim1,
+            jtrim2,
+            jtrim3,
+            transition,
+            outsidecorner1,
+            insidecorner1,
+            outsidecorner2,
+            insidecorner2,
+            outsidecorner3,
+            insidecorner3,
+            outsidecorner4,
+            insidecorner4,
+            standing290,
+            standing291,
+            standing292,
+            standing293,
+            standing294,
+            standing295
+        })
+        console.log(this.state)
+        e.target.reset();
+      }
 
     render(){
-        console.log(this.props)
-        return (
+            return (
             
             <div className="diamondMainContainer">
-                 {/* <Header/> */}
+                 <Header/>
                 {/*<div className="productPageLandingContainer">
                     <img className="productPageLandingImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
                     <div className="productPage2ndContainer">
@@ -556,7 +556,6 @@ class Standingseam2Print extends Component{
                                                 className="orderOptionsTextInput"
                                                 name="customerName" 
                                                 // placeholder="Customer Name"
-                                                // onChange={this.handleChange}
                                                 // required 
                                                 value={this.props.obj.customerName}
                                                 />:
@@ -577,7 +576,6 @@ class Standingseam2Print extends Component{
                                                 name="phone"
                                                 // placeholder="Phone Number"
                                                 value={this.props.obj.phone}
-                                                // onChange={this.handleChange} 
                                                 // required 
                                                 />:
                                             <Input 
@@ -595,17 +593,15 @@ class Standingseam2Print extends Component{
                                             <Input 
                                                 type="text"
                                                 className="orderOptionsTextInput"
-                                                // name="po"
+                                                name="po"
                                                 // placeholder="PO"
-                                                // onChange={this.handleChange}
                                                 // required 
                                                 value={this.props.obj.po}
                                                 />:<Input 
                                                 type="text"
                                                 className="orderOptionsTextInput"
                                                 // name="po"
-                                                placeholder="PO"
-                                                // onChange={this.handleChange}
+                                                placeholder="PO"    
                                                 // required 
                                                 // value={this.props.obj.po}
                                                 />}
@@ -615,9 +611,8 @@ class Standingseam2Print extends Component{
                                             <Input 
                                                 type="email"
                                                 className="orderOptionsTextInput"
-                                                // name="email"
+                                                name="email"
                                                 // placeholder="Email Address"
-                                                // onChange={this.handleChange}
                                                 // required 
                                                 value={this.props.obj.email}
                                                 />:<Input 
@@ -637,7 +632,6 @@ class Standingseam2Print extends Component{
                                                 className="orderOptionsTextInput"
                                                 // name="address"
                                                 // placeholder="Customer Address"
-                                                // onChange={this.handleChange} 
                                                 value={this.props.obj.address}
                                                 />:<Input 
                                                 type="text"
@@ -655,7 +649,6 @@ class Standingseam2Print extends Component{
                                                 className="orderOptionsTextInput"
                                                 name="productname"
                                                 // placeholder="Product Name"
-                                                // onChange={this.handleChange} 
                                                 // required 
                                                 value={this.props.obj.productname}
                                                 />:<Input 
@@ -692,30 +685,30 @@ class Standingseam2Print extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Special Crating</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" value={this.props.obj.specialcrating} name="specialcrating" onChange={this.handleChange} />
-                                                    {/* <option>-</option>
+                                                <Input type="select" className="orderOptionsSpecsInput" value={this.props.obj.specialcrating} name="specialcrating" onChange={this.handleChange} >
+                                                    <option>-</option>
                                                     <option>Yes</option>
-                                                    <option>No</option> */}
-                                                {/* </Input> */}
+                                                    <option>No</option>
+                                                </Input>
                                                 <p className="protectiveFilmDisclaimer">At extra cost</p>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>Protective film</Label>
-                                                <Input type="select" className="orderOptionsSpecsInput" value={this.props.obj.protectivefilm} name="protectivefilm" onChange={this.handleChange} />
-                                                    {/* <option>-</option>
+                                                <Input type="select" className="orderOptionsSpecsInput" value={this.props.obj.protectivefilm} name="protectivefilm" onChange={this.handleChange} >
+                                                     <option>-</option>
                                                     <option>Yes</option>
                                                     <option>No</option>
-                                                </Input> */}
+                                                </Input>
                                                 <p className="protectiveFilmDisclaimer">10cents extra per sq/ft</p>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Finish</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" value={this.props.obj.finish} name="finish" onChange={this.handleChange} required />
-                                                    {/* <option>-</option>
+                                                <Input type="select" className="orderOptionsSpecsInput" value={this.props.obj.finish} name="finish" onChange={this.handleChange} required >
+                                                    <option>-</option>
                                                     <option>12</option>
                                                     <option>16</option>
                                                     <option>20</option>
-                                                </Input> */}
+                                                </Input>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total SQFT.</label>
@@ -755,11 +748,11 @@ class Standingseam2Print extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty2} name="qty2" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty2} name="qty2" />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch2} name="inch2" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch2} name="inch2" />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -784,11 +777,11 @@ class Standingseam2Print extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty3} name="qty3" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty3} name="qty3" />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch3} name="inch3" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch3} name="inch3" />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -813,11 +806,11 @@ class Standingseam2Print extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty4} name="qty4" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty4} name="qty4" />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch4} name="inch4" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch4} name="inch4" />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -842,11 +835,11 @@ class Standingseam2Print extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty5} name="qty5" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty5} name="qty5" />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch5} name="inch5" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch5} name="inch5" />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -871,11 +864,11 @@ class Standingseam2Print extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty6} name="qty6" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty6} name="qty6" />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch6} name="inch6" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch6} name="inch6" />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -900,11 +893,11 @@ class Standingseam2Print extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty7} name="qty7" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty7} name="qty7" />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch7} name="inch7" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch7} name="inch7" />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -929,11 +922,11 @@ class Standingseam2Print extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty8} name="qty8" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty8} name="qty8" />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch8} name="inch8" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch8} name="inch8" />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -958,11 +951,11 @@ class Standingseam2Print extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty9} name="qty9" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty9} name="qty9" />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch9} name="inch9" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch9} name="inch9" />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -987,11 +980,11 @@ class Standingseam2Print extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty10} name="qty10" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty10} name="qty10" />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch10} name="inch10" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch10} name="inch10" />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -1742,8 +1735,8 @@ class Standingseam2Print extends Component{
                                         <CustomInput type="checkbox" className="productDisclaimer"/>
                                         <Label>I accept terms and services</Label>
                                     </FormGroup> */}
-                                    {/* <Button className="contactButton" onClick={this.printPage}><p className="contactButtonText">Print Page</p></Button> */}
-                                    {/* <Button className="contactButton"><p className="contactButtonText">Submit</p></Button> */}
+                                    <Button className="contactButton" onClick={this.printPage}><p className="contactButtonText">Print Page</p></Button> 
+                                    <Button className="contactButton"><p className="contactButtonText">Submit</p></Button>
                                 </Form>
                             </div>
                     {/* //     ) : (

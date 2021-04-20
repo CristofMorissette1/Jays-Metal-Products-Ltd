@@ -187,7 +187,6 @@ class Standingseam2 extends Component{
             this.state.status = false
             this.forceUpdate();
         // )
-        console.log(this.state.status);
         // <Standingseam2Print handle={this.handle} />
     }
 
@@ -263,7 +262,6 @@ class Standingseam2 extends Component{
             totallinearfeet: totalLinear.toFixed(2),
             totalsquarefeet: sqft.toFixed(2)
         })
-        console.log(this.state.squarefeet, "name")
         if (this.state.ga == 29 && this.state.finish == 12) {
             let weightCal = this.state.totalsquarefeet * 0.688;
             this.setState({
@@ -329,7 +327,6 @@ class Standingseam2 extends Component{
     
       handleSumbit(e) {
         e.preventDefault();
-    console.log(customerName, productname);
         const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, squarefeet, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gablerake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
     
         const form = axios.post('http://localhost:3001/api/form', {
@@ -413,7 +410,7 @@ class Standingseam2 extends Component{
         })
         e.target.reset();
       }
-    //   console.log(this.state)
+
     render(){
         return (
             <div>{this.state.status==true?(<div className="diamondMainContainer">
@@ -738,11 +735,11 @@ class Standingseam2 extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty2} name="qty2" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty2} name="qty2"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch2} name="inch2" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch2} name="inch2"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -764,11 +761,11 @@ class Standingseam2 extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty3} name="qty3" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty3} name="qty3"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch3} name="inch3" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch3} name="inch3"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -790,11 +787,11 @@ class Standingseam2 extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty4} name="qty4" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty4} name="qty4"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch4} name="inch4" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch4} name="inch4"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -816,11 +813,11 @@ class Standingseam2 extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty5} name="qty5" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty5} name="qty5"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch5} name="inch5" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch5} name="inch5"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -842,11 +839,11 @@ class Standingseam2 extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty6} name="qty6" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty6} name="qty6"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch6} name="inch6" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch6} name="inch6"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -868,11 +865,11 @@ class Standingseam2 extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty7} name="qty7" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty7} name="qty7"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch7} name="inch7" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch7} name="inch7"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -894,11 +891,11 @@ class Standingseam2 extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty8} name="qty8" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty8} name="qty8"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch8} name="inch8" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch8} name="inch8"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -920,11 +917,11 @@ class Standingseam2 extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty9} name="qty9" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty9} name="qty9"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch9} name="inch9" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch9} name="inch9"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -946,11 +943,11 @@ class Standingseam2 extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty10} name="qty10" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty10} name="qty10"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch10} name="inch10" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch10} name="inch10"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -2046,7 +2043,7 @@ class Standingseam2 extends Component{
                                         <Label>I accept terms and services</Label>
                                     </FormGroup>
                                     <Button className="contactButton" onClick={this.printPage}><p className="contactButtonText">Go To Print Page</p></Button>
-                                    <Button onClick={() => {console.log(this.state)}} className="contactButton"><p className="contactButtonText">Submit</p></Button>
+                                    <Button className="contactButton"><p className="contactButtonText">Submit</p></Button>
                                     
                                 </Form>
                             </div>
@@ -2058,11 +2055,10 @@ class Standingseam2 extends Component{
                 <Footer/>
             </div>):
             <div>
-                <button onClick={() => {this.state.status = true; this.state = this.state; this.forceUpdate()}}>Back</button>
                 <ReactToPrint content={() => this.componentRef}>
                 <PrintContextConsumer>
                     {({ handlePrint }) => (
-                    <button style={{width: '80%', margin: '10px auto', padding: '10px', fontWeight: 'bold', fontSize: 18}} onClick={handlePrint} className="contactButton" >Print Page</button>
+                    <button style={{width: '80%', margin: '10px auto', padding: '10px', fontWeight: 'bold', fontSize: 18, visibility: 'hidden'}} onClick={handlePrint} className="contactButton" >Print Page</button>
                     )}
                 </PrintContextConsumer>
                 </ReactToPrint>
