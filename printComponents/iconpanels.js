@@ -572,6 +572,267 @@ class IconpanelsPrint extends Component{
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet} name="squarefeet" readOnly />
                                             </FormGroup>
                                         </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty2} name="qty2" />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch2} name="inch2" />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm2} name="mm2"  readOnly/>
+                                                {/* placeholder={this.state.mm2} */}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag2} name="tag2" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet2} name="linearfeet2" />
+                                                {/* placeholder={this.state.linearfeet2} */}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet2} name="squarefeet2"  readOnly />
+                                                {/* placeholder={this.state.squarefeet2} */}
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty3} name="qty3" />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch3} name="inch3" />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm3} name="mm3"  readOnly/>
+                                                {/* placeholder={this.state.mm3} */}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag3} name="tag3" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet3} name="linearfeet3" />
+                                                {/* placeholder={this.state.linearfeet3} */}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet3} name="squarefeet3"  readOnly />
+                                                {/* placeholder={this.state.squarefeet3} */}
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty4} name="qty4" />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch4} name="inch4" />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm4} name="mm4"  readOnly/>
+                                                {/* placeholder={this.state.mm4} */}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag4} name="tag4" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet4} name="linearfeet4" />
+                                                {/* placeholder={this.state.linearfeet4} */}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet4} name="squarefeet4"  readOnly />
+                                                {/* placeholder={this.state.squarefeet4} */}
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty5} name="qty5" />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch5} name="inch5" />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm5} name="mm5"  readOnly/>
+                                                {/* placeholder={this.state.mm5} */}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag5} name="tag5" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet5} name="linearfeet5" />
+                                                {/* placeholder={this.state.linearfeet5} */}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet5} name="squarefeet5"  readOnly />
+                                                {/* placeholder={this.state.squarefeet5} */}
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty6} name="qty6" />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch6} name="inch6" />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm6} name="mm6"  readOnly/>
+                                                {/* placeholder={this.state.mm6} */}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag6} name="tag6" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet6} name="linearfeet6" />
+                                                {/* placeholder={this.state.linearfeet6} */}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet6} name="squarefeet6"  readOnly />
+                                                {/* placeholder={this.state.squarefeet6} */}
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty7} name="qty7" />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch7} name="inch7" />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm7} name="mm7"  readOnly/>
+                                                {/* placeholder={this.state.mm7} */}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag7} name="tag7" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet7} name="linearfeet7" />
+                                                {/* placeholder={this.state.linearfeet7} */}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet7} name="squarefeet7"  readOnly />
+                                                {/* placeholder={this.state.squarefeet7} */}
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty8} name="qty8" />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch8} name="inch8" />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm8} name="mm8"  readOnly/>
+                                                {/* placeholder={this.state.mm8} */}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag8} name="tag8" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet8} name="linearfeet8" />
+                                                {/* placeholder={this.state.linearfeet8} */}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet8} name="squarefeet8"  readOnly />
+                                                {/* placeholder={this.state.squarefeet8} */}
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty9} name="qty9" />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch9} name="inch9" />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm9} name="mm9"  readOnly/>
+                                                {/* placeholder={this.state.mm9} */}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag9} name="tag9" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet9} name="linearfeet9" />
+                                                {/* placeholder={this.state.linearfeet9} */}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet9} name="squarefeet9"  readOnly />
+                                                {/* placeholder={this.state.squarefeet9} */}
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty10} name="qty10" />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch10} name="inch10" />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm10} name="mm10"  readOnly/>
+                                                {/* placeholder={this.state.mm10} */}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag10} name="tag10" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet10} name="linearfeet10" />
+                                                {/* placeholder={this.state.linearfeet10} */}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet10} name="squarefeet10"  readOnly />
+                                                {/* placeholder={this.state.squarefeet10} */}
+                                            </FormGroup>
+                                        </div>
                                     </div>
                                     <div className="orderOptionsFlashingsMainContainer">
                                         <h2 className="orderOptionsTitle">FLASHINGS:</h2>
