@@ -4,11 +4,14 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import { Form, FormGroup, Input, Button, Label, CustomInput } from 'reactstrap'
 import axios from 'axios'
+// import Standingseam2Print from '../printComponents/standingseam2';
+import ReactToPrint, { PrintContextConsumer } from 'react-to-print';
 
 class StandingSeam3 extends Component{
     constructor(){
         super()
         this.state = {
+            status: true,
             colorOptions: false,
             orderOptions: false,
             customerName: '',
@@ -178,7 +181,9 @@ class StandingSeam3 extends Component{
 
     printPage = e => {
         e.preventDefault();
-        window.print();
+        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, squarefeet, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gablerake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
+            this.state.status = false
+            this.forceUpdate();
     }
 
 
@@ -458,7 +463,7 @@ class StandingSeam3 extends Component{
 
     render(){
         return (
-            <div className="diamondMainContainer">
+            <div>{this.state.status==true?(<div className="diamondMainContainer">
                 <Header/>
                 <div className="productPageLandingContainer">
                     <img className="productPageLandingImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Home%2Fhome%20image1.png?alt=media&token=5023b190-2479-4de8-8d66-9c02fe005c19"></img>
@@ -602,64 +607,107 @@ class StandingSeam3 extends Component{
                                     <div className="orderOptionsTextForm">
                                         <h2 className="orderOptionsTextFormTitle">SS 200</h2>
                                         <FormGroup className="orderOptionsTextFormSmall">
-                                            <Input 
+                                            {this.state.customerName?<Input 
                                                 type="text"
                                                 className="orderOptionsTextInput"
                                                 name="customerName" 
-                                                placeholder="Customer Name"
+                                                // placeholder="Customer Name"
+                                                value={this.state.customerName}
                                                 onChange={this.handleChange}
-                                                required />
+                                                required 
+                                                 />:<Input 
+                                                 type="text"
+                                                 className="orderOptionsTextInput"
+                                                 name="customerName" 
+                                                 placeholder="Customer Name"
+                                                 onChange={this.handleChange}
+                                                 required 
+                                                  />}
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
-                                            <Input 
+                                        {this.state.phone?<Input 
+                                                type="phone"
+                                                className="orderOptionsTextInput"
+                                                name="phone"
+                                                // placeholder="Phone Number"
+                                                value={this.state.phone}
+                                                onChange={this.handleChange} 
+                                                required />:<Input 
                                                 type="phone"
                                                 className="orderOptionsTextInput"
                                                 name="phone"
                                                 placeholder="Phone Number"
                                                 onChange={this.handleChange} 
-                                                required />
+                                                required />}
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
-                                            <Input 
+                                            {this.state.po?<Input 
+                                                type="text"
+                                                className="orderOptionsTextInput"
+                                                name="po"
+                                                // placeholder="PO"
+                                                value={this.state.po}
+                                                onChange={this.handleChange}
+                                                required />:<Input 
                                                 type="text"
                                                 className="orderOptionsTextInput"
                                                 name="po"
                                                 placeholder="PO"
                                                 onChange={this.handleChange}
-                                                required />
+                                                required />}
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
-                                            <Input 
+                                            {this.state.email?<Input 
+                                                type="email"
+                                                className="orderOptionsTextInput"
+                                                name="email"
+                                                // placeholder="Email Address"
+                                                value={this.state.email}
+                                                onChange={this.handleChange}
+                                                required />:<Input 
                                                 type="email"
                                                 className="orderOptionsTextInput"
                                                 name="email"
                                                 placeholder="Email Address"
                                                 onChange={this.handleChange}
-                                                required />
+                                                required />}
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
-                                            <Input 
+                                            {this.state.address?<Input 
+                                                type="text"
+                                                className="orderOptionsTextInput"
+                                                name="address"
+                                                // placeholder="Customer Address"
+                                                value={this.state.address}
+                                                onChange={this.handleChange} />:<Input 
                                                 type="text"
                                                 className="orderOptionsTextInput"
                                                 name="address"
                                                 placeholder="Customer Address"
-                                                onChange={this.handleChange} />
+                                                onChange={this.handleChange} />}
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
-                                            <Input 
+                                            {this.state.productname?<Input 
+                                                type="text"
+                                                className="orderOptionsTextInput"
+                                                name="productname"
+                                                // placeholder="Product Name"
+                                                value={this.state.productname}
+                                                onChange={this.handleChange} 
+                                                required />:<Input 
                                                 type="text"
                                                 className="orderOptionsTextInput"
                                                 name="productname"
                                                 placeholder="Product Name"
                                                 onChange={this.handleChange} 
-                                                required />
+                                                required />}
                                         </FormGroup>
                                     </div>
                                     <div className="orderOptionsSpecsForm">
                                         <div className="orderOptionsSpecsFormTitle">
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>GA</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" name="ga" onChange={this.handleChange} required>
+                                                <Input type="select" className="orderOptionsSpecsInput" value={this.state.ga} name="ga" onChange={this.handleChange} required>
                                                     <option>-</option>
                                                     <option>29</option>
                                                     <option>26</option>
@@ -669,15 +717,15 @@ class StandingSeam3 extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Color</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="color" onChange={this.handleChange} required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.color} name="color" onChange={this.handleChange} required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total Linear Feet</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="totallinearfeet" placeholder={this.state.totallinearfeet} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.totallinearfeet} name="totallinearfeet" placeholder={this.state.totallinearfeet} readOnly />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Special Crating</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" name="specialcrating" onChange={this.handleChange}>
+                                                <Input type="select" className="orderOptionsSpecsInput" value={this.state.specialcrating} name="specialcrating" onChange={this.handleChange}>
                                                     <option>-</option>
                                                     <option>Yes</option>
                                                     <option>No</option>
@@ -686,7 +734,7 @@ class StandingSeam3 extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>Protective film</Label>
-                                                <Input type="select" className="orderOptionsSpecsInput" name="protectivefilm" onChange={this.handleChange}>
+                                                <Input type="select" className="orderOptionsSpecsInput" value={this.state.protectivefilm} name="protectivefilm" onChange={this.handleChange}>
                                                     <option>-</option>
                                                     <option>Yes</option>
                                                     <option>No</option>
@@ -695,7 +743,7 @@ class StandingSeam3 extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Finish</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" name="finish" onChange={this.handleChange} required >
+                                                <Input type="select" className="orderOptionsSpecsInput" value={this.state.finish} name="finish" onChange={this.handleChange} required >
                                                     <option>-</option>
                                                     <option>12</option>
                                                     <option>16</option>
@@ -704,267 +752,267 @@ class StandingSeam3 extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="totalsquarefeet" placeholder={this.state.totalsquarefeet} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="totalsquarefeet" value={this.state.totalsquarefeet} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="qty" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty} name="qty" required />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="inch" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch} name="inch" required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="mm" placeholder={this.state.mm} readOnly/>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm} name="mm" placeholder={this.state.mm} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Tag</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="tag" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag} name="tag" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Linear Feet</label>
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet" placeholder={this.state.linearfeet}/>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet} name="linearfeet" placeholder={this.state.linearfeet}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet" placeholder={this.state.squarefeet} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet} name="squarefeet" placeholder={this.state.squarefeet} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="qty2" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty2} name="qty2"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="inch2" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch2} name="inch2"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="mm2" placeholder={this.state.mm2} readOnly/>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm2} name="mm2" placeholder={this.state.mm2} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Tag</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="tag2" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag2} name="tag2" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Linear Feet</label>
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet2" placeholder={this.state.linearfeet2}/>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet2} name="linearfeet2" placeholder={this.state.linearfeet2}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet2" placeholder={this.state.squarefeet2} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet2} name="squarefeet2" placeholder={this.state.squarefeet2} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="qty3" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty3} name="qty3"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="inch3" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch3} name="inch3"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="mm3" placeholder={this.state.mm3} readOnly/>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm3} name="mm3" placeholder={this.state.mm3} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Tag</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="tag3" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag3} name="tag3" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Linear Feet</label>
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet3" placeholder={this.state.linearfeet3}/>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet3} name="linearfeet3" placeholder={this.state.linearfeet3}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet3" placeholder={this.state.squarefeet3} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet3} name="squarefeet3" placeholder={this.state.squarefeet3} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="qty4" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty4} name="qty4"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="inch4" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch4} name="inch4"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="mm4" placeholder={this.state.mm4} readOnly/>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm4} name="mm4" placeholder={this.state.mm4} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Tag</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="tag4" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag4} name="tag4" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Linear Feet</label>
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet4" placeholder={this.state.linearfeet4}/>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet4} name="linearfeet4" placeholder={this.state.linearfeet4}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet4" placeholder={this.state.squarefeet4} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet4} name="squarefeet4" placeholder={this.state.squarefeet4} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="qty5" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty5} name="qty5"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="inch5" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch5} name="inch5"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="mm5" placeholder={this.state.mm5} readOnly/>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm5} name="mm5" placeholder={this.state.mm5} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Tag</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="tag5" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag5} name="tag5" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Linear Feet</label>
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet5" placeholder={this.state.linearfeet5}/>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet5} name="linearfeet5" placeholder={this.state.linearfeet5}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet5" placeholder={this.state.squarefeet5} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet5} name="squarefeet5" placeholder={this.state.squarefeet5} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="qty6" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty6} name="qty6"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="inch6" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch6} name="inch6"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="mm6" placeholder={this.state.mm6} readOnly/>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm6} name="mm6" placeholder={this.state.mm6} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Tag</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="tag6" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag6} name="tag6" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Linear Feet</label>
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet6" placeholder={this.state.linearfeet6}/>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet6} name="linearfeet6" placeholder={this.state.linearfeet6}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet6" placeholder={this.state.squarefeet6} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet6} name="squarefeet6" placeholder={this.state.squarefeet6} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="qty7" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty7} name="qty7"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="inch7" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch7} name="inch7"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="mm7" placeholder={this.state.mm7} readOnly/>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm7} name="mm7" placeholder={this.state.mm7} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Tag</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="tag7" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag7} name="tag7" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Linear Feet</label>
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet7" placeholder={this.state.linearfeet7}/>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet7} name="linearfeet7" placeholder={this.state.linearfeet7}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet7" placeholder={this.state.squarefeet7} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet7} name="squarefeet7" placeholder={this.state.squarefeet7} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="qty8" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty8} name="qty8"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="inch8" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch8} name="inch8"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="mm8" placeholder={this.state.mm8} readOnly/>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm8} name="mm8" placeholder={this.state.mm8} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Tag</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="tag8" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag8} name="tag8" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Linear Feet</label>
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet8" placeholder={this.state.linearfeet8}/>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet8} name="linearfeet8" placeholder={this.state.linearfeet8}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet8" placeholder={this.state.squarefeet8} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet8} name="squarefeet8" placeholder={this.state.squarefeet8} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="qty9" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty9} name="qty9"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="inch9" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch9} name="inch9"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="mm9" placeholder={this.state.mm9} readOnly/>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm9} name="mm9" placeholder={this.state.mm9} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Tag</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="tag9" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag9} name="tag9" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Linear Feet</label>
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet9" placeholder={this.state.linearfeet9}/>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet9} name="linearfeet9" placeholder={this.state.linearfeet9}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet9" placeholder={this.state.squarefeet9} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet9} name="squarefeet9" placeholder={this.state.squarefeet9} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="qty10" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty10} name="qty10"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="inch10" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch10} name="inch10"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="mm10" placeholder={this.state.mm10} readOnly/>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm10} name="mm10" placeholder={this.state.mm10} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Tag</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="tag10" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag10} name="tag10" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Linear Feet</label>
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet10" placeholder={this.state.linearfeet10}/>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet10} name="linearfeet10" placeholder={this.state.linearfeet10}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet10" placeholder={this.state.squarefeet10} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet10} name="squarefeet10" placeholder={this.state.squarefeet10} readOnly />
                                             </FormGroup>
                                         </div>
                                     </div>
@@ -972,544 +1020,933 @@ class StandingSeam3 extends Component{
                                         <h2 className="orderOptionsTitle">FLASHINGS:</h2>
                                         <div className="orderOptionsFlashingsContainerSmall">
                                         <FormGroup className="orderOptionsFlashingsContainer2"> 
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fhook%20drip.jpg?alt=media&token=70711190-0093-4dd7-a85e-fb153bb13267"/>
-                                                <CustomInput
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FHook%20Drip.jpg?alt=media&token=128c0549-17d9-45a3-b2a7-bc365f5884de"/>
+                                                {this.state.hookdrip1?<CustomInput
+                                                    className="orderOptionsFlashingsInput" 
+                                                    name="hookdrip1"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.hookdrip1}
+                                                    onChange={this.handleChange}
+                                                    />:<CustomInput
                                                     className="orderOptionsFlashingsInput" 
                                                     name="hookdrip1"
                                                     type="text"
                                                     placeholder="QTY"
                                                     onChange={this.handleChange}
-                                                    />
+                                                    />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fhook%20drip%20for%20step%20pitch.jpg?alt=media&token=4890e24f-0247-4ec7-99e2-a0594496f8d3"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FHook%20Drip%20for%20Step%20Pitch.jpg?alt=media&token=f65e7428-d232-44d5-a98c-575772c14c33"/>
+                                                {this.state.hookdripsteppitch?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.hookdripsteppitch}
+                                                    name="hookdripsteppitch"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="hookdripsteppitch"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fgabble%20rake1.jpg?alt=media&token=123239cc-4cd5-44b3-8575-a275b34b5db9"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FGable%20Rake%201.jpg?alt=media&token=2168f699-830a-44fd-9436-b723263b012f"/>
+                                                {this.state.gabbleRake1?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.gabbleRake1}
+                                                    name="gabbleRake1"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="gabbleRake1"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fgabble%20rake2.jpg?alt=media&token=bb036fd8-345f-4f84-984a-96836d7c53ca"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FGable%20Rake%202.jpg?alt=media&token=bb75ffd9-207c-47f4-bd34-9da4b7e2c639"/>
+                                                {this.state.gabbleRake2?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.gabbleRake2}
+                                                    name="gabbleRake2"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="gabbleRake2"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fgabble%20rake3.jpg?alt=media&token=a27e2b6c-9110-4e4e-94aa-aed72a13c08e"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FGable%20Rake3.jpg?alt=media&token=136150c3-5ebe-478d-9047-f3c252b61610"/>
+                                                {this.state.gabbleRake3?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.gabbleRake3}
+                                                    name="gabbleRake3"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="gabbleRake3"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fside%20wall1.jpg?alt=media&token=711ed774-5431-42e2-931b-17e6e9a8d2dc"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FSide%20Wall1.jpg?alt=media&token=976350de-e6df-448e-ac75-c01286d7a46f"/>
+                                                {this.state.sidewall1?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.sidewall1}
+                                                    name="sidewall1"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="sidewall1"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fside%20wall2.jpg?alt=media&token=7367fec5-0f8b-40f0-a70f-a7e612b9661e"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FSide%20Wall2.jpg?alt=media&token=738b3bd2-35cb-4d21-89c4-d0abc76d1095"/>
+                                                {this.state.sidewall2?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.sidewall2}
+                                                    name="sidewall2"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="sidewall2"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fend%20wall1.jpg?alt=media&token=e9b2e85b-f1d9-457f-a387-b1e214bd4a56"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FEnd%20Wall1.jpg?alt=media&token=5b64a623-4628-41df-b181-c79a38337da2"/>
+                                                {this.state.endwall1?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.endwall1}
+                                                    name="endwall1"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="endwall1"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fend%20wall2.jpg?alt=media&token=0d587631-27c3-4b09-a833-09eb400f64ff"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FEnd%20Wall2.jpg?alt=media&token=7f97894b-5d52-40e4-b7e6-618c9b6c936f"/>
+                                                {this.state.endWall2?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.endWall2}
+                                                    name="endWall2"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="endWall2"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fend%20wall3.jpg?alt=media&token=57034de2-9baf-4b74-8bbb-7cf18a40a47c"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FEnd%20Wall3.jpg?alt=media&token=26ec8677-267b-4db0-8f3a-1698501391be"/>
+                                                {this.state.endwall3?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.endwall3}
+                                                    name="endwall3"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="endwall3"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Ftransition1.jpg?alt=media&token=8419ef7a-e396-4cf8-af9a-bcb7ae1deb94"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FTransition1.jpg?alt=media&token=34056558-c020-4562-892c-fd66e759def0"/>
+                                                {this.state.transition1?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.transition1}
+                                                    name="transition1"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="transition1"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Ftransition2.jpg?alt=media&token=a6a48a26-a768-4fb6-8e9b-39ac6273937b"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FTransition2.jpg?alt=media&token=a5e7befb-9a90-415a-81bc-c5fdb15c2242"/>
+                                                {this.state.transition2?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.transition2}
+                                                    name="transition2"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="transition2"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Ftransition3.jpg?alt=media&token=f9c81a42-faf7-40d1-b871-d730bb6c0938"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FTransition3.jpg?alt=media&token=966d4436-fb81-491d-ab8b-f30b976224f8"/>
+                                                {this.state.transition3?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.transition3}
+                                                    name="transition3"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="transition3"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fpeak%20cap1.jpg?alt=media&token=6a872100-5ce7-403e-b726-755991f85dea"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FPeak%20Cap1.jpg?alt=media&token=c14face5-939d-4285-ba3e-50bc28c90575"/>
+                                                {this.state.peakcap1?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.peakcap1}
+                                                    name="peakcap1"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="peakcap1"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fpeak%20cap2.jpg?alt=media&token=7e2000bf-5fb5-4d97-bdc3-70e50b861528"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FPeak%20Cap2.jpg?alt=media&token=adec41f4-5187-465c-81ee-63d11bb3289e"/>
+                                                {this.state.peakcap2?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.peakcap2}
+                                                    name="peakcap2"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="peakcap2"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fpeak%20cap3.jpg?alt=media&token=748d08be-f8d8-4962-bee6-b0f480d8314d"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FPeak%20Cap3.jpg?alt=media&token=79a3bc42-e526-4153-9c33-178d3f9c7739"/>
+                                                {this.state.peakcap3?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.peakcap3}
+                                                    name="peakcap3"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="peakcap3"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fhip1.jpg?alt=media&token=b012c160-1085-45ca-bcc7-bc7a0de8457e"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FHIP1.jpg?alt=media&token=170717c2-e8b9-4217-a7af-aaac85fd64dd"/>
+                                                {this.state.hip1?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.hip1}
+                                                    name="hip1"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="hip1"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fhip2.jpg?alt=media&token=8ef290c2-7271-4bbc-94d5-2862ef2fb253"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fhip2.jpg?alt=media&token=74c1af7f-f804-4478-a3e3-eb9669f76828"/>
+                                                {this.state.hip2?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.hip2}
+                                                    name="hip2"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="hip2"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fhip3.jpg?alt=media&token=848ace7d-7083-4202-92f9-4f87a22f3543"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fhip3.jpg?alt=media&token=d50c0ad5-953b-44e0-ba35-b003326b2952"/>
+                                                {this.state.hip3?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.hip3}
+                                                    name="hip3"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="hip3"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fridge1.jpg?alt=media&token=70334f37-67e3-4de6-8f8f-74d49df9d2b7"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fridge1.jpg?alt=media&token=981f9517-2c82-40a9-beb7-cf69ba5bc4ec"/>
+                                                {this.state.ridge1?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.ridge1}
+                                                    name="ridge1"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="ridge1"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fridge2.jpg?alt=media&token=87e7c07b-3dff-4710-a00c-e090ec4ef5a8"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fridge2.jpg?alt=media&token=42040d63-9ae0-439b-8d51-9f0095cc6c33"/>
+                                                {this.state.ridge2?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.ridge2}
+                                                    name="ridge2"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="ridge2"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fridge3.jpg?alt=media&token=260382ab-c7c1-4863-b89a-3083b89bf697"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FRidge3.jpg?alt=media&token=c2d35282-ed62-4b16-b814-3e399d172c13"/>
+                                                {this.state.ridge3?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.ridge3}
+                                                    name="ridge3"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="ridge3"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fridge4.jpg?alt=media&token=93bbef5e-47d5-4180-a391-c08673418c24"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fridge4.jpg?alt=media&token=fd08e06e-d95b-4af2-8c48-77249f122131"/>
+                                                {this.state.ridge4?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.ridge4}
+                                                    name="ridge4"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="ridge4"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fw%20valley1.jpg?alt=media&token=fe27a41f-5822-4cef-8405-b70ecab0433a"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fw%20valley1.jpg?alt=media&token=8c8d4a97-bc5d-49fc-87db-e932a50d4840"/>
+                                                {this.state.wvalley1?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.wvalley1}
+                                                    name="wvalley1"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="wvalley1"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fw%20valley2.jpg?alt=media&token=adf53e43-b25a-454c-b3a1-e0e9bcd8c2e8"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fw%20valley%202.jpg?alt=media&token=5d48576e-9425-46b3-9034-9340d8e1a3d9"/>
+                                                {this.state.wvalley2?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.wvalley2}
+                                                    name="wvalley2"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="wvalley2"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fv%20valley1.jpg?alt=media&token=2e5d3bf3-8529-4242-bf57-65b878bf8018"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fv%20valley1.jpg?alt=media&token=6119c876-4cf3-4bb5-bde6-6cec23327350"/>
+                                                {this.state.vvalley1?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.vvalley1}
+                                                    name="vvalley1"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="vvalley1"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fsnow%20stop1.jpg?alt=media&token=48125644-b7f9-4206-be39-16a956d53ab3"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FSnow%20Stop1.jpg?alt=media&token=2facc5b6-33fc-4478-a8c4-38118003f67a"/>
+                                                {this.state.snowstop1?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.snowstop1}
+                                                    name="snowstop1"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="snowstop1"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fcleat.jpg?alt=media&token=734b69ed-039c-4cc4-8b32-cc5a99f261db"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FCleat.jpg?alt=media&token=906047c9-a6c6-4da3-847a-dfc3c431f989"/>
+                                                {this.state.cleat?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.cleat}
+                                                    name="cleat"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="cleat"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fj%20under%20panel.jpg?alt=media&token=29855359-d0cc-49c7-aa8c-fbc3ad8d4c85"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FJ%20-%20Under%20panel.jpg?alt=media&token=ce96a89a-53c9-48e8-baa0-e34700ee517d"/>
+                                                {this.state.junderbarrel?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.junderbarrel}
+                                                    name="junderbarrel"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="junderbarrel"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fz%20bar%20over%20panel.jpg?alt=media&token=00f69b80-5f5f-402c-992c-e8cf750976ad"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fz%20bar%20-%20over%20panel.jpg?alt=media&token=77f0411b-b731-484b-978d-205f25583889"/>
+                                                {this.state.zbaroverbarrel?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.zbaroverbarrel}
+                                                    name="zbaroverbarrel"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="zbaroverbarrel"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fperforated%20under%20panel.jpg?alt=media&token=6ab8af11-fab8-4911-baf9-16da3aacc1fc"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fperforated%20j%20under%20panel.jpg?alt=media&token=1054ddc7-a74b-463b-a798-ad667fab8587"/>
+                                                {this.state.perforatedjunderbarrel?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.perforatedjunderbarrel}
+                                                    name="perforatedjunderbarrel"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="perforatedjunderbarrel"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fperforated%20over%20panel.jpg?alt=media&token=c3e7ae14-fef6-4cdf-b330-cc4bab49c139"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fperforated%20z%20bar%20over%20panel.jpg?alt=media&token=ebf74b6d-62e8-431f-bf19-5be893850b0e"/>
+                                                {this.state.perforatedzbaroverbarrel?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.perforatedzbaroverbarrel}
+                                                    name="perforatedzbaroverbarrel"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="perforatedzbaroverbarrel"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fback%20pan5.jpg?alt=media&token=d154ea8e-069d-4750-bd92-58f8e1516f33"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fback%20pan%205'.jpg?alt=media&token=473c5f91-c50a-4cc1-b09d-b05eeec907bb"/>
+                                                {this.state.backpan5?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.backpan5}
+                                                    name="backpan5"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="backpan5"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fback%20pan10.jpg?alt=media&token=e8945d3e-6f09-4aa5-95c3-da6693b479de"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fback%20pan%2010'.jpg?alt=media&token=e4ee0ccb-3c4f-4171-9dd0-85affbbb6983"/>
+                                                {this.state.backpan10?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.backpan10}
+                                                    name="backpan10"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="backpan10"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fbase1.jpg?alt=media&token=4faaf402-3901-480e-8316-804af79969c4"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fbase1.jpg?alt=media&token=7380e3f3-febe-4850-b44c-3487c570d593"/>
+                                                {this.state.base1?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.base1}
+                                                    name="base1"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="base1"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fbase2.jpg?alt=media&token=f30fb682-4dd1-45ab-a0f1-76a714f08549"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fbase2.jpg?alt=media&token=799df40c-cb74-4f4c-9be0-43f771c44adb"/>
+                                                {this.state.base2?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.base2}
+                                                    name="base2"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="base2"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fbase3.jpg?alt=media&token=632390cf-ab64-42bf-9a5c-fa3392066c63"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fbase3.jpg?alt=media&token=97107a41-d31b-4ef8-91c0-ce95afac08d9"/>
+                                                {this.state.base3?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.base3}
+                                                    name="base3"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="base3"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fwindow%20header.jpg?alt=media&token=d4e393ef-9fa8-4f57-95f3-f8487a3c32ec"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fwindow%20header.jpg?alt=media&token=e129e120-0493-4b39-bcc6-6f43fd743714"/>
+                                                {this.state.windowheader?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.windowheader}
+                                                    name="windowheader"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="windowheader"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fwindow%20reverse.jpg?alt=media&token=3e02ebc8-1d5d-4c42-b052-3d4957d9f322"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fwindow%20reverse.jpg?alt=media&token=46cde2e8-b918-415b-aef6-92ea65c45988"/>
+                                                {this.state.windowreverse?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.windowreverse}
+                                                    name="windowreverse"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="windowreverse"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fwall%20transition.jpg?alt=media&token=fdce57fa-6d7d-424e-a97c-41602d4dbfe3"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fwall%20transition.jpg?alt=media&token=8d8a0c06-26ae-4882-89db-ae0dea8dd7e9"/>
+                                                {this.state.walltransition?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.walltransition}
+                                                    name="walltransition"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="walltransition"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fjtrim1.jpg?alt=media&token=7f347959-ba36-43da-ae7c-8bfdfea2baf5"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fj%20trim1.jpg?alt=media&token=44dbbede-3e6d-4e34-a0de-ae21918f4172"/>
+                                                {this.state.jtrim1?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.jtrim1}
+                                                    name="jtrim1"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="jtrim1"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fjtrim2.jpg?alt=media&token=cb9f01fe-cbfd-42d3-970e-8db7de720ee0"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fj%20trim2.jpg?alt=media&token=0aae4a79-370e-45b2-96e6-8ce6e18d2a92"/>
+                                                {this.state.jtrim2?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.jtrim2}
+                                                    name="jtrim2"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="jtrim2"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fjtrim3.jpg?alt=media&token=02492014-5506-43f3-bd77-82d4041610d3"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F2%20piece%20jtrim3.jpg?alt=media&token=756efa31-2396-4d91-97d2-4be22e4f8bcd"/>
+                                                {this.state.jtrim3?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.jtrim3}
+                                                    name="jtrim3"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="jtrim3"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Ftransition.jpg?alt=media&token=be4a6b63-4eb0-479a-a62d-43416d747712"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Ftransition.jpg?alt=media&token=42c3faae-0e29-4d10-9bfd-63bbd842ea9f"/>
+                                                {this.state.transition?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.transition}
+                                                    name="transition"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="transition"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Foutside%20corner1.jpg?alt=media&token=e2f38cec-bafa-424d-90cc-f48505d9235b"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Foutside%20corner1.jpg?alt=media&token=02b739c0-bbf2-49bc-9b7d-bb223cbf2b26"/>
+                                                {this.state.outsidecorner1?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.outsidecorner1}
+                                                    name="outsidecorner1"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="outsidecorner1"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Finside%20corner1.jpg?alt=media&token=48835e6b-7dd3-45c4-b48b-b9aa08aad94c"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Finside%20corner1.jpg?alt=media&token=882c02f5-ea61-4ca3-beb3-745e1043599d"/>
+                                                {this.state.insidecorner1?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.insidecorner1}
+                                                    name="insidecorner1"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="insidecorner1"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Foutside%20corner2.jpg?alt=media&token=ea07d5b4-39c7-48e0-ba19-afff86823f5d"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Foutisde%20corner2.jpg?alt=media&token=151ca8a2-a7d7-4f05-87cc-d0f523996f3f"/>
+                                                {this.state.outsidecorner2?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.outsidecorner2}
+                                                    name="outsidecorner2"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="outsidecorner2"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Finside%20corner2.jpg?alt=media&token=574c044b-ac83-4fb8-8948-a8ea927ee11e"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Finside%20corner%202.jpg?alt=media&token=43d76f94-970c-4389-a0fe-3acf2b433ea3"/>
+                                                {this.state.insidecorner2?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.insidecorner2}
+                                                    name="insidecorner2"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="insidecorner2"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Foutside%20corner3.jpg?alt=media&token=03214f39-b4de-4191-918b-763faab3e92c"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Foutside%20corner3.jpg?alt=media&token=d93d7683-5b29-4ac8-a19b-3ba3ab2f7315"/>
+                                                {this.state.outsidecorner3?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.outsidecorner3}
+                                                    name="outsidecorner3"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="outsidecorner3"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Finside%20corner3.jpg?alt=media&token=66155ca4-b0d3-4f65-afd7-c280fa160d21"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Finside%20corner%203.jpg?alt=media&token=f1794e40-01aa-4b20-bda9-bfbda9613cf1"/>
+                                                {this.state.insidecorner3?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.insidecorner3}
+                                                    name="insidecorner3"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="insidecorner3"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fss290.jpg?alt=media&token=2d7672f5-830c-43a4-8fce-be684b74c113"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F2%20piece%20outside%20corner%204.jpg?alt=media&token=0f7b3af5-4dfe-4aa2-89b4-ba3e7dd7372c"/>
+                                                {this.state.outsidecorner4?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.outsidecorner4}
+                                                    name="outsidecorner4"
+                                                    onChange={this.handleChange} />:<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="outsidecorner4"
+                                                    onChange={this.handleChange} />}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F2%20piece%20inside%20corner%204.jpg?alt=media&token=51b3c95b-eb40-4842-8fc6-1e980c084437"/>
+                                                {this.state.insidecorner4?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.insidecorner4}
+                                                    name="insidecorner4"
+                                                    onChange={this.handleChange} />:<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    placeholder="QTY"
+                                                    name="insidecorner4"
+                                                    onChange={this.handleChange} />}
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsFlashingsContainer2">
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F%23290.jpg?alt=media&token=6c68de20-0c63-4945-889e-e23a542e79f1"/>
+                                                {this.state.standing290?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.standing290}
+                                                    name="standing290"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="standing290"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fss291.jpg?alt=media&token=d9e60d17-efc9-4dae-9f98-c967dd7ce537"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F%23291.jpg?alt=media&token=1cf9db98-49c0-428e-939e-c7e6580b254c"/>
+                                                {this.state.standing291?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.standing291}
+                                                    name="standing291"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="standing291"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fss292.jpg?alt=media&token=a5f0d93a-52a4-46c3-8c07-bf1dbe78913e"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F292.jpg?alt=media&token=3ed2147e-208e-44fc-84d9-f86b405f2c15"/>
+                                                {this.state.standing292?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.standing292}
+                                                    name="standing292"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="standing292"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fss293.jpg?alt=media&token=ed475e7f-0412-4bdd-8029-c3a8c8c12c3a"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F293.jpg?alt=media&token=620e55ed-13f2-4a99-9fae-762cd5fcba37"/>
+                                                {this.state.standing293?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.standing293}
+                                                    name="standing293"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="standing293"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fss294.jpg?alt=media&token=03872080-63c4-47e8-8828-d03b4246bc0b"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F294.jpg?alt=media&token=111aa019-7325-40c0-bf5b-879d8e0b31ab"/>
+                                                {this.state.standing294?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.standing294}
+                                                    name="standing294"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="standing294"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2Fss295.jpg?alt=media&token=c23d0e40-9046-4cf6-9dc5-1150c69ab941"/>
-                                                <CustomInput 
+                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F295.jpg?alt=media&token=013a0246-9ad8-49e1-b8f5-a353e8f2f05a"/>
+                                                {this.state.standing295?<CustomInput 
+                                                    className="orderOptionsFlashingsInput"
+                                                    type="text"
+                                                    // placeholder="QTY"
+                                                    value={this.state.standing295}
+                                                    name="standing295"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsFlashingsInput"
                                                     type="text"
                                                     placeholder="QTY"
                                                     name="standing295"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                         </div>
                                     </div>
                                     <h2 className="orderOptionsTitle">ACCESSORIES:</h2>
                                         <div className="orderOptionsFlashingsContainerSmall">
-                                            <FormGroup className="orderOptionsFlashingsContainer"> 
+                                        <FormGroup className="orderOptionsFlashingsContainer"> 
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fmetal%20drill%20screws.png?alt=media&token=def7c31f-bab7-430a-aac1-c6686b9eb621"/>
-                                                <CustomInput
+                                                {this.state.metalDrillScrews?<CustomInput
+                                                    className="orderOptionsAccessoriesInput" 
+                                                    name="metalDrillScrews"
+                                                    type="text"
+                                                    id="annoying"
+                                                    // placeholder="QTY"
+                                                    value={this.state.metalDrillScrews}
+                                                    onChange={this.handleChange}
+                                                    />:<CustomInput
                                                     className="orderOptionsAccessoriesInput" 
                                                     name="metalDrillScrews"
                                                     type="text"
                                                     id="annoying"
                                                     placeholder="QTY"
                                                     onChange={this.handleChange}
-                                                    />
+                                                    />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fwoodgrip%20screws.png?alt=media&token=bedb64c8-3ace-4697-8bd6-10e6b6ee4db2"/>
-                                                <CustomInput 
+                                                {this.state.woodGripScrews?<CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    // placeholder="QTY"
+                                                    value={this.state.woodGripScrews}
+                                                    name="woodGripScrews"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     placeholder="QTY"
                                                     name="woodGripScrews"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fsynthetic%20high%20temp%20cover.png?alt=media&token=175a4dbb-40b2-43b5-92f2-eb31cb839e7c"/>
-                                                <CustomInput 
+                                                {this.state.syntheticHighTempCover?<CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    // placeholder="QTY"
+                                                    value={this.state.syntheticHighTempCover}
+                                                    name="syntheticHighTempCover"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     placeholder="QTY"
                                                     name="syntheticHighTempCover"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fpeel%20%26%20stick%20high%20temp%20cover.png?alt=media&token=7bfec47d-cb9b-40c3-b843-b93811e530f2"/>
@@ -1523,73 +1960,122 @@ class StandingSeam3 extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Ftube%20sealant.png?alt=media&token=bf1baf8a-beac-461e-af91-7fa9c12695e6"/>
-                                                <CustomInput 
+                                                {this.state.tubeSealant?<CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    // placeholder="QTY"
+                                                    value={this.state.tubeSealant}
+                                                    name="tubeSealant"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     placeholder="QTY"
                                                     name="tubeSealant"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fbutyl%20tape.png?alt=media&token=24398d7f-af89-4872-82fd-d9286875a3cb"/>
-                                                <CustomInput 
+                                                {this.state.butylTape?<CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    // placeholder="QTY"
+                                                    value={this.state.butylTape}
+                                                    name="butylTape"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     placeholder="QTY"
                                                     name="butylTape"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fplumbing%20boots.png?alt=media&token=1db3c74a-c476-4596-b4b6-0c286a1cc006"/>
-                                                <CustomInput 
+                                                {this.state.plumbingBoots?<CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    // placeholder="QTY"
+                                                    value={this.state.plumbingBoots}
+                                                    name="plumbingBoots"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     placeholder="QTY"
                                                     name="plumbingBoots"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fflex-o-vent.png?alt=media&token=c1e81e0f-c6a2-48fd-84be-6952ba69aadf"/>
-                                                <CustomInput 
+                                                {this.state.flexOVent?<CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    // placeholder="QTY"
+                                                    value={this.state.flexOVent}
+                                                    name="flexOVent"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     placeholder="QTY"
                                                     name="flexOVent"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fprofile%20outer%20closure.png?alt=media&token=836d6b46-1e94-45a5-aea2-6ce4c69d37a3"/>
-                                                <CustomInput 
+                                                {this.state.profileOuterClosure?<CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    // placeholder="QTY"
+                                                    value={this.state.profileOuterClosure}
+                                                    name="profileOuterClosure"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     placeholder="QTY"
                                                     name="profileOuterClosure"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fprofile%20inner%20closure.png?alt=media&token=a799aa5a-55a3-41d9-9a47-a4565e06e6c5"/>
-                                                <CustomInput 
+                                                {this.state.profileInnerClosure?<CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    // placeholder="QTY"
+                                                    value={this.state.profileInnerClosure}
+                                                    name="profileInnerClosure"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     placeholder="QTY"
                                                     name="profileInnerClosure"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                             <FormGroup className="orderOptionsFlashingsContainer">
                                                 <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Flow%20profile%20ridge%20vent.png?alt=media&token=18d4aaaf-d88f-4cda-96ee-1addef31a649"/>
-                                                <CustomInput 
+                                                {this.state.lowProfileRidgeVent?<CustomInput 
+                                                    className="orderOptionsAccessoriesInput"
+                                                    type="text"
+                                                    id="annoying"
+                                                    // placeholder="QTY"
+                                                    value={this.state.lowProfileRidgeVent}
+                                                    name="lowProfileRidgeVent"
+                                                    onChange={this.handleChange} />:<CustomInput 
                                                     className="orderOptionsAccessoriesInput"
                                                     type="text"
                                                     id="annoying"
                                                     placeholder="QTY"
                                                     name="lowProfileRidgeVent"
-                                                    onChange={this.handleChange} />
+                                                    onChange={this.handleChange} />}
                                             </FormGroup>
                                         </div>
                                     <FormGroup className="productDisclaimerFG">
@@ -1615,7 +2101,17 @@ class StandingSeam3 extends Component{
                     }
                 </div>
                 <Footer/>
-            </div>
+            </div>):
+            <div>
+            <ReactToPrint content={() => this.componentRef}>
+            <PrintContextConsumer>
+                {({ handlePrint }) => (
+                <button style={{width: '80%', margin: '10px auto', padding: '10px', fontWeight: 'bold', fontSize: 18, visibility: 'hidden'}} onClick={handlePrint} className="contactButton" >Print Page</button>
+                )}
+            </PrintContextConsumer>
+            </ReactToPrint>
+            <Standingseam2Print obj = {this.state} ref={el => (this.componentRef = el)} />
+        </div>}</div>
         )
     }
 }
