@@ -1129,7 +1129,7 @@ class Iconpanels extends Component{
                                         <Label>I accept terms and services</Label>
                                     </FormGroup>
                                     <Button className="contactButton" onClick={this.printPage}><p className="contactButtonText">Go To Print Page</p></Button>
-                                    <Button className="contactButton"><p className="contactButtonText">Submit</p></Button>
+                                    <Button onClick={this.handleSumbit} className="contactButton"><p className="contactButtonText">Submit</p></Button>
                                 </Form>
                             </div>
                         ) : (

@@ -329,8 +329,9 @@ class Standingseam2 extends Component{
     
       handleSumbit(e) {
         e.preventDefault();
+    // console.log(customerName, productname);
+    const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, squarefeet, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gablerake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
     console.log(customerName, productname);
-        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, squarefeet, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gablerake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
     
         const form = axios.post('http://localhost:3001/api/form', {
             customerName,
@@ -411,7 +412,7 @@ class Standingseam2 extends Component{
             standing294,
             standing295
         })
-        e.target.reset();
+        // e.target.reset();
       }
     //   console.log(this.state)
     render(){
@@ -2046,7 +2047,7 @@ class Standingseam2 extends Component{
                                         <Label>I accept terms and services</Label>
                                     </FormGroup>
                                     <Button className="contactButton" onClick={this.printPage}><p className="contactButtonText">Go To Print Page</p></Button>
-                                    <Button onClick={() => {console.log(this.state)}} className="contactButton"><p className="contactButtonText">Submit</p></Button>
+                                    <Button onClick={this.handleSumbit} className="contactButton"><p className="contactButtonText">Submit</p></Button>
                                     
                                 </Form>
                             </div>
