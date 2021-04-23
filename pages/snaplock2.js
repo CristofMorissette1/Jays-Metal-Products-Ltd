@@ -16,6 +16,7 @@ class Snaplock2 extends Component{
             colorOptions: false,
             orderOptions: false,
             customerName: '',
+            productname: '',
             phone: '',
             po: '',
             email: '',
@@ -33,6 +34,60 @@ class Snaplock2 extends Component{
             tag: '',
             linearfeet: 0,
             sqft: '',
+            qty2: '',
+            inch2: '',
+            mm2: '',
+            tag2: '',
+            linearfeet2: '',
+            squarefeet2: '',
+            qty3: '',
+            inch3: '',
+            mm3: '',
+            tag3: '',
+            linearfeet3: '',
+            squarefeet3: '',
+            qty4: '',
+            inch4: '',
+            mm4: '',
+            tag4: '',
+            linearfeet4: '',
+            squarefeet4: '',
+            qty5: '',
+            inch5: '',
+            mm5: '',
+            tag5: '',
+            linearfeet5: '',
+            squarefeet5: '',
+            qty6: '',
+            inch6: '',
+            mm6: '',
+            tag6: '',
+            linearfeet6: '',
+            squarefeet6: '',
+            qty7: '',
+            inch7: '',
+            mm7: '',
+            tag7: '',
+            linearfeet7: '',
+            squarefeet7: '',
+            qty8: '',
+            inch8: '',
+            mm8: '',
+            tag8: '',
+            linearfeet8: '',
+            squarefeet8: '',
+            qty9: '',
+            inch9: '',
+            mm9: '',
+            tag9: '',
+            linearfeet9: '',
+            squarefeet9: '',
+            qty10: '',
+            inch10: '',
+            mm10: '',
+            tag10: '',
+            linearfeet10: '',
+            squarefeet10: '',
             hookdrip1: '',
             hookdripsteppitch: '',
             gabbleRake1: '',
@@ -137,18 +192,79 @@ class Snaplock2 extends Component{
         this.setState({
           [e.target.name]: e.target.value
         })
-        let qtyNum = this.state.qty;
-        let size = this.state.inch;
-        let linearFeet = qtyNum * size;
+        let linearFeet1 = (this.state.qty * this.state.inch) / 12;
+        let mmSize1 = this.state.inch * 25.4;
+        let sqft1 = (this.state.mm / 12) * this.state.linearfeet;
+        let linearFeet2 = (this.state.qty2 * this.state.inch2) / 12;
+        let mmSize2 = this.state.inch2 * 25.4;
+        let sqft2 = (this.state.mm2 / 12) * this.state.linearfeet2;
+        let linearFeet3 = (this.state.qty3 * this.state.inch3) / 12;
+        let mmSize3 = this.state.inch3 * 25.4;
+        let sqft3 = (this.state.mm3 / 12) * this.state.linearfeet3;
+        let linearFeet4 = (this.state.qty4 * this.state.inch4) / 12;
+        let mmSize4 = this.state.inch4 * 25.4;
+        let sqft4 = (this.state.mm4 / 12) * this.state.linearfeet4;
+        let linearFeet5 = (this.state.qty5 * this.state.inch5) / 12;
+        let mmSize5 = this.state.inch5 * 25.4;
+        let sqft5 = (this.state.mm5 / 12) * this.state.linearfeet5;
+        let linearFeet6 = (this.state.qty6 * this.state.inch6) / 12;
+        let mmSize6 = this.state.inch6 * 25.4;
+        let sqft6 = (this.state.mm6 / 12) * this.state.linearfeet6;
+        let linearFeet7 = (this.state.qty7 * this.state.inch7) / 12;
+        let mmSize7= this.state.inch7 * 25.4;
+        let sqft7 = (this.state.mm7 / 12) * this.state.linearfeet7;
+        let linearFeet8 = (this.state.qty8 * this.state.inch8) / 12;
+        let mmSize8 = this.state.inch8 * 25.4;
+        let sqft8 = (this.state.mm8 / 12) * this.state.linearfeet8;
+        let linearFeet9 = (this.state.qty9 * this.state.inch9) / 12;
+        let mmSize9 = this.state.inch9 * 25.4;
+        let sqft9 = (this.state.mm9 / 12) * this.state.linearfeet9;
+        let linearFeet10 = (this.state.qty10 * this.state.inch10) / 12;
+        let mmSize10 = this.state.inch10 * 25.4;
+        let sqft10 = (this.state.mm10 / 12) * this.state.linearfeet10;
+        let sqft = sqft1 + sqft2 + sqft3 + sqft4 + sqft5 + sqft6 + sqft7 + sqft8 + sqft9 + sqft10;
+        let totalLinear = linearFeet1 + linearFeet2 + linearFeet3 + linearFeet4 + linearFeet5 + linearFeet6 + linearFeet7 + linearFeet8 + linearFeet9 + linearFeet10;
         this.setState({
-            linearfeet: linearFeet
+            linearfeet: linearFeet1.toFixed(2),
+            mm: mmSize1.toFixed(2),
+            squarefeet: sqft1.toFixed(2),
+            linearfeet2: linearFeet2.toFixed(2),
+            mm2: mmSize2.toFixed(2),
+            squarefeet2: sqft2.toFixed(2),
+            linearfeet3: linearFeet3.toFixed(2),
+            mm3: mmSize3.toFixed(2),
+            squarefeet3: sqft3.toFixed(2),
+            linearfeet4: linearFeet4.toFixed(2),
+            mm4: mmSize4.toFixed(2),
+            squarefeet4: sqft4.toFixed(2),
+            linearfeet5: linearFeet5.toFixed(2),
+            mm5: mmSize5.toFixed(2),
+            squarefeet5: sqft5.toFixed(2),
+            linearfeet6: linearFeet6.toFixed(2),
+            mm6: mmSize6.toFixed(2),
+            squarefeet6: sqft6.toFixed(2),
+            linearfeet7: linearFeet7.toFixed(2),
+            mm7: mmSize7.toFixed(2),
+            squarefeet7: sqft7.toFixed(2),
+            linearfeet8: linearFeet8.toFixed(2),
+            mm8: mmSize8.toFixed(2),
+            squarefeet8: sqft8.toFixed(2),
+            linearfeet9: linearFeet9.toFixed(2),
+            mm9: mmSize9.toFixed(2),
+            squarefeet9: sqft9.toFixed(2),
+            linearfeet10: linearFeet10.toFixed(2),
+            mm10: mmSize10.toFixed(2),
+            squarefeet10: sqft10.toFixed(2),
+            totallinearfeet: totalLinear.toFixed(2),
+            totalsquarefeet: sqft.toFixed(2)
         })
     }
     
       handleSumbit(e) {
         e.preventDefault();
     
-        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, sqft, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gabbleRake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
+
+        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, sqft, qty2, inch2, mm2, tag2, linearfeet2, squarefeet2, qty3, inch3, mm3, tag3, linearfeet3, squarefeet3, qty4, inch4, mm4, tag4, linearfeet4, squarefeet4, qty5, inch5, mm5, tag5, linearfeet5, squarefeet5, qty6, inch6, mm6, tag6, linearfeet6, squarefeet6, qty7, inch7, mm7, tag7, linearfeet7, squarefeet7, qty8, inch8, mm8, tag8, linearfeet8, squarefeet8, qty9, inch9, mm9, tag9, linearfeet9, squarefeet9, qty10, inch10, mm10, tag10, linearfeet10, squarefeet10, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gablerake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
     
         const form = axios.post('http://localhost:3001/api/form', {
             customerName,
@@ -170,6 +286,60 @@ class Snaplock2 extends Component{
             tag,
             linearfeet,
             sqft,
+            qty2,
+            inch2,
+            mm2,
+            tag2,
+            linearfeet2,
+            squarefeet2,
+            qty3,
+            inch3,
+            mm3,
+            tag3,
+            linearfeet3,
+            squarefeet3,
+            qty4,
+            inch4,
+            mm4,
+            tag4,
+            linearfeet4,
+            squarefeet4,
+            qty5,
+            inch5,
+            mm5,
+            tag5,
+            linearfeet5,
+            squarefeet5,
+            qty6,
+            inch6,
+            mm6,
+            tag6,
+            linearfeet6,
+            squarefeet6,
+            qty7,
+            inch7,
+            mm7,
+            tag7,
+            linearfeet7,
+            squarefeet7,
+            qty8,
+            inch8,
+            mm8,
+            tag8,
+            linearfeet8,
+            squarefeet8,
+            qty9,
+            inch9,
+            mm9,
+            tag9,
+            linearfeet9,
+            squarefeet9,
+            qty10,
+            inch10,
+            mm10,
+            tag10,
+            linearfeet10,
+            squarefeet10,
             hookdrip1,
             hookdripsteppitch,
             gabbleRake1,
@@ -515,6 +685,7 @@ class Snaplock2 extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total SQFT.</label>
+
                                                 <Input type="text" className="orderOptionsSpecsInput" name="totalsquarefeet" value={this.state.totalsquarefeet} readOnly />
                                             </FormGroup>
                                         </div>
@@ -594,6 +765,8 @@ class Snaplock2 extends Component{
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet3} name="squarefeet3" placeholder={this.state.squarefeet3} readOnly />
+
+
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">

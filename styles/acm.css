@@ -10,7 +10,7 @@
 
 .acmHeaderOptions {
     width: 30%;
-    background-color: #333;
+    background-color: #fff;
     margin-right: 2%;
     margin-top: 2%;
     display: flex;
@@ -18,12 +18,8 @@
     align-items: center;
     font-size: 150%;
     font-weight: 400;
-    color: #fff;
+    color: black;
     cursor: pointer;
-}
-
-.acmHeaderOptions:hover {
-    background-color: black;
 }
 
 .acmMenuImage {

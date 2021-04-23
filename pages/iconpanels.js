@@ -16,6 +16,7 @@ class Iconpanels extends Component{
             colorOptions: false,
             orderOptions: false,
             customerName: '',
+            productname: '',
             phone: '',
             po: '',
             email: '',
@@ -33,6 +34,60 @@ class Iconpanels extends Component{
             tag: '',
             linearfeet: '',
             sqft: '',
+            qty2: '',
+            inch2: '',
+            mm2: '',
+            tag2: '',
+            linearfeet2: '',
+            squarefeet2: '',
+            qty3: '',
+            inch3: '',
+            mm3: '',
+            tag3: '',
+            linearfeet3: '',
+            squarefeet3: '',
+            qty4: '',
+            inch4: '',
+            mm4: '',
+            tag4: '',
+            linearfeet4: '',
+            squarefeet4: '',
+            qty5: '',
+            inch5: '',
+            mm5: '',
+            tag5: '',
+            linearfeet5: '',
+            squarefeet5: '',
+            qty6: '',
+            inch6: '',
+            mm6: '',
+            tag6: '',
+            linearfeet6: '',
+            squarefeet6: '',
+            qty7: '',
+            inch7: '',
+            mm7: '',
+            tag7: '',
+            linearfeet7: '',
+            squarefeet7: '',
+            qty8: '',
+            inch8: '',
+            mm8: '',
+            tag8: '',
+            linearfeet8: '',
+            squarefeet8: '',
+            qty9: '',
+            inch9: '',
+            mm9: '',
+            tag9: '',
+            linearfeet9: '',
+            squarefeet9: '',
+            qty10: '',
+            inch10: '',
+            mm10: '',
+            tag10: '',
+            linearfeet10: '',
+            squarefeet10: '',
             i101: '',
             i102: '',
             i103: '',
@@ -136,25 +191,78 @@ class Iconpanels extends Component{
         this.setState({
           [e.target.name]: e.target.value
         })
-        let qtyNum = this.state.qty;
-        let size = this.state.inch;
-        let linearFeet = (qtyNum * size) / 12;
-        let mmSize = size * 25.4;
-        let sqft = linearFeet * (this.state.finish / 12);
-        console.log(mmSize)
+        let linearFeet1 = (this.state.qty * this.state.inch) / 12;
+        let mmSize1 = this.state.inch * 25.4;
+        let sqft1 = (this.state.mm / 12) * this.state.linearfeet;
+        let linearFeet2 = (this.state.qty2 * this.state.inch2) / 12;
+        let mmSize2 = this.state.inch2 * 25.4;
+        let sqft2 = (this.state.mm2 / 12) * this.state.linearfeet2;
+        let linearFeet3 = (this.state.qty3 * this.state.inch3) / 12;
+        let mmSize3 = this.state.inch3 * 25.4;
+        let sqft3 = (this.state.mm3 / 12) * this.state.linearfeet3;
+        let linearFeet4 = (this.state.qty4 * this.state.inch4) / 12;
+        let mmSize4 = this.state.inch4 * 25.4;
+        let sqft4 = (this.state.mm4 / 12) * this.state.linearfeet4;
+        let linearFeet5 = (this.state.qty5 * this.state.inch5) / 12;
+        let mmSize5 = this.state.inch5 * 25.4;
+        let sqft5 = (this.state.mm5 / 12) * this.state.linearfeet5;
+        let linearFeet6 = (this.state.qty6 * this.state.inch6) / 12;
+        let mmSize6 = this.state.inch6 * 25.4;
+        let sqft6 = (this.state.mm6 / 12) * this.state.linearfeet6;
+        let linearFeet7 = (this.state.qty7 * this.state.inch7) / 12;
+        let mmSize7= this.state.inch7 * 25.4;
+        let sqft7 = (this.state.mm7 / 12) * this.state.linearfeet7;
+        let linearFeet8 = (this.state.qty8 * this.state.inch8) / 12;
+        let mmSize8 = this.state.inch8 * 25.4;
+        let sqft8 = (this.state.mm8 / 12) * this.state.linearfeet8;
+        let linearFeet9 = (this.state.qty9 * this.state.inch9) / 12;
+        let mmSize9 = this.state.inch9 * 25.4;
+        let sqft9 = (this.state.mm9 / 12) * this.state.linearfeet9;
+        let linearFeet10 = (this.state.qty10 * this.state.inch10) / 12;
+        let mmSize10 = this.state.inch10 * 25.4;
+        let sqft10 = (this.state.mm10 / 12) * this.state.linearfeet10;
+        let sqft = sqft1 + sqft2 + sqft3 + sqft4 + sqft5 + sqft6 + sqft7 + sqft8 + sqft9 + sqft10;
+        let totalLinear = linearFeet1 + linearFeet2 + linearFeet3 + linearFeet4 + linearFeet5 + linearFeet6 + linearFeet7 + linearFeet8 + linearFeet9 + linearFeet10;
         this.setState({
-            linearfeet: linearFeet,
-            mm: mmSize,
-            squarefeet: sqft,
-            totallinearfeet: linearFeet,
-            totalsquarefeet: sqft
+            linearfeet: linearFeet1.toFixed(2),
+            mm: mmSize1.toFixed(2),
+            squarefeet: sqft1.toFixed(2),
+            linearfeet2: linearFeet2.toFixed(2),
+            mm2: mmSize2.toFixed(2),
+            squarefeet2: sqft2.toFixed(2),
+            linearfeet3: linearFeet3.toFixed(2),
+            mm3: mmSize3.toFixed(2),
+            squarefeet3: sqft3.toFixed(2),
+            linearfeet4: linearFeet4.toFixed(2),
+            mm4: mmSize4.toFixed(2),
+            squarefeet4: sqft4.toFixed(2),
+            linearfeet5: linearFeet5.toFixed(2),
+            mm5: mmSize5.toFixed(2),
+            squarefeet5: sqft5.toFixed(2),
+            linearfeet6: linearFeet6.toFixed(2),
+            mm6: mmSize6.toFixed(2),
+            squarefeet6: sqft6.toFixed(2),
+            linearfeet7: linearFeet7.toFixed(2),
+            mm7: mmSize7.toFixed(2),
+            squarefeet7: sqft7.toFixed(2),
+            linearfeet8: linearFeet8.toFixed(2),
+            mm8: mmSize8.toFixed(2),
+            squarefeet8: sqft8.toFixed(2),
+            linearfeet9: linearFeet9.toFixed(2),
+            mm9: mmSize9.toFixed(2),
+            squarefeet9: sqft9.toFixed(2),
+            linearfeet10: linearFeet10.toFixed(2),
+            mm10: mmSize10.toFixed(2),
+            squarefeet10: sqft10.toFixed(2),
+            totallinearfeet: totalLinear.toFixed(2),
+            totalsquarefeet: sqft.toFixed(2)
         })
     }
     
       handleSumbit(e) {
         e.preventDefault();
     
-        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, sqft, i101, i102, i103, i104, i106, i107, i108, i111, i113, i112, i116, i117, i118, i119, i114, i115, i120, i121, i122, i123, i128, i129, i130, i131, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
+        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, sqft, qty2, inch2, mm2, tag2, linearfeet2, squarefeet2, qty3, inch3, mm3, tag3, linearfeet3, squarefeet3, qty4, inch4, mm4, tag4, linearfeet4, squarefeet4, qty5, inch5, mm5, tag5, linearfeet5, squarefeet5, qty6, inch6, mm6, tag6, linearfeet6, squarefeet6, qty7, inch7, mm7, tag7, linearfeet7, squarefeet7, qty8, inch8, mm8, tag8, linearfeet8, squarefeet8, qty9, inch9, mm9, tag9, linearfeet9, squarefeet9, qty10, inch10, mm10, tag10, linearfeet10, squarefeet10, i101, i102, i103, i104, i106, i107, i108, i111, i113, i112, i116, i117, i118, i119, i114, i115, i120, i121, i122, i123, i128, i129, i130, i131, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
     
         const form = axios.post('http://localhost:3001/api/form', {
             customerName,
@@ -176,6 +284,60 @@ class Iconpanels extends Component{
             tag,
             linearfeet,
             sqft,
+            qty2,
+            inch2,
+            mm2,
+            tag2,
+            linearfeet2,
+            squarefeet2,
+            qty3,
+            inch3,
+            mm3,
+            tag3,
+            linearfeet3,
+            squarefeet3,
+            qty4,
+            inch4,
+            mm4,
+            tag4,
+            linearfeet4,
+            squarefeet4,
+            qty5,
+            inch5,
+            mm5,
+            tag5,
+            linearfeet5,
+            squarefeet5,
+            qty6,
+            inch6,
+            mm6,
+            tag6,
+            linearfeet6,
+            squarefeet6,
+            qty7,
+            inch7,
+            mm7,
+            tag7,
+            linearfeet7,
+            squarefeet7,
+            qty8,
+            inch8,
+            mm8,
+            tag8,
+            linearfeet8,
+            squarefeet8,
+            qty9,
+            inch9,
+            mm9,
+            tag9,
+            linearfeet9,
+            squarefeet9,
+            qty10,
+            inch10,
+            mm10,
+            tag10,
+            linearfeet10,
+            squarefeet10,
             i101,
             i102,
             i103,
@@ -380,7 +542,7 @@ class Iconpanels extends Component{
                             <div className="orderOptionsContent">
                                 <Form className="orderOptionsContentForm" onSubmit={this.handleSumbit}>
                                     <div className="orderOptionsTextForm">
-                                        <h2 className="orderOptionsTextFormTitle">SS 150</h2>
+                                        <h2 className="orderOptionsTextFormTitle">Icon Panels</h2>
                                         <FormGroup className="orderOptionsTextFormSmall">
                                             {this.state.customerName?<Input 
                                                 type="text"
@@ -552,6 +714,240 @@ class Iconpanels extends Component{
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet} name="squarefeet" placeholder={this.state.squarefeet} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="qty2" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="inch2" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="mm2" placeholder={this.state.mm2} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="tag2" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet2" placeholder={this.state.linearfeet2}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet2" placeholder={this.state.squarefeet2} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="qty3" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="inch3" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="mm3" placeholder={this.state.mm3} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="tag3" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet3" placeholder={this.state.linearfeet3}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet3" placeholder={this.state.squarefeet3} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="qty4" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="inch4" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="mm4" placeholder={this.state.mm4} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="tag4" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet4" placeholder={this.state.linearfeet4}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet4" placeholder={this.state.squarefeet4} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="qty5" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="inch5" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="mm5" placeholder={this.state.mm5} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="tag5" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet5" placeholder={this.state.linearfeet5}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet5" placeholder={this.state.squarefeet5} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="qty6" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="inch6" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="mm6" placeholder={this.state.mm6} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="tag6" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet6" placeholder={this.state.linearfeet6}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet6" placeholder={this.state.squarefeet6} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="qty7" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="inch7" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="mm7" placeholder={this.state.mm7} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="tag7" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet7" placeholder={this.state.linearfeet7}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet7" placeholder={this.state.squarefeet7} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="qty8" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="inch8" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="mm8" placeholder={this.state.mm8} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="tag8" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet8" placeholder={this.state.linearfeet8}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet8" placeholder={this.state.squarefeet8} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="qty9" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="inch9" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="mm9" placeholder={this.state.mm9} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="tag9" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet9" placeholder={this.state.linearfeet9}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet9" placeholder={this.state.squarefeet9} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>QTY</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="qty10" required />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <label>Inch</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="inch10" required />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Label>MM</Label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="mm10" placeholder={this.state.mm10} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Tag</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="tag10" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>Linear Feet</label>
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet10" placeholder={this.state.linearfeet10}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <label>SQFT.</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" name="squarefeet10" placeholder={this.state.squarefeet10} readOnly />
                                             </FormGroup>
                                         </div>
                                     </div>

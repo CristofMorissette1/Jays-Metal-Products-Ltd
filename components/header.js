@@ -61,7 +61,7 @@ class Header extends Component {
                                             <a className="navLinks" href="/curvedpanelsystem">Curved Panel System</a>
                                             <a className="navLinks" href="/standingseam">Standing Seam 100</a>
                                             <a className="navLinks" href="/standingseam2">Standing Seam 150</a>
-                                            <a className="navLinks" href="/standingseam2">Standing Seam 200</a>
+                                            <a className="navLinks" href="/standingseam3">Standing Seam 200</a>
                                             <a className="navLinks" href="/standingseam2">AR-24 Roof System</a>
                                             <a className="navLinks" href="/snaplock">Interlock 100</a>
                                             <a className="navLinks" href="/snaplock2">Interlock 150</a>
