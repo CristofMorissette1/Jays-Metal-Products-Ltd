@@ -8,116 +8,143 @@ import axios from 'axios'
 class CurvedPanelSystemPrint extends Component{
     constructor(){
         super()
-        // this.state = {
-        //     colorOptions: false,
-        //     orderOptions: false,
-        //     customerName: '',
-        //     phone: '',
-        //     po: '',
-        //     email: '',
-        //     address: '',
-        //     ga: '',
-        //     color: '',
-        //     protectivefilm: '',
-        //     finish: '',
-        //     totallinearfeet: '',
-        //     totalsquarefeet: '',
-        //     qty: 0,
-        //     inch: 0,
-        //     mm: '',
-        //     specialcrating: '',
-        //     tag: '',
-        //     linearfeet: 0,
-        //     sqft: '',
-        //     hookdrip1: '',
-        //     hookdripsteppitch: '',
-        //     gabbleRake1: '',
-        //     gabbleRake2: '',
-        //     gablerake3: '',
-        //     sidewall1: '',
-        //     sidewall2: '',
-        //     endwall1: '',
-        //     endwall3: '',
-        //     endWall2: '',
-        //     transition3: '',
-        //     peakcap1: '',
-        //     peakcap2: '',
-        //     peakcap3: '',
-        //     transition1: '',
-        //     transition2: '',
-        //     hip1: '',
-        //     hip2: '',
-        //     hip3: '',
-        //     ridge1: '',
-        //     ridge2: '',
-        //     ridge3: '',
-        //     ridge4: '',
-        //     wvalley1: '',
-        //     wvalley2: '',
-        //     vvalley1: '',
-        //     snowstop1: '',
-        //     cleat: '',
-        //     junderbarrel: '',
-        //     zbaroverbarrel: '',
-        //     perforatedjoverbarrel: '',
-        //     perforatedzbaroverbarrel: '',
-        //     backpan5: '',
-        //     backpan10: '',
-        //     base1: '',
-        //     base2: '',
-        //     base3: '',
-        //     windowheader: '',
-        //     windowreverse: '',
-        //     walltransition: '',
-        //     jtrim1: '',
-        //     jtrim2: '',
-        //     jtrim3: '',
-        //     transition: '',
-        //     outsidecorner1: '',
-        //     insidecorner1: '',
-        //     outsidecorner2: '',
-        //     insidecorner2: '',
-        //     outsidecorner3: '',
-        //     insidecorner3: '',
-        //     outsidecorner4: '',
-        //     insidecorner4: '',
-        //     standing290: '',
-        //     standing291: '',
-        //     standing292: '',
-        //     standing293: '',
-        //     standing294: '',
-        //     standing295: ''
-        // }
-        // this.colorOptions = this.colorOptions.bind(this);
-        // this.orderOptions = this.orderOptions.bind(this);
-        // this.handleChange = this.handleChange.bind(this);
+        this.state = {
+            colorOptions: false,
+            orderOptions: false,
+            productname: '',
+            customerName: '',
+            phone: '',
+            po: '',
+            email: '',
+            address: '',
+            ga: '',
+            color: '',
+            protectivefilm: '',
+            finish: '',
+            totallinearfeet: '',
+            totalsquarefeet: '',
+            qty: 0,
+            inch: 0,
+            mm: '',
+            specialcrating: '',
+            tag: '',
+            linearfeet: 0,
+            sqft: '',
+            qty2: '',
+            inch2: '',
+            mm2: '',
+            tag2: '',
+            linearfeet2: '',
+            squarefeet2: '',
+            qty3: '',
+            inch3: '',
+            mm3: '',
+            tag3: '',
+            linearfeet3: '',
+            squarefeet3: '',
+            qty4: '',
+            inch4: '',
+            mm4: '',
+            tag4: '',
+            linearfeet4: '',
+            squarefeet4: '',
+            qty5: '',
+            inch5: '',
+            mm5: '',
+            tag5: '',
+            linearfeet5: '',
+            squarefeet5: '',
+            qty6: '',
+            inch6: '',
+            mm6: '',
+            tag6: '',
+            linearfeet6: '',
+            squarefeet6: '',
+            qty7: '',
+            inch7: '',
+            mm7: '',
+            tag7: '',
+            linearfeet7: '',
+            squarefeet7: '',
+            qty8: '',
+            inch8: '',
+            mm8: '',
+            tag8: '',
+            linearfeet8: '',
+            squarefeet8: '',
+            qty9: '',
+            inch9: '',
+            mm9: '',
+            tag9: '',
+            linearfeet9: '',
+            squarefeet9: '',
+            qty10: '',
+            inch10: '',
+            mm10: '',
+            tag10: '',
+            linearfeet10: '',
+            squarefeet10: '',
+            hookdrip1: '',
+            hookdripsteppitch: '',
+            gabbleRake1: '',
+            gabbleRake2: '',
+            gabbleRake3: '',
+            sidewall1: '',
+            sidewall2: '',
+            endwall1: '',
+            endwall3: '',
+            endWall2: '',
+            transition3: '',
+            peakcap1: '',
+            peakcap2: '',
+            peakcap3: '',
+            transition1: '',
+            transition2: '',
+            hip1: '',
+            hip2: '',
+            hip3: '',
+            ridge1: '',
+            ridge2: '',
+            ridge3: '',
+            ridge4: '',
+            wvalley1: '',
+            wvalley2: '',
+            vvalley1: '',
+            snowstop1: '',
+            cleat: '',
+            junderbarrel: '',
+            zbaroverbarrel: '',
+            perforatedjoverbarrel: '',
+            perforatedzbaroverbarrel: '',
+            backpan5: '',
+            backpan10: '',
+            base1: '',
+            base2: '',
+            base3: '',
+            windowheader: '',
+            windowreverse: '',
+            walltransition: '',
+            jtrim1: '',
+            jtrim2: '',
+            jtrim3: '',
+            transition: '',
+            outsidecorner1: '',
+            insidecorner1: '',
+            outsidecorner2: '',
+            insidecorner2: '',
+            outsidecorner3: '',
+            insidecorner3: '',
+            outsidecorner4: '',
+            insidecorner4: '',
+            standing290: '',
+            standing291: '',
+            standing292: '',
+            standing293: '',
+            standing294: '',
+            standing295: ''
+        }
         this.handleSumbit = this.handleSumbit.bind(this);
         this.printPage = this.printPage.bind(this);
-    }
-
-    // colorOptions(event) {
-    //     event.preventDefault();
-    //       if (this.state.colorOptions == false) {
-    //       this.setState({
-    //         colorOptions: true,
-    //         orderOptions: false
-    //       });
-    //     } else {
-    //       null;
-    //     }
-    // }
-
-
-    orderOptions(event) {
-        event.preventDefault();
-          if (this.state.orderOptions == false) {
-          this.setState({
-            colorOptions: false,
-            orderOptions: true
-          });
-        } else {
-          null;
-        }
     }
 
     printPage = e => {
@@ -125,23 +152,10 @@ class CurvedPanelSystemPrint extends Component{
         window.print();
     }
 
-
-    // handleChange = e => {
-    //     this.setState({
-    //       [e.target.name]: e.target.value
-    //     })
-    //     let qtyNum = this.state.qty;
-    //     let size = this.state.inch;
-    //     let linearFeet = qtyNum * size;
-    //     this.setState({
-    //         linearfeet: linearFeet
-    //     })
-    // }
-    
       handleSumbit(e) {
         e.preventDefault();
     
-        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, sqft, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gabbleRake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
+        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, sqft, squarefeet, qty2, inch2, mm2, tag2, linearfeet2, squarefeet2, qty3, inch3, mm3, tag3, linearfeet3, squarefeet3, qty4, inch4, mm4, tag4, linearfeet4, squarefeet4, qty5, inch5, mm5, tag5, linearfeet5, squarefeet5, qty6, inch6, mm6, tag6, linearfeet6, squarefeet6, qty7, inch7, mm7, tag7, linearfeet7, squarefeet7, qty8, inch8, mm8, tag8, linearfeet8, squarefeet8, qty9, inch9, mm9, tag9, linearfeet9, squarefeet9, qty10, inch10, mm10, tag10, linearfeet10, squarefeet10, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gabbleRake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
     
         const form = axios.post('http://localhost:3001/api/form', {
             customerName,
@@ -163,6 +177,59 @@ class CurvedPanelSystemPrint extends Component{
             tag,
             linearfeet,
             sqft,
+            squarefeet,
+            qty2,
+            inch2,
+            mm2,
+            tag2,
+            linearfeet2,
+            squarefeet2,
+            qty3,
+            inch3,
+            mm3,
+            tag3,
+            linearfeet3,
+            squarefeet3,
+            qty4,
+            inch4,
+            mm4,
+            tag4,
+            linearfeet4,
+            squarefeet4,
+            qty5,
+            inch5,
+            mm5,
+            tag5,
+            linearfeet5,
+            squarefeet5,
+            qty6,
+            inch6,
+            mm6,
+            tag6,
+            linearfeet6,
+            squarefeet6,
+            qty7,
+            inch7,
+            mm7,
+            tag7,
+            linearfeet7,
+            squarefeet7,
+            qty8,
+            inch8,
+            mm8,
+            tag8,
+            linearfeet8,
+            squarefeet8,
+            qty9,
+            inch9,
+            mm9,
+            tag9,
+            linearfeet9,
+            squarefeet9,
+            qty10,
+            inch10,
+            mm10,
+            tag10,
             hookdrip1,
             hookdripsteppitch,
             gabbleRake1,
@@ -222,7 +289,144 @@ class CurvedPanelSystemPrint extends Component{
             standing294,
             standing295
         })
-        e.target.reset();
+        window.location.reload();
+      }
+
+      componentDidMount() {
+        this.setState({
+            customerName: this.props.obj.customerName,
+            productname: this.props.obj.productname,
+            phone: this.props.obj.phone,
+            po: this.props.obj.po,
+            email: this.props.obj.email,
+            address: this.props.obj.address,
+            ga: this.props.obj.ga,
+            color: this.props.obj.color,
+            protectivefilm: this.props.obj.protectivefilm,
+            finish: this.props.obj.finish,
+            totallinearfeet: this.props.obj.totallinearfeet,
+            totalsquarefeet: this.props.obj.totalsquarefeet,
+            weight: this.props.obj.weight,
+            qty: this.props.obj.qty,
+            inch: this.props.obj.inch,
+            mm: this.props.obj.mm,
+            specialcrating: this.props.obj.specialcrating,
+            tag: this.props.obj.tag,
+            linearfeet: this.props.obj.linearfeet,
+            squarefeet: this.props.obj.linearfeet,
+            qty2: this.props.obj.qty2,
+            inch2: this.props.obj.inch2,
+            mm2: this.props.obj.mm2,
+            tag2: this.props.obj.tag2,
+            linearfeet2: this.props.obj.linearfeet2,
+            squarefeet2: this.props.obj.squarefeet2,
+            qty3: this.props.obj.qty3,
+            inch3: this.props.obj.inch3,
+            mm3: this.props.obj.mm3,
+            tag3: this.props.obj.tag3,
+            linearfeet3: this.props.obj.linearfeet3,
+            squarefeet3: this.props.obj.squarefeet3,
+            qty4: this.props.obj.qty4,
+            inch4: this.props.obj.inch4,
+            mm4: this.props.obj.mm4,
+            tag4: this.props.obj.tag4,
+            linearfeet4: this.props.obj.linearfeet4,
+            squarefeet4: this.props.obj.squarefeet4,
+            qty5: this.props.obj.qty5,
+            inch5: this.props.obj.inch5,
+            mm5: this.props.obj.mm5,
+            tag5: this.props.obj.tag5,
+            linearfeet5: this.props.obj.linearfeet5,
+            squarefeet5: this.props.obj.squarefeet5,
+            qty6: this.props.obj.qty6,
+            inch6: this.props.obj.inch6,
+            mm6: this.props.obj.mm6,
+            tag6: this.props.obj.tag6,
+            linearfeet6: this.props.obj.linearfeet6,
+            squarefeet6: this.props.obj.squarefeet6,
+            qty7: this.props.obj.qty7,
+            inch7: this.props.obj.inch7,
+            mm7: this.props.obj.mm7,
+            tag7: this.props.obj.tag7,
+            linearfeet7: this.props.obj.linearfeet7,
+            squarefeet7: this.props.obj.squarefeet7,
+            qty8: this.props.obj.qty8,
+            inch8: this.props.obj.inch8,
+            mm8: this.props.obj.mm8,
+            tag8: this.props.obj.tag8,
+            linearfeet8: this.props.obj.linearfeet8,
+            squarefeet8: this.props.obj.squarefeet8,
+            qty9: this.props.obj.qty9,
+            inch9: this.props.obj.inch9,
+            mm9: this.props.obj.mm9,
+            tag9: this.props.obj.tag9,
+            linearfeet9: this.props.obj.linearfeet9,
+            squarefeet9: this.props.obj.squarefeet9,
+            qty10: this.props.obj.qty10,
+            inch10: this.props.obj.inch10,
+            mm10: this.props.obj.mm10,
+            tag10: this.props.obj.tag10,
+            linearfeet10: this.props.obj.lineafeet10,
+            squarefeet10: this.props.obj.squarefeet10,
+            hookdrip1: this.props.obj.hookdrip1,
+            hookdripsteppitch: this.props.obj.hookdripsteppitch,
+            gabbleRake1: this.props.obj.gabbleRake1,
+            gabbleRake2: this.props.obj.gabbleRake2,
+            gabbleRake3: this.props.obj.gabbleRake3,
+            sidewall1: this.props.obj.sidewall1,
+            sidewall2: this.props.obj.sidewall2,
+            endwall1: this.props.obj.endwall1,
+            endwall3: this.props.obj.endwall3,
+            endWall2: this.props.obj.endWall2,
+            transition3: this.props.obj.transition3,
+            peakcap1: this.props.obj.peakcap1,
+            peakcap2: this.props.obj.peakcap2,
+            peakcap3: this.props.obj.peakcap3,
+            transition1: this.props.obj.transition1,
+            transition2: this.props.obj.transition2,
+            hip1: this.props.obj.hip1,
+            hip2: this.props.obj.hip2,
+            hip3: this.props.obj.hip3,
+            ridge1: this.props.obj.ridge1,
+            ridge2: this.props.obj.ridge2,
+            ridge3: this.props.obj.ridge3,
+            ridge4: this.props.obj.ridge4,
+            wvalley1: this.props.obj.wvalley1,
+            wvalley2: this.props.obj.wvalley2,
+            vvalley1: this.props.obj.vvalley1,
+            snowstop1: this.props.obj.snowstop1,
+            cleat: this.props.obj.cleat,
+            junderbarrel: this.props.obj.junderbarrel,
+            zbaroverbarrel: this.props.obj.zbaroverbarrel,
+            perforatedjoverbarrel: this.props.obj.perforatedjoverbarrel,
+            perforatedzbaroverbarrel: this.props.obj.perforatedzbaroverbarrel,
+            backpan5: this.props.obj.backpan5,
+            backpan10: this.props.obj.backpan10,
+            base1: this.props.obj.base1,
+            base2: this.props.obj.base2,
+            base3: this.props.obj.base3,
+            windowheader: this.props.obj.windowheader,
+            windowreverse: this.props.obj.windowreverse,
+            walltransition: this.props.obj.walltransition,
+            jtrim1: this.props.obj.jtrim1,
+            jtrim2: this.props.obj.jtrim2,
+            jtrim3: this.props.obj.jtrim3,
+            transition: this.props.obj.transition,
+            outsidecorner1: this.props.obj.outsidecorner1,
+            insidecorner1: this.props.obj.insidecorner1,
+            outsidecorner2: this.props.obj.outsidecorner2,
+            insidecorner2: this.props.obj.insidecorner2,
+            outsidecorner3: this.props.obj.outsidecorner3,
+            insidecorner3: this.props.obj.insidecorner3,
+            outsidecorner4: this.props.obj.outsidecorner4,
+            insidecorner4: this.props.obj.insidecorner4,
+            standing290: this.props.obj.standing290,
+            standing291: this.props.obj.standing291,
+            standing292: this.props.obj.standing292,
+            standing293: this.props.obj.standing293,
+            standing294: this.props.obj.standing294,
+            standing295: this.props.obj.standing295
+        })
       }
 
     render(){
@@ -378,7 +582,7 @@ class CurvedPanelSystemPrint extends Component{
                                                 name="customerName" 
                                                 // placeholder="Customer Name"
                                                 // onChange={this.handleChange}
-                                                // required 
+                                                //  
                                                 value={this.props.obj.customerName}
                                                 />:
                                                 <Input 
@@ -387,7 +591,7 @@ class CurvedPanelSystemPrint extends Component{
                                                 name="customerName" 
                                                 placeholder="Customer Name"
                                                 // onChange={this.handleChange}
-                                                // required 
+                                                //  
                                                 // value={this.props.obj.customerName}
                                                 />}
                                         </FormGroup>
@@ -399,7 +603,7 @@ class CurvedPanelSystemPrint extends Component{
                                                 // placeholder="Phone Number"
                                                 value={this.props.obj.phone}
                                                 // onChange={this.handleChange} 
-                                                // required 
+                                                //  
                                                 />:
                                             <Input 
                                                 type="phone"
@@ -408,7 +612,7 @@ class CurvedPanelSystemPrint extends Component{
                                                 placeholder="Phone Number"
                                                 // value={this.props.obj.phone}
                                                 // onChange={this.handleChange} 
-                                                // required 
+                                                //  
                                                 />}
                                         </FormGroup>
                                         <FormGroup className="orderOptionsTextFormSmall">
@@ -419,7 +623,7 @@ class CurvedPanelSystemPrint extends Component{
                                                 // name="po"
                                                 // placeholder="PO"
                                                 // onChange={this.handleChange}
-                                                // required 
+                                                //  
                                                 value={this.props.obj.po}
                                                 />:<Input 
                                                 type="text"
@@ -427,7 +631,7 @@ class CurvedPanelSystemPrint extends Component{
                                                 // name="po"
                                                 placeholder="PO"
                                                 // onChange={this.handleChange}
-                                                // required 
+                                                //  
                                                 // value={this.props.obj.po}
                                                 />}
                                         </FormGroup>
@@ -439,7 +643,7 @@ class CurvedPanelSystemPrint extends Component{
                                                 // name="email"
                                                 // placeholder="Email Address"
                                                 // onChange={this.handleChange}
-                                                // required 
+                                                //  
                                                 value={this.props.obj.email}
                                                 />:<Input 
                                                 type="email"
@@ -447,7 +651,7 @@ class CurvedPanelSystemPrint extends Component{
                                                 // name="email"
                                                 placeholder="Email Address"
                                                 // onChange={this.handleChange}
-                                                // required 
+                                                //  
                                                 // value={this.props.obj.email}
                                                 />}
                                         </FormGroup>
@@ -477,7 +681,7 @@ class CurvedPanelSystemPrint extends Component{
                                                 name="productname"
                                                 // placeholder="Product Name"
                                                 // onChange={this.handleChange} 
-                                                // required 
+                                                //  
                                                 value={this.props.obj.productname}
                                                 />:<Input 
                                                 type="text"
@@ -485,7 +689,7 @@ class CurvedPanelSystemPrint extends Component{
                                                 name="productname"
                                                 placeholder="Product Name"
                                                 // onChange={this.handleChange} 
-                                                // required 
+                                                //  
                                                 // value={this.props.obj.productName}
                                                 />}
                                         </FormGroup>
@@ -494,7 +698,7 @@ class CurvedPanelSystemPrint extends Component{
                                     <div className="orderOptionsSpecsFormTitle">
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>GA</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" value={this.props.obj.ga} name="ga" onChange={this.handleChange} required>
+                                                <Input type="select" className="orderOptionsSpecsInput" value={this.props.obj.ga} name="ga" onChange={this.handleChange} >
                                                     <option>-</option>
                                                     <option>29</option>
                                                     <option>26</option>
@@ -504,7 +708,7 @@ class CurvedPanelSystemPrint extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Color</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.color} name="color" onChange={this.handleChange} required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.color} name="color" onChange={this.handleChange}  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total Linear Feet</label>
@@ -531,7 +735,7 @@ class CurvedPanelSystemPrint extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Finish</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" value={this.props.obj.finish} name="finish" onChange={this.handleChange} required />
+                                                <Input type="select" className="orderOptionsSpecsInput" value={this.props.obj.finish} name="finish" onChange={this.handleChange}  />
                                                     {/* <option>-</option>
                                                     <option>12</option>
                                                     <option>16</option>
@@ -547,11 +751,11 @@ class CurvedPanelSystemPrint extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="number" className="orderOptionsSpecsInput" value={this.props.obj.qty} name="qty" required />
+                                                <Input type="number" className="orderOptionsSpecsInput" value={this.props.obj.qty} name="qty"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="number" className="orderOptionsSpecsInput" value={this.props.obj.inch} name="inch" required />
+                                                <Input type="number" className="orderOptionsSpecsInput" value={this.props.obj.inch} name="inch"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
@@ -1542,29 +1746,12 @@ class CurvedPanelSystemPrint extends Component{
                                                     onChange={this.handleChange} />
                                             </FormGroup>:''}
                                         </div>
-                                    {/* <FormGroup className="productDisclaimerFG">
-                                    <p className="disclaimerTitle">Please note by placing an order with Jay’s Metal Products Ltd. you (THE CUSTOMER) are agreeing to the following terms and conditions:</p>
-                                        <ul>
-                                            <li>Jay’s Metal Products Ltd. recommends that prior to the installation of panels, the protective film is removed from the panel to prevent any accidents.</li>
-                                            <li>ALL orders are custom therefore are considered final sale.</li>
-                                            <li>Please refer to our delivery page for partnered delivery services.</li>
-                                            <li>If special crating is required, it may be subject to additional costs.</li>
-                                            <li>Customers are responsible for ensuring that products are deemed acceptable to their standards before removing the product from the facility. Upon removal from Jay’s Metal Products facility, damages incurred to the product are not covered by Jay’s Metal Products Ltd.</li>
-                                            <li>Jay’s Metal Products Ltd. is not responsible for defects to the product during installation.</li>
-                                        </ul>
-                                        <CustomInput type="checkbox" className="productDisclaimer"/>
-                                        <Label>I accept terms and services</Label>
-                                    </FormGroup> */}
-                                    {/* <Button className="contactButton" onClick={this.printPage}><p className="contactButtonText">Print Page</p></Button>
-                                    <Button className="contactButton"><p className="contactButtonText">Submit</p></Button> */}
+                                    
+                                    <Button className="contactButton" onClick={this.printPage}><p className="contactButtonText">Print Page</p></Button>
+                                    <Button className="contactButton"><p className="contactButtonText">Submit</p></Button> 
                                 </Form>
-                            </div>
-                        {/* ) : (
-                            null
-                        )
-                    } */}
+                            </div>   
                 </div>
-                {/* <Footer/> */}
             </div>
         )
     }
