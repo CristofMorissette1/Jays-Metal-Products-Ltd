@@ -421,7 +421,7 @@ class Standingseam extends Component{
                 </div>
                 <div className="productPage3rdContainer">
                     <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/products%2Fstandingseam-100.png?alt=media&token=1c7a6b67-14fe-429d-ae0e-1d63d9f65b47"></img>
-                    <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/productsPages%2Fstandingseamspecs.png?alt=media&token=834d3107-a551-4c91-a8d4-a625725381a7"></img>
+                    <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/productsPages%2FSS%20100.jpg?alt=media&token=b3d4bfff-29dc-4e62-b03b-acbfab32c937"></img>
                 </div>
                 <div className="productsPage4thContainer">
                     <div className="productsPage4thContainerHeader">

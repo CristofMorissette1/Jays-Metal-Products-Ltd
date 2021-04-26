@@ -417,7 +417,7 @@ class Snaplock extends Component{
                 </div>
                 <div className="productPage3rdContainer">
                     <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/products%2Fsnaplock-100.png?alt=media&token=a9892d5c-55f9-4ce4-97e2-f15c7e051d79"></img>
-                    <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/products%2Fsnaplockspecs.png?alt=media&token=f8e35429-5251-4d6f-a06c-6ee18d184b31"></img>
+                    <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/productsPages%2Finterlock%20100.jpg?alt=media&token=dd97f2cf-1cd5-4bb4-acf5-f060083a166c"></img>
                 </div>
                 <div className="productsPage4thContainer">
                     <div className="productsPage4thContainerHeader">

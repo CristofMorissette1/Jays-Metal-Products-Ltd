@@ -482,7 +482,7 @@ class StandingSeam3 extends Component{
                 </div>
                 <div className="productPage3rdContainer">
                     <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Steading%20Seam%20200%2FStanding%20seam%20200.png?alt=media&token=4be38546-d3e3-43f2-a3ef-89bfba23a44d"></img>
-                    <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/productsPages%2Fss150specs.png?alt=media&token=81fdb78d-1915-4964-8337-0566669eb4cb"></img>
+                    <img className="productPageImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/productsPages%2FSS%20200.jpg?alt=media&token=dca2ed92-5299-46c5-b906-268ff5879a00"></img>
                 </div>
                 <div className="productsPage4thContainer">
                     <div className="productsPage4thContainerHeader">

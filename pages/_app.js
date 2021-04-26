@@ -11,6 +11,7 @@ import '../styles/standardflashings.css';
 import '../styles/colors.css';
 import '../styles/deliveryservices.css';
 import '../styles/acm.css';
+import '../styles/standingseam2print.css';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
