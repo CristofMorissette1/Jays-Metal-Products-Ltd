@@ -26,12 +26,12 @@ class CurvedPanelSystem extends Component{
             finish: '',
             totallinearfeet: '',
             totalsquarefeet: '',
-            qty: 0,
-            inch: 0,
+            qty: '',
+            inch: '',
             mm: '',
             specialcrating: '',
             tag: '',
-            linearfeet: 0,
+            linearfeet: '',
             sqft: '',
             qty2: '',
             inch2: '',
@@ -193,34 +193,34 @@ class CurvedPanelSystem extends Component{
         })
         let linearFeet1 = (this.state.qty * this.state.inch) / 12;
         let mmSize1 = this.state.inch * 25.4;
-        let sqft1 = (this.state.mm / 12) * this.state.linearfeet;
+        let sqft1 = (this.state.finish / 12) * this.state.linearfeet;
         let linearFeet2 = (this.state.qty2 * this.state.inch2) / 12;
         let mmSize2 = this.state.inch2 * 25.4;
-        let sqft2 = (this.state.mm2 / 12) * this.state.linearfeet2;
+        let sqft2 = (this.state.finish / 12) * this.state.linearfeet2;
         let linearFeet3 = (this.state.qty3 * this.state.inch3) / 12;
         let mmSize3 = this.state.inch3 * 25.4;
-        let sqft3 = (this.state.mm3 / 12) * this.state.linearfeet3;
+        let sqft3 = (this.state.finish / 12) * this.state.linearfeet3;
         let linearFeet4 = (this.state.qty4 * this.state.inch4) / 12;
         let mmSize4 = this.state.inch4 * 25.4;
-        let sqft4 = (this.state.mm4 / 12) * this.state.linearfeet4;
+        let sqft4 = (this.state.finish / 12) * this.state.linearfeet4;
         let linearFeet5 = (this.state.qty5 * this.state.inch5) / 12;
         let mmSize5 = this.state.inch5 * 25.4;
-        let sqft5 = (this.state.mm5 / 12) * this.state.linearfeet5;
+        let sqft5 = (this.state.finish / 12) * this.state.linearfeet5;
         let linearFeet6 = (this.state.qty6 * this.state.inch6) / 12;
         let mmSize6 = this.state.inch6 * 25.4;
-        let sqft6 = (this.state.mm6 / 12) * this.state.linearfeet6;
+        let sqft6 = (this.state.finish / 12) * this.state.linearfeet6;
         let linearFeet7 = (this.state.qty7 * this.state.inch7) / 12;
         let mmSize7= this.state.inch7 * 25.4;
-        let sqft7 = (this.state.mm7 / 12) * this.state.linearfeet7;
+        let sqft7 = (this.state.finish / 12) * this.state.linearfeet7;
         let linearFeet8 = (this.state.qty8 * this.state.inch8) / 12;
         let mmSize8 = this.state.inch8 * 25.4;
-        let sqft8 = (this.state.mm8 / 12) * this.state.linearfeet8;
+        let sqft8 = (this.state.finish / 12) * this.state.linearfeet8;
         let linearFeet9 = (this.state.qty9 * this.state.inch9) / 12;
         let mmSize9 = this.state.inch9 * 25.4;
-        let sqft9 = (this.state.mm9 / 12) * this.state.linearfeet9;
+        let sqft9 = (this.state.finish / 12) * this.state.linearfeet9;
         let linearFeet10 = (this.state.qty10 * this.state.inch10) / 12;
         let mmSize10 = this.state.inch10 * 25.4;
-        let sqft10 = (this.state.mm10 / 12) * this.state.linearfeet10;
+        let sqft10 = (this.state.finish / 12) * this.state.linearfeet10;
         let sqft = sqft1 + sqft2 + sqft3 + sqft4 + sqft5 + sqft6 + sqft7 + sqft8 + sqft9 + sqft10;
         let totalLinear = linearFeet1 + linearFeet2 + linearFeet3 + linearFeet4 + linearFeet5 + linearFeet6 + linearFeet7 + linearFeet8 + linearFeet9 + linearFeet10;
         this.setState({
@@ -542,7 +542,7 @@ class CurvedPanelSystem extends Component{
                         this.state.orderOptions
                         ? (
                             <div className="orderOptionsContent">
-                                <Form className="orderOptionsContentForm" onSubmit={this.handleSumbit}>
+                                <Form className="orderOptionsContentForm" onSubmit={this.handleSumbit} onClick={this.handleChange}>
                                     <div className="orderOptionsTextForm">
                                         <h2 className="orderOptionsTextFormTitle">Curved Panel System</h2>
                                         <FormGroup className="orderOptionsTextFormSmall">
@@ -686,7 +686,7 @@ class CurvedPanelSystem extends Component{
                                                 <label>Finish</label>
                                                 <Input type="select" className="orderOptionsSpecsInput" value={this.state.finish} name="finish" onChange={this.handleChange} required >
                                                     <option>-</option>
-                                                    <option>30"</option>
+                                                    <option>30</option>
                                                 </Input>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
@@ -697,15 +697,15 @@ class CurvedPanelSystem extends Component{
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
-                                                <Input type="number" className="orderOptionsSpecsInput" value={this.state.qty} name="qty" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty} name="qty" required />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
-                                                <Input type="number" className="orderOptionsSpecsInput" value={this.state.inch} name="inch" required />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch} name="inch" required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>MM</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm} name="mm" onChange={this.handleChange} />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm} name="mm" placeholder={this.state.mm} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Tag</label>
@@ -713,244 +713,190 @@ class CurvedPanelSystem extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Linear Feet</label>
-                                                <Input readOnly type="number" className="orderOptionsSpecsInput" value={this.state.linearfeet} name="linearfeet" onChange={this.handleChange} />
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet} name="linearfeet" placeholder={this.state.linearfeet}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet} name="squarefeet" onChange={this.handleChange} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet} name="squarefeet" placeholder={this.state.squarefeet} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>QTY</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="qty2" required />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>Inch</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="inch2" required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Label>MM</Label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="mm2" placeholder={this.state.mm2} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Tag</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="tag2" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Linear Feet</label>
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet2" placeholder={this.state.linearfeet2}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>SQFT.</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="squarefeet2" placeholder={this.state.squarefeet2} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>QTY</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="qty3" required />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>Inch</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="inch3" required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Label>MM</Label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="mm3" placeholder={this.state.mm3} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Tag</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="tag3" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Linear Feet</label>
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet3" placeholder={this.state.linearfeet3}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>SQFT.</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="squarefeet3" placeholder={this.state.squarefeet3} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>QTY</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="qty4" required />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>Inch</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="inch4" required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Label>MM</Label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="mm4" placeholder={this.state.mm4} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Tag</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="tag4" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Linear Feet</label>
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet4" placeholder={this.state.linearfeet4}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>SQFT.</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="squarefeet4" placeholder={this.state.squarefeet4} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>QTY</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="qty5" required />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>Inch</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="inch5" required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Label>MM</Label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="mm5" placeholder={this.state.mm5} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Tag</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="tag5" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Linear Feet</label>
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet5" placeholder={this.state.linearfeet5}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>SQFT.</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="squarefeet5" placeholder={this.state.squarefeet5} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>QTY</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="qty6" required />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>Inch</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="inch6" required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Label>MM</Label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="mm6" placeholder={this.state.mm6} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Tag</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="tag6" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Linear Feet</label>
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet6" placeholder={this.state.linearfeet6}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>SQFT.</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="squarefeet6" placeholder={this.state.squarefeet6} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>QTY</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="qty7" required />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>Inch</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="inch7" required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Label>MM</Label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="mm7" placeholder={this.state.mm7} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Tag</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="tag7" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Linear Feet</label>
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet7" placeholder={this.state.linearfeet7}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>SQFT.</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="squarefeet7" placeholder={this.state.squarefeet7} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>QTY</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="qty8" required />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>Inch</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="inch8" required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Label>MM</Label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="mm8" placeholder={this.state.mm8} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Tag</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="tag8" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Linear Feet</label>
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet8" placeholder={this.state.linearfeet8}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>SQFT.</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="squarefeet8" placeholder={this.state.squarefeet8} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>QTY</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="qty9" required />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>Inch</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="inch9" required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Label>MM</Label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="mm9" placeholder={this.state.mm9} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Tag</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="tag9" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Linear Feet</label>
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet9" placeholder={this.state.linearfeet9}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>SQFT.</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="squarefeet9" placeholder={this.state.squarefeet9} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>QTY</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="qty10" required />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>Inch</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="inch10" required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Label>MM</Label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="mm10" placeholder={this.state.mm10} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Tag</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="tag10" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Linear Feet</label>
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" name="linearfeet10" placeholder={this.state.linearfeet10}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>SQFT.</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" name="squarefeet10" placeholder={this.state.squarefeet10} readOnly />
                                             </FormGroup>
                                         </div>

@@ -612,7 +612,7 @@ class Standingseam2 extends Component{
                             <div className="orderOptionsContent">
                                 <Form className="orderOptionsContentForm" onSubmit={this.handleSumbit} onClick={this.handleChange}>
                                     <div className="orderOptionsTextForm">
-                                        <h2 className="orderOptionsTextFormTitle">SS 150</h2>
+                                        <h2 className="orderOptionsTextFormTitle">Standing Seam 150</h2>
                                         <FormGroup className="orderOptionsTextFormSmall">
                                             {this.state.customerName?<Input 
                                                 type="text"

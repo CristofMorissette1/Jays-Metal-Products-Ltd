@@ -1,0 +1,35 @@
+.orderNum {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.orderOptionsTextForm2 {
+    background-color: #333;
+    width: 81.5%;
+    padding-top: 1%;
+    margin-left: 1.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2%;
+}
+
+.orderOptionsTextFormSmall2 {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 40%;
+}
+
+.orderOptionsTextInput2 {
+    width: 50%;
+    height: 5vh;
+    margin-top: 2%;
+}
+
+.printLabel {
+    margin-right: 1%;
+    color: #fff;
+}

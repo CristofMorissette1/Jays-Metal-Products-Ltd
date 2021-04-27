@@ -193,34 +193,34 @@ class Iconpanels extends Component{
         })
         let linearFeet1 = (this.state.qty * this.state.inch) / 12;
         let mmSize1 = this.state.inch * 25.4;
-        let sqft1 = (this.state.mm / 12) * this.state.linearfeet;
+        let sqft1 = (this.state.finish / 12) * this.state.linearfeet;
         let linearFeet2 = (this.state.qty2 * this.state.inch2) / 12;
         let mmSize2 = this.state.inch2 * 25.4;
-        let sqft2 = (this.state.mm2 / 12) * this.state.linearfeet2;
+        let sqft2 = (this.state.finish / 12) * this.state.linearfeet2;
         let linearFeet3 = (this.state.qty3 * this.state.inch3) / 12;
         let mmSize3 = this.state.inch3 * 25.4;
-        let sqft3 = (this.state.mm3 / 12) * this.state.linearfeet3;
+        let sqft3 = (this.state.finish / 12) * this.state.linearfeet3;
         let linearFeet4 = (this.state.qty4 * this.state.inch4) / 12;
         let mmSize4 = this.state.inch4 * 25.4;
-        let sqft4 = (this.state.mm4 / 12) * this.state.linearfeet4;
+        let sqft4 = (this.state.finish / 12) * this.state.linearfeet4;
         let linearFeet5 = (this.state.qty5 * this.state.inch5) / 12;
         let mmSize5 = this.state.inch5 * 25.4;
-        let sqft5 = (this.state.mm5 / 12) * this.state.linearfeet5;
+        let sqft5 = (this.state.finish / 12) * this.state.linearfeet5;
         let linearFeet6 = (this.state.qty6 * this.state.inch6) / 12;
         let mmSize6 = this.state.inch6 * 25.4;
-        let sqft6 = (this.state.mm6 / 12) * this.state.linearfeet6;
+        let sqft6 = (this.state.finish / 12) * this.state.linearfeet6;
         let linearFeet7 = (this.state.qty7 * this.state.inch7) / 12;
         let mmSize7= this.state.inch7 * 25.4;
-        let sqft7 = (this.state.mm7 / 12) * this.state.linearfeet7;
+        let sqft7 = (this.state.finish / 12) * this.state.linearfeet7;
         let linearFeet8 = (this.state.qty8 * this.state.inch8) / 12;
         let mmSize8 = this.state.inch8 * 25.4;
-        let sqft8 = (this.state.mm8 / 12) * this.state.linearfeet8;
+        let sqft8 = (this.state.finish / 12) * this.state.linearfeet8;
         let linearFeet9 = (this.state.qty9 * this.state.inch9) / 12;
         let mmSize9 = this.state.inch9 * 25.4;
-        let sqft9 = (this.state.mm9 / 12) * this.state.linearfeet9;
+        let sqft9 = (this.state.finish / 12) * this.state.linearfeet9;
         let linearFeet10 = (this.state.qty10 * this.state.inch10) / 12;
         let mmSize10 = this.state.inch10 * 25.4;
-        let sqft10 = (this.state.mm10 / 12) * this.state.linearfeet10;
+        let sqft10 = (this.state.finish / 12) * this.state.linearfeet10;
         let sqft = sqft1 + sqft2 + sqft3 + sqft4 + sqft5 + sqft6 + sqft7 + sqft8 + sqft9 + sqft10;
         let totalLinear = linearFeet1 + linearFeet2 + linearFeet3 + linearFeet4 + linearFeet5 + linearFeet6 + linearFeet7 + linearFeet8 + linearFeet9 + linearFeet10;
         this.setState({
@@ -262,7 +262,7 @@ class Iconpanels extends Component{
       handleSumbit(e) {
         e.preventDefault();
     
-        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, sqft, qty2, inch2, mm2, tag2, linearfeet2, squarefeet2, qty3, inch3, mm3, tag3, linearfeet3, squarefeet3, qty4, inch4, mm4, tag4, linearfeet4, squarefeet4, qty5, inch5, mm5, tag5, linearfeet5, squarefeet5, qty6, inch6, mm6, tag6, linearfeet6, squarefeet6, qty7, inch7, mm7, tag7, linearfeet7, squarefeet7, qty8, inch8, mm8, tag8, linearfeet8, squarefeet8, qty9, inch9, mm9, tag9, linearfeet9, squarefeet9, qty10, inch10, mm10, tag10, linearfeet10, squarefeet10, i101, i102, i103, i104, i106, i107, i108, i111, i113, i112, i116, i117, i118, i119, i114, i115, i120, i121, i122, i123, i128, i129, i130, i131, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
+        const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, squarefeet, qty2, inch2, mm2, tag2, linearfeet2, squarefeet2, qty3, inch3, mm3, tag3, linearfeet3, squarefeet3, qty4, inch4, mm4, tag4, linearfeet4, squarefeet4, qty5, inch5, mm5, tag5, linearfeet5, squarefeet5, qty6, inch6, mm6, tag6, linearfeet6, squarefeet6, qty7, inch7, mm7, tag7, linearfeet7, squarefeet7, qty8, inch8, mm8, tag8, linearfeet8, squarefeet8, qty9, inch9, mm9, tag9, linearfeet9, squarefeet9, qty10, inch10, mm10, tag10, linearfeet10, squarefeet10, i101, i102, i103, i104, i106, i107, i108, i111, i113, i112, i116, i117, i118, i119, i114, i115, i120, i121, i122, i123, i128, i129, i130, i131, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
     
         const form = axios.post('http://localhost:3001/api/form', {
             customerName,
@@ -283,7 +283,7 @@ class Iconpanels extends Component{
             specialcrating,
             tag,
             linearfeet,
-            sqft,
+            squarefeet,
             qty2,
             inch2,
             mm2,
