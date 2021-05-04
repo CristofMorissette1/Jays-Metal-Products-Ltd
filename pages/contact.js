@@ -74,6 +74,7 @@ class Contact extends Component {
                   type="text"
                   name="firstName" 
                   placeholder="First Name"
+                  className="contactInput"
                   onChange={this.handleChange} />
               </FormGroup>
               <FormGroup className="contactForm">
@@ -81,6 +82,7 @@ class Contact extends Component {
                   type="text"
                   name="lastName"
                   placeholder="Last Name"
+                  className="contactInput"
                   onChange={this.handleChange} />
               </FormGroup>
               <FormGroup className="contactForm">
@@ -88,6 +90,7 @@ class Contact extends Component {
                   type="phone"
                   name="phone"
                   placeholder="Phone Number"
+                  className="contactInput"
                   onChange={this.handleChange} />
               </FormGroup>
               <FormGroup className="contactForm">
@@ -95,6 +98,7 @@ class Contact extends Component {
                   type="email"
                   name="email"
                   placeholder="Email Address"
+                  className="contactInput"
                   onChange={this.handleChange} />
               </FormGroup>
               <FormGroup className="contactForm">
@@ -102,6 +106,7 @@ class Contact extends Component {
                   type="text"
                   name="organizationName"
                   placeholder="Organization Name"
+                  className="contactInput"
                   onChange={this.handleChange} />
               </FormGroup>
               <FormGroup className="contactForm">
@@ -109,6 +114,7 @@ class Contact extends Component {
                   type="text"
                   name="organizationWebsite"
                   placeholder="Organization Website"
+                  className="contactInput"
                   onChange={this.handleChange} />
               </FormGroup>
               <FormGroup className="messageGroupForm">

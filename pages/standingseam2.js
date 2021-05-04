@@ -2060,7 +2060,7 @@ class Standingseam2 extends Component{
                 <ReactToPrint content={() => this.componentRef}>
                 <PrintContextConsumer>
                     {({ handlePrint }) => (
-                    <button style={{width: '80%', margin: '10px auto', padding: '10px', fontWeight: 'bold', fontSize: 18, visibility: 'hidden'}} onClick={handlePrint} className="contactButton" >Print Page</button>
+                    <button style={{width: '80%', margin: '10px auto', padding: '10px', fontWeight: 'bold', fontSize: 18, display: 'none'}} onClick={handlePrint} className="contactButton" >Print Page</button>
                     )}
                 </PrintContextConsumer>
                 </ReactToPrint>
