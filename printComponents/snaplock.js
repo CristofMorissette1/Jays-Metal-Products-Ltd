@@ -70,24 +70,30 @@ fontSize: '12px',
         height: "180px",
     },
     orderOptionsFlashingsMainContainer: {
-        width: '100%',
+        width: '80%',
         marginBottom: '20px',
         marginTop: "20px",
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        marginLeft: 'auto',
+        marginRight: 'auto'
     },
     orderOptionsFlashingsMainContainera: {
         width: '100%',
-        marginBottom: '40px',
+        marginBottom: '20px',
         marginTop: "-90px",
         marginLeft: "-200px",
     },
     orderOptionsFlashingsContainerSmall: {
         display: "flex",
         flexWrap: "wrap",
-        width: '80%', 
+        // width: '80%', 
         marginLeft: 'auto', 
         marginRight: 'auto',
         flexDirection: 'row',
         marginTop: "20px",
+        // border: '1px solid red'
     },
     flashDiv: {
         marginBottom: '-30px',
@@ -151,6 +157,7 @@ fontSize: '12px',
     img59: {
         width: "100%",
         height: "100%",
+        border: '1px solid black'
     },
     img62: {
         width: "100%",
@@ -748,12 +755,12 @@ class Standingseam2Print extends Component{
                                 </View>
                             </View>
                             <View style={{marginTop: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'row'}}>
-                                <Text style={{width: '20%', fontWeight: 600, fontSize: 14, textAlign: 'left', color: 'black'}}>Address:</Text>
+                                <Text style={{width: '14.6%', fontWeight: 600, fontSize: 14, textAlign: 'left', color: 'black'}}>Address:</Text>
                                 {this.props.obj.address?
                                 <Text 
                                     type="text"
                                     style={{
-                                        width: "80%",
+                                        width: "85.4%",
                                         backgroundColor: 'white',
                                         padding: '2px 4px',
                                         fontSize: '12px',
@@ -762,7 +769,7 @@ class Standingseam2Print extends Component{
                                     >{this.props.obj.address}</Text>:<Text 
                                     type="text"
                                     style={{
-                                        width: "80%",
+                                        width: "85.4%",
                                         backgroundColor: 'white',
                                         padding: '8px 4px',
                                         fontSize: '12px',
@@ -873,10 +880,10 @@ class Standingseam2Print extends Component{
                                 <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet}</Text>
                             </View>
                         </View>
                         
@@ -895,11 +902,11 @@ class Standingseam2Print extends Component{
                                 <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag2}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet2}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet2}</Text>
                                 {/* placeholder={this.state.linearfeet2} */}
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet2}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet2}</Text>
                                 {/* placeholder={this.state.squarefeet2} */}
                             </View>
                         </View>
@@ -919,11 +926,11 @@ class Standingseam2Print extends Component{
                                 <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag3}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet3}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet3}</Text>
                                 {/* placeholder={this.state.linearfeet3} */}
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet3}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet3}</Text>
                                 {/* placeholder={this.state.squarefeet3} */}
                             </View>
                         </View>
@@ -942,11 +949,11 @@ class Standingseam2Print extends Component{
                                 <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag4}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet4}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet4}</Text>
                                 {/* placeholder={this.state.linearfeet4} */}
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet4}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet4}</Text>
                                 {/* placeholder={this.state.squarefeet4} */}
                             </View>
                         </View>
@@ -962,10 +969,10 @@ class Standingseam2Print extends Component{
                                 {/* placeholder={this.state.mm5} */}
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag5}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.tag5}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet5}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet5}</Text>
                                 {/* placeholder={this.state.linearfeet5} */}
                             </View>
                             <View className="orderOptionsSpecsFG2">
@@ -988,11 +995,11 @@ class Standingseam2Print extends Component{
                                 <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag6}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet6}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet6}</Text>
                                 {/* placeholder={this.state.linearfeet6} */}
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet6}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet6}</Text>
                                 {/* placeholder={this.state.squarefeet6} */}
                             </View>
                         </View>
@@ -1011,11 +1018,11 @@ class Standingseam2Print extends Component{
                                 <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag7}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet7}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet7}</Text>
                                 {/* placeholder={this.state.linearfeet7} */}
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet7}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet7}</Text>
                                 {/* placeholder={this.state.squarefeet7} */}
                             </View>
                         </View>
@@ -1034,11 +1041,11 @@ class Standingseam2Print extends Component{
                                 <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag8}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet8}</Text>
+                                <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet8}</Text>
                                 {/* placeholder={this.state.linearfeet8} */}
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet8}</Text>
+                                <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet8}</Text>
                                 {/* placeholder={this.state.squarefeet8} */}
                             </View>
                         </View>
@@ -1057,11 +1064,11 @@ class Standingseam2Print extends Component{
                                 <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag9}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet9}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet9}</Text>
                                 {/* placeholder={this.state.linearfeet9} */}
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet9}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet9}</Text>
                                 {/* placeholder={this.state.squarefeet9} */}
                             </View>
                         </View>
@@ -1080,11 +1087,11 @@ class Standingseam2Print extends Component{
                                 <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.tag10}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.linearfeet10}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}} >{this.props.obj.linearfeet10}</Text>
                                 {/* placeholder={this.state.linearfeet10} */}
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.squarefeet10}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}} >{this.props.obj.squarefeet10}</Text>
                                 {/* placeholder={this.state.squarefeet10} */}
                             </View>
                         </View>
@@ -1102,10 +1109,10 @@ class Standingseam2Print extends Component{
                                 <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag11}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet11}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet11}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet11}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet11}</Text>
                             </View>
                         </View>:<View style={{display: 'none'}}></View>}
                         {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
@@ -1122,10 +1129,10 @@ class Standingseam2Print extends Component{
                                 <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag12}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet12}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet12}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet12}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet12}</Text>
                             </View>
                         </View>:<View style={{display: 'none'}}></View>}
                         {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
@@ -1142,10 +1149,10 @@ class Standingseam2Print extends Component{
                                 <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag13}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet13}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet13}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet13}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet13}</Text>
                             </View>
                         </View>:<View style={{display: 'none'}}></View>}
                         {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
@@ -1162,10 +1169,10 @@ class Standingseam2Print extends Component{
                                 <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag14}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet14}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet14}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet14}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet14}</Text>
                             </View>
                         </View>:<View style={{display: 'none'}}></View>}
                         {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
@@ -1182,10 +1189,10 @@ class Standingseam2Print extends Component{
                                 <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag15}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet15}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet15}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet15}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet15}</Text>
                             </View>
                         </View>:<View style={{display: 'none'}}></View>}
                         {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
@@ -1202,10 +1209,10 @@ class Standingseam2Print extends Component{
                                 <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag16}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet16}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet16}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet16}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet16}</Text>
                             </View>
                         </View>:<View style={{display: 'none'}}></View>}
                         {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
@@ -1222,10 +1229,10 @@ class Standingseam2Print extends Component{
                                 <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag17}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet17}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet17}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet17}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet17}</Text>
                             </View>
                         </View>:<View style={{display: 'none'}}></View>}
                         {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
@@ -1242,10 +1249,10 @@ class Standingseam2Print extends Component{
                                 <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag18}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet18}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet18}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet18}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet18}</Text>
                             </View>
                         </View>:<View style={{display: 'none'}}></View>}
                         {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
@@ -1262,10 +1269,10 @@ class Standingseam2Print extends Component{
                                 <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag19}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet19}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet19}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet19}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet19}</Text>
                             </View>
                         </View>:<View style={{display: 'none'}}></View>}
                         {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
@@ -1282,10 +1289,10 @@ class Standingseam2Print extends Component{
                                 <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag20}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet20}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet20}</Text>
                             </View>
                             <View className="orderOptionsSpecsFG2">
-                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet20}</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet20}</Text>
                             </View>
                         </View>:<View style={{display: 'none'}}></View>}
                     </View>
@@ -1293,269 +1300,288 @@ class Standingseam2Print extends Component{
 
                     {/* Flashings */}
                 
-                    {/* <View style={styles.orderOptionsFlashingsMainContainer} wrap={false}> */}
-                        {this.props.obj.sa101||this.props.obj.sa102||this.props.obj.sa104?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa101?<View style={styles.orderOptionsFlashingsContainer3}> 
+                    <View style={styles.orderOptionsFlashingsMainContainer} wrap={false}>
+                        {/* {this.props.obj.sa101||this.props.obj.sa102||this.props.obj.sa104?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa101?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}> 
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F101.jpg?alt=media&token=64c9587d-e7e3-4531-8473-f19d4890eb5a"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa101}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa102?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa102?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F102.jpg?alt=media&token=3aa8605c-fbb5-45df-a02b-981d6517ea95"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa102}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa104?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa104?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F104.jpg?alt=media&token=19fe9ad5-91ca-4266-a3c2-f858e4ff84e3"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa104}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa105||this.props.obj.sa106||this.props.obj.sa108?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa105?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.sa105||this.props.obj.sa106||this.props.obj.sa108?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa105?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F105.jpg?alt=media&token=7be981b4-3a74-4c37-8058-29415440e906"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa105}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa106?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa106?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F106.jpg?alt=media&token=542cf440-e597-4f00-9f2a-6fb7bfbde114"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa106}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa108?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa108?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F108.jpg?alt=media&token=cd662a88-879a-43a0-9e80-0d7fc2d4010c"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa108}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa109||this.props.obj.sa112||this.props.obj.sa113?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa109?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.sa109||this.props.obj.sa112||this.props.obj.sa113?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa109?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F109.jpg?alt=media&token=fb96c910-c1da-4e7d-a055-41af52ec0673"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa109}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa112?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa112?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F112.jpg?alt=media&token=2e728d82-d930-457a-ab80-a4c897caeca6"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa112}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa113?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa113?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F113.jpg?alt=media&token=0b3e4158-a8f6-4675-a591-07525a95cb5e"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa113}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa114||this.props.obj.sa117||this.props.obj.sa118?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa114?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.sa114||this.props.obj.sa117||this.props.obj.sa118?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa114?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F114.jpg?alt=media&token=102d6938-7612-4f6c-8ec5-862ccf4c4954"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa114}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa117?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa117?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F117.jpg?alt=media&token=5fdc68a2-75a5-439f-a651-03851d1172e3"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa117}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa118?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa118?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F118.jpg?alt=media&token=3ecae168-9c22-4da4-8a8c-aac2c7a1dca6"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa118}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa119||this.props.obj.sa121||this.props.obj.sa121?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa119?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.sa119||this.props.obj.sa121||this.props.obj.sa121?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa119?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F119.jpg?alt=media&token=9c31cb8f-b95e-43ec-b654-e5cd6ffda59d"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa119}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa121?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa121?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F121.jpg?alt=media&token=5b59e207-cac5-4ad1-84af-4e0ff81afb0c"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa121}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa122?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa122?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F122.jpg?alt=media&token=53f535b9-230c-4180-bb64-49a4b04d2e04"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa122}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa123||this.props.obj.sa123||this.props.obj.sa123?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa126?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.sa123||this.props.obj.sa123||this.props.obj.sa123?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa126?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F123.jpg?alt=media&token=dc6baf56-5bd1-4051-8e08-753db3c492a5"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa126}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa127?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa127?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F126.jpg?alt=media&token=cdb09e80-828c-41e7-bbad-73a1d96c4873"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa127}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa128?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa128?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F127.jpg?alt=media&token=ae6040db-1154-441f-81b9-3162a8965739"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa128}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa128||this.props.obj.sa131||this.props.obj.sa132?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa131?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.sa128||this.props.obj.sa131||this.props.obj.sa132?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa131?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F128.jpg?alt=media&token=e91d01f4-d0a7-412c-8968-76cfdb2953c1"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa131}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa132?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa132?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F131.jpg?alt=media&token=326f742a-9b07-46f7-92ac-d1e2c82ca34f"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa132}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa133?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa133?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F132.jpg?alt=media&token=20d67532-d29d-4635-9760-69bc7fdeaddf"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa133}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa133||this.props.obj.sa134||this.props.obj.sa137?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa134?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.sa133||this.props.obj.sa134||this.props.obj.sa137?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa134?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F133.jpg?alt=media&token=ba6280ac-6167-43da-a905-3205d43e4d17"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa134}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa137?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa137?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F134.jpg?alt=media&token=22bda750-963f-43ca-9feb-6d5b772eac19"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa137}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa138?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa138?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F137.jpg?alt=media&token=328a7468-5ecd-440f-9936-7b022175f48a"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa138}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa138||this.props.obj.sa139||this.props.obj.sa140?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa139?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.sa138||this.props.obj.sa139||this.props.obj.sa140?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa139?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F138.jpg?alt=media&token=80d374c6-4e76-46e2-a058-41e30e246cfa"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa139}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa140?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa140?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F139.jpg?alt=media&token=fc21e6cd-d137-473f-bbc8-8d393ab1322d"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa140}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa143?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa143?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F140.jpg?alt=media&token=909da43f-e75f-451d-8c65-b572afc2fb43"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa143}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa143||this.props.obj.sa144||this.props.obj.sa147?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa144?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.sa143||this.props.obj.sa144||this.props.obj.sa147?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa144?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F143.jpg?alt=media&token=42d33f07-67d1-4718-b81f-f163c40ece41"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa144}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa147?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa147?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F144.jpg?alt=media&token=1b7457b8-8a1e-4802-913a-0b22e63a35a0"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa147}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa150?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa150?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F147.jpg?alt=media&token=de45732a-9bbb-4677-bddc-b27f8dc57a62"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa150}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style='none'></View>}
-                        {this.props.obj.sa150||this.props.obj.s151||this.props.obj.sa152?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa151?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:<View style='none'></View>} */}
+                        {/* {this.props.obj.sa150||this.props.obj.s151||this.props.obj.sa152?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa151?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F150.jpg?alt=media&token=bcb2e87a-d08d-401a-b31a-a0f4d5adfc79"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa151}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa152?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa152?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F151.jpg?alt=media&token=790d8e81-9f43-43e0-a894-29b3f596c7be"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa152}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa153?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa153?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F152.jpg?alt=media&token=d25a4c69-1d22-4975-b4b4-35f4646bb991"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa153}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa153||this.props.obj.sa154||this.props.obj.sa155?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa154?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.sa153||this.props.obj.sa154||this.props.obj.sa155?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa154?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F153.jpg?alt=media&token=25af4d81-cf85-41ab-80c7-02b5510a8900"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa154}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa155?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa155?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F154.jpg?alt=media&token=d04f658e-7b70-46cf-9115-6f84a28d3d4c"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa155}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa160?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa160?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F155.jpg?alt=media&token=7e6b4c55-15d5-4875-ab7a-e9bd17d0a657"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa160}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa160||this.props.obj.sa161||this.props.obj.sa162?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa161?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.sa160||this.props.obj.sa161||this.props.obj.sa162?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa161?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F160.jpg?alt=media&token=2a7a0ba9-cb23-4891-8e5d-ef349644aae6"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa161}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa162?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa162?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F161.jpg?alt=media&token=45ce9566-95bf-4776-b54f-9b3436c60834"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa162}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa165?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa165?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F162.jpg?alt=media&token=f6bb3f32-4de5-4f84-affd-48911746ca2b"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa165}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa165||this.props.obj.sa166||this.props.obj.sa169?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa166?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.sa165||this.props.obj.sa166||this.props.obj.sa169?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa166?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F165.jpg?alt=media&token=1a43bf35-7690-4456-b692-409d75f21c78"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa166}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa169?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa169?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F166.jpg?alt=media&token=851c441a-f3a1-43a4-accf-22c0ddaefafe"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa169}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa171?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa171?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F169.jpg?alt=media&token=e67d1af4-5d8f-4aa9-aaab-2e67516ec4d2"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa171}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa171||this.props.obj.sa172||this.props.obj.sa173?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa172?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.sa171||this.props.obj.sa172||this.props.obj.sa173?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa172?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F171.jpg?alt=media&token=d89547ba-5b90-4804-bda6-a4071bb97ba0"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa172}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa173?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa173?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F172.jpg?alt=media&token=ed629ba7-3c41-44f0-9cfa-fd5006c67b34"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa173}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa175?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa175?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F173.jpg?alt=media&token=729bbd10-c459-404b-93d6-e795835b0356"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa175}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa175||this.props.obj.sa180||this.props.obj.sa181?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa180?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.sa175||this.props.obj.sa180||this.props.obj.sa181?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa180?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F175.jpg?alt=media&token=ad0d74de-00e1-488f-9ff3-e6a65265c64f"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa180}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa181?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa181?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F180.jpg?alt=media&token=9aed4033-57dc-4f7e-9d61-4ae116b6fc2b"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa181}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa182?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa182?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F181.jpg?alt=media&token=fedb892d-227d-4880-8f54-f2f33f3dd7c9"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa182}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa182||this.props.obj.sa182||this.props.obj.sa184?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa183?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.sa182||this.props.obj.sa182||this.props.obj.sa184?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa183?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F182.jpg?alt=media&token=b53225cd-c180-4542-88e4-725796706eec"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa183}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa184?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa184?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F183.jpg?alt=media&token=d93f4574-a169-49dc-a77d-33abe0cc090e"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa184}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa185?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa185?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F184.jpg?alt=media&token=74d048d8-5336-44db-b4f3-75cf7a59fec1"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa185}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa185||this.props.obj.sa186||this.props.obj.sa187?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa186?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.sa185||this.props.obj.sa186||this.props.obj.sa187?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa186?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F185.jpg?alt=media&token=a8a76acc-64b3-4287-a071-b1adaf3a7bb3"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa186}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa187?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa187?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F186.jpg?alt=media&token=8e5087d7-fa86-45a4-ae1d-06f1484bad35"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa187}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa190?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa190?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F187.jpg?alt=media&token=16b9200d-bf0f-476d-b076-ac211f3711af"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa190}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa190||this.props.obj.sa191||this.props.obj.sa192?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa191?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.sa190||this.props.obj.sa191||this.props.obj.sa192?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa191?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F190.jpg?alt=media&token=def9a9dd-ef01-4c49-a63b-1dcdab0c2001"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa191}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa192?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa192?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F191.jpg?alt=media&token=9ca9350a-c4f3-4591-a254-aed4c63923c5"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa192}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa193?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa193?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F192.jpg?alt=media&token=2f9e1eb4-9e59-473f-bb43-b912de391c88"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa193}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa193||this.props.obj.sa194||this.props.obj.sa195?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                        {this.props.obj.sa193?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.sa193||this.props.obj.sa194||this.props.obj.sa195?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                        {this.props.obj.sa193?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "hhttps://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F193.jpg?alt=media&token=140f6a22-9acf-4ef3-9c05-97191b80966a"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa193}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa194?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa194?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F194.jpg?alt=media&token=43c8cef7-4f01-4128-b064-31b5cda9e9df"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa194}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.sa195?<View style={styles.orderOptionsFlashingsContainer3}>
+                        </View>:null}
+                        {this.props.obj.sa195?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                             <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F195.jpg?alt=media&token=b92902e7-be6e-476c-a825-b6a250aae1f0"}}/>
                             <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa195}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                    </View>:<View style={{display: 'none'}}></View>}
-                    {/* </View> */}
+                        </View>:null}
+                        {/* </View>:null} */}
+                    </View>
 
 
 
@@ -1571,72 +1597,75 @@ class Standingseam2Print extends Component{
                             </View>
                         </View>
 
-                    
-                        {this.props.obj.metalDrillScrewsthis||this.props.obj.woodGripScrewsthis||this.props.obj.syntheticHighTempCover?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}>
-                        {this.props.obj.metalDrillScrews?<View style={styles.orderOptionsFlashingsContainer31}> 
+                        <View style={styles.orderOptionsFlashingsMainContainer}>
+                        {/* {this.props.obj.metalDrillScrewsthis||this.props.obj.woodGripScrewsthis||this.props.obj.syntheticHighTempCover?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}> */}
+                        {this.props.obj.metalDrillScrews?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}> 
                             <Image style={styles.img62} cache={false} style={{border: '1px solid black'}} 
                             source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fmetal%20drill%20screws.png?alt=media&token=def7c31f-bab7-430a-aac1-c6686b9eb621"}} />
                             <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.metalDrillScrews}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        { this.props.obj.woodGripScrews?<View style={styles.orderOptionsFlashingsContainer31}>
+                        </View>:null}
+                        { this.props.obj.woodGripScrews?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                         <Image style={styles.img62} cache={false} style={{border: '1px solid black'}} 
                             source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fwoodgrip%20screws.png?alt=media&token=bedb64c8-3ace-4697-8bd6-10e6b6ee4db2"}} />
                             
                             <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.woodGripScrews}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.syntheticHighTempCover?<View style={styles.orderOptionsFlashingsContainer31}>
+                        </View>:null}
+                        {this.props.obj.syntheticHighTempCover?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                         <Image style={styles.img62} cache={false} style={{border: '1px solid black'}} 
                             source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fsynthetic%20high%20temp%20cover.png?alt=media&token=175a4dbb-40b2-43b5-92f2-eb31cb839e7c"}} />
                             
                             <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.syntheticHighTempCover}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.tubeSealantthis||this.props.obj.butylTapethis||this.props.obj.plumbingBoots?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}>
-                        {this.props.obj.tubeSealant?<View style={styles.orderOptionsFlashingsContainer31}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.tubeSealantthis||this.props.obj.butylTapethis||this.props.obj.plumbingBoots?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}> */}
+                        {this.props.obj.tubeSealant?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                         <Image style={styles.img62} cache={false} style={{border: '1px solid black'}} 
                             source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Ftube%20sealant.png?alt=media&token=bf1baf8a-beac-461e-af91-7fa9c12695e6"}} />
                             
                             <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.tubeSealant}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.butylTape?<View style={styles.orderOptionsFlashingsContainer31}>
+                        </View>:null}
+                        {this.props.obj.butylTape?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                         <Image style={styles.img63} cache={false} style={{border: '1px solid black'}} 
                             source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fbutyl%20tape.png?alt=media&token=24398d7f-af89-4872-82fd-d9286875a3cb"}} />
                             
                             <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.butylTape}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.plumbingBoots?<View style={styles.orderOptionsFlashingsContainer31}>
+                        </View>:null}
+                        {this.props.obj.plumbingBoots?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                         <Image style={styles.img64} cache={false} style={{border: '1px solid black'}} 
                             source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fplumbing%20boots.png?alt=media&token=1db3c74a-c476-4596-b4b6-0c286a1cc006"}} />
                             
                             <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.plumbingBoots}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.flexOVentthis||this.props.obj.profileOuterClosurethis||this.props.obj.profileInnerClosure?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}>
-                        {this.props.obj.flexOVent?<View style={styles.orderOptionsFlashingsContainer31}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.flexOVentthis||this.props.obj.profileOuterClosurethis||this.props.obj.profileInnerClosure?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}> */}
+                        {this.props.obj.flexOVent?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                         <Image style={styles.img65} cache={false} style={{border: '1px solid black'}} 
                             source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fflex-o-vent.png?alt=media&token=c1e81e0f-c6a2-48fd-84be-6952ba69aadf"}} />
                             
                             <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.flexOVent}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.profileOuterClosure?<View style={styles.orderOptionsFlashingsContainer31}>
+                        </View>:null}
+                        {this.props.obj.profileOuterClosure?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                         <Image style={styles.img66} cache={false} style={{border: '1px solid black'}} 
                             source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fprofile%20outer%20closure.png?alt=media&token=836d6b46-1e94-45a5-aea2-6ce4c69d37a3"}} />
                             
                             <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.profileOuterClosure}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.profileInnerClosure?<View style={styles.orderOptionsFlashingsContainer31}>
+                        </View>:null}
+                        {this.props.obj.profileInnerClosure?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                         <Image style={styles.img67} cache={false} style={{border: '1px solid black'}} 
                             source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fprofile%20inner%20closure.png?alt=media&token=a799aa5a-55a3-41d9-9a47-a4565e06e6c5"}} />
                             
                             <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.profileInnerClosure}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                        {this.props.obj.lowProfileRidgeVent?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}>
-                        {this.props.obj.lowProfileRidgeVent?<View style={styles.orderOptionsFlashingsContainer31}>
+                        </View>:null}
+                        {/* </View>:null} */}
+                        {/* {this.props.obj.lowProfileRidgeVent?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}> */}
+                        {this.props.obj.lowProfileRidgeVent?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                         <Image style={styles.img68} cache={false} style={{border: '1px solid black'}} 
                             source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Flow%20profile%20ridge%20vent.png?alt=media&token=18d4aaaf-d88f-4cda-96ee-1addef31a649"}} />
                             
                             <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.lowProfileRidgeVent}</Text>
-                        </View>:<View style={{display: 'none'}}></View>}
-                        </View>:<View style={{display: 'none'}}></View>}
-
+                        </View>:null}
+                        {/* </View>:null} */}
+                    </View>
                     {/* Footer */}
                     <View style={styles.productDisclaimerFG2} break>
                         <View>

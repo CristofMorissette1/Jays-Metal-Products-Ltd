@@ -71,24 +71,30 @@ fontSize: '12px',
         height: "180px",
     },
     orderOptionsFlashingsMainContainer: {
-        width: '100%',
+        width: '80%',
         marginBottom: '20px',
         marginTop: "20px",
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        marginLeft: 'auto',
+        marginRight: 'auto'
     },
     orderOptionsFlashingsMainContainera: {
         width: '100%',
-        marginBottom: '40px',
+        marginBottom: '20px',
         marginTop: "-90px",
         marginLeft: "-200px",
     },
     orderOptionsFlashingsContainerSmall: {
         display: "flex",
         flexWrap: "wrap",
-        width: '80%', 
+        // width: '80%', 
         marginLeft: 'auto', 
         marginRight: 'auto',
         flexDirection: 'row',
         marginTop: "20px",
+        // border: '1px solid red'
     },
     flashDiv: {
         marginBottom: '-30px',
@@ -152,6 +158,7 @@ fontSize: '12px',
     img59: {
         width: "100%",
         height: "100%",
+        border: '1px solid black'
     },
     img62: {
         width: "100%",
@@ -744,12 +751,12 @@ class IconpanelsPrint extends Component{
                                                     </View>
                                                 </View>
                                                 <View style={{marginTop: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'row'}}>
-                                                    <Text style={{width: '20%', fontWeight: 600, fontSize: 14, textAlign: 'left', color: 'black'}}>Address:</Text>
+                                                    <Text style={{width: '14.6%', fontWeight: 600, fontSize: 14, textAlign: 'left', color: 'black'}}>Address:</Text>
                                                     {this.props.obj.address?
                                                     <Text 
                                                         type="text"
                                                         style={{
-                                                            width: "80%",
+                                                            width: "85.4%",
                                                             backgroundColor: 'white',
                                                             padding: '2px 4px',
                                                             fontSize: '12px',
@@ -758,7 +765,7 @@ class IconpanelsPrint extends Component{
                                                         >{this.props.obj.address}</Text>:<Text 
                                                         type="text"
                                                         style={{
-                                                            width: "80%",
+                                                            width: "85.4%",
                                                             backgroundColor: 'white',
                                                             padding: '8px 4px',
                                                             fontSize: '12px',
@@ -869,10 +876,10 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet}</Text>
                                                 </View>
                                             </View>
                                             
@@ -891,11 +898,11 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag2}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet2}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet2}</Text>
                                                     {/* placeholder={this.state.linearfeet2} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet2}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet2}</Text>
                                                     {/* placeholder={this.state.squarefeet2} */}
                                                 </View>
                                             </View>
@@ -915,11 +922,11 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag3}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet3}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet3}</Text>
                                                     {/* placeholder={this.state.linearfeet3} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet3}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet3}</Text>
                                                     {/* placeholder={this.state.squarefeet3} */}
                                                 </View>
                                             </View>
@@ -938,11 +945,11 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag4}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet4}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet4}</Text>
                                                     {/* placeholder={this.state.linearfeet4} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet4}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet4}</Text>
                                                     {/* placeholder={this.state.squarefeet4} */}
                                                 </View>
                                             </View>
@@ -961,11 +968,11 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag5}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet5}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet5}</Text>
                                                     {/* placeholder={this.state.linearfeet5} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet5}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet5}</Text>
                                                     {/* placeholder={this.state.squarefeet5} */}
                                                 </View>
                                             </View>
@@ -984,11 +991,11 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag6}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet6}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet6}</Text>
                                                     {/* placeholder={this.state.linearfeet6} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet6}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet6}</Text>
                                                     {/* placeholder={this.state.squarefeet6} */}
                                                 </View>
                                             </View>
@@ -1007,11 +1014,11 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag7}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet7}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet7}</Text>
                                                     {/* placeholder={this.state.linearfeet7} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet7}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet7}</Text>
                                                     {/* placeholder={this.state.squarefeet7} */}
                                                 </View>
                                             </View>
@@ -1030,11 +1037,11 @@ class IconpanelsPrint extends Component{
                                                     <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag8}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet8}</Text>
+                                                    <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet8}</Text>
                                                     {/* placeholder={this.state.linearfeet8} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet8}</Text>
+                                                    <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet8}</Text>
                                                     {/* placeholder={this.state.squarefeet8} */}
                                                 </View>
                                             </View>
@@ -1053,11 +1060,11 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag9}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet9}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet9}</Text>
                                                     {/* placeholder={this.state.linearfeet9} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet9}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet9}</Text>
                                                     {/* placeholder={this.state.squarefeet9} */}
                                                 </View>
                                             </View>
@@ -1076,11 +1083,11 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.tag10}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.linearfeet10}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}} >{this.props.obj.linearfeet10}</Text>
                                                     {/* placeholder={this.state.linearfeet10} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.squarefeet10}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}} >{this.props.obj.squarefeet10}</Text>
                                                     {/* placeholder={this.state.squarefeet10} */}
                                                 </View>
                                             </View>
@@ -1098,10 +1105,10 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag11}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet11}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet11}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet11}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet11}</Text>
                                                 </View>
                                             </View>:<View style={{display: 'none'}}></View>}
                                             {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
@@ -1118,10 +1125,10 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag12}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet12}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet12}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet12}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet12}</Text>
                                                 </View>
                                             </View>:<View style={{display: 'none'}}></View>}
                                             {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
@@ -1138,10 +1145,10 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag13}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet13}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet13}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet13}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet13}</Text>
                                                 </View>
                                             </View>:<View style={{display: 'none'}}></View>}
                                             {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
@@ -1158,10 +1165,10 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag14}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet14}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet14}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet14}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet14}</Text>
                                                 </View>
                                             </View>:<View style={{display: 'none'}}></View>}
                                             {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
@@ -1178,10 +1185,10 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag15}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet15}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet15}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet15}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet15}</Text>
                                                 </View>
                                             </View>:<View style={{display: 'none'}}></View>}
                                             {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
@@ -1198,10 +1205,10 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag16}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet16}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet16}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet16}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet16}</Text>
                                                 </View>
                                             </View>:<View style={{display: 'none'}}></View>}
                                             {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
@@ -1218,10 +1225,10 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag17}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet17}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet17}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet17}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet17}</Text>
                                                 </View>
                                             </View>:<View style={{display: 'none'}}></View>}
                                             {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
@@ -1238,10 +1245,10 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag18}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet18}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet18}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet18}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet18}</Text>
                                                 </View>
                                             </View>:<View style={{display: 'none'}}></View>}
                                             {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
@@ -1258,10 +1265,10 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag19}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet19}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet19}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet19}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet19}</Text>
                                                 </View>
                                             </View>:<View style={{display: 'none'}}></View>}
                                             {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
@@ -1278,10 +1285,10 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag20}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet20}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet20}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet20}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet20}</Text>
                                                 </View>
                                             </View>:<View style={{display: 'none'}}></View>}
                                         </View>
@@ -1289,113 +1296,121 @@ class IconpanelsPrint extends Component{
 
                                         {/* Flashings */}
                                     
-                                        {/* <View style={styles.orderOptionsFlashingsMainContainer} wrap={false}> */}
-                                            {this.props.obj.i101||this.props.obj.i102||this.props.obj.i103?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                                            {this.props.obj.i101?<View style={styles.orderOptionsFlashingsContainer3}> 
+                                        <View style={styles.orderOptionsFlashingsMainContainer} wrap={false}>
+                                            {/* {this.props.obj.i101||this.props.obj.i102||this.props.obj.i103?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                                            {this.props.obj.i101?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}> 
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F101.jpg?alt=media&token=8bffe047-361f-467d-b54d-79873721fb7b"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i101}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i102?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {this.props.obj.i102?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F102.jpg?alt=media&token=1a1089f9-b2cc-476d-9405-cf79fda0ceee"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i102}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i103?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {this.props.obj.i103?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F103.jpg?alt=media&token=9e17a1c1-a515-49fd-92e3-9c1a5de10a4e"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i103}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i104||this.props.obj.i106||this.props.obj.i107?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                                            {this.props.obj.i104?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {/* </View>:null} */}
+                                            {/* {this.props.obj.i104||this.props.obj.i106||this.props.obj.i107?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                                            {this.props.obj.i104?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F104.jpg?alt=media&token=1621b1c6-2da6-4b81-873c-573ac49527da"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i104}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i106?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {this.props.obj.i106?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F106.jpg?alt=media&token=b8ef318d-25c3-47c8-b904-7fa377656077"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i106}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i107?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {this.props.obj.i107?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F107.jpg?alt=media&token=86f2835b-ce37-46ac-b2c4-6f0c18d8a7cb"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i107}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i108||this.props.obj.i111||this.props.obj.i112?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                                            {this.props.obj.i108?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {/* </View>:null} */}
+                                            {/* {this.props.obj.i108||this.props.obj.i111||this.props.obj.i112?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                                            {this.props.obj.i108?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F108.jpg?alt=media&token=9f8d26df-edfe-4578-b22d-027c316abf0a"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i108}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i111?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {this.props.obj.i111?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F111.jpg?alt=media&token=f6f40da4-59e1-44fa-a58e-56e1ffb04ac1"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i111}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i112?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {this.props.obj.i112?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F112.jpg?alt=media&token=8addf58e-a0a3-4fa1-99ae-b5c827d91d22"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i112}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i113||this.props.obj.i114||this.props.obj.i115?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                                            {this.props.obj.i113?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {/* </View>:null} */}
+                                            {/* {this.props.obj.i113||this.props.obj.i114||this.props.obj.i115?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                                            {this.props.obj.i113?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F113.jpg?alt=media&token=86b9bc9d-fdc5-43a5-9797-06ff8d54054b"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i113}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i114?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {this.props.obj.i114?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F114.jpg?alt=media&token=6c8b8c8d-38ca-48b1-a325-33d0aec83a7d"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i114}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i115?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {this.props.obj.i115?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F115.jpg?alt=media&token=9252d05c-2720-4416-abaf-4eae552de636"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i115}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i116||this.props.obj.i117||this.props.obj.i118?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                                            {this.props.obj.i116?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {/* </View>:null} */}
+                                            {/* {this.props.obj.i116||this.props.obj.i117||this.props.obj.i118?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                                            {this.props.obj.i116?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F116.jpg?alt=media&token=1f93d521-2daf-4f39-88da-f41b475f45b1"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i116}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i117?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {this.props.obj.i117?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F117.jpg?alt=media&token=62be0f92-9e90-43e9-8189-abeacd259fa2"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i117}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i118?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {this.props.obj.i118?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F118.jpg?alt=media&token=3dd781c8-5993-484f-83a9-f4f77eac3fa4"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i118}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i119||this.props.obj.i120||this.props.obj.i121?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                                            {this.props.obj.i119?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {/* </View>:null} */}
+                                            {/* {this.props.obj.i119||this.props.obj.i120||this.props.obj.i121?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                                            {this.props.obj.i119?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F119.jpg?alt=media&token=20914689-0cdd-4203-831c-7d376503deb9"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i119}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i120?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {this.props.obj.i120?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F120.jpg?alt=media&token=8cfd4fe2-a94b-445a-8aa9-0906b9e2147e"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i120}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i121?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {this.props.obj.i121?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F121.jpg?alt=media&token=cecf7570-2e4e-4501-83e3-2eb7f6434602"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i121}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i122||this.props.obj.i123||this.props.obj.i128?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                                            {this.props.obj.i122?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {/* </View>:null} */}
+                                            {/* {this.props.obj.i122||this.props.obj.i123||this.props.obj.i128?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                                            {this.props.obj.i122?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F122.jpg?alt=media&token=91e8e0a4-a547-4009-8c48-78f1e95f94c5"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i122}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i123?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {this.props.obj.i123?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F123.jpg?alt=media&token=25fb14b8-6894-46c4-88e6-79eb361dd401"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i123}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i128?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {this.props.obj.i128?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F128.jpg?alt=media&token=8a8eaa5a-2546-48c0-b241-ed18ba350b38"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i128}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i129||this.props.obj.i130||this.props.obj.i131?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
-                                            {this.props.obj.ridge3?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {/* </View>:null} */}
+                                            {/* {this.props.obj.i129||this.props.obj.i130||this.props.obj.i131?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}> */}
+                                            {this.props.obj.ridge3?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F129.jpg?alt=media&token=09641c07-fe20-42a6-991e-cbf36d5eead2"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i129}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i130?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {this.props.obj.i130?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F130.jpg?alt=media&token=20d182b1-8002-4be7-bf95-4bcf54e30955"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i130}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.i131?<View style={styles.orderOptionsFlashingsContainer3}>
+                                            </View>:null}
+                                            {this.props.obj.i131?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                                 <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/icon%20panel%2F131.jpg?alt=media&token=e71f40d0-29c7-4c16-8e62-5eaccaa884cd"}}/>
                                                 <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.state.i131}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                                            </View>:null}
+                                            {/* </View>:null} */}
                                          
-                                        {/* </View> */}
+                                        </View>
 
 
 
@@ -1411,72 +1426,75 @@ class IconpanelsPrint extends Component{
                                                 </View>
                                             </View>
 
-                                        
-                                            {this.props.obj.metalDrillScrews||this.props.obj.woodGripScrews||this.props.obj.syntheticHighTempCover?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}>
-                                            {this.props.obj.metalDrillScrews?<View style={styles.orderOptionsFlashingsContainer31}> 
+                                            <View style={styles.orderOptionsFlashingsMainContainer}>
+                                            {/* {this.props.obj.metalDrillScrews||this.props.obj.woodGripScrews||this.props.obj.syntheticHighTempCover?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}> */}
+                                            {this.props.obj.metalDrillScrews?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}> 
                                                 <Image style={styles.img62} cache={false} style={{border: '1px solid black'}} 
                                                 source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fmetal%20drill%20screws.png?alt=media&token=def7c31f-bab7-430a-aac1-c6686b9eb621"}} />
                                                 <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.metalDrillScrews}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            { this.props.obj.woodGripScrews?<View style={styles.orderOptionsFlashingsContainer31}>
+                                            </View>:null}
+                                            { this.props.obj.woodGripScrews?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                             <Image style={styles.img62} cache={false} style={{border: '1px solid black'}} 
                                                 source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fwoodgrip%20screws.png?alt=media&token=bedb64c8-3ace-4697-8bd6-10e6b6ee4db2"}} />
                                                 
                                                 <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.woodGripScrews}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.syntheticHighTempCover?<View style={styles.orderOptionsFlashingsContainer31}>
+                                            </View>:null}
+                                            {this.props.obj.syntheticHighTempCover?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                             <Image style={styles.img62} cache={false} style={{border: '1px solid black'}} 
                                                 source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fsynthetic%20high%20temp%20cover.png?alt=media&token=175a4dbb-40b2-43b5-92f2-eb31cb839e7c"}} />
                                                 
                                                 <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.syntheticHighTempCover}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.tubeSealant||this.props.obj.butylTape||this.props.obj.plumbingBoots?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}>
-                                            {this.props.obj.tubeSealant?<View style={styles.orderOptionsFlashingsContainer31}>
+                                            </View>:null}
+                                            {/* </View>:null} */}
+                                            {/* {this.props.obj.tubeSealant||this.props.obj.butylTape||this.props.obj.plumbingBoots?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}> */}
+                                            {this.props.obj.tubeSealant?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                             <Image style={styles.img62} cache={false} style={{border: '1px solid black'}} 
                                                 source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Ftube%20sealant.png?alt=media&token=bf1baf8a-beac-461e-af91-7fa9c12695e6"}} />
                                                 
                                                 <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.tubeSealant}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.butylTape?<View style={styles.orderOptionsFlashingsContainer31}>
+                                            </View>:null}
+                                            {this.props.obj.butylTape?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                             <Image style={styles.img63} cache={false} style={{border: '1px solid black'}} 
                                                 source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fbutyl%20tape.png?alt=media&token=24398d7f-af89-4872-82fd-d9286875a3cb"}} />
                                                 
                                                 <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.butylTape}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.plumbingBoots?<View style={styles.orderOptionsFlashingsContainer31}>
+                                            </View>:null}
+                                            {this.props.obj.plumbingBoots?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                             <Image style={styles.img64} cache={false} style={{border: '1px solid black'}} 
                                                 source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fplumbing%20boots.png?alt=media&token=1db3c74a-c476-4596-b4b6-0c286a1cc006"}} />
                                                 
                                                 <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.plumbingBoots}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.flexOVent||this.props.obj.profileOuterClosure||this.props.obj.profileInnerClosure?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}>
-                                            {this.props.obj.flexOVent?<View style={styles.orderOptionsFlashingsContainer31}>
+                                            </View>:null}
+                                            {/* </View>:null} */}
+                                            {/* {this.props.obj.flexOVent||this.props.obj.profileOuterClosure||this.props.obj.profileInnerClosure?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}> */}
+                                            {this.props.obj.flexOVent?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                             <Image style={styles.img65} cache={false} style={{border: '1px solid black'}} 
                                                 source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fflex-o-vent.png?alt=media&token=c1e81e0f-c6a2-48fd-84be-6952ba69aadf"}} />
                                                 
                                                 <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.flexOVent}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.profileOuterClosure?<View style={styles.orderOptionsFlashingsContainer31}>
+                                            </View>:null}
+                                            {this.props.obj.profileOuterClosure?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                             <Image style={styles.img66} cache={false} style={{border: '1px solid black'}} 
                                                 source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fprofile%20outer%20closure.png?alt=media&token=836d6b46-1e94-45a5-aea2-6ce4c69d37a3"}} />
                                                 
                                                 <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.profileOuterClosure}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.profileInnerClosure?<View style={styles.orderOptionsFlashingsContainer31}>
+                                            </View>:null}
+                                            {this.props.obj.profileInnerClosure?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                             <Image style={styles.img67} cache={false} style={{border: '1px solid black'}} 
                                                 source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fprofile%20inner%20closure.png?alt=media&token=a799aa5a-55a3-41d9-9a47-a4565e06e6c5"}} />
                                                 
                                                 <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.profileInnerClosure}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
-                                            {this.props.obj.lowProfileRidgeVent?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}>
-                                            {this.props.obj.lowProfileRidgeVent?<View style={styles.orderOptionsFlashingsContainer31}>
+                                            </View>:null}
+                                            {/* </View>:null} */}
+                                            {/* {this.props.obj.lowProfileRidgeVent?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}> */}
+                                            {this.props.obj.lowProfileRidgeVent?<View style={styles.orderOptionsFlashingsContainer3} wrap={false}>
                                             <Image style={styles.img68} cache={false} style={{border: '1px solid black'}} 
                                                 source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Flow%20profile%20ridge%20vent.png?alt=media&token=18d4aaaf-d88f-4cda-96ee-1addef31a649"}} />
                                                 
                                                 <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.lowProfileRidgeVent}</Text>
-                                            </View>:<View style={{display: 'none'}}></View>}
-                                            </View>:<View style={{display: 'none'}}></View>}
-
+                                            </View>:null}
+                                            {/* </View>:null} */}
+                                        </View>
                                         {/* Footer */}
                                         <View style={styles.productDisclaimerFG2} break>
                                             <View>
