@@ -1,6 +1,188 @@
 import { Component } from 'react'
 import { Form, FormGroup, Input, Button, Label, CustomInput } from 'reactstrap'
+import { Image, Page, Text, View, Document, StyleSheet, PDFViewer, ReactPDF } from '@react-pdf/renderer';
 import axios from 'axios'
+
+const styles = StyleSheet.create({
+    headerF: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexDirection: 'row',
+        marginTop: '10px'
+    },
+    headerV1: {
+        width: "100%",
+        marginBottom: '20px'
+    },
+    orderOptionsTextInput2:{
+        width: "70%",
+        backgroundColor: 'white',
+        border: '1px solid black',
+        fontSize: '12px',
+        padding: '2px 4px'
+    },
+    orderOptionsTextInput21:{
+        width: "70%",
+        backgroundColor: 'white',
+        marginRight: '10px',
+        padding: '2px 4px',
+fontSize: '12px',
+        border: '1px solid black',
+    },
+    orderOptionsTextFormSmall2:{
+        display: "flex",
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'center'
+    },
+    orderOptionsTextForm2: {
+        width: "80%",
+        marginLeft: "auto",
+        marginRight: 'auto',
+
+    },
+    orderOptionsTextFormTitle2: {
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        color: "#fff",
+        fontSize: "200%",
+        fontWeight: 400,
+        marginTop: "0px",
+    },
+    orderOptionsFlashingsInput3: {
+        position: "absolute",
+        marginTop: "87%",
+        border: "4px solid rgb(106, 106, 248)",
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: 'center',
+        textAlign: 'center',
+        paddingTop: "6px"
+    },
+    orderOptionsFlashingsContainer3: {
+        width: "33.333%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        height: "180px",
+    },
+    orderOptionsFlashingsMainContainer: {
+        width: '100%',
+        marginBottom: '20px',
+        marginTop: "20px",
+    },
+    orderOptionsFlashingsMainContainera: {
+        width: '100%',
+        marginBottom: '40px',
+        marginTop: "-90px",
+        marginLeft: "-200px",
+    },
+    orderOptionsFlashingsContainerSmall: {
+        display: "flex",
+        flexWrap: "wrap",
+        width: '80%', 
+        marginLeft: 'auto', 
+        marginRight: 'auto',
+        flexDirection: 'row',
+        marginTop: "20px",
+    },
+    flashDiv: {
+        marginBottom: '-30px',
+        marginTop: '30px'
+    },
+    flash: {
+        fontWeight: "bold",
+        fontSize: "20px",
+    },
+    orderOptionsFlashingsContainer31: {
+        width: "33.333%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        marginTop: "-20px",
+        height: "180px",
+    },
+    orderOptionsFlashingsInput31: {
+        position: "absolute",
+        marginTop: "85%",
+        border: "4px solid rgb(106, 106, 248)",
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: 'center',
+        textAlign: 'center',
+        paddingTop: "6px"
+    },
+    page: {
+      width: '100%',
+      height: '100%',
+      flexDirection: 'column',
+      flex: 1
+    },
+    section: {
+      margin: 10,
+      padding: 10,
+      flexGrow: 1
+    },
+    flashDiv: {
+        marginLeft: "auto",
+        marginRight: "auto",
+        marginBottom: "-20px",
+        marginTop: "50px",
+        paddingTop: '50px'
+    },
+    productDisclaimerFG2: {
+        width: "70%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        marginTop: "6.5%",
+        marginBottom: "0%",
+        alignItems: "center",
+        marginLeft: "auto",
+        marginRight: "auto",
+        fontWeight: 600,
+        padding: "1%"
+    },
+    
+    img59: {
+        width: "100%",
+        height: "100%",
+    },
+    img62: {
+        width: "100%",
+        height: "100%",
+        border: '4px solid yellow'
+    },
+    img63: {
+        width: "100%",
+        height: "100%",
+    },
+    img64: {
+        width: "100%",
+        height: "100%",
+    },
+    img65: {
+        width: "100%",
+        height: "100%",
+    },
+    img66: {
+        width: "100%",
+        height: "100%",
+    },
+    img67: {
+        width: "100%",
+        height: "100%",
+    },
+    img68: {
+        width: "100%",
+        height: "100%",
+    },
+    
+});
 
 class Standingseam2Print extends Component{
     constructor(){
@@ -433,1108 +615,1045 @@ class Standingseam2Print extends Component{
     render(){
             return (
             
-            <div className="diamondMainContainer"> 
-            <p className="orderNum">#__________</p>      
-                <div className="productsPage4thContainer">
-                            <div className="orderOptionsContent">
-                                <Form className="orderOptionsContentForm" onSubmit={this.handleSumbit}>
-                                    <div className="orderOptionsTextForm2">
-                                        <h2 className="orderOptionsTextFormTitle">Interlock 100</h2>
-                                        <FormGroup className="orderOptionsTextFormSmall2">
-                                            <label className="printLabel">Customer Name:</label>
-                                            {this.props.obj.customerName?
-                                            <Input 
-                                                type="text"
-                                                className="orderOptionsTextInput2"
-                                                name="customerName" 
-                                                value={this.props.obj.customerName}
-                                                />:
-                                                <Input 
-                                                type="text"
-                                                className="orderOptionsTextInput2"
-                                                name="customerName" 
-                                                placeholder="Customer Name"                                    
-                                                />}
-                                        </FormGroup>
-                                        <FormGroup className="orderOptionsTextFormSmall2">
-                                            <label className="printLabel">PO:</label>
-                                            {this.props.obj.po?
-                                            <Input 
-                                                type="text"
-                                                className="orderOptionsTextInput2"
-                                                name="po"
-                                                value={this.props.obj.po}
-                                                />:<Input 
-                                                type="text"
-                                                className="orderOptionsTextInput2"
-                                                placeholder="PO"    
-                                                />}
-                                        </FormGroup>
-                                        <FormGroup className="orderOptionsTextFormSmall2">
-                                            <label className="printLabel">Email:</label>
-                                            {this.props.obj.email?
-                                            <Input 
-                                                type="email"
-                                                className="orderOptionsTextInput2"
-                                                name="email"
-                                                // placeholder="Email Address"
-                                                //  
-                                                value={this.props.obj.email}
-                                                />:<Input 
-                                                type="email"
-                                                className="orderOptionsTextInput2"
-                                                // name="email"
-                                                placeholder="Email Address"
-                                                // onChange={this.handleChange}
-                                                //  
-                                                // value={this.props.obj.email}
-                                                />}
-                                        </FormGroup>
-                                        <FormGroup className="orderOptionsTextFormSmall2">
-                                            <label className="printLabel">Address:</label>
-                                            {this.props.obj.address?
-                                            <Input 
-                                                type="text"
-                                                className="orderOptionsTextInput2"
-                                                // name="address"
-                                                // placeholder="Customer Address"
-                                                value={this.props.obj.address}
-                                                />:<Input 
-                                                type="text"
-                                                className="orderOptionsTextInput2"
-                                                // name="address"
-                                                placeholder="Customer Address"
-                                                // onChange={this.handleChange} 
-                                                // value={this.props.obj.address}
-                                                />}
-                                        </FormGroup>
-                                    </div>
-                                    <div className="orderOptionsSpecsForm">
-                                        <div className="orderOptionsSpecsFormTitle">
-                                            <FormGroup className="orderOptionsSpecsFG2">
-                                                <label>GA</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" value={this.props.obj.ga} name="ga" onChange={this.handleChange} >
-                                                    <option>-</option>
-                                                    <option>29</option>
-                                                    <option>26</option>
-                                                    <option>24</option>
-                                                    <option>22</option>
-                                                </Input>
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG2">
-                                                <label>Color</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.color} name="color" onChange={this.handleChange}  />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG2">
-                                                <label>Total Feet</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.totallinearfeet} name="totallinearfeet" readOnly />
-                                                {/* this.state.totallinearfeet */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG2">
-                                                <label>Crating</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" value={this.props.obj.specialcrating} name="specialcrating" onChange={this.handleChange} >
-                                                    <option>-</option>
-                                                    <option>Yes</option>
-                                                    <option>No</option>
-                                                </Input>
-                                                <p className="protectiveFilmDisclaimer">At extra cost</p>
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG2">
-                                                <Label>Film</Label>
-                                                <Input type="select" className="orderOptionsSpecsInput" value={this.props.obj.protectivefilm} name="protectivefilm" onChange={this.handleChange} >
-                                                     <option>-</option>
-                                                    <option>Yes</option>
-                                                    <option>No</option>
-                                                </Input>
-                                                <p className="protectiveFilmDisclaimer">10cents extra per sq/ft</p>
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG2">
-                                                <label>Finish</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" value={this.props.obj.finish} name="finish" onChange={this.handleChange}  >
-                                                    <option>-</option>
-                                                    <option>12</option>
-                                                    <option>16</option>
-                                                    <option>20</option>
-                                                </Input>
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG2">
-                                                <label>Total SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.totalsquarefeet} name="totalsquarefeet"  readOnly />
-                                                {/* placeholder={this.state.totalsquarefeet} */}
-                                            </FormGroup>
-                                        </div>
-                                        <div className="orderOptionsSpecsSmall">
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>QTY</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty} name="qty"  />
-                                            </FormGroup>
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <label>Inch</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch} name="inch"  />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Label>MM</Label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm} name="mm"  readOnly/>
-                                                {/* placeholder={this.state.mm} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Tag</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag} name="tag" onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Linear Feet</label>
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet} name="linearfeet" />
-                                                {/* placeholder={this.state.linearfeet} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet} name="squarefeet"  readOnly />
-                                                {/* placeholder={this.state.squarefeet} */}
-                                            </FormGroup>
-                                        </div>
-                                        <div className="orderOptionsSpecsSmall">
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty2} name="qty2" />
-                                            </FormGroup>
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch2} name="inch2" />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm2} name="mm2"  readOnly/>
-                                                {/* placeholder={this.state.mm2} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag2} name="tag2" onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet2} name="linearfeet2" />
-                                                {/* placeholder={this.state.linearfeet2} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet2} name="squarefeet2"  readOnly />
-                                                {/* placeholder={this.state.squarefeet2} */}
-                                            </FormGroup>
-                                        </div>
-                                        <div className="orderOptionsSpecsSmall">
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty3} name="qty3" />
-                                            </FormGroup>
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch3} name="inch3" />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm3} name="mm3"  readOnly/>
-                                                {/* placeholder={this.state.mm3} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag3} name="tag3" onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet3} name="linearfeet3" />
-                                                {/* placeholder={this.state.linearfeet3} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet3} name="squarefeet3"  readOnly />
-                                                {/* placeholder={this.state.squarefeet3} */}
-                                            </FormGroup>
-                                        </div>
-                                        <div className="orderOptionsSpecsSmall">
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty4} name="qty4" />
-                                            </FormGroup>
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch4} name="inch4" />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm4} name="mm4"  readOnly/>
-                                                {/* placeholder={this.state.mm4} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag4} name="tag4" onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet4} name="linearfeet4" />
-                                                {/* placeholder={this.state.linearfeet4} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet4} name="squarefeet4"  readOnly />
-                                                {/* placeholder={this.state.squarefeet4} */}
-                                            </FormGroup>
-                                        </div>
-                                        <div className="orderOptionsSpecsSmall">
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty5} name="qty5" />
-                                            </FormGroup>
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch5} name="inch5" />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm5} name="mm5"  readOnly/>
-                                                {/* placeholder={this.state.mm5} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag5} name="tag5" onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet5} name="linearfeet5" />
-                                                {/* placeholder={this.state.linearfeet5} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet5} name="squarefeet5"  readOnly />
-                                                {/* placeholder={this.state.squarefeet5} */}
-                                            </FormGroup>
-                                        </div>
-                                        <div className="orderOptionsSpecsSmall">
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty6} name="qty6" />
-                                            </FormGroup>
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch6} name="inch6" />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm6} name="mm6"  readOnly/>
-                                                {/* placeholder={this.state.mm6} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag6} name="tag6" onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet6} name="linearfeet6" />
-                                                {/* placeholder={this.state.linearfeet6} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet6} name="squarefeet6"  readOnly />
-                                                {/* placeholder={this.state.squarefeet6} */}
-                                            </FormGroup>
-                                        </div>
-                                        <div className="orderOptionsSpecsSmall">
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty7} name="qty7" />
-                                            </FormGroup>
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch7} name="inch7" />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm7} name="mm7"  readOnly/>
-                                                {/* placeholder={this.state.mm7} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag7} name="tag7" onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet7} name="linearfeet7" />
-                                                {/* placeholder={this.state.linearfeet7} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet7} name="squarefeet7"  readOnly />
-                                                {/* placeholder={this.state.squarefeet7} */}
-                                            </FormGroup>
-                                        </div>
-                                        <div className="orderOptionsSpecsSmall">
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty8} name="qty8" />
-                                            </FormGroup>
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch8} name="inch8" />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm8} name="mm8"  readOnly/>
-                                                {/* placeholder={this.state.mm8} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag8} name="tag8" onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet8} name="linearfeet8" />
-                                                {/* placeholder={this.state.linearfeet8} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet8} name="squarefeet8"  readOnly />
-                                                {/* placeholder={this.state.squarefeet8} */}
-                                            </FormGroup>
-                                        </div>
-                                        <div className="orderOptionsSpecsSmall">
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty9} name="qty9" />
-                                            </FormGroup>
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch9} name="inch9" />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm9} name="mm9"  readOnly/>
-                                                {/* placeholder={this.state.mm9} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag9} name="tag9" onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet9} name="linearfeet9" />
-                                                {/* placeholder={this.state.linearfeet9} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet9} name="squarefeet9"  readOnly />
-                                                {/* placeholder={this.state.squarefeet9} */}
-                                            </FormGroup>
-                                        </div>
-                                        <div className="orderOptionsSpecsSmall">
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.qty10} name="qty10" />
-                                            </FormGroup>
-                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.inch10} name="inch10" />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.mm10} name="mm10"  readOnly/>
-                                                {/* placeholder={this.state.mm10} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.tag10} name="tag10" onChange={this.handleChange} />
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.props.obj.linearfeet10} name="linearfeet10" />
-                                                {/* placeholder={this.state.linearfeet10} */}
-                                            </FormGroup>
-                                            <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.props.obj.squarefeet10} name="squarefeet10"  readOnly />
-                                                {/* placeholder={this.state.squarefeet10} */}
-                                            </FormGroup>
-                                        </div>
-                                    </div>
-                                    <div className="orderOptionsFlashingsMainContainer">
-                                        <br/><br/><br/><br/><br/><br/>
-                                        <h2 className="orderOptionsTitle">FLASHINGS:</h2>
-                                        <div className="orderOptionsFlashingsContainerSmall">
-                                            {this.props.obj.hookdrip1?<FormGroup className="orderOptionsFlashingsContainer2"> 
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FHook%20Drip.jpg?alt=media&token=128c0549-17d9-45a3-b2a7-bc365f5884de"/>
-                                                <CustomInput
-                                                    className="orderOptionsFlashingsInput" 
-                                                    // name={this.state.obj.hookdrip1}
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // onChange={this.handleChange}
-                                                    value={this.props.obj.hookdrip1}
-                                                    />
-                                            </FormGroup>:''}
-                                            {this.props.obj.hookdripsteppitch?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FHook%20Drip%20for%20Step%20Pitch.jpg?alt=media&token=f65e7428-d232-44d5-a98c-575772c14c33"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="hookdripsteppitch"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.hookdripsteppitch}
-                                                    />
-                                            </FormGroup>:''}
-                                            {this.props.obj.gabbleRake1?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FGable%20Rake%201.jpg?alt=media&token=2168f699-830a-44fd-9436-b723263b012f"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="gabbleRake1"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.gabbleRake1}
-                                                    />
-                                            </FormGroup>:''}
-                                            {this.props.obj.gabbleRake2?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FGable%20Rake%202.jpg?alt=media&token=bb75ffd9-207c-47f4-bd34-9da4b7e2c639"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="gabbleRake2"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.gabbleRake2}
-                                                    />
-                                            </FormGroup>:''}
-                                            {this.props.obj.gabbleRake3?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FGable%20Rake3.jpg?alt=media&token=136150c3-5ebe-478d-9047-f3c252b61610"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="gabbleRake3"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.gabbleRake3}
-                                                    />
-                                            </FormGroup>:''}
-                                            {this.props.obj.sidewall1?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FSide%20Wall1.jpg?alt=media&token=976350de-e6df-448e-ac75-c01286d7a46f"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="sidewall1"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.sidewall1}
-                                                    />
-                                            </FormGroup>:''}
-                                            {this.props.obj.sidewall2?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FSide%20Wall2.jpg?alt=media&token=738b3bd2-35cb-4d21-89c4-d0abc76d1095"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="sidewall2"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.sidewall2}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.endwall1?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FEnd%20Wall1.jpg?alt=media&token=5b64a623-4628-41df-b181-c79a38337da2"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="endwall1"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.endwall1}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.endWall2?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FEnd%20Wall2.jpg?alt=media&token=7f97894b-5d52-40e4-b7e6-618c9b6c936f"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.endWall2}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.endwall3?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FEnd%20Wall3.jpg?alt=media&token=26ec8677-267b-4db0-8f3a-1698501391be"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="endwall3"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.endwall3}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.transition1?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FTransition1.jpg?alt=media&token=34056558-c020-4562-892c-fd66e759def0"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="transition1"
-                                                    onChange={this.handleChange} 
-                                                    value={this.props.obj.transition1}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.transition2?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FTransition2.jpg?alt=media&token=a5e7befb-9a90-415a-81bc-c5fdb15c2242"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="transition2"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.transition2}/>
-                                            </FormGroup>:""}
-                                            {this.props.obj.transition3?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FTransition3.jpg?alt=media&token=966d4436-fb81-491d-ab8b-f30b976224f8"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="transition3"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.transition3}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.peakcap1?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FPeak%20Cap1.jpg?alt=media&token=c14face5-939d-4285-ba3e-50bc28c90575"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="peakcap1"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.peakcap1}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.peakcap2?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FPeak%20Cap2.jpg?alt=media&token=adec41f4-5187-465c-81ee-63d11bb3289e"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="peakcap2"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.peakcap2}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.peakcap3?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FPeak%20Cap3.jpg?alt=media&token=79a3bc42-e526-4153-9c33-178d3f9c7739"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="peakcap3"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.peakcap3}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.hip1?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FHIP1.jpg?alt=media&token=170717c2-e8b9-4217-a7af-aaac85fd64dd"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="hip1"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.hip1}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.hip2?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fhip2.jpg?alt=media&token=74c1af7f-f804-4478-a3e3-eb9669f76828"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="hip2"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.hip2}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.hip3?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fhip3.jpg?alt=media&token=d50c0ad5-953b-44e0-ba35-b003326b2952"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    placeholder="QTY"
-                                                    name="hip3"
-                                                    onChange={this.handleChange} 
-                                                    value={this.props.obj.hip3}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.ridge1?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fridge1.jpg?alt=media&token=981f9517-2c82-40a9-beb7-cf69ba5bc4ec"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="ridge1"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.ridge1}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.ridge2?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fridge2.jpg?alt=media&token=42040d63-9ae0-439b-8d51-9f0095cc6c33"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="ridge2"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.ridge2}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.ridge3?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FRidge3.jpg?alt=media&token=c2d35282-ed62-4b16-b814-3e399d172c13"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="ridge3"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.ridge3}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.ridge4?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fridge4.jpg?alt=media&token=fd08e06e-d95b-4af2-8c48-77249f122131"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="ridge4"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.ridge4}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.wvalley1?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fw%20valley1.jpg?alt=media&token=8c8d4a97-bc5d-49fc-87db-e932a50d4840"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="wvalley1"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.wvalley1}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.wvalley2?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fw%20valley%202.jpg?alt=media&token=5d48576e-9425-46b3-9034-9340d8e1a3d9"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="wvalley2"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.wvalley2}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.vvalley1?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fv%20valley1.jpg?alt=media&token=6119c876-4cf3-4bb5-bde6-6cec23327350"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="vvalley1"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.vvalley1}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.snowstop1?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FSnow%20Stop1.jpg?alt=media&token=2facc5b6-33fc-4478-a8c4-38118003f67a"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="snowstop1"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.snowstop1}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.cleat?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FCleat.jpg?alt=media&token=906047c9-a6c6-4da3-847a-dfc3c431f989"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="cleat"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.cleat}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.junderbarrel?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FJ%20-%20Under%20panel.jpg?alt=media&token=ce96a89a-53c9-48e8-baa0-e34700ee517d"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="junderbarrel"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.junderbarrel}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.zbaroverbarrel?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fz%20bar%20-%20over%20panel.jpg?alt=media&token=77f0411b-b731-484b-978d-205f25583889"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="zbaroverbarrel"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.zbaroverbarrel}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.perforatedjunderbarrel?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fperforated%20j%20under%20panel.jpg?alt=media&token=1054ddc7-a74b-463b-a798-ad667fab8587"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="perforatedjunderbarrel"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.perforatedjunderbarrel}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.perforatedzbaroverbarrel?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fperforated%20z%20bar%20over%20panel.jpg?alt=media&token=ebf74b6d-62e8-431f-bf19-5be893850b0e"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="perforatedzbaroverbarrel"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.perforatedzbaroverbarrel}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.backpan5?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fback%20pan%205'.jpg?alt=media&token=473c5f91-c50a-4cc1-b09d-b05eeec907bb"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="backpan5"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.backpan5}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.backpan10?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fback%20pan%2010'.jpg?alt=media&token=e4ee0ccb-3c4f-4171-9dd0-85affbbb6983"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="backpan10"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.backpan10}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.base1?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fbase1.jpg?alt=media&token=7380e3f3-febe-4850-b44c-3487c570d593"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="base1"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.base1}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.base2?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fbase2.jpg?alt=media&token=799df40c-cb74-4f4c-9be0-43f771c44adb"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="base2"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.base2}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.base3?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fbase3.jpg?alt=media&token=97107a41-d31b-4ef8-91c0-ce95afac08d9"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="base3"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.base3}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.windowheader?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fwindow%20header.jpg?alt=media&token=e129e120-0493-4b39-bcc6-6f43fd743714"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="windowheader"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.windowheader}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.windowreverse?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fwindow%20reverse.jpg?alt=media&token=46cde2e8-b918-415b-aef6-92ea65c45988"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="windowreverse"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.windowreverse}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.walltransition?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fwall%20transition.jpg?alt=media&token=8d8a0c06-26ae-4882-89db-ae0dea8dd7e9"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="walltransition"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.walltransition} />
-                                            </FormGroup>:''}
-                                            {this.props.obj.jtrim1?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fj%20trim1.jpg?alt=media&token=44dbbede-3e6d-4e34-a0de-ae21918f4172"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="jtrim1"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.jtrim1}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.jtrim2?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Fj%20trim2.jpg?alt=media&token=0aae4a79-370e-45b2-96e6-8ce6e18d2a92"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="jtrim2"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.jtrim2}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.jtrim3?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F2%20piece%20jtrim3.jpg?alt=media&token=756efa31-2396-4d91-97d2-4be22e4f8bcd"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="jtrim3"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.jtrim3}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.transition?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Ftransition.jpg?alt=media&token=42c3faae-0e29-4d10-9bfd-63bbd842ea9f"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="transition"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.transition}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.outsidecorner1?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Foutside%20corner1.jpg?alt=media&token=02b739c0-bbf2-49bc-9b7d-bb223cbf2b26"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="outsidecorner1"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.outsidecorner1}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.insidecorner1?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Finside%20corner1.jpg?alt=media&token=882c02f5-ea61-4ca3-beb3-745e1043599d"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="insidecorner1"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.insidecorner1}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.outsidecorner2?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Foutisde%20corner2.jpg?alt=media&token=151ca8a2-a7d7-4f05-87cc-d0f523996f3f"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="outsidecorner2"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.outsidecorner2}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.insidecorner2?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Finside%20corner%202.jpg?alt=media&token=43d76f94-970c-4389-a0fe-3acf2b433ea3"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="insidecorner2"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.insidecorner2}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.outsidecorner3?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Foutside%20corner3.jpg?alt=media&token=d93d7683-5b29-4ac8-a19b-3ba3ab2f7315"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="outsidecorner3"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.outsidecorner3}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.insidecorner3?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2Finside%20corner%203.jpg?alt=media&token=f1794e40-01aa-4b20-bda9-bfbda9613cf1"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="insidecorner3"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.insidecorner3}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.outsidecorner4?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F2%20piece%20outside%20corner%204.jpg?alt=media&token=0f7b3af5-4dfe-4aa2-89b4-ba3e7dd7372c"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="outsidecorner4"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.outsidecorner4}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.insidecorner4?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F2%20piece%20inside%20corner%204.jpg?alt=media&token=51b3c95b-eb40-4842-8fc6-1e980c084437"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="insidecorner4"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.insidecorner4}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.standing290?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F%23290.jpg?alt=media&token=6c68de20-0c63-4945-889e-e23a542e79f1"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="standing290"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.standing290}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.standing291?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F%23291.jpg?alt=media&token=1cf9db98-49c0-428e-939e-c7e6580b254c"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="standing291"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.standing291}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.standing292?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F292.jpg?alt=media&token=3ed2147e-208e-44fc-84d9-f86b405f2c15"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="standing292"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.standing292}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.standing293?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F293.jpg?alt=media&token=620e55ed-13f2-4a99-9fae-762cd5fcba37"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="standing293"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.standing293}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.standing294?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F294.jpg?alt=media&token=111aa019-7325-40c0-bf5b-879d8e0b31ab"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="standing294"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.standing294}/>
-                                            </FormGroup>:''}
-                                            {this.props.obj.standing295?<FormGroup className="orderOptionsFlashingsContainer2">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2F295.jpg?alt=media&token=013a0246-9ad8-49e1-b8f5-a353e8f2f05a"/>
-                                                <CustomInput 
-                                                    className="orderOptionsFlashingsInput"
-                                                    type="text"
-                                                    // placeholder="QTY"
-                                                    // name="standing295"
-                                                    // onChange={this.handleChange} 
-                                                    value={this.props.obj.standing295}/>
-                                            </FormGroup>:''}
-                                        </div>
-                                    </div>
-                                    <h2 className="orderOptionsTitle">ACCESSORIES:</h2>
-                                    <div className="orderOptionsFlashingsContainerSmall">
-                                        {this.props.obj.metalDrillScrews?<FormGroup className="orderOptionsFlashingsContainer"> 
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fmetal%20drill%20screws.png?alt=media&token=def7c31f-bab7-430a-aac1-c6686b9eb621"/>
-                                                <CustomInput
-                                                    className="orderOptionsAccessoriesInput" 
-                                                    name="metalDrillScrews"
-                                                    type="text"
-                                                    id="annoying"
-                                                    // placeholder="QTY"
-                                                    value={this.props.obj.metalDrillScrews}
-                                                    onChange={this.handleChange}
-                                                    />
-                                            </FormGroup>:''}
-                                            {this.props.obj.woodGripScrews?<FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fwoodgrip%20screws.png?alt=media&token=bedb64c8-3ace-4697-8bd6-10e6b6ee4db2"/>
-                                                <CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    // placeholder="QTY"
-                                                    value={this.props.obj.woodGripScrews}
-                                                    name="woodGripScrews"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>:''}
-                                            {this.props.obj.syntheticHighTempCover?<FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fsynthetic%20high%20temp%20cover.png?alt=media&token=175a4dbb-40b2-43b5-92f2-eb31cb839e7c"/>
-                                                <CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    // placeholder="QTY"
-                                                    value={this.props.obj.syntheticHighTempCover}
-                                                    name="syntheticHighTempCover"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>:''}
-                                            {/* <FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fpeel%20%26%20stick%20high%20temp%20cover.png?alt=media&token=7bfec47d-cb9b-40c3-b843-b93811e530f2"/>
-                                                <CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    placeholder="QTY"
-                                                    name="peel&StickHighTempCover"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup> */}
-                                            {this.props.obj.tubeSealant?<FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Ftube%20sealant.png?alt=media&token=bf1baf8a-beac-461e-af91-7fa9c12695e6"/>
-                                                <CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    // placeholder="QTY"
-                                                    value={this.props.obj.tubeSealant}
-                                                    name="tubeSealant"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>:''}
-                                            {this.props.obj.butylTape?<FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fbutyl%20tape.png?alt=media&token=24398d7f-af89-4872-82fd-d9286875a3cb"/>
-                                                <CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    // placeholder="QTY"
-                                                    value={this.props.obj.butylTape}
-                                                    name="butylTape"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>:''}
-                                            {this.props.obj.plumbingBoots?<FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fplumbing%20boots.png?alt=media&token=1db3c74a-c476-4596-b4b6-0c286a1cc006"/>
-                                                <CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    // placeholder="QTY"
-                                                    value={this.props.obj.plumbingBoots}
-                                                    name="plumbingBoots"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>:''}
-                                            {this.props.obj.flexOVent?<FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fflex-o-vent.png?alt=media&token=c1e81e0f-c6a2-48fd-84be-6952ba69aadf"/>
-                                                <CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    // placeholder="QTY"
-                                                    value={this.props.obj.flexOVent}
-                                                    name="flexOVent"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>:''}
-                                            {this.props.obj.profileOuterClosure?<FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fprofile%20outer%20closure.png?alt=media&token=836d6b46-1e94-45a5-aea2-6ce4c69d37a3"/>
-                                                <CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    // placeholder="QTY"
-                                                    value={this.props.obj.profileOuterClosure}
-                                                    name="profileOuterClosure"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>:''}
-                                            {this.props.obj.profileInnerClosure?<FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fprofile%20inner%20closure.png?alt=media&token=a799aa5a-55a3-41d9-9a47-a4565e06e6c5"/>
-                                                <CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    // placeholder="QTY"
-                                                    value={this.props.obj.profileInnerClosure}
-                                                    name="profileInnerClosure"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>:''}
-                                            {this.props.obj.lowProfileRidgeVent?<FormGroup className="orderOptionsFlashingsContainer">
-                                                <img className="orderOptionsFlashingsImage" src="https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Flow%20profile%20ridge%20vent.png?alt=media&token=18d4aaaf-d88f-4cda-96ee-1addef31a649"/>
-                                                <CustomInput 
-                                                    className="orderOptionsAccessoriesInput"
-                                                    type="text"
-                                                    id="annoying"
-                                                    // placeholder="QTY"
-                                                    value={this.props.obj.lowProfileRidgeVent}
-                                                    name="lowProfileRidgeVent"
-                                                    onChange={this.handleChange} />
-                                            </FormGroup>:''}
-                                        </div>
-                                        <br/><br/><br/><br/>
-                                        <FormGroup className="productDisclaimerFG">
-                                            <p className="disclaimerTitle">Please note by placing an order with Jay’s Metal Products Ltd. you (THE CUSTOMER) are agreeing to the following terms and conditions:</p>
-                                            <ul>
-                                                <li>Jay’s Metal Products Ltd. recommends that prior to the installation of panels, the protective film is removed from the panel to prevent any accidents.</li>
-                                                <li>ALL orders are custom therefore are considered final sale.</li>
-                                                <li>Please refer to our delivery page for partnered delivery services.</li>
-                                                <li>If special crating is required, it may be subject to additional costs.</li>
-                                                <li>Customers are responsible for ensuring that products are deemed acceptable to their standards before removing the product from the facility. Upon removal from Jay’s Metal Products facility, damages incurred to the product are not covered by Jay’s Metal Products Ltd.</li>
-                                                <li>Jay’s Metal Products Ltd. is not responsible for defects to the product during installation.</li>
-                                            </ul>
-                                            <CustomInput type="checkbox" className="productDisclaimer"/>
-                                            <Label>I accept terms and services</Label>
-                                    </FormGroup>
-                                    <Button className="contactButton" onClick={this.printPage}><p className="contactButtonText">Print</p></Button> 
-                                    <Button className="contactButton"><p className="contactButtonText">Submit</p></Button>
-                                </Form>
-                            </div>
-                </div>
-            </div>
+                <Document className="orderOptionsContentForm" >
+                <Page size="A4" style={styles.page} wrap>
+
+                    <View fixed style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: "flex", justifyContent: 'space-between', alignItems: 'center', marginTop: '20px', marginBottom: '8px', flexDirection: 'row'}}>
+                        <View style={{display: 'flex', alignItems: 'center', flexDirection: 'row'}}>
+                            <Text style={{fontWeight: 'bold', fontSize: '8px'}}>CUSTOMER: </Text>
+                            {this.state.customerName?
+                            <Text 
+                                type="text"
+                                style={{fontWeight: "bold", fontSize: '14px' }}
+                                name="customerName" 
+                                // value=
+                                >{this.state.customerName}</Text>:
+                                <Text 
+                                type="text"
+                                // style={styles.orderOptionsTextInput21}
+                                style={{fontWeight: 'bold', fontSize: '14px'}}
+                                name="customerName" 
+                                placeholder="Customer Name"                                    
+                            ></Text>}
+                        </View>
+                        <View style={{display: 'flex', alignItems: 'center', flexDirection: 'row'}}>
+                            <Text style={{fontWeight: "bold", fontSize: '14px' }}>COLOR: </Text>
+                            <Text                                                 
+                            style={{fontWeight: "bold", fontSize: '14px' }}
+                            className="orderOptionsSpecsInput" >{this.props.obj.color}
+                            </Text>
+                        </View>
+                        <View style={{display: 'flex', alignItems: 'center', flexDirection: 'row'}}>
+                            <Text style={{fontWeight: "bold", fontSize: '14px' }}>GA: </Text>
+                            <Text                                                 
+                            style={{fontWeight: "bold", fontSize: '14px' }}
+                            className="orderOptionsSpecsInput" >{this.props.obj.ga}
+                            </Text>
+                        </View>
+                        
+                    </View>
+                    <View style={{width: '80%', borderTop: '1px solid black', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto'}} fixed>
+
+                    </View>
+
+                    {/* Header */}
+                    <View style={styles.headerV1}>
+                        <View style={styles.orderOptionsTextForm2}>
+                            <View style={{display: 'flex', alignItems: 'center', flexDirection: 'row', marginBottom: "30px", marginTop: '10px'}}>
+                                <Text style={{fontSize: "24px", fontWeight: 400, color: 'black', textAlign: 'center'}}>Interlock 100</Text>
+                                <Text style={{fontWeight: 400, fontSize: "14px", marginTop: '20px', textAlign: 'right', marginRight: '170px'}}>#___________</Text>
+                            </View>
+                            <View style={styles.headerF}>
+                                <View style={styles.orderOptionsTextFormSmall2}>
+                                    <Text style={{width: '30%', textAlign: 'left', fontWeight: 600, fontSize: 14, color: 'black'}}>Name:</Text>
+                                    {this.state.customerName?
+                                    <Text 
+                                        type="text"
+                                        style={styles.orderOptionsTextInput21}
+                                        name="customerName" 
+                                        >{this.state.customerName}</Text>:
+                                        <Text 
+                                        type="text"
+                                        style={{
+                                            width: "70%",
+                                            backgroundColor: 'white',
+                                            marginRight: '10px',
+                                            padding: '8px 4px',
+                                            fontSize: '12px',
+                                            border: '1px solid black',
+                                        }}
+                                        name="customerName" 
+                                        placeholder="Customer Name"                                    
+                                    ></Text>}
+                                </View>
+                                <View style={styles.orderOptionsTextFormSmall2}>
+                                    <Text style={{width: '30%', fontWeight: 600, fontSize: 14, textAlign: 'left', color: 'black'}}>PO:</Text>
+                                    {this.props.obj.po?
+                                    <Text 
+                                        type="text"
+                                        style={styles.orderOptionsTextInput2}
+                                        name="po"
+                                        >{this.props.obj.po}</Text>:<Text 
+                                        type="text"
+                                        style={{
+                                            width: "70%",
+                                            backgroundColor: 'white',
+                                            border: '1px solid black',
+                                            fontSize: '12px',
+                                            padding: '8px 4px'
+                                        }}
+                                        placeholder="PO"    
+                                    ></Text>}
+                                </View>
+                            </View>
+                            <View style={styles.headerF}>
+                                <View style={styles.orderOptionsTextFormSmall2}>
+                                    <Text style={{width: '30%', fontWeight: 600, fontSize: 14, textAlign: 'left', color: 'black'}}>Phone:</Text>
+                                    {this.props.obj.phone?
+                                    <Text 
+                                        type="phone"
+                                        style={styles.orderOptionsTextInput21}
+                                        name="phone"
+                                        >{this.props.obj.phone}</Text>:<Text 
+                                        type="phone"
+                                        style={{
+                                            width: "70%",
+                                            backgroundColor: 'white',
+                                            marginRight: '10px',
+                                            padding: '8px 4px',
+                                            fontSize: '12px',
+                                            border: '1px solid black',
+                                        }}
+                                        placeholder="Phone"
+                                    ></Text>}
+                                </View>
+                                <View style={styles.orderOptionsTextFormSmall2}>
+                                    <Text style={{width: '30%', fontWeight: 600, fontSize: 14, textAlign: 'left', color: 'black'}}>Email:</Text>
+                                    {this.props.obj.email?
+                                    <Text 
+                                        type="email"
+                                        style={styles.orderOptionsTextInput2}
+                                        name="email"
+                                        >{this.props.obj.email}</Text>:<Text 
+                                        type="email"
+                                        style={{
+                                            width: "70%",
+                                            backgroundColor: 'white',
+                                            border: '1px solid black',
+                                            fontSize: '12px',
+                                            padding: '8px 4px'
+                                        }}
+                                        placeholder="Email Address"
+                                    ></Text>}
+                                </View>
+                            </View>
+                            <View style={{marginTop: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'row'}}>
+                                <Text style={{width: '20%', fontWeight: 600, fontSize: 14, textAlign: 'left', color: 'black'}}>Address:</Text>
+                                {this.props.obj.address?
+                                <Text 
+                                    type="text"
+                                    style={{
+                                        width: "80%",
+                                        backgroundColor: 'white',
+                                        padding: '2px 4px',
+                                        fontSize: '12px',
+                                        border: '1px solid black',
+                                    }}
+                                    >{this.props.obj.address}</Text>:<Text 
+                                    type="text"
+                                    style={{
+                                        width: "80%",
+                                        backgroundColor: 'white',
+                                        padding: '8px 4px',
+                                        fontSize: '12px',
+                                        border: '1px solid black',
+                                    }}
+                                    placeholder="Customer Address"
+                                ></Text>}
+                            </View>
+                        </View>
+                    </View>
+                
+
+                    {/* below header */}
+                    <View style={{width: '100%'}}> 
+                        <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', marginTop: '20px', marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View>
+                                <Text style={{fontSize: 12}}>GA</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '66px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '2px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput" >{this.props.obj.ga}
+                                    {/* <option>-</option>
+                                    <option>29</option>
+                                    <option>26</option>
+                                    <option>24</option>
+                                    <option>22</option> */}
+                                </Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{fontSize: 12}}>Color</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '66px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '2px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput" >{this.props.obj.color}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{fontSize: 12}}>Film</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '66px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '2px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput" >{this.props.obj.protectivefilm}
+                                    {/* <option>-</option>
+                                    <option>Yes</option>
+                                    <option>No</option> */}
+                                </Text>
+                                <Text style={{color: 'grey', fontSize: '5',marginBottom: '-5px'}} className="protectiveFilmDisclaimer">10cents extra per sq/ft</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{fontSize: 12}}>Crating</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '66px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '2px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput" >{this.props.obj.specialcrating}
+                                    {/* <option>-</option>
+                                    <option>Yes</option>
+                                    <option>No</option> */}
+                                </Text>
+                                <Text style={{color: 'grey', fontSize: '5',marginBottom: '-5px'}} className="protectiveFilmDisclaimer">At extra cost</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{fontSize: 12}}>Finish</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '66px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '2px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput"  >{this.props.obj.finish}
+                                    {/* <option>-</option>
+                                    <option>12</option>
+                                    <option>16</option>
+                                    <option>20</option> */}
+                                </Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{fontSize: 12}}>Total LFt.</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '66px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.totallinearfeet}</Text>
+                                {/* this.state.totallinearfeet */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{fontSize: 12}}>Total SqFt.</Text>
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '66px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput" >{this.props.obj.totalsquarefeet}</Text>
+                                {/* placeholder={this.state.totalsquarefeet} */}
+                            </View>
+                        </View>
+                        <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{ backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>QTY</Text>
+                                {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty}</Text> */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{ backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>Inch</Text>
+                                {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch}</Text> */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{ backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>mm</Text>
+                                {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm}</Text> */}
+                                {/* placeholder={this.state.mm} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{ backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>Description</Text>
+                                {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag}</Text> */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{ backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>LFt.</Text>
+                                {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet}</Text> */}
+                                {/* placeholder={this.state.linearfeet} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{ backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>SqFt.</Text>
+                                {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet}</Text> */}
+                                {/* placeholder={this.state.squarefeet} */}
+                            </View>
+                        </View>
+                        <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet}</Text>
+                            </View>
+                        </View>
+                        
+                        <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View onChange={this.handleChange} className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty2}</Text>
+                            </View>
+                            <View onChange={this.handleChange} className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch2}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm2}</Text>
+                                {/* placeholder={this.state.mm2} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag2}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet2}</Text>
+                                {/* placeholder={this.state.linearfeet2} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet2}</Text>
+                                {/* placeholder={this.state.squarefeet2} */}
+                            </View>
+                        </View>
+                        
+                        <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty3}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch3}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm3}</Text>
+                                {/* placeholder={this.state.mm3} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag3}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet3}</Text>
+                                {/* placeholder={this.state.linearfeet3} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet3}</Text>
+                                {/* placeholder={this.state.squarefeet3} */}
+                            </View>
+                        </View>
+                        <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty4}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch4}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm4}</Text>
+                                {/* placeholder={this.state.mm4} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag4}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet4}</Text>
+                                {/* placeholder={this.state.linearfeet4} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet4}</Text>
+                                {/* placeholder={this.state.squarefeet4} */}
+                            </View>
+                        </View>
+                        <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.qty5}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch5}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm5}</Text>
+                                {/* placeholder={this.state.mm5} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag5}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet5}</Text>
+                                {/* placeholder={this.state.linearfeet5} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet5}</Text>
+                                {/* placeholder={this.state.squarefeet5} */}
+                            </View>
+                        </View>
+                        <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty6}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch6}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm6}</Text>
+                                {/* placeholder={this.state.mm6} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag6}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet6}</Text>
+                                {/* placeholder={this.state.linearfeet6} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet6}</Text>
+                                {/* placeholder={this.state.squarefeet6} */}
+                            </View>
+                        </View>
+                        <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty7}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch7}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm7}</Text>
+                                {/* placeholder={this.state.mm7} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag7}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet7}</Text>
+                                {/* placeholder={this.state.linearfeet7} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet7}</Text>
+                                {/* placeholder={this.state.squarefeet7} */}
+                            </View>
+                        </View>
+                        <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty8}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch8}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm8}</Text>
+                                {/* placeholder={this.state.mm8} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag8}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet8}</Text>
+                                {/* placeholder={this.state.linearfeet8} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet8}</Text>
+                                {/* placeholder={this.state.squarefeet8} */}
+                            </View>
+                        </View>
+                        <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty9}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch9}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm9}</Text>
+                                {/* placeholder={this.state.mm9} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag9}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.linearfeet9}</Text>
+                                {/* placeholder={this.state.linearfeet9} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.squarefeet9}</Text>
+                                {/* placeholder={this.state.squarefeet9} */}
+                            </View>
+                        </View>
+                        <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.qty10}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.inch10}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.mm10}</Text>
+                                {/* placeholder={this.state.mm10} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.tag10}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.linearfeet10}</Text>
+                                {/* placeholder={this.state.linearfeet10} */}
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.squarefeet10}</Text>
+                                {/* placeholder={this.state.squarefeet10} */}
+                            </View>
+                        </View>
+                        {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty11}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch11}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm11}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag11}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet11}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet11}</Text>
+                            </View>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty12}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch12}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm12}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag12}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet12}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet12}</Text>
+                            </View>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty13}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch13}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm13}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag13}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet13}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet13}</Text>
+                            </View>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty14}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch14}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm14}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag14}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet14}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet14}</Text>
+                            </View>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty15}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch15}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm15}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag15}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet15}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet15}</Text>
+                            </View>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty16}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch16}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm16}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag16}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet16}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet16}</Text>
+                            </View>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty17}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch17}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm17}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag17}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet17}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet17}</Text>
+                            </View>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty18}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch18}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm18}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag18}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet18}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet18}</Text>
+                            </View>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty19}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch19}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm19}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag19}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet19}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet19}</Text>
+                            </View>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty20}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch20}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm20}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag20}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet20}</Text>
+                            </View>
+                            <View className="orderOptionsSpecsFG2">
+                                <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet20}</Text>
+                            </View>
+                        </View>:<View style={{display: 'none'}}></View>}
+                    </View>
+
+
+                    {/* Flashings */}
+                
+                    {/* <View style={styles.orderOptionsFlashingsMainContainer} wrap={false}> */}
+                        {this.props.obj.sa101||this.props.obj.sa102||this.props.obj.sa104?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa101?<View style={styles.orderOptionsFlashingsContainer3}> 
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F101.jpg?alt=media&token=64c9587d-e7e3-4531-8473-f19d4890eb5a"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa101}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa102?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F102.jpg?alt=media&token=3aa8605c-fbb5-45df-a02b-981d6517ea95"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa102}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa104?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F104.jpg?alt=media&token=19fe9ad5-91ca-4266-a3c2-f858e4ff84e3"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa104}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa105||this.props.obj.sa106||this.props.obj.sa108?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa105?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F105.jpg?alt=media&token=7be981b4-3a74-4c37-8058-29415440e906"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa105}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa106?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F106.jpg?alt=media&token=542cf440-e597-4f00-9f2a-6fb7bfbde114"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa106}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa108?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F108.jpg?alt=media&token=cd662a88-879a-43a0-9e80-0d7fc2d4010c"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa108}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa109||this.props.obj.sa112||this.props.obj.sa113?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa109?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F109.jpg?alt=media&token=fb96c910-c1da-4e7d-a055-41af52ec0673"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa109}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa112?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F112.jpg?alt=media&token=2e728d82-d930-457a-ab80-a4c897caeca6"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa112}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa113?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F113.jpg?alt=media&token=0b3e4158-a8f6-4675-a591-07525a95cb5e"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa113}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa114||this.props.obj.sa117||this.props.obj.sa118?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa114?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F114.jpg?alt=media&token=102d6938-7612-4f6c-8ec5-862ccf4c4954"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa114}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa117?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F117.jpg?alt=media&token=5fdc68a2-75a5-439f-a651-03851d1172e3"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa117}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa118?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F118.jpg?alt=media&token=3ecae168-9c22-4da4-8a8c-aac2c7a1dca6"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa118}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa119||this.props.obj.sa121||this.props.obj.sa121?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa119?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F119.jpg?alt=media&token=9c31cb8f-b95e-43ec-b654-e5cd6ffda59d"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa119}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa121?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F121.jpg?alt=media&token=5b59e207-cac5-4ad1-84af-4e0ff81afb0c"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa121}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa122?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F122.jpg?alt=media&token=53f535b9-230c-4180-bb64-49a4b04d2e04"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa122}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa123||this.props.obj.sa123||this.props.obj.sa123?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa126?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F123.jpg?alt=media&token=dc6baf56-5bd1-4051-8e08-753db3c492a5"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa126}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa127?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F126.jpg?alt=media&token=cdb09e80-828c-41e7-bbad-73a1d96c4873"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa127}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa128?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F127.jpg?alt=media&token=ae6040db-1154-441f-81b9-3162a8965739"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa128}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa128||this.props.obj.sa131||this.props.obj.sa132?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa131?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F128.jpg?alt=media&token=e91d01f4-d0a7-412c-8968-76cfdb2953c1"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa131}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa132?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F131.jpg?alt=media&token=326f742a-9b07-46f7-92ac-d1e2c82ca34f"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa132}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa133?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F132.jpg?alt=media&token=20d67532-d29d-4635-9760-69bc7fdeaddf"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa133}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa133||this.props.obj.sa134||this.props.obj.sa137?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa134?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F133.jpg?alt=media&token=ba6280ac-6167-43da-a905-3205d43e4d17"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa134}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa137?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F134.jpg?alt=media&token=22bda750-963f-43ca-9feb-6d5b772eac19"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa137}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa138?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F137.jpg?alt=media&token=328a7468-5ecd-440f-9936-7b022175f48a"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa138}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa138||this.props.obj.sa139||this.props.obj.sa140?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa139?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F138.jpg?alt=media&token=80d374c6-4e76-46e2-a058-41e30e246cfa"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa139}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa140?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F139.jpg?alt=media&token=fc21e6cd-d137-473f-bbc8-8d393ab1322d"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa140}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa143?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F140.jpg?alt=media&token=909da43f-e75f-451d-8c65-b572afc2fb43"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa143}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa143||this.props.obj.sa144||this.props.obj.sa147?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa144?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F143.jpg?alt=media&token=42d33f07-67d1-4718-b81f-f163c40ece41"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa144}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa147?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F144.jpg?alt=media&token=1b7457b8-8a1e-4802-913a-0b22e63a35a0"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa147}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa150?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F147.jpg?alt=media&token=de45732a-9bbb-4677-bddc-b27f8dc57a62"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa150}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style='none'></View>}
+                        {this.props.obj.sa150||this.props.obj.s151||this.props.obj.sa152?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa151?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F150.jpg?alt=media&token=bcb2e87a-d08d-401a-b31a-a0f4d5adfc79"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa151}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa152?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F151.jpg?alt=media&token=790d8e81-9f43-43e0-a894-29b3f596c7be"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa152}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa153?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F152.jpg?alt=media&token=d25a4c69-1d22-4975-b4b4-35f4646bb991"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa153}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa153||this.props.obj.sa154||this.props.obj.sa155?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa154?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F153.jpg?alt=media&token=25af4d81-cf85-41ab-80c7-02b5510a8900"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa154}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa155?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F154.jpg?alt=media&token=d04f658e-7b70-46cf-9115-6f84a28d3d4c"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa155}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa160?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F155.jpg?alt=media&token=7e6b4c55-15d5-4875-ab7a-e9bd17d0a657"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa160}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa160||this.props.obj.sa161||this.props.obj.sa162?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa161?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F160.jpg?alt=media&token=2a7a0ba9-cb23-4891-8e5d-ef349644aae6"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa161}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa162?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F161.jpg?alt=media&token=45ce9566-95bf-4776-b54f-9b3436c60834"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa162}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa165?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F162.jpg?alt=media&token=f6bb3f32-4de5-4f84-affd-48911746ca2b"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa165}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa165||this.props.obj.sa166||this.props.obj.sa169?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa166?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F165.jpg?alt=media&token=1a43bf35-7690-4456-b692-409d75f21c78"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa166}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa169?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F166.jpg?alt=media&token=851c441a-f3a1-43a4-accf-22c0ddaefafe"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa169}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa171?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F169.jpg?alt=media&token=e67d1af4-5d8f-4aa9-aaab-2e67516ec4d2"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa171}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa171||this.props.obj.sa172||this.props.obj.sa173?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa172?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F171.jpg?alt=media&token=d89547ba-5b90-4804-bda6-a4071bb97ba0"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa172}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa173?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F172.jpg?alt=media&token=ed629ba7-3c41-44f0-9cfa-fd5006c67b34"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa173}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa175?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F173.jpg?alt=media&token=729bbd10-c459-404b-93d6-e795835b0356"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa175}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa175||this.props.obj.sa180||this.props.obj.sa181?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa180?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F175.jpg?alt=media&token=ad0d74de-00e1-488f-9ff3-e6a65265c64f"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa180}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa181?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F180.jpg?alt=media&token=9aed4033-57dc-4f7e-9d61-4ae116b6fc2b"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa181}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa182?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F181.jpg?alt=media&token=fedb892d-227d-4880-8f54-f2f33f3dd7c9"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa182}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa182||this.props.obj.sa182||this.props.obj.sa184?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa183?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F182.jpg?alt=media&token=b53225cd-c180-4542-88e4-725796706eec"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa183}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa184?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F183.jpg?alt=media&token=d93f4574-a169-49dc-a77d-33abe0cc090e"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa184}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa185?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F184.jpg?alt=media&token=74d048d8-5336-44db-b4f3-75cf7a59fec1"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa185}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa185||this.props.obj.sa186||this.props.obj.sa187?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa186?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F185.jpg?alt=media&token=a8a76acc-64b3-4287-a071-b1adaf3a7bb3"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa186}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa187?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F186.jpg?alt=media&token=8e5087d7-fa86-45a4-ae1d-06f1484bad35"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa187}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa190?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F187.jpg?alt=media&token=16b9200d-bf0f-476d-b076-ac211f3711af"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa190}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa190||this.props.obj.sa191||this.props.obj.sa192?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa191?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F190.jpg?alt=media&token=def9a9dd-ef01-4c49-a63b-1dcdab0c2001"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa191}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa192?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F191.jpg?alt=media&token=9ca9350a-c4f3-4591-a254-aed4c63923c5"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa192}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa193?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F192.jpg?alt=media&token=2f9e1eb4-9e59-473f-bb43-b912de391c88"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa193}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa193||this.props.obj.sa194||this.props.obj.sa195?<View style={styles.orderOptionsFlashingsContainerSmall} wrap={false}>
+                        {this.props.obj.sa193?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "hhttps://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F193.jpg?alt=media&token=140f6a22-9acf-4ef3-9c05-97191b80966a"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa193}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa194?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F194.jpg?alt=media&token=43c8cef7-4f01-4128-b064-31b5cda9e9df"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa194}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.sa195?<View style={styles.orderOptionsFlashingsContainer3}>
+                            <Image style={styles.img59} cache={false} style={{border: '1px solid black'}} source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/standing%20seam%20100%2F195.jpg?alt=media&token=b92902e7-be6e-476c-a825-b6a250aae1f0"}}/>
+                            <Text style={styles.orderOptionsFlashingsInput3}>QTY: {this.props.obj.sa195}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                    </View>:<View style={{display: 'none'}}></View>}
+                    {/* </View> */}
+
+
+
+
+
+
+                        {/* Accessories */}
+                        <View style={styles.orderOptionsFlashingsMainContainera} break>
+                            <View style={styles.orderOptionsFlashingsContainerSmall} >
+                                <View  style={styles.flashDiv}>
+                                    <Text style={styles.flash}>ACCESSORIES</Text>
+                                </View>
+                            </View>
+                        </View>
+
+                    
+                        {this.props.obj.metalDrillScrewsthis||this.props.obj.woodGripScrewsthis||this.props.obj.syntheticHighTempCover?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}>
+                        {this.props.obj.metalDrillScrews?<View style={styles.orderOptionsFlashingsContainer31}> 
+                            <Image style={styles.img62} cache={false} style={{border: '1px solid black'}} 
+                            source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fmetal%20drill%20screws.png?alt=media&token=def7c31f-bab7-430a-aac1-c6686b9eb621"}} />
+                            <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.metalDrillScrews}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        { this.props.obj.woodGripScrews?<View style={styles.orderOptionsFlashingsContainer31}>
+                        <Image style={styles.img62} cache={false} style={{border: '1px solid black'}} 
+                            source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fwoodgrip%20screws.png?alt=media&token=bedb64c8-3ace-4697-8bd6-10e6b6ee4db2"}} />
+                            
+                            <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.woodGripScrews}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.syntheticHighTempCover?<View style={styles.orderOptionsFlashingsContainer31}>
+                        <Image style={styles.img62} cache={false} style={{border: '1px solid black'}} 
+                            source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fsynthetic%20high%20temp%20cover.png?alt=media&token=175a4dbb-40b2-43b5-92f2-eb31cb839e7c"}} />
+                            
+                            <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.syntheticHighTempCover}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.tubeSealantthis||this.props.obj.butylTapethis||this.props.obj.plumbingBoots?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}>
+                        {this.props.obj.tubeSealant?<View style={styles.orderOptionsFlashingsContainer31}>
+                        <Image style={styles.img62} cache={false} style={{border: '1px solid black'}} 
+                            source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Ftube%20sealant.png?alt=media&token=bf1baf8a-beac-461e-af91-7fa9c12695e6"}} />
+                            
+                            <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.tubeSealant}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.butylTape?<View style={styles.orderOptionsFlashingsContainer31}>
+                        <Image style={styles.img63} cache={false} style={{border: '1px solid black'}} 
+                            source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fbutyl%20tape.png?alt=media&token=24398d7f-af89-4872-82fd-d9286875a3cb"}} />
+                            
+                            <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.butylTape}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.plumbingBoots?<View style={styles.orderOptionsFlashingsContainer31}>
+                        <Image style={styles.img64} cache={false} style={{border: '1px solid black'}} 
+                            source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fplumbing%20boots.png?alt=media&token=1db3c74a-c476-4596-b4b6-0c286a1cc006"}} />
+                            
+                            <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.plumbingBoots}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.flexOVentthis||this.props.obj.profileOuterClosurethis||this.props.obj.profileInnerClosure?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}>
+                        {this.props.obj.flexOVent?<View style={styles.orderOptionsFlashingsContainer31}>
+                        <Image style={styles.img65} cache={false} style={{border: '1px solid black'}} 
+                            source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fflex-o-vent.png?alt=media&token=c1e81e0f-c6a2-48fd-84be-6952ba69aadf"}} />
+                            
+                            <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.flexOVent}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.profileOuterClosure?<View style={styles.orderOptionsFlashingsContainer31}>
+                        <Image style={styles.img66} cache={false} style={{border: '1px solid black'}} 
+                            source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fprofile%20outer%20closure.png?alt=media&token=836d6b46-1e94-45a5-aea2-6ce4c69d37a3"}} />
+                            
+                            <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.profileOuterClosure}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.profileInnerClosure?<View style={styles.orderOptionsFlashingsContainer31}>
+                        <Image style={styles.img67} cache={false} style={{border: '1px solid black'}} 
+                            source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Fprofile%20inner%20closure.png?alt=media&token=a799aa5a-55a3-41d9-9a47-a4565e06e6c5"}} />
+                            
+                            <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.profileInnerClosure}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}</View>:<View style={{display: 'none'}}></View>}
+                        {this.props.obj.lowProfileRidgeVent?<View style={styles.orderOptionsFlashingsContainerSmall}  wrap={false}>
+                        {this.props.obj.lowProfileRidgeVent?<View style={styles.orderOptionsFlashingsContainer31}>
+                        <Image style={styles.img68} cache={false} style={{border: '1px solid black'}} 
+                            source={{uri: "https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/colors%2Flow%20profile%20ridge%20vent.png?alt=media&token=18d4aaaf-d88f-4cda-96ee-1addef31a649"}} />
+                            
+                            <Text style={styles.orderOptionsFlashingsInput31}>QTY: {this.state.lowProfileRidgeVent}</Text>
+                        </View>:<View style={{display: 'none'}}></View>}
+                        </View>:<View style={{display: 'none'}}></View>}
+
+                    {/* Footer */}
+                    <View style={styles.productDisclaimerFG2} break>
+                        <View>
+                            <Text style={{fontWeight: 300, fontSize: "12px"}}>Please note by placing an order with Jay’s Metal Products Ltd. you (THE CUSTOMER) are agreeing to the following terms and conditions:</Text>
+                            <Text style={{fontWeight: 300, fontSize: "12px"}}>&nbsp;&nbsp;&nbsp;&nbsp;Jay’s Metal Products Ltd. recommends that prior to the installation of panels, the protective film is removed from the panel to prevent any accidents.</Text><Text></Text>
+                            <Text style={{fontWeight: 300, fontSize: "12px"}}>&nbsp;&nbsp;&nbsp;&nbsp;ALL orders are custom therefore are considered final sale.</Text><Text></Text>
+                            <Text style={{fontWeight: 300, fontSize: "12px"}}>&nbsp;&nbsp;&nbsp;&nbsp;Please refer to our delivery page for partnered delivery services.</Text><Text></Text>
+                            <Text style={{fontWeight: 300, fontSize: "12px"}}>&nbsp;&nbsp;&nbsp;&nbsp;If special crating is required, it may be subject to additional costs.</Text><Text></Text>
+                            <Text style={{fontWeight: 300, fontSize: "12px"}}>&nbsp;&nbsp;&nbsp;&nbsp;Customers are responsible for ensuring that products are deemed acceptable to their standards before removing the product from the facility. Upon removal from Jay’s Metal Products facility, damages incurred to the product are not covered by Jay’s Metal Products Ltd.</Text><Text></Text>
+                            <Text style={{fontWeight: 300, fontSize: "12px"}}>&nbsp;&nbsp;&nbsp;&nbsp;Jay’s Metal Products Ltd. is not responsible for defects to the product during installation.</Text>
+                        </View>
+                        <Text style={{fontWeight: 300, fontSize: "12px", marginTop: '20px'}}>_____________________</Text>
+                        <Text style={{fontWeight: 300, fontSize: "12px"}}>Customer Signature</Text>
+                    </View>
+                
+                </Page>
+            </Document>
         )
     }
 }
