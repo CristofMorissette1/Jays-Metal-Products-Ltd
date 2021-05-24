@@ -630,7 +630,7 @@ class Standingseam2 extends Component{
                         this.state.orderOptions
                         ? (
                             <div className="orderOptionsContent">
-                                <Form className="orderOptionsContentForm" onSubmit={this.handleSumbit} onClick={this.handleChange}>
+                                <Form className="orderOptionsContentForm" onSubmit={this.handleSumbit} onChange={this.handleChange} onClick={this.handleChange}>
                                     <div className="orderOptionsTextForm">
                                         <h2 className="orderOptionsTextFormTitle">Standing Seam 150</h2>
                                         <FormGroup className="orderOptionsTextFormSmall">
@@ -805,7 +805,7 @@ class Standingseam2 extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet} name="squarefeet" placeholder={this.state.squarefeet} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.squarefeet} name="squarefeet" onChange={this.handleChange} placeholder={this.state.squarefeet} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
