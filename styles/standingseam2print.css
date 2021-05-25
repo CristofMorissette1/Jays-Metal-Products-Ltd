@@ -8,7 +8,7 @@
     width: 80%;
     padding-top: 1%;
     margin-left: 1.5%;
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     padding-bottom: 2%;
 }
@@ -29,9 +29,16 @@
 }
 
 .orderOptionsTextInput2 {
-    width: 70%;
+    /* width: 70%;
+    height: 5vh;
+    margin-top: 2%; */
+}
+.orderOptionsTextInput211 {
+    width: 80%;
     height: 5vh;
     margin-top: 2%;
+    margin-left: -16px;
+    text-align: left;
 }
 
 .orderOptionsTextInputAddress {
@@ -41,48 +48,64 @@
 }
 
 .printLabel {
-    margin-right: 1%;
+    /* margin-right: 5%; */
+
 }
 
 .orderOptionsTextFormTitle2 {
     color: black;
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
     width: 100%;
     font-size: 300%;
     font-weight: 400;
+    /* border: 1px solid black; */
+    text-align: right;
+    margin-right: -280px;
 }
 
 .productDisclaimerFG2 {
-    width: 90%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 2.5%;
+    margin-top: 6.5%;
     margin-bottom: 0%;
     align-items: center;
-    margin-left: 25%;
-    margin-right: 25%;
-    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 1px solid black; */
+    font-weight: 600;
     padding: 1%
 }
 
 .orderOptionsFlashingsImage2 {
-    width: 90%;
+    width: 70%;
+}
+.orderOptionsFlashingsImage21 {
+    width: 100%;
 }
 
 .orderOptionsFlashingsImage3 {
     width: 100%;
 }
 
-.orderOptionsFlashingsInput3 {
+/* .orderOptionsFlashingsInput3 {
     position: absolute;
-    margin-top: 20.5%;
-    border: 1px solid black;
-    width: 25%;
+    margin-top: 16.8%;
+    border: 4px solid rgb(106, 106, 248);
+    width: 26.533%;
     display: flex;
     justify-content: center;
 }
+.orderOptionsFlashingsInput31 {
+    position: absolute;
+    margin-top: 16.8%;
+    border: 4px solid rgb(106, 106, 248);
+    width: 26.633%;
+    display: flex;
+    justify-content: center;
+} */
 
 .orderOptionsFlashingsInput4 {
     position: absolute;
@@ -102,11 +125,49 @@
     border: 1px solid black;
 }
 
-.orderOptionsFlashingsContainer3 {
-    width: 25%;
+/* .orderOptionsFlashingsContainer3 {
+    width: 33.333%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5%;
-    border: 1px solid black;
+    margin-top: 3%;
+    border: 2px solid #2E2A2B;
+    /* flex: 1; 
+    height: 230px;
+}
+.orderOptionsFlashingsContainer31 {
+    width: 33.333%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    height: 230px; */
+    /* border: 1px solid rgb(206, 192, 192); */
+/* } */
+
+/* .flashDiv{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-bottom: -40px;
+    margin-top: 30px; */
+    /* border: 2px solid red; */
+/* } */ 
+
+/* .flash{
+    font-weight: bold;
+    font-size: 20px; */
+    /* margin-top: ; */
+/* } */
+
+.img1{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/jays-metal-products.appspot.com/o/Standing%20Seam%20150%2FHook%20Drip.jpg?alt=media&token=128c0549-17d9-45a3-b2a7-bc365f5884de');
+    width: 100%;
+    background-size: contain;
+    height: 100%;
+}
+
+iframe{
+    height: 100vh;
+    width: 100%;
 }
