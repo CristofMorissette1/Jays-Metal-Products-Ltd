@@ -30,12 +30,12 @@ class StandingSeam3 extends Component{
             totallinearfeet: '',
             totalsquarefeet: '',
             weight: '',
-            qty: '',
-            inch: '',
+            qty: 0,
+            inch: 0,
             mm: '',
             specialcrating: '',
             tag: '',
-            linearfeet: '',
+            linearfeet: 0,
             squarefeet: '',
             qty2: '',
             inch2: '',
@@ -151,6 +151,186 @@ class StandingSeam3 extends Component{
             tag20: '',
             linearfeet20: '',
             squarefeet20: '',
+            qty21: '',
+            inch21: '',
+            mm21: '',
+            tag21: '',
+            linearfeet21: '',
+            squarefeet21: '',
+            qty22: '',
+            inch22: '',
+            mm22: '',
+            tag22: '',
+            linearfeet22: '',
+            squarefeet22: '',
+            qty23: '',
+            inch23: '',
+            mm23: '',
+            tag23: '',
+            linearfeet23: '',
+            squarefeet23: '',
+            qty24: '',
+            inch24: '',
+            mm24: '',
+            tag24: '',
+            linearfeet24: '',
+            squarefeet24: '',
+            qty25: '',
+            inch25: '',
+            mm25: '',
+            tag25: '',
+            linearfeet25: '',
+            squarefeet25: '',
+            qty26: '',
+            inch26: '',
+            mm26: '',
+            tag26: '',
+            linearfeet26: '',
+            squarefeet26: '',
+            qty27: '',
+            inch27: '',
+            mm27: '',
+            tag27: '',
+            linearfeet27: '',
+            squarefeet27: '',
+            qty28: '',
+            inch28: '',
+            mm28: '',
+            tag28: '',
+            linearfeet28: '',
+            squarefeet28: '',
+            qty29: '',
+            inch29: '',
+            mm29: '',
+            tag29: '',
+            linearfeet29: '',
+            squarefeet29: '',
+            qty30: '',
+            inch30: '',
+            mm30: '',
+            tag30: '',
+            linearfeet30: '',
+            squarefeet30: '',
+            qty31: '',
+            inch31: '',
+            mm31: '',
+            tag31: '',
+            linearfeet31: '',
+            squarefeet31: '',
+            qty32: '',
+            inch32: '',
+            mm32: '',
+            tag32: '',
+            linearfeet32: '',
+            squarefeet32: '',
+            qty33: '',
+            inch33: '',
+            mm33: '',
+            tag33: '',
+            linearfeet33: '',
+            squarefeet33: '',
+            qty34: '',
+            inch34: '',
+            mm34: '',
+            tag34: '',
+            linearfeet34: '',
+            squarefeet34: '',
+            qty35: '',
+            inch35: '',
+            mm35: '',
+            tag35: '',
+            linearfeet35: '',
+            squarefeet35: '',
+            qty36: '',
+            inch36: '',
+            mm36: '',
+            tag36: '',
+            linearfeet36: '',
+            squarefeet36: '',
+            qty37: '',
+            inch37: '',
+            mm37: '',
+            tag37: '',
+            linearfeet37: '',
+            squarefeet37: '',
+            qty38: '',
+            inch38: '',
+            mm38: '',
+            tag38: '',
+            linearfeet38: '',
+            squarefeet38: '',
+            qty39: '',
+            inch39: '',
+            mm39: '',
+            tag39: '',
+            linearfeet39: '',
+            squarefeet39: '',
+            qty40: '',
+            inch40: '',
+            mm40: '',
+            tag40: '',
+            linearfeet40: '',
+            squarefeet40: '',
+            qty41: '',
+            inch41: '',
+            mm41: '',
+            tag41: '',
+            linearfeet41: '',
+            squarefeet41: '',
+            qty42: '',
+            inch42: '',
+            mm42: '',
+            tag42: '',
+            linearfeet42: '',
+            squarefeet42: '',
+            qty43: '',
+            inch43: '',
+            mm43: '',
+            tag43: '',
+            linearfeet43: '',
+            squarefeet43: '',
+            qty44: '',
+            inch44: '',
+            mm44: '',
+            tag44: '',
+            linearfeet44: '',
+            squarefeet44: '',
+            qty45: '',
+            inch45: '',
+            mm45: '',
+            tag45: '',
+            linearfeet45: '',
+            squarefeet45: '',
+            qty46: '',
+            inch46: '',
+            mm46: '',
+            tag46: '',
+            linearfeet46: '',
+            squarefeet46: '',
+            qty47: '',
+            inch47: '',
+            mm47: '',
+            tag47: '',
+            linearfeet47: '',
+            squarefeet47: '',
+            qty48: '',
+            inch48: '',
+            mm48: '',
+            tag48: '',
+            linearfeet48: '',
+            squarefeet48: '',
+            qty49: '',
+            inch49: '',
+            mm49: '',
+            tag49: '',
+            linearfeet49: '',
+            squarefeet49: '',
+            qty50: '',
+            inch50: '',
+            mm50: '',
+            tag50: '',
+            linearfeet50: '',
+            squarefeet50: '',
             hookdrip1: '',
             hookdripsteppitch: '',
             gabbleRake1: '',
@@ -243,7 +423,7 @@ class StandingSeam3 extends Component{
     }
 
     printPage = e => {
-        e.preventDefault();
+        // e.preventDefault();
         const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, squarefeet, hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gabbleRake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
             this.state.status = false
             this.forceUpdate();
@@ -323,8 +503,103 @@ class StandingSeam3 extends Component{
         let linearFeet20 = (this.state.qty20 * this.state.inch20) / 12;
         let mmSize20 = this.state.inch20 * 25.4;
         let sqft20 = (this.state.finish / 12) * linearFeet20;
-        let sqft = sqft1 + sqft2 + sqft3 + sqft4 + sqft5 + sqft6 + sqft7 + sqft8 + sqft9 + sqft10+sqft11 + sqft12 + sqft13 + sqft14 + sqft15 + sqft16 + sqft17 + sqft18 + sqft19 + sqft20;
-        let totalLinear = linearFeet1 + linearFeet2 + linearFeet3 + linearFeet4 + linearFeet5 + linearFeet6 + linearFeet7 + linearFeet8 + linearFeet9 + linearFeet10+linearFeet11 + linearFeet12 + linearFeet13 + linearFeet14 + linearFeet15 + linearFeet16 + linearFeet17 + linearFeet18 + linearFeet19 + linearFeet20;
+        let linearFeet21 = (this.state.qty21 * this.state.inch21) / 12;
+        let mmSize21 = this.state.inch21 * 25.4;
+        let sqft21 = (this.state.finish / 12) * linearFeet21;
+        // sqft1 = (this.state.finish / 12) * linearFeet1;
+        let linearFeet22 = (this.state.qty22 * this.state.inch22) / 12;
+        let mmSize22 = this.state.inch22 * 25.4;
+        let sqft22 = (this.state.finish / 12) * linearFeet22;
+        let linearFeet23 = (this.state.qty23 * this.state.inch23) / 12;
+        let mmSize23 = this.state.inch23 * 25.4;
+        let sqft23 = (this.state.finish / 12) * linearFeet23;
+        let linearFeet24 = (this.state.qty24 * this.state.inch24) / 12;
+        let mmSize24 = this.state.inch24 * 25.4;
+        let sqft24 = (this.state.finish / 12) * linearFeet24;
+        let linearFeet25 = (this.state.qty25 * this.state.inch25) / 12;
+        let mmSize25 = this.state.inch25 * 25.4;
+        let sqft25 = (this.state.finish / 12) * linearFeet25;
+        let linearFeet26 = (this.state.qty26 * this.state.inch26) / 12;
+        let mmSize26 = this.state.inch26 * 25.4;
+        let sqft26 = (this.state.finish / 12) * linearFeet26;
+        let linearFeet27 = (this.state.qty27 * this.state.inch27) / 12;
+        let mmSize27= this.state.inch27 * 25.4;
+        let sqft27 = (this.state.finish / 12) * linearFeet27;
+        let linearFeet28 = (this.state.qty28 * this.state.inch28) / 12;
+        let mmSize28 = this.state.inch28 * 25.4;
+        let sqft28 = (this.state.finish / 12) * linearFeet28;
+        let linearFeet29 = (this.state.qty29 * this.state.inch29) / 12;
+        let mmSize29 = this.state.inch29 * 25.4;
+        let sqft29 = (this.state.finish / 12) * linearFeet29;
+        let linearFeet30 = (this.state.qty30 * this.state.inch30) / 12;
+        let mmSize30 = this.state.inch30 * 25.4;
+        let sqft30 = (this.state.finish / 12) * linearFeet30;
+        let linearFeet31 = (this.state.qty31 * this.state.inch31) / 12;
+        let mmSize31 = this.state.inch31 * 25.4;
+        let sqft31 = (this.state.finish / 12) * linearFeet31;
+        let linearFeet32 = (this.state.qty32 * this.state.inch32) / 12;
+        let mmSize32 = this.state.inch32 * 25.4;
+        let sqft32 = (this.state.finish / 12) * linearFeet32;
+        let linearFeet33 = (this.state.qty33 * this.state.inch33) / 12;
+        let mmSize33 = this.state.inch33 * 25.4;
+        let sqft33 = (this.state.finish / 12) * linearFeet33;
+        let linearFeet34 = (this.state.qty34 * this.state.inch34) / 12;
+        let mmSize34 = this.state.inch34 * 25.4;
+        let sqft34 = (this.state.finish / 12) * linearFeet34;
+        let linearFeet35 = (this.state.qty35 * this.state.inch35) / 12;
+        let mmSize35 = this.state.inch35 * 25.4;
+        let sqft35 = (this.state.finish / 12) * linearFeet35;
+        let linearFeet36 = (this.state.qty36 * this.state.inch36) / 12;
+        let mmSize36 = this.state.inch36 * 25.4;
+        let sqft36 = (this.state.finish / 12) * linearFeet36;
+        let linearFeet37 = (this.state.qty37 * this.state.inch37) / 12;
+        let mmSize37= this.state.inch37 * 25.4;
+        let sqft37 = (this.state.finish / 12) * linearFeet37;
+        let linearFeet38 = (this.state.qty38 * this.state.inch38) / 12;
+        let mmSize38 = this.state.inch38 * 25.4;
+        let sqft38 = (this.state.finish / 12) * linearFeet38;
+        let linearFeet39 = (this.state.qty39 * this.state.inch39) / 12;
+        let mmSize39 = this.state.inch39 * 25.4;
+        let sqft39 = (this.state.finish / 12) * linearFeet39;
+        let linearFeet40 = (this.state.qty40 * this.state.inch40) / 12;
+        let mmSize40 = this.state.inch40 * 25.4;
+        let sqft40 = (this.state.finish / 12) * linearFeet40;
+        let linearFeet41 = (this.state.qty41 * this.state.inch41) / 12;
+        let mmSize41 = this.state.inch41 * 25.4;
+        let sqft41 = (this.state.finish / 12) * linearFeet41;
+        let linearFeet42 = (this.state.qty42 * this.state.inch42) / 12;
+        let mmSize42 = this.state.inch42 * 25.4;
+        let sqft42 = (this.state.finish / 12) * linearFeet42;
+        let linearFeet43 = (this.state.qty43 * this.state.inch43) / 12;
+        let mmSize43 = this.state.inch43 * 25.4;
+        let sqft43 = (this.state.finish / 12) * linearFeet43;
+        let linearFeet44 = (this.state.qty44 * this.state.inch44) / 12;
+        let mmSize44 = this.state.inch44 * 25.4;
+        let sqft44 = (this.state.finish / 12) * linearFeet44;
+        let linearFeet45 = (this.state.qty45 * this.state.inch45) / 12;
+        let mmSize45 = this.state.inch45 * 25.4;
+        let sqft45 = (this.state.finish / 12) * linearFeet45;
+        let linearFeet46 = (this.state.qty46 * this.state.inch46) / 12;
+        let mmSize46 = this.state.inch46 * 25.4;
+        let sqft46 = (this.state.finish / 12) * linearFeet46;
+        let linearFeet47 = (this.state.qty47 * this.state.inch47) / 12;
+        let mmSize47= this.state.inch47 * 25.4;
+        let sqft47 = (this.state.finish / 12) * linearFeet47;
+        let linearFeet48 = (this.state.qty48 * this.state.inch48) / 12;
+        let mmSize48 = this.state.inch48 * 25.4;
+        let sqft48 = (this.state.finish / 12) * linearFeet48;
+        let linearFeet49 = (this.state.qty49 * this.state.inch49) / 12;
+        let mmSize49 = this.state.inch49 * 25.4;
+        let sqft49 = (this.state.finish / 12) * linearFeet49;
+        let linearFeet50 = (this.state.qty50 * this.state.inch50) / 12;
+        let mmSize50 = this.state.inch50 * 25.4;
+        let sqft50 = (this.state.finish / 12) * linearFeet50;
+        let sqft = sqft1 + sqft2 + sqft3 + sqft4 + sqft5 + sqft6 + sqft7 + sqft8 + sqft9 + sqft10+sqft11 + sqft12 + sqft13 + sqft14 + sqft15 + sqft16 + sqft17 + sqft18 + sqft19 + sqft20+
+        sqft21 + sqft22 + sqft23 + sqft24 + sqft25 + sqft26 + sqft27 + sqft28 + sqft29 + sqft30+sqft31 + sqft32 + sqft33 + sqft34 + sqft35 + sqft36 + sqft37 + sqft38 + sqft39 + sqft40+
+        sqft41 + sqft42 + sqft43 + sqft44 + sqft45 + sqft46 + sqft47 + sqft48 + sqft49 + sqft50;
+        let totalLinear = linearFeet1 + linearFeet2 + linearFeet3 + linearFeet4 + linearFeet5 + linearFeet6 + linearFeet7 + linearFeet8 + linearFeet9 + linearFeet10+linearFeet11 + linearFeet12 + linearFeet13 + linearFeet14 + linearFeet15 + linearFeet16 + linearFeet17 + linearFeet18 + linearFeet19 + linearFeet20+
+        linearFeet21 + linearFeet22 + linearFeet23 + linearFeet24 + linearFeet25 + linearFeet26 + linearFeet27 + linearFeet28 + linearFeet29 + linearFeet30+linearFeet31 + linearFeet32 + linearFeet33 + linearFeet34 + linearFeet35 + linearFeet36 + linearFeet37 + linearFeet38 + linearFeet39 + linearFeet40+
+        linearFeet41 + linearFeet42 + linearFeet43 + linearFeet44 + linearFeet45 + linearFeet46 + linearFeet47 + linearFeet48 + linearFeet49 + linearFeet50;
         this.setState({
             totalsquarefeet: sqft.toFixed(2),
             linearfeet: linearFeet1.toFixed(2),
@@ -387,6 +662,96 @@ class StandingSeam3 extends Component{
             linearfeet20: linearFeet20.toFixed(2),
             mm20: mmSize20.toFixed(2),
             squarefeet20: sqft20.toFixed(2),
+            linearfeet21: linearFeet21.toFixed(2),
+            mm21: mmSize21.toFixed(2),
+            squarefeet21: sqft21.toFixed(2),
+            linearfeet22: linearFeet22.toFixed(2),
+            mm22: mmSize22.toFixed(2),
+            squarefeet22: sqft22.toFixed(2),
+            linearfeet23: linearFeet23.toFixed(2),
+            mm23: mmSize23.toFixed(2),
+            squarefeet23: sqft23.toFixed(2),
+            linearfeet24: linearFeet24.toFixed(2),
+            mm24: mmSize24.toFixed(2),
+            squarefeet24: sqft24.toFixed(2),
+            linearfeet25: linearFeet25.toFixed(2),
+            mm25: mmSize25.toFixed(2),
+            squarefeet25: sqft25.toFixed(2),
+            linearfeet26: linearFeet26.toFixed(2),
+            mm26: mmSize26.toFixed(2),
+            squarefeet26: sqft26.toFixed(2),
+            linearfeet27: linearFeet27.toFixed(2),
+            mm27: mmSize27.toFixed(2),
+            squarefeet27: sqft7.toFixed(2),
+            linearfeet28: linearFeet28.toFixed(2),
+            mm28: mmSize28.toFixed(2),
+            squarefeet28: sqft28.toFixed(2),
+            linearfeet29: linearFeet29.toFixed(2),
+            mm29: mmSize29.toFixed(2),
+            squarefeet29: sqft29.toFixed(2),
+            linearfeet30: linearFeet30.toFixed(2),
+            mm30: mmSize30.toFixed(2),
+            squarefeet30: sqft30.toFixed(2),
+            linearfeet31: linearFeet31.toFixed(2),
+            mm31: mmSize31.toFixed(2),
+            squarefeet31: sqft31.toFixed(2),
+            linearfeet32: linearFeet32.toFixed(2),
+            mm32: mmSize32.toFixed(2),
+            squarefeet32: sqft32.toFixed(2),
+            linearfeet33: linearFeet33.toFixed(2),
+            mm33: mmSize33.toFixed(2),
+            squarefeet33: sqft33.toFixed(2),
+            linearfeet34: linearFeet34.toFixed(2),
+            mm34: mmSize34.toFixed(2),
+            squarefeet34: sqft34.toFixed(2),
+            linearfeet35: linearFeet35.toFixed(2),
+            mm35: mmSize35.toFixed(2),
+            squarefeet35: sqft35.toFixed(2),
+            linearfeet36: linearFeet36.toFixed(2),
+            mm36: mmSize36.toFixed(2),
+            squarefeet36: sqft36.toFixed(2),
+            linearfeet37: linearFeet37.toFixed(2),
+            mm37: mmSize37.toFixed(2),
+            squarefeet37: sqft37.toFixed(2),
+            linearfeet38: linearFeet38.toFixed(2),
+            mm38: mmSize38.toFixed(2),
+            squarefeet38: sqft38.toFixed(2),
+            linearfeet39: linearFeet39.toFixed(2),
+            mm39: mmSize39.toFixed(2),
+            squarefeet39: sqft39.toFixed(2),
+            linearfeet40: linearFeet40.toFixed(2),
+            mm40: mmSize40.toFixed(2),
+            squarefeet40: sqft40.toFixed(2),
+            linearfeet41: linearFeet41.toFixed(2),
+            mm41: mmSize41.toFixed(2),
+            squarefeet41: sqft41.toFixed(2),
+            linearfeet42: linearFeet42.toFixed(2),
+            mm42: mmSize42.toFixed(2),
+            squarefeet42: sqft42.toFixed(2),
+            linearfeet43: linearFeet43.toFixed(2),
+            mm43: mmSize43.toFixed(2),
+            squarefeet43: sqft43.toFixed(2),
+            linearfeet44: linearFeet44.toFixed(2),
+            mm44: mmSize44.toFixed(2),
+            squarefeet44: sqft44.toFixed(2),
+            linearfeet45: linearFeet45.toFixed(2),
+            mm45: mmSize45.toFixed(2),
+            squarefeet45: sqft45.toFixed(2),
+            linearfeet46: linearFeet46.toFixed(2),
+            mm46: mmSize46.toFixed(2),
+            squarefeet46: sqft46.toFixed(2),
+            linearfeet47: linearFeet47.toFixed(2),
+            mm47: mmSize47.toFixed(2),
+            squarefeet47: sqft47.toFixed(2),
+            linearfeet48: linearFeet48.toFixed(2),
+            mm38: mmSize48.toFixed(2),
+            squarefeet48: sqft48.toFixed(2),
+            linearfeet49: linearFeet49.toFixed(2),
+            mm39: mmSize49.toFixed(2),
+            squarefeet49: sqft49.toFixed(2),
+            linearfeet50: linearFeet50.toFixed(2),
+            mm20: mmSize50.toFixed(2),
+            squarefeet50: sqft50.toFixed(2),
             totallinearfeet: totalLinear.toFixed(2),
         })
         // this.myRef.forceUpdate();
@@ -471,6 +836,9 @@ class StandingSeam3 extends Component{
     
         const { customerName, productname, phone, po, email, address, ga, color, protectivefilm, finish, totallinearfeet, totalsquarefeet, qty, inch, mm, tag, specialcrating, linearfeet, squarefeet, qty2, inch2, mm2, tag2, linearfeet2, squarefeet2, qty3, inch3, mm3, tag3, linearfeet3, squarefeet3, qty4, inch4, mm4, tag4, linearfeet4, squarefeet4, qty5, inch5, mm5, tag5, linearfeet5, squarefeet5, qty6, inch6, mm6, tag6, linearfeet6, squarefeet6, qty7, inch7, mm7, tag7, linearfeet7, squarefeet7, qty8, inch8, mm8, tag8, linearfeet8, squarefeet8, qty9, inch9, mm9, tag9, linearfeet9, squarefeet9, qty10, inch10, mm10, tag10, linearfeet10, squarefeet10, 
             qty11, inch11, mm11, linearfeet11, squarefeet11, qty12, inch12, mm12, tag12, linearfeet12, squarefeet12, qty13, inch13, mm13, tag13, linearfeet13, squarefeet13, qty14, inch14, mm14, tag14, linearfeet14, squarefeet14, qty15, inch15, mm15, tag15, linearfeet15, squarefeet15, qty16, inch16, mm16, tag16, linearfeet16, squarefeet16, qty17, inch17, mm17, tag17, linearfeet17, squarefeet17, qty18, inch18, mm18, tag18, linearfeet18, squarefeet18, qty19, inch19, mm19, tag19, linearfeet19, squarefeet19, qty20, inch20, mm20, tag20, linearfeet20, squarefeet20,
+            qty21, inch21, mm21, linearfeet21, squarefeet21, qty22, inch22, mm22, tag22, linearfeet22, squarefeet22, qty23, inch23, mm23, tag23, linearfeet23, squarefeet23, qty24, inch24, mm24, tag24, linearfeet24, squarefeet24, qty25, inch25, mm25, tag25, linearfeet25, squarefeet25, qty26, inch26, mm26, tag26, linearfeet26, squarefeet26, qty27, inch27, mm27, tag27, linearfeet27, squarefeet27, qty28, inch28, mm28, tag28, linearfeet28, squarefeet28, qty29, inch29, mm29, tag29, linearfeet29, squarefeet29, qty30, inch30, mm30, tag30, linearfeet30, squarefeet30,
+             qty31, inch31, mm31, linearfeet31, squarefeet31, qty32, inch32, mm32, tag32, linearfeet32, squarefeet32, qty33, inch33, mm33, tag33, linearfeet33, squarefeet33, qty34, inch34, mm34, tag34, linearfeet34, squarefeet34, qty35, inch35, mm35, tag35, linearfeet35, squarefeet35, qty36, inch36, mm36, tag36, linearfeet36, squarefeet36, qty37, inch37, mm37, tag37, linearfeet37, squarefeet37, qty38, inch38, mm38, tag38, linearfeet38, squarefeet38, qty39, inch39, mm39, tag39, linearfeet39, squarefeet39, qty40, inch40, mm40, tag40, linearfeet40, squarefeet40,
+             qty41, inch41, mm41, linearfeet41, squarefeet41, qty42, inch42, mm42, tag42, linearfeet42, squarefeet42, qty43, inch43, mm43, tag43, linearfeet43, squarefeet43, qty44, inch44, mm44, tag44, linearfeet44, squarefeet44, qty45, inch45, mm45, tag45, linearfeet45, squarefeet45, qty46, inch46, mm46, tag46, linearfeet46, squarefeet46, qty47, inch47, mm47, tag47, linearfeet47, squarefeet47, qty48, inch48, mm48, tag48, linearfeet48, squarefeet48, qty49, inch49, mm49, tag49, linearfeet49, squarefeet49, qty50, inch50, mm50, tag50, linearfeet50, squarefeet50,
             hookdrip1, hookdripsteppitch, gabbleRake1, gabbleRake2, gabbleRake3, sidewall1, sidewall2, endwall1, endwall3, endWall2, transition3, peakcap1, peakcap2, peakcap3, transition1, transition2, hip1, hip2, hip3, ridge1, ridge2, ridge3, ridge4, wvalley1, wvalley2, vvalley1, snowstop1, cleat, junderbarrel, zbaroverbarrel, perforatedjoverbarrel, perforatedzbaroverbarrel, backpan5, backpan10, base1, base2, base3, windowheader, windowreverse, walltransition, jtrim1, jtrim2, jtrim3, transition, outsidecorner1, insidecorner1, outsidecorner2, insidecorner2, outsidecorner3, insidecorner3, outsidecorner4, insidecorner4, standing290, standing291, standing292, standing293, standing294, standing295} = this.state;
     
         const form = axios.post('http://localhost:3001/api/form', {
@@ -608,6 +976,186 @@ class StandingSeam3 extends Component{
             tag20,
             linearfeet20,
             squarefeet20,
+            qty21,
+            inch21,
+            mm21,
+            tag21,
+            linearfeet21,
+            squarefeet21,
+            qty22,
+            inch22,
+            mm22,
+            tag22,
+            linearfeet22,
+            squarefeet22,
+            qty23,
+            inch23,
+            mm23,
+            tag23,
+            linearfeet23,
+            squarefeet23,
+            qty24,
+            inch24,
+            mm24,
+            tag24,
+            linearfeet24,
+            squarefeet24,
+            qty25,
+            inch25,
+            mm25,
+            tag25,
+            linearfeet25,
+            squarefeet25,
+            qty26,
+            inch26,
+            mm26,
+            tag26,
+            linearfeet26,
+            squarefeet26,
+            qty27,
+            inch27,
+            mm27,
+            tag27,
+            linearfeet27,
+            squarefeet27,
+            qty28,
+            inch28,
+            mm28,
+            tag28,
+            linearfeet28,
+            squarefeet28,
+            qty29,
+            inch29,
+            mm29,
+            tag29,
+            linearfeet29,
+            squarefeet29,
+            qty30,
+            inch30,
+            mm30,
+            tag30,
+            linearfeet30,
+            squarefeet30,
+            qty31,
+            inch31,
+            mm31,
+            tag31,
+            linearfeet31,
+            squarefeet31,
+            qty32,
+            inch32,
+            mm32,
+            tag32,
+            linearfeet32,
+            squarefeet32,
+            qty33,
+            inch33,
+            mm33,
+            tag33,
+            linearfeet33,
+            squarefeet33,
+            qty34,
+            inch34,
+            mm34,
+            tag34,
+            linearfeet34,
+            squarefeet34,
+            qty35,
+            inch35,
+            mm35,
+            tag35,
+            linearfeet35,
+            squarefeet35,
+            qty36,
+            inch36,
+            mm36,
+            tag36,
+            linearfeet36,
+            squarefeet36,
+            qty37,
+            inch37,
+            mm37,
+            tag37,
+            linearfeet37,
+            squarefeet37,
+            qty38,
+            inch38,
+            mm38,
+            tag38,
+            linearfeet38,
+            squarefeet38,
+            qty39,
+            inch39,
+            mm39,
+            tag39,
+            linearfeet39,
+            squarefeet39,
+            qty40,
+            inch40,
+            mm40,
+            tag40,
+            linearfeet40,
+            squarefeet40,
+            qty41,
+            inch41,
+            mm41,
+            tag41,
+            linearfeet41,
+            squarefeet41,
+            qty42,
+            inch42,
+            mm42,
+            tag42,
+            linearfeet42,
+            squarefeet42,
+            qty43,
+            inch43,
+            mm43,
+            tag43,
+            linearfeet43,
+            squarefeet43,
+            qty44,
+            inch44,
+            mm44,
+            tag44,
+            linearfeet44,
+            squarefeet44,
+            qty45,
+            inch45,
+            mm45,
+            tag45,
+            linearfeet45,
+            squarefeet45,
+            qty46,
+            inch46,
+            mm46,
+            tag46,
+            linearfeet46,
+            squarefeet46,
+            qty47,
+            inch47,
+            mm47,
+            tag47,
+            linearfeet47,
+            squarefeet47,
+            qty48,
+            inch48,
+            mm48,
+            tag48,
+            linearfeet48,
+            squarefeet48,
+            qty49,
+            inch49,
+            mm49,
+            tag49,
+            linearfeet49,
+            squarefeet49,
+            qty50,
+            inch50,
+            mm50,
+            tag50,
+            linearfeet50,
+            squarefeet50,
             hookdrip1,
             hookdripsteppitch,
             gabbleRake1,
@@ -913,7 +1461,7 @@ class StandingSeam3 extends Component{
                                         </FormGroup>
                                     </div>
                                     <div className="orderOptionsSpecsForm">
-                                        <div className="orderOptionsSpecsFormTitle">
+                                    <div className="orderOptionsSpecsFormTitle">
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>GA</label>
                                                 <Input type="select" className="orderOptionsSpecsInput" value={this.state.ga} name="ga" onChange={this.handleChange} required>
@@ -934,7 +1482,7 @@ class StandingSeam3 extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Special Crating</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" value={this.state.specialcrating} name="specialcrating" onChange={this.handleChange}>
+                                                <Input type="select" className="orderOptionsSpecsInput" value={this.state.specialcrating} name="specialcrating" onChange={this.handleChange} required>
                                                     <option>-</option>
                                                     <option>Yes</option>
                                                     <option>No</option>
@@ -943,7 +1491,7 @@ class StandingSeam3 extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Label>Protective film</Label>
-                                                <Input type="select" className="orderOptionsSpecsInput" value={this.state.protectivefilm} name="protectivefilm" onChange={this.handleChange}>
+                                                <Input type="select" className="orderOptionsSpecsInput" value={this.state.protectivefilm} name="protectivefilm" onChange={this.handleChange} required>
                                                     <option>-</option>
                                                     <option>Yes</option>
                                                     <option>No</option>
@@ -961,15 +1509,15 @@ class StandingSeam3 extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total SQFT.</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" ref={this.myRef} name="totalsquarefeet" value={this.state.totalsquarefeet} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" name="totalsquarefeet" value={this.state.totalsquarefeet} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
-                                        <FormGroup onChange={this.handleChange.bind(this)} className="orderOptionsSpecsFG">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>QTY</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty} name="qty" required />
                                             </FormGroup>
-                                        <FormGroup onChange={this.handleChange.bind(this)} className="orderOptionsSpecsFG">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <label>Inch</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch} name="inch" required />
                                             </FormGroup>
@@ -979,7 +1527,7 @@ class StandingSeam3 extends Component{
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Tag</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag} name="tag" onChange={this.handleChange.bind(this)} />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag} name="tag" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Linear Feet</label>
@@ -991,17 +1539,17 @@ class StandingSeam3 extends Component{
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
-                                        <FormGroup onChange={this.handleChange.bind(this)} className="orderOptionsSpecsFG">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty2} name="qty2"  />
                                             </FormGroup>
-                                        <FormGroup onChange={this.handleChange.bind(this)} className="orderOptionsSpecsFG">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch2} name="inch2"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm2} name="mm2" placeholder={this.state.mm2} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag2} name="tag2" onChange={this.handleChange.bind(this)} />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag2} name="tag2" onChange={this.handleChange} />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet2} name="linearfeet2" placeholder={this.state.linearfeet2}/>
@@ -1018,7 +1566,7 @@ class StandingSeam3 extends Component{
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch3} name="inch3"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" onChange={this.handleChange} value={this.state.mm3} name="mm3" placeholder={this.state.mm3} readOnly/>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm3} name="mm3" placeholder={this.state.mm3} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag3} name="tag3" onChange={this.handleChange} />
@@ -1038,7 +1586,7 @@ class StandingSeam3 extends Component{
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch4} name="inch4"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" onChange={this.handleChange} value={this.state.mm4} name="mm4" placeholder={this.state.mm4} readOnly/>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm4} name="mm4" placeholder={this.state.mm4} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag4} name="tag4" onChange={this.handleChange} />
@@ -1058,7 +1606,7 @@ class StandingSeam3 extends Component{
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch5} name="inch5"  />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" onChange={this.handleChange} value={this.state.mm5} name="mm5" placeholder={this.state.mm5} readOnly/>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm5} name="mm5" placeholder={this.state.mm5} readOnly/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag5} name="tag5" onChange={this.handleChange} />
@@ -1067,7 +1615,7 @@ class StandingSeam3 extends Component{
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet5} name="linearfeet5" placeholder={this.state.linearfeet5}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={(this.state.finish/12)*this.state.linearfeet5} name="squarefeet5" placeholder={this.state.squarefeet5} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet5).toFixed(2)} name="squarefeet5" placeholder={this.state.squarefeet5} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
@@ -1087,7 +1635,7 @@ class StandingSeam3 extends Component{
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet6} name="linearfeet6" placeholder={this.state.linearfeet6}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={(this.state.finish/12)*this.state.linearfeet6} name="squarefeet6" placeholder={this.state.squarefeet6} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet6).toFixed(2)} name="squarefeet6" placeholder={this.state.squarefeet6} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
@@ -1107,7 +1655,7 @@ class StandingSeam3 extends Component{
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet7} name="linearfeet7" placeholder={this.state.linearfeet7}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={(this.state.finish/12)*this.state.linearfeet7} name="squarefeet7" placeholder={this.state.squarefeet7} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet7).toFixed(2)} name="squarefeet7" placeholder={this.state.squarefeet7} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
@@ -1127,7 +1675,7 @@ class StandingSeam3 extends Component{
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet8} name="linearfeet8" placeholder={this.state.linearfeet8}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={(this.state.finish/12)*this.state.linearfeet8} name="squarefeet8" placeholder={this.state.squarefeet8} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet8).toFixed(2)} name="squarefeet8" placeholder={this.state.squarefeet8} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
@@ -1147,12 +1695,12 @@ class StandingSeam3 extends Component{
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet9} name="linearfeet9" placeholder={this.state.linearfeet9}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={(this.state.finish/12)*this.state.linearfeet9} name="squarefeet9" placeholder={this.state.squarefeet9} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet9).toFixed(2)} name="squarefeet9" placeholder={this.state.squarefeet9} readOnly />
                                             </FormGroup>
                                         </div>
                                         <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
-                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty10} name="qty10"  />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty10} name="qty10"  />
                                             </FormGroup>
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch10} name="inch10"  />
@@ -1167,10 +1715,15 @@ class StandingSeam3 extends Component{
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet10} name="linearfeet10" placeholder={this.state.linearfeet10}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={(this.state.finish/12)*this.state.linearfeet10} name="squarefeet10" placeholder={this.state.squarefeet10} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet10).toFixed(2)} name="squarefeet10" placeholder={this.state.squarefeet10} readOnly />
                                             </FormGroup>
                                         </div>
-                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+
+
+
+
+                                        {/* 9 */}
+                                        <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty11} name="qty11"  />
                                             </FormGroup>
@@ -1187,10 +1740,12 @@ class StandingSeam3 extends Component{
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet11} name="linearfeet11" placeholder={this.state.linearfeet11}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={(this.state.finish/12)*this.state.linearfeet11} name="squarefeet11" placeholder={this.state.squarefeet11} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet11).toFixed(2)} name="squarefeet11" placeholder={this.state.squarefeet11} readOnly />
                                             </FormGroup>
-                                        </div>:''}
-                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        </div>
+                                        
+
+                                        <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty12} name="qty12"  />
                                             </FormGroup>
@@ -1207,10 +1762,11 @@ class StandingSeam3 extends Component{
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet12} name="linearfeet12" placeholder={this.state.linearfeet12}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={(this.state.finish/12)*this.state.linearfeet12} name="squarefeet12" placeholder={this.state.squarefeet12} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet12).toFixed(2)} name="squarefeet12" placeholder={this.state.squarefeet12} readOnly />
                                             </FormGroup>
-                                        </div>:''}
-                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        </div>
+                                        
+                                        <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty13} name="qty13"  />
                                             </FormGroup>
@@ -1227,10 +1783,11 @@ class StandingSeam3 extends Component{
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet13} name="linearfeet13" placeholder={this.state.linearfeet13}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={(this.state.finish/12)*this.state.linearfeet13} name="squarefeet13" placeholder={this.state.squarefeet13} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet13).toFixed(2)} name="squarefeet13" placeholder={this.state.squarefeet13} readOnly />
                                             </FormGroup>
-                                        </div>:''}
-                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        </div>
+                                        
+                                        <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty14} name="qty14"  />
                                             </FormGroup>
@@ -1247,10 +1804,11 @@ class StandingSeam3 extends Component{
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet14} name="linearfeet14" placeholder={this.state.linearfeet14}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={(this.state.finish/12)*this.state.linearfeet14} name="squarefeet14" placeholder={this.state.squarefeet14} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet14).toFixed(2)} name="squarefeet14" placeholder={this.state.squarefeet14} readOnly />
                                             </FormGroup>
-                                        </div>:''}
-                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        </div>
+                                        
+                                        <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty15} name="qty15"  />
                                             </FormGroup>
@@ -1267,10 +1825,16 @@ class StandingSeam3 extends Component{
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet15} name="linearfeet15" placeholder={this.state.linearfeet15}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={(this.state.finish/12)*this.state.linearfeet15} name="squarefeet15" placeholder={this.state.squarefeet15} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet15).toFixed(2)} name="squarefeet15" placeholder={this.state.squarefeet15} readOnly />
                                             </FormGroup>
-                                        </div>:''}
-                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        </div>
+                                        
+                                        
+
+
+                                        {/* 9 */}
+                                        
+                                        <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty16} name="qty16"  />
                                             </FormGroup>
@@ -1287,10 +1851,10 @@ class StandingSeam3 extends Component{
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet16} name="linearfeet16" placeholder={this.state.linearfeet16}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={(this.state.finish/12)*this.state.linearfeet16} name="squarefeet16" placeholder={this.state.squarefeet16} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet16).toFixed(2)} name="squarefeet16" placeholder={this.state.squarefeet16} readOnly />
                                             </FormGroup>
-                                        </div>:''}
-                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty17} name="qty17"  />
                                             </FormGroup>
@@ -1307,10 +1871,10 @@ class StandingSeam3 extends Component{
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet17} name="linearfeet17" placeholder={this.state.linearfeet17}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={(this.state.finish/12)*this.state.linearfeet17} name="squarefeet17" placeholder={this.state.squarefeet17} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet17).toFixed(2)} name="squarefeet17" placeholder={this.state.squarefeet17} readOnly />
                                             </FormGroup>
-                                        </div>:''}
-                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty18} name="qty18"  />
                                             </FormGroup>
@@ -1327,10 +1891,10 @@ class StandingSeam3 extends Component{
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet18} name="linearfeet18" placeholder={this.state.linearfeet18}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={(this.state.finish/12)*this.state.linearfeet18} name="squarefeet18" placeholder={this.state.squarefeet18} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet18).toFixed(2)} name="squarefeet18" placeholder={this.state.squarefeet18} readOnly />
                                             </FormGroup>
-                                        </div>:''}
-                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty19} name="qty19"  />
                                             </FormGroup>
@@ -1347,10 +1911,10 @@ class StandingSeam3 extends Component{
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet19} name="linearfeet19" placeholder={this.state.linearfeet19}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={(this.state.finish/12)*this.state.linearfeet19} name="squarefeet19" placeholder={this.state.squarefeet19} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet19).toFixed(2)} name="squarefeet19" placeholder={this.state.squarefeet19} readOnly />
                                             </FormGroup>
-                                        </div>:''}
-                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
                                         <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty20} name="qty20"  />
                                             </FormGroup>
@@ -1367,7 +1931,607 @@ class StandingSeam3 extends Component{
                                                 <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet20} name="linearfeet20" placeholder={this.state.linearfeet20}/>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Input type="text" className="orderOptionsSpecsInput" value={(this.state.finish/12)*this.state.linearfeet20} name="squarefeet20" placeholder={this.state.squarefeet20} readOnly />
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet20).toFixed(2)} name="squarefeet20" placeholder={this.state.squarefeet20} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty21} name="qty21"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch21} name="inch21"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm21} name="mm21" placeholder={this.state.mm21} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag21} name="tag21" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet21} name="linearfeet21" placeholder={this.state.linearfeet21}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet21).toFixed(2)} name="squarefeet21" placeholder={this.state.squarefeet21} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty22} name="qty22"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch22} name="inch22"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm22} name="mm22" placeholder={this.state.mm22} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag22} name="tag22" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet22} name="linearfeet22" placeholder={this.state.linearfeet22}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet22).toFixed(2)} name="squarefeet22" placeholder={this.state.squarefeet22} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty23} name="qty23"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch23} name="inch23"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm23} name="mm23" placeholder={this.state.mm23} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag23} name="tag23" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet23} name="linearfeet23" placeholder={this.state.linearfeet23}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet23).toFixed(2)} name="squarefeet23" placeholder={this.state.squarefeet23} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.qty24} name="qty24"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch24} name="inch24"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm24} name="mm24" placeholder={this.state.mm24} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag24} name="tag24" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet24} name="linearfeet24" placeholder={this.state.linearfeet24}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet24).toFixed(2)} name="squarefeet24" placeholder={this.state.squarefeet24} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        <div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty25} name="qty25"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch25} name="inch25"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm25} name="mm25" placeholder={this.state.mm25} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag25} name="tag25" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet25} name="linearfeet25" placeholder={this.state.linearfeet25}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet25).toFixed(2)} name="squarefeet25" placeholder={this.state.squarefeet25} readOnly />
+                                            </FormGroup>
+                                        </div>
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty26} name="qty26"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch26} name="inch26"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm26} name="mm26" placeholder={this.state.mm26} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag26} name="tag26" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet26} name="linearfeet26" placeholder={this.state.linearfeet26}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet26).toFixed(2)} name="squarefeet26" placeholder={this.state.squarefeet26} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty27} name="qty27"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch27} name="inch27"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm27} name="mm27" placeholder={this.state.mm27} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag27} name="tag27" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet27} name="linearfeet27" placeholder={this.state.linearfeet27}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet27).toFixed(2)} name="squarefeet27" placeholder={this.state.squarefeet27} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty28} name="qty28"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch28} name="inch28"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm28} name="mm25" placeholder={this.state.mm28} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag28} name="tag28" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet28} name="linearfeet28" placeholder={this.state.linearfeet28}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet28).toFixed(2)} name="squarefeet28" placeholder={this.state.squarefeet28} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty29} name="qty29"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch29} name="inch29"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm29} name="mm29" placeholder={this.state.mm29} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag29} name="tag29" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet29} name="linearfeet29" placeholder={this.state.linearfeet29}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet29).toFixed(2)} name="squarefeet29" placeholder={this.state.squarefeet29} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty30} name="qty30"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch30} name="inch30"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm30} name="mm30" placeholder={this.state.mm30} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag30} name="tag30" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet30} name="linearfeet30" placeholder={this.state.linearfeet30}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet30).toFixed(2)} name="squarefeet30" placeholder={this.state.squarefeet30} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty31} name="qty31"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch31} name="inch31"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm31} name="mm31" placeholder={this.state.mm31} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag31} name="tag31" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet31} name="linearfeet31" placeholder={this.state.linearfeet31}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet31).toFixed(2)} name="squarefeet30" placeholder={this.state.squarefeet31} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty32} name="qty32"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch32} name="inch32"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm32} name="mm32" placeholder={this.state.mm32} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag32} name="tag32" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet32} name="linearfeet32" placeholder={this.state.linearfeet32}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet32).toFixed(2)} name="squarefeet32" placeholder={this.state.squarefeet32} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty33} name="qty33"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch33} name="inch33"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm33} name="mm33" placeholder={this.state.mm33} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag33} name="tag33" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet33} name="linearfeet33" placeholder={this.state.linearfeet33}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet33).toFixed(2)} name="squarefeet33" placeholder={this.state.squarefeet33} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty34} name="qty34"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch34} name="inch34"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm34} name="mm34" placeholder={this.state.mm34} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag34} name="tag34" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet34} name="linearfeet34" placeholder={this.state.linearfeet34}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet34).toFixed(2)} name="squarefeet34" placeholder={this.state.squarefeet34} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty35} name="qty35"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch35} name="inch35"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm35} name="mm35" placeholder={this.state.mm35} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag35} name="tag35" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet35} name="linearfeet35" placeholder={this.state.linearfeet35}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet35).toFixed(2)} name="squarefeet35" placeholder={this.state.squarefeet35} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty36} name="qty36"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch36} name="inch36"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm36} name="mm36" placeholder={this.state.mm36} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag36} name="tag36" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet36} name="linearfeet36" placeholder={this.state.linearfeet36}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet36).toFixed(2)} name="squarefeet36" placeholder={this.state.squarefeet36} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty37} name="qty37"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch37} name="inch37"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm37} name="mm37" placeholder={this.state.mm37} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag37} name="tag37" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet37} name="linearfeet37" placeholder={this.state.linearfeet37}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet37).toFixed(2)} name="squarefeet37" placeholder={this.state.squarefeet37} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty38} name="qty38"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch38} name="inch38"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm28} name="mm38" placeholder={this.state.mm38} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag38} name="tag38" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet38} name="linearfeet38" placeholder={this.state.linearfeet38}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet38).toFixed(2)} name="squarefeet38" placeholder={this.state.squarefeet38} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty39} name="qty39"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch39} name="inch39"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm39} name="mm39" placeholder={this.state.mm39} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag39} name="tag39" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet39} name="linearfeet39" placeholder={this.state.linearfeet39}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet39).toFixed(2)} name="squarefeet39" placeholder={this.state.squarefeet39} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty40} name="qty40"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch39} name="inch40"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm39} name="mm40" placeholder={this.state.mm40} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag39} name="tag40" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet40} name="linearfeet40" placeholder={this.state.linearfeet40}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet40).toFixed(2)} name="squarefeet40" placeholder={this.state.squarefeet40} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty41} name="qty41"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch41} name="inch41"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm41} name="mm41" placeholder={this.state.mm41} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag41} name="tag41" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet41} name="linearfeet41" placeholder={this.state.linearfeet41}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet41).toFixed(2)} name="squarefeet30" placeholder={this.state.squarefeet41} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty42} name="qty42"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch42} name="inch42"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm42} name="mm42" placeholder={this.state.mm42} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag42} name="tag42" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet42} name="linearfeet42" placeholder={this.state.linearfeet42}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet42).toFixed(2)} name="squarefeet42" placeholder={this.state.squarefeet42} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty43} name="qty43"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch43} name="inch43"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm43} name="mm43" placeholder={this.state.mm43} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag43} name="tag43" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet43} name="linearfeet43" placeholder={this.state.linearfeet43}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet43).toFixed(2)} name="squarefeet43" placeholder={this.state.squarefeet43} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty44} name="qty44"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch44} name="inch44"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm44} name="mm44" placeholder={this.state.mm44} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag44} name="tag34" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet44} name="linearfeet44" placeholder={this.state.linearfeet44}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet44).toFixed(2)} name="squarefee434" placeholder={this.state.squarefeet44} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty45} name="qty45"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch45} name="inch45"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm45} name="mm45" placeholder={this.state.mm35} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag45} name="tag45" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet45} name="linearfeet45" placeholder={this.state.linearfeet45}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet45).toFixed(2)} name="squarefeet45" placeholder={this.state.squarefeet45} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty46} name="qty46"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch46} name="inch46"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm46} name="mm46" placeholder={this.state.mm46} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag46} name="tag46" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet46} name="linearfeet46" placeholder={this.state.linearfeet46}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet46).toFixed(2)} name="squarefeet46" placeholder={this.state.squarefeet46} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty47} name="qty47"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch47} name="inch47"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm47} name="mm47" placeholder={this.state.mm47} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag47} name="tag47" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet47} name="linearfeet47" placeholder={this.state.linearfeet47}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet47).toFixed(2)} name="squarefeet47" placeholder={this.state.squarefeet47} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty48} name="qty48"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch48} name="inch48"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm48} name="mm45" placeholder={this.state.mm48} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag48} name="tag48" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet48} name="linearfeet48" placeholder={this.state.linearfeet48}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet48).toFixed(2)} name="squarefeet48" placeholder={this.state.squarefeet48} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty49} name="qty49"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch49} name="inch49"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm49} name="mm49" placeholder={this.state.mm49} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag49} name="tag49" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet49} name="linearfeet49" placeholder={this.state.linearfeet49}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet49).toFixed(2)} name="squarefeet49" placeholder={this.state.squarefeet49} readOnly />
+                                            </FormGroup>
+                                        </div>:''}
+                                        {this.state.ten?<div className="orderOptionsSpecsSmall">
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input onClick={this.tenMore} type="text" className="orderOptionsSpecsInput" value={this.state.qty50} name="qty50"  />
+                                            </FormGroup>
+                                        <FormGroup onChange={this.handleChange} className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.inch50} name="inch50"  />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.mm50} name="mm50" placeholder={this.state.mm50} readOnly/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.tag50} name="tag50" onChange={this.handleChange} />
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input readOnly type="text" className="orderOptionsSpecsInput" value={this.state.linearfeet50} name="linearfeet50" placeholder={this.state.linearfeet50}/>
+                                            </FormGroup>
+                                            <FormGroup className="orderOptionsSpecsFG">
+                                                <Input type="text" className="orderOptionsSpecsInput" value={((this.state.finish/12)*this.state.linearfeet50).toFixed(2)} name="squarefeet50" placeholder={this.state.squarefeet50} readOnly />
                                             </FormGroup>
                                         </div>:''}
                                     </div>
@@ -2446,7 +3610,8 @@ class StandingSeam3 extends Component{
                                         <CustomInput type="checkbox" className="productDisclaimer"/>
                                         <Label>I accept terms and services</Label>
                                     </FormGroup>
-                                    <Button className="contactButton" onClick={this.printPage}><p className="contactButtonText">Print Page</p></Button>
+                                    <Button className="contactButton" onClick={() => {
+                                        this.state.ga.length!=0&&this.state.color.length!=0&&this.state.totallinearfeet!=0&&this.state.specialcrating.length!=0&&this.state.protectivefilm.length!=0&&this.state.finish.length!=0&&this.state.totalsquarefeet!=0&&this.state.qty!=0&&this.state.inch!=0&&this.state.mm!=0&&this.state.tag!=0&&this.state.linearfeet!=0?this.printPage():alert('please fill the required fields')}}><p className="contactButtonText">Go To Print Page</p></Button>
                                     <Button className="contactButton"><p className="contactButtonText">Submit</p></Button>
                                 </Form>
                             </div>

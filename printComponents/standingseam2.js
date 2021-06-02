@@ -14,7 +14,8 @@ const styles = StyleSheet.create({
     },
     headerV1: {
         width: "100%",
-        marginBottom: '20px'
+        marginBottom: '16px',
+        marginTop: '16px'
     },
     orderOptionsTextInput2:{
         width: "70%",
@@ -55,7 +56,7 @@ fontSize: '12px',
     orderOptionsFlashingsInput3: {
         position: "absolute",
         marginTop: "87%",
-        border: "4px solid rgb(106, 106, 248)",
+        border: "2px solid rgb(106, 106, 248)",
         width: "100%",
         display: "flex",
         justifyContent: "center",
@@ -69,21 +70,24 @@ fontSize: '12px',
         flexDirection: "column",
         alignItems: "center",
         height: "180px",
+        // border: '1px solid red',
+        marginBottom: '0px'
     },
     orderOptionsFlashingsMainContainer: {
         width: '80%',
-        marginBottom: '20px',
+        // marginBottom: '20px',
         marginTop: "20px",
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
         marginLeft: 'auto',
-        marginRight: 'auto'
+        marginRight: 'auto',
+        // border: '1px solid blue'
     },
     orderOptionsFlashingsMainContainera: {
         width: '100%',
-        marginBottom: '20px',
-        marginTop: "-90px",
+        marginBottom: '10px',
+        marginTop: "-120px",
         marginLeft: "-200px",
     },
     orderOptionsFlashingsContainerSmall: {
@@ -115,7 +119,7 @@ fontSize: '12px',
     orderOptionsFlashingsInput31: {
         position: "absolute",
         marginTop: "85%",
-        border: "4px solid rgb(106, 106, 248)",
+        border: "2px solid rgb(106, 106, 248)",
         width: "100%",
         display: "flex",
         justifyContent: "center",
@@ -658,7 +662,7 @@ class Standingseam2Print extends Component{
                                 <Document className="orderOptionsContentForm" >
                                     <Page size="A4" style={styles.page} wrap>
 
-                                        <View fixed style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: "flex", justifyContent: 'space-between', alignItems: 'center', marginTop: '20px', marginBottom: '8px', flexDirection: 'row'}}>
+                                        {/* <View fixed style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: "flex", justifyContent: 'space-between', alignItems: 'center', marginTop: '20px', marginBottom: '8px', flexDirection: 'row'}}>
                                             <View style={{display: 'flex', alignItems: 'center', flexDirection: 'row'}}>
                                                 <Text style={{fontWeight: 'bold', fontSize: '8px'}}>CUSTOMER: </Text>
                                                 {this.state.customerName?
@@ -694,13 +698,13 @@ class Standingseam2Print extends Component{
                                         </View>
                                         <View style={{width: '80%', borderTop: '1px solid black', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto'}} fixed>
 
-                                        </View>
+                                        </View> */}
 
                                         {/* Header */}
-                                        <View style={styles.headerV1}>
+                                        <View style={styles.headerV1} fixed>
                                             <View style={styles.orderOptionsTextForm2}>
-                                                <View style={{display: 'flex', alignItems: 'center', flexDirection: 'row', marginBottom: "30px", marginTop: '10px'}}>
-                                                    <Text style={{fontSize: "24px", fontWeight: 400, color: 'black', textAlign: 'center'}}>Standing Seam 150</Text>
+                                                <View style={{display: 'flex', alignItems: 'center', flexDirection: 'row', marginBottom: "16px", marginTop: '10px'}}>
+                                                    <Text style={{fontSize: "18px", fontWeight: 400, color: 'black', textAlign: 'center'}}>Standing Seam 150</Text>
                                                     <Text style={{fontWeight: 400, fontSize: "14px", marginTop: '20px', textAlign: 'right', marginRight: '170px'}}>#___________</Text>
                                                 </View>
                                                 <View style={styles.headerF}>
@@ -811,6 +815,49 @@ class Standingseam2Print extends Component{
                                                         placeholder="Customer Address"
                                                     ></Text>}
                                                 </View>
+                                                <View style={styles.headerF}>
+                                                    <View style={styles.orderOptionsTextFormSmall2}>
+                                                        <Text style={{width: '30%', textAlign: 'left', fontWeight: 600, fontSize: 14, color: 'black'}}>Color:</Text>
+                                                        {this.state.customerName?
+                                                        <Text 
+                                                            type="text"
+                                                            style={styles.orderOptionsTextInput21}
+                                                            name="customerName" 
+                                                            >{this.props.obj.color}</Text>:
+                                                            <Text 
+                                                            type="text"
+                                                            style={{
+                                                                width: "70%",
+                                                                backgroundColor: 'white',
+                                                                marginRight: '10px',
+                                                                padding: '8px 4px',
+                                                                fontSize: '12px',
+                                                                border: '1px solid black',
+                                                            }}
+                                                            name="customerName" 
+                                                            placeholder="Customer Name"                                    
+                                                        ></Text>}
+                                                    </View>
+                                                    <View style={styles.orderOptionsTextFormSmall2}>
+                                                        <Text style={{width: '30%', fontWeight: 600, fontSize: 14, textAlign: 'left', color: 'black'}}>GA:</Text>
+                                                        {this.props.obj.po?
+                                                        <Text 
+                                                            type="text"
+                                                            style={styles.orderOptionsTextInput2}
+                                                            name="po"
+                                                            >{this.props.obj.ga}</Text>:<Text 
+                                                            type="text"
+                                                            style={{
+                                                                width: "70%",
+                                                                backgroundColor: 'white',
+                                                                border: '1px solid black',
+                                                                fontSize: '12px',
+                                                                padding: '8px 4px'
+                                                            }}
+                                                            placeholder="PO"    
+                                                        ></Text>}
+                                                    </View>
+                                                </View>
                                             </View>
                                         </View>
                                     
@@ -872,7 +919,7 @@ class Standingseam2Print extends Component{
                                             </View>
                                             <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{ backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>QTY</Text>
+                                                    <Text style={{ backgroundColor: 'white', width: '32px', fontSize: 12, height: '16px', paddingLeft: '2px', marginTop: '4px', paddingTop: '2px'}}>QTY</Text>
                                                     {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty}</Text> */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
@@ -880,37 +927,37 @@ class Standingseam2Print extends Component{
                                                     {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch}</Text> */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{ backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>mm</Text>
+                                                    <Text style={{ backgroundColor: 'white', width: '32px', fontSize: 12, height: '16px', paddingLeft: '0px', marginTop: '4px', paddingTop: '2px'}}>mm</Text>
                                                     {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm}</Text> */}
                                                     {/* placeholder={this.state.mm} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{ backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>Description</Text>
+                                                    <Text style={{ backgroundColor: 'white', width: '108px', fontSize: 12, height: '16px', paddingLeft: '0px', marginTop: '4px', paddingTop: '2px'}}>Description</Text>
                                                     {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag}</Text> */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{ backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>LFt.</Text>
+                                                    <Text style={{ backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '2px', marginTop: '4px', paddingTop: '2px'}}>LFt.</Text>
                                                     {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet}</Text> */}
                                                     {/* placeholder={this.state.linearfeet} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{ backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>SqFt.</Text>
+                                                    <Text style={{ backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '0px', marginTop: '4px', paddingTop: '2px'}}>SqFt.</Text>
                                                     {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet}</Text> */}
                                                     {/* placeholder={this.state.squarefeet} */}
                                                 </View>
                                             </View>
                                             <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px',paddingTop:'1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet}</Text>
@@ -922,17 +969,17 @@ class Standingseam2Print extends Component{
                                             
                                             <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View onChange={this.handleChange} className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty2}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty2}</Text>
                                                 </View>
                                                 <View onChange={this.handleChange} className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch2}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm2}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm2}</Text>
                                                     {/* placeholder={this.state.mm2} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag2}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag2}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet2}</Text>
@@ -946,17 +993,17 @@ class Standingseam2Print extends Component{
                                             
                                             <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty3}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty3}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch3}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm3}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm3}</Text>
                                                     {/* placeholder={this.state.mm3} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag3}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag3}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet3}</Text>
@@ -969,17 +1016,17 @@ class Standingseam2Print extends Component{
                                             </View>
                                             <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty4}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty4}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch4}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm4}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm4}</Text>
                                                     {/* placeholder={this.state.mm4} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag4}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag4}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet4}</Text>
@@ -992,17 +1039,17 @@ class Standingseam2Print extends Component{
                                             </View>
                                             <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.qty5}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.qty5}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch5}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm5}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm5}</Text>
                                                     {/* placeholder={this.state.mm5} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag5}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag5}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet5}</Text>
@@ -1015,17 +1062,17 @@ class Standingseam2Print extends Component{
                                             </View>
                                             <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty6}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty6}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch6}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm6}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm6}</Text>
                                                     {/* placeholder={this.state.mm6} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag6}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag6}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet6}</Text>
@@ -1038,17 +1085,17 @@ class Standingseam2Print extends Component{
                                             </View>
                                             <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty7}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty7}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch7}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm7}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm7}</Text>
                                                     {/* placeholder={this.state.mm7} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag7}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag7}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet7}</Text>
@@ -1061,17 +1108,17 @@ class Standingseam2Print extends Component{
                                             </View>
                                             <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty8}</Text>
+                                                    <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty8}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch8}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm8}</Text>
+                                                    <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm8}</Text>
                                                     {/* placeholder={this.state.mm8} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag8}</Text>
+                                                    <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag8}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet8}</Text>
@@ -1084,17 +1131,17 @@ class Standingseam2Print extends Component{
                                             </View>
                                             <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty9}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty9}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch9}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm9}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm9}</Text>
                                                     {/* placeholder={this.state.mm9} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag9}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag9}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet9}</Text>
@@ -1107,17 +1154,17 @@ class Standingseam2Print extends Component{
                                             </View>
                                             <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.qty10}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.qty10}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.inch10}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.mm10}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.mm10}</Text>
                                                     {/* placeholder={this.state.mm10} */}
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.tag10}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.tag10}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}} >{this.props.obj.linearfeet10}</Text>
@@ -1128,204 +1175,847 @@ class Standingseam2Print extends Component{
                                                     {/* placeholder={this.state.squarefeet10} */}
                                                 </View>
                                             </View>
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty11}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty11}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch11}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm11}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm11}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag11}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag11}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet11}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px',paddingTop:'1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet11}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet11}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px',paddingTop:'1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet11}</Text>
+                                                </View>
+                                            </View>
+                                            
+                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View onChange={this.handleChange} className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty12}</Text>
+                                                </View>
+                                                <View onChange={this.handleChange} className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch12}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm12}</Text>
+                                                    {/* placeholder={this.state.mm2} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag12}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet12}</Text>
+                                                    {/* placeholder={this.state.linearfeet2} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet12}</Text>
+                                                    {/* placeholder={this.state.squarefeet2} */}
+                                                </View>
+                                            </View>
+                                            
+                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty13}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch13}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm13}</Text>
+                                                    {/* placeholder={this.state.mm3} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag13}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet13}</Text>
+                                                    {/* placeholder={this.state.linearfeet3} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet13}</Text>
+                                                    {/* placeholder={this.state.squarefeet3} */}
+                                                </View>
+                                            </View>
+                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty14}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch14}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm14}</Text>
+                                                    {/* placeholder={this.state.mm4} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag14}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet14}</Text>
+                                                    {/* placeholder={this.state.linearfeet4} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet14}</Text>
+                                                    {/* placeholder={this.state.squarefeet4} */}
+                                                </View>
+                                            </View>
+                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.qty15}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch15}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm15}</Text>
+                                                    {/* placeholder={this.state.mm5} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag15}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet15}</Text>
+                                                    {/* placeholder={this.state.linearfeet5} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet15}</Text>
+                                                    {/* placeholder={this.state.squarefeet5} */}
+                                                </View>
+                                            </View>
+                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty16}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch16}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm16}</Text>
+                                                    {/* placeholder={this.state.mm6} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag16}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet16}</Text>
+                                                    {/* placeholder={this.state.linearfeet6} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet16}</Text>
+                                                    {/* placeholder={this.state.squarefeet6} */}
+                                                </View>
+                                            </View>
+                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty17}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch17}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm17}</Text>
+                                                    {/* placeholder={this.state.mm7} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag17}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet17}</Text>
+                                                    {/* placeholder={this.state.linearfeet7} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet17}</Text>
+                                                    {/* placeholder={this.state.squarefeet7} */}
+                                                </View>
+                                            </View>
+                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty18}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch18}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm18}</Text>
+                                                    {/* placeholder={this.state.mm8} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag18}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet18}</Text>
+                                                    {/* placeholder={this.state.linearfeet8} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet18}</Text>
+                                                    {/* placeholder={this.state.squarefeet8} */}
+                                                </View>
+                                            </View>
+                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty19}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch19}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm19}</Text>
+                                                    {/* placeholder={this.state.mm9} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag19}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet19}</Text>
+                                                    {/* placeholder={this.state.linearfeet9} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet19}</Text>
+                                                    {/* placeholder={this.state.squarefeet9} */}
+                                                </View>
+                                            </View>
+                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.qty20}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.inch20}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.mm20}</Text>
+                                                    {/* placeholder={this.state.mm10} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.tag20}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}} >{this.props.obj.linearfeet20}</Text>
+                                                    {/* placeholder={this.state.linearfeet10} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}} >{this.props.obj.squarefeet20}</Text>
+                                                    {/* placeholder={this.state.squarefeet10} */}
+                                                </View>
+                                            </View>
+                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty21}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch21}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm21}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag21}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px',paddingTop:'1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet21}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px',paddingTop:'1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet21}</Text>
+                                                </View>
+                                            </View>
+                                            
+                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View onChange={this.handleChange} className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty22}</Text>
+                                                </View>
+                                                <View onChange={this.handleChange} className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch22}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm22}</Text>
+                                                    {/* placeholder={this.state.mm2} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag22}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet22}</Text>
+                                                    {/* placeholder={this.state.linearfeet2} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet22}</Text>
+                                                    {/* placeholder={this.state.squarefeet2} */}
+                                                </View>
+                                            </View>
+                                            
+                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty23}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch23}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm23}</Text>
+                                                    {/* placeholder={this.state.mm3} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag23}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet23}</Text>
+                                                    {/* placeholder={this.state.linearfeet3} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet23}</Text>
+                                                    {/* placeholder={this.state.squarefeet3} */}
+                                                </View>
+                                            </View>
+                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty24}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch24}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm24}</Text>
+                                                    {/* placeholder={this.state.mm4} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag24}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet24}</Text>
+                                                    {/* placeholder={this.state.linearfeet4} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet24}</Text>
+                                                    {/* placeholder={this.state.squarefeet4} */}
+                                                </View>
+                                            </View>
+                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.qty25}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.inch25}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.mm25}</Text>
+                                                    {/* placeholder={this.state.mm5} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.tag25}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.linearfeet25}</Text>
+                                                    {/* placeholder={this.state.linearfeet5} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px'}}>{this.props.obj.squarefeet25}</Text>
+                                                    {/* placeholder={this.state.squarefeet5} */}
+                                                </View>
+                                            </View>
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty26}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch26}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm26}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag26}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet26}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet26}</Text>
                                                 </View>
                                             </View>:null}
                                             {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty12}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty27}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch12}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch27}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm12}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm27}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag12}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag27}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet12}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet27}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet12}</Text>
-                                                </View>
-                                            </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty13}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch13}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm13}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag13}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet13}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet13}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet27}</Text>
                                                 </View>
                                             </View>:null}
                                             {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty14}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty28}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch14}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch28}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm14}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm28}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag14}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag28}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet14}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet28}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet14}</Text>
-                                                </View>
-                                            </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty15}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch15}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm15}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag15}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet15}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet15}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet28}</Text>
                                                 </View>
                                             </View>:null}
                                             {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty16}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty29}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch16}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch29}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm16}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm29}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag16}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag29}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet16}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet29}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet16}</Text>
-                                                </View>
-                                            </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty17}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch17}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm17}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag17}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet17}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet17}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet29}</Text>
                                                 </View>
                                             </View>:null}
                                             {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty18}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty30}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch18}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch30}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm18}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm30}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag18}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag30}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet18}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet30}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet18}</Text>
-                                                </View>
-                                            </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty19}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch19}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm19}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag19}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet19}</Text>
-                                                </View>
-                                                <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet19}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet30}</Text>
                                                 </View>
                                             </View>:null}
                                             {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty20}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty31}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch20}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch31}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm20}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm31}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag20}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag31}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet20}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet31}</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet20}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet31}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty32}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch32}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm32}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag32}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet32}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet32}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty33}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch33}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm33}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag33}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet33}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet33}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty34}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch34}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm34}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag34}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet34}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet34}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty35}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch35}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm35}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag35}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet35}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet35}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty36}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch36}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm36}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag36}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet36}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet36}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty37}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch37}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm37}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag37}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet37}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet37}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty38}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch38}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm38}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag38}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet38}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet38}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty39}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch39}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm39}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag39}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet39}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet39}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty40}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch40}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm40}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag40}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet40}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet40}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty41}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch41}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm41}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag41}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet41}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet41}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty42}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch42}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm42}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag42}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet42}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet42}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty43}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch43}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm43}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag43}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet43}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet43}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty44}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch44}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm44}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag44}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet44}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet44}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty45}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch45}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm45}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag45}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet45}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet45}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty46}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch46}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm46}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag46}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet46}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet46}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty47}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch47}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm47}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag47}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet47}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet47}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty48}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch48}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm48}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag48}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet48}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet48}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty49}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch49}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm49}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag49}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet49}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet49}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty50}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch50}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm50}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '127px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag50}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet50}</Text>
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet50}</Text>
                                                 </View>
                                             </View>:null}
                                         </View>
@@ -1615,13 +2305,13 @@ class Standingseam2Print extends Component{
 
                                             {/* Accessories */}
 
-                                            <View style={styles.orderOptionsFlashingsMainContainera} break>
+                                            {/* <View style={styles.orderOptionsFlashingsMainContainera} wrap={false}>
                                                 <View style={styles.orderOptionsFlashingsContainerSmall} >
                                                     <View  style={styles.flashDiv}>
                                                         <Text style={styles.flash}>ACCESSORIES</Text>
                                                     </View>
                                                 </View>
-                                            </View>
+                                            </View> */}
                                             <View style={styles.orderOptionsFlashingsMainContainer}>
 
                                         
