@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     headerV1: {
         width: "100%",
         marginBottom: '16px',
-        marginTop: '16px'
+        // marginTop: '16px'
     },
     orderOptionsTextInput2:{
         width: "70%",
@@ -129,7 +129,7 @@ fontSize: '12px',
     },
     page: {
       width: '100%',
-      height: '100%',
+      height: '96%',
       flexDirection: 'column',
       flex: 1
     },
@@ -841,7 +841,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.totalsquarefeet} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{ backgroundColor: 'white', width: '32px', fontSize: 12, height: '16px', paddingLeft: '2px', marginTop: '4px', paddingTop: '2px'}}>QTY</Text>
                                                     {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty}</Text> */}
@@ -870,7 +870,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty}</Text>
                                                 </View>
@@ -891,7 +891,7 @@ class IconpanelsPrint extends Component{
                                                 </View>
                                             </View>
                                             
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View onChange={this.handleChange} className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty2}</Text>
                                                 </View>
@@ -915,7 +915,7 @@ class IconpanelsPrint extends Component{
                                                 </View>
                                             </View>
                                             
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty3}</Text>
                                                 </View>
@@ -938,7 +938,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet3} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty4}</Text>
                                                 </View>
@@ -961,7 +961,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet4} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.qty5}</Text>
                                                 </View>
@@ -984,7 +984,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet5} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty6}</Text>
                                                 </View>
@@ -1007,7 +1007,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet6} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty7}</Text>
                                                 </View>
@@ -1030,7 +1030,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet7} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty8}</Text>
                                                 </View>
@@ -1053,7 +1053,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet8} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty9}</Text>
                                                 </View>
@@ -1076,7 +1076,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet9} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.qty10}</Text>
                                                 </View>
@@ -1099,7 +1099,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet10} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty11}</Text>
                                                 </View>
@@ -1120,7 +1120,7 @@ class IconpanelsPrint extends Component{
                                                 </View>
                                             </View>
                                             
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View onChange={this.handleChange} className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty12}</Text>
                                                 </View>
@@ -1144,7 +1144,7 @@ class IconpanelsPrint extends Component{
                                                 </View>
                                             </View>
                                             
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty13}</Text>
                                                 </View>
@@ -1167,7 +1167,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet3} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty14}</Text>
                                                 </View>
@@ -1190,7 +1190,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet4} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.qty15}</Text>
                                                 </View>
@@ -1213,7 +1213,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet5} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty16}</Text>
                                                 </View>
@@ -1236,7 +1236,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet6} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty17}</Text>
                                                 </View>
@@ -1259,7 +1259,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet7} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text  style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty18}</Text>
                                                 </View>
@@ -1282,7 +1282,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet8} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty19}</Text>
                                                 </View>
@@ -1305,7 +1305,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet9} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.qty20}</Text>
                                                 </View>
@@ -1328,7 +1328,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet10} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty21}</Text>
                                                 </View>
@@ -1349,7 +1349,7 @@ class IconpanelsPrint extends Component{
                                                 </View>
                                             </View>
                                             
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View onChange={this.handleChange} className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty22}</Text>
                                                 </View>
@@ -1373,7 +1373,7 @@ class IconpanelsPrint extends Component{
                                                 </View>
                                             </View>
                                             
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty23}</Text>
                                                 </View>
@@ -1396,7 +1396,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet3} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>{this.props.obj.qty24}</Text>
                                                 </View>
@@ -1419,7 +1419,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet4} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}} >{this.props.obj.qty25}</Text>
                                                 </View>
@@ -1442,7 +1442,7 @@ class IconpanelsPrint extends Component{
                                                     {/* placeholder={this.state.squarefeet5} */}
                                                 </View>
                                             </View>
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty26}</Text>
                                                 </View>
@@ -1462,7 +1462,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet26}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty27}</Text>
                                                 </View>
@@ -1482,7 +1482,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet27}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty28}</Text>
                                                 </View>
@@ -1502,7 +1502,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet28}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty29}</Text>
                                                 </View>
@@ -1522,7 +1522,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet29}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty30}</Text>
                                                 </View>
@@ -1542,7 +1542,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet30}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty31}</Text>
                                                 </View>
@@ -1562,7 +1562,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet31}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty32}</Text>
                                                 </View>
@@ -1582,7 +1582,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet32}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty33}</Text>
                                                 </View>
@@ -1602,7 +1602,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet33}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty34}</Text>
                                                 </View>
@@ -1622,7 +1622,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet34}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty35}</Text>
                                                 </View>
@@ -1642,7 +1642,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet35}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty36}</Text>
                                                 </View>
@@ -1662,7 +1662,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet36}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty37}</Text>
                                                 </View>
@@ -1682,7 +1682,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet37}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty38}</Text>
                                                 </View>
@@ -1702,7 +1702,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet38}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty39}</Text>
                                                 </View>
@@ -1722,7 +1722,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet39}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty40}</Text>
                                                 </View>
@@ -1742,7 +1742,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet40}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty41}</Text>
                                                 </View>
@@ -1762,7 +1762,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet41}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty42}</Text>
                                                 </View>
@@ -1782,7 +1782,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet42}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty43}</Text>
                                                 </View>
@@ -1802,7 +1802,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet43}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty44}</Text>
                                                 </View>
@@ -1822,7 +1822,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet44}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty45}</Text>
                                                 </View>
@@ -1842,7 +1842,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet45}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty46}</Text>
                                                 </View>
@@ -1862,7 +1862,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet46}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty47}</Text>
                                                 </View>
@@ -1882,7 +1882,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet47}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty48}</Text>
                                                 </View>
@@ -1902,7 +1902,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet48}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty49}</Text>
                                                 </View>
@@ -1922,7 +1922,7 @@ class IconpanelsPrint extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet49}</Text>
                                                 </View>
                                             </View>:null}
-                                            {this.props.obj.ten?<View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty50}</Text>
                                                 </View>

@@ -14,7 +14,8 @@ const styles = StyleSheet.create({
     },
     headerV1: {
         width: "100%",
-        marginBottom: '20px'
+        marginBottom: '16px',
+        // marginTop: '16px'
     },
     orderOptionsTextInput2:{
         width: "70%",
@@ -55,7 +56,7 @@ fontSize: '12px',
     orderOptionsFlashingsInput3: {
         position: "absolute",
         marginTop: "87%",
-        border: "4px solid rgb(106, 106, 248)",
+        border: "2px solid rgb(106, 106, 248)",
         width: "100%",
         display: "flex",
         justifyContent: "center",
@@ -69,21 +70,24 @@ fontSize: '12px',
         flexDirection: "column",
         alignItems: "center",
         height: "180px",
+        // border: '1px solid red',
+        marginBottom: '0px'
     },
     orderOptionsFlashingsMainContainer: {
         width: '80%',
-        marginBottom: '20px',
+        // marginBottom: '20px',
         marginTop: "20px",
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
         marginLeft: 'auto',
-        marginRight: 'auto'
+        marginRight: 'auto',
+        // border: '1px solid blue'
     },
     orderOptionsFlashingsMainContainera: {
         width: '100%',
-        marginBottom: '20px',
-        marginTop: "-90px",
+        marginBottom: '10px',
+        marginTop: "-120px",
         marginLeft: "-200px",
     },
     orderOptionsFlashingsContainerSmall: {
@@ -115,7 +119,7 @@ fontSize: '12px',
     orderOptionsFlashingsInput31: {
         position: "absolute",
         marginTop: "85%",
-        border: "4px solid rgb(106, 106, 248)",
+        border: "2px solid rgb(106, 106, 248)",
         width: "100%",
         display: "flex",
         justifyContent: "center",
@@ -125,7 +129,7 @@ fontSize: '12px',
     },
     page: {
       width: '100%',
-      height: '100%',
+      height: '96%',
       flexDirection: 'column',
       flex: 1
     },
@@ -903,7 +907,7 @@ class Standingseam2Print extends Component{
                                                     {/* placeholder={this.state.squarefeet} */}
                                                 </View>
                                             </View>
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty}</Text>
                                                 </View>
