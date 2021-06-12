@@ -3025,7 +3025,7 @@ class Iconpanels extends Component{
                                         <Label>I accept terms and services</Label>
                                     </FormGroup>
                                     <Button className="contactButton" onClick={() => {
-                                        this.state.ga.length!=0&&this.state.color.length!=0&&this.state.totallinearfeet!=0&&this.state.specialcrating.length!=0&&this.state.protectivefilm.length!=0&&this.state.finish.length!=0&&this.state.totalsquarefeet!=0&&this.state.qty!=0&&this.state.inch!=0&&this.state.mm!=0&&this.state.tag!=0&&this.state.linearfeet!=0?this.printPage():alert('please fill the required fields')}}><p className="contactButtonText">Go To Print Page</p></Button>
+                                        this.state.customerName.length!=0&&this.state.phone.length!=0&&this.state.po.length!=0&&this.state.email.length!=0&&this.state.address.length!=0&&this.state.ga.length!=0&&this.state.color.length!=0&&this.state.totallinearfeet!=0&&this.state.specialcrating.length!=0&&this.state.protectivefilm.length!=0&&this.state.finish.length!=0&&this.state.totalsquarefeet!=0&&this.state.qty!=0&&this.state.inch!=0&&this.state.mm!=0&&this.state.linearfeet!=0?this.printPage():alert('please fill the required fields')}}><p className="contactButtonText">Go To Print Page</p></Button>
                                     <Button onClick={this.handleSumbit} className="contactButton"><p className="contactButtonText">Submit</p></Button>
                                 </Form>
                             </div>

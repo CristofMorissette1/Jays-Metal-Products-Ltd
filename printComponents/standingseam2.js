@@ -703,7 +703,7 @@ class Standingseam2Print extends Component{
                                         {/* Header */}
                                         <View style={styles.headerV1} fixed>
                                             <View style={styles.orderOptionsTextForm2}>
-                                                <View style={{display: 'flex', alignItems: 'center', flexDirection: 'row', marginBottom: "16px", marginTop: '10px'}}>
+                                                <View style={{display: 'flex', alignItems: 'center', flexDirection: 'row', marginTop: '10px'}}>
                                                     <Text style={{fontSize: "18px", fontWeight: 400, color: 'black', textAlign: 'center'}}>Standing Seam 150</Text>
                                                     <Text style={{fontWeight: 400, fontSize: "14px", marginTop: '20px', textAlign: 'right', marginRight: '170px'}}>#___________</Text>
                                                 </View>
@@ -864,7 +864,7 @@ class Standingseam2Print extends Component{
 
                                         {/* below header */}
                                         <View style={{width: '100%'}}> 
-                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', marginTop: '20px', marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                            <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', marginBottom: '5px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View>
                                                     <Text style={{fontSize: 12}}>GA</Text>
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '66px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '2px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput" >{this.props.obj.ga}
@@ -1558,6 +1558,7 @@ class Standingseam2Print extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet27}</Text>
                                                 </View>
                                             </View>:null}
+                                            
                                             {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty28}</Text>
@@ -1578,6 +1579,7 @@ class Standingseam2Print extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet28}</Text>
                                                 </View>
                                             </View>:null}
+                                            
                                             {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty29}</Text>
@@ -1598,6 +1600,7 @@ class Standingseam2Print extends Component{
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet29}</Text>
                                                 </View>
                                             </View>:null}
+                                            
                                             {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '47px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty30}</Text>
@@ -1616,6 +1619,35 @@ class Standingseam2Print extends Component{
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{border: '1px solid black', backgroundColor: 'white', width: '77px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '1px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet30}</Text>
+                                                </View>
+                                            </View>:null}
+                                            {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{ backgroundColor: 'white', width: '32px', fontSize: 12, height: '16px', paddingLeft: '2px', marginTop: '4px', paddingTop: '2px'}}>QTY</Text>
+                                                    {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.qty}</Text> */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{ backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px'}}>Inch</Text>
+                                                    {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.inch}</Text> */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{ backgroundColor: 'white', width: '32px', fontSize: 12, height: '16px', paddingLeft: '0px', marginTop: '4px', paddingTop: '2px'}}>mm</Text>
+                                                    {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.mm}</Text> */}
+                                                    {/* placeholder={this.state.mm} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{ backgroundColor: 'white', width: '108px', fontSize: 12, height: '16px', paddingLeft: '0px', marginTop: '4px', paddingTop: '2px'}}>Description</Text>
+                                                    {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput">{this.props.obj.tag}</Text> */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{ backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '2px', marginTop: '4px', paddingTop: '2px'}}>LFt.</Text>
+                                                    {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.linearfeet}</Text> */}
+                                                    {/* placeholder={this.state.linearfeet} */}
+                                                </View>
+                                                <View className="orderOptionsSpecsFG2">
+                                                    <Text style={{ backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '0px', marginTop: '4px', paddingTop: '2px'}}>SqFt.</Text>
+                                                    {/* <Text style={{border: '1px solid black', backgroundColor: 'white', width: '68px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '4px', paddingTop: '4px', paddingBottom: '4px'}} className="orderOptionsSpecsInput" >{this.props.obj.squarefeet}</Text> */}
+                                                    {/* placeholder={this.state.squarefeet} */}
                                                 </View>
                                             </View>:null}
                                             {this.props.obj.ten?<View wrap={false} style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
