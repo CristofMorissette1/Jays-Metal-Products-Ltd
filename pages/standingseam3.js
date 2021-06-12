@@ -18,7 +18,7 @@ class StandingSeam3 extends Component{
             colorOptions: false,
             orderOptions: false,
             customerName: '',
-            productname: '',
+            productname: 'Standing Seam 200',
             phone: '',
             po: '',
             email: '',
@@ -1463,7 +1463,7 @@ class StandingSeam3 extends Component{
                                     <div className="orderOptionsSpecsForm">
                                     <div className="orderOptionsSpecsFormTitle">
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>GA</label>
+                                                <label>GA*</label>
                                                 <Input type="select" className="orderOptionsSpecsInput" value={this.state.ga} name="ga" onChange={this.handleChange} required>
                                                     <option>-</option>
                                                     <option>29</option>
@@ -1473,15 +1473,20 @@ class StandingSeam3 extends Component{
                                                 </Input>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Color</label>
+                                                <label>Color*</label>
                                                 <Input type="text" className="orderOptionsSpecsInput" value={this.state.color} name="color" onChange={this.handleChange} required />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Total Linear Feet</label>
-                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.totallinearfeet} name="totallinearfeet" placeholder={this.state.totallinearfeet} readOnly />
+                                                <label>Finish*</label>
+                                                <Input type="select" className="orderOptionsSpecsInput" value={this.state.finish} name="finish" onChange={this.handleChange} required >
+                                                    <option>-</option>
+                                                    <option>12</option>
+                                                    <option>16</option>
+                                                    <option>20</option>
+                                                </Input>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Special Crating</label>
+                                                <label>Special Crating*</label>
                                                 <Input type="select" className="orderOptionsSpecsInput" value={this.state.specialcrating} name="specialcrating" onChange={this.handleChange} required>
                                                     <option>-</option>
                                                     <option>Yes</option>
@@ -1490,7 +1495,7 @@ class StandingSeam3 extends Component{
                                                 <p className="protectiveFilmDisclaimer">At extra cost</p>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <Label>Protective film</Label>
+                                                <Label>Protective film*</Label>
                                                 <Input type="select" className="orderOptionsSpecsInput" value={this.state.protectivefilm} name="protectivefilm" onChange={this.handleChange} required>
                                                     <option>-</option>
                                                     <option>Yes</option>
@@ -1499,13 +1504,8 @@ class StandingSeam3 extends Component{
                                                 <p className="protectiveFilmDisclaimer">10cents extra per sq/ft</p>
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
-                                                <label>Finish</label>
-                                                <Input type="select" className="orderOptionsSpecsInput" value={this.state.finish} name="finish" onChange={this.handleChange} required >
-                                                    <option>-</option>
-                                                    <option>12</option>
-                                                    <option>16</option>
-                                                    <option>20</option>
-                                                </Input>
+                                                <label>Total Linear Feet</label>
+                                                <Input type="text" className="orderOptionsSpecsInput" value={this.state.totallinearfeet} name="totallinearfeet" placeholder={this.state.totallinearfeet} readOnly />
                                             </FormGroup>
                                             <FormGroup className="orderOptionsSpecsFG">
                                                 <label>Total SQFT.</label>
