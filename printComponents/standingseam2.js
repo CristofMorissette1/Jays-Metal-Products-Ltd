@@ -715,7 +715,7 @@ class Standingseam2Print extends Component{
                                                             type="text"
                                                             style={styles.orderOptionsTextInput21}
                                                             name="customerName" 
-                                                            >{this.state.customerName}</Text>:
+                                                            >{this.state.customerName}*</Text>:
                                                             <Text 
                                                             type="text"
                                                             style={{
@@ -737,7 +737,7 @@ class Standingseam2Print extends Component{
                                                             type="text"
                                                             style={styles.orderOptionsTextInput2}
                                                             name="po"
-                                                            >{this.props.obj.po}</Text>:<Text 
+                                                            >{this.props.obj.po}*</Text>:<Text 
                                                             type="text"
                                                             style={{
                                                                 width: "70%",
@@ -758,7 +758,7 @@ class Standingseam2Print extends Component{
                                                             type="phone"
                                                             style={styles.orderOptionsTextInput21}
                                                             name="phone"
-                                                            >{this.props.obj.phone}</Text>:<Text 
+                                                            >{this.props.obj.phone}*</Text>:<Text 
                                                             type="phone"
                                                             style={{
                                                                 width: "70%",
@@ -778,7 +778,7 @@ class Standingseam2Print extends Component{
                                                             type="email"
                                                             style={styles.orderOptionsTextInput2}
                                                             name="email"
-                                                            >{this.props.obj.email}</Text>:<Text 
+                                                            >{this.props.obj.email}*</Text>:<Text 
                                                             type="email"
                                                             style={{
                                                                 width: "70%",
@@ -803,7 +803,7 @@ class Standingseam2Print extends Component{
                                                             fontSize: '12px',
                                                             border: '1px solid black',
                                                         }}
-                                                        >{this.props.obj.address}</Text>:<Text 
+                                                        >{this.props.obj.address}*</Text>:<Text 
                                                         type="text"
                                                         style={{
                                                             width: "85.4%",
@@ -867,7 +867,7 @@ class Standingseam2Print extends Component{
                                             <View style={{width: '80%', marginLeft: 'auto', marginRight: 'auto', marginBottom: '5px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                                                 <View>
                                                     <Text style={{fontSize: 12}}>GA</Text>
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '66px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '2px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput" >{this.props.obj.ga}
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '66px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '2px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput" >{this.props.obj.ga}*
                                                         {/* <option>-</option>
                                                         <option>29</option>
                                                         <option>26</option>
@@ -877,11 +877,11 @@ class Standingseam2Print extends Component{
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{fontSize: 12}}>Color</Text>
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '66px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '2px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput" >{this.props.obj.color}</Text>
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '66px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '2px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput" >{this.props.obj.color}*</Text>
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{fontSize: 12}}>Film</Text>
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '66px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '2px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput" >{this.props.obj.protectivefilm}
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '66px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '2px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput" >{this.props.obj.protectivefilm}*
                                                         {/* <option>-</option>
                                                         <option>Yes</option>
                                                         <option>No</option> */}
@@ -890,7 +890,7 @@ class Standingseam2Print extends Component{
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{fontSize: 12}}>Crating</Text>
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '66px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '2px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput" >{this.props.obj.specialcrating}
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '66px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '2px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput" >{this.props.obj.specialcrating}*
                                                         {/* <option>-</option>
                                                         <option>Yes</option>
                                                         <option>No</option> */}
@@ -899,7 +899,7 @@ class Standingseam2Print extends Component{
                                                 </View>
                                                 <View className="orderOptionsSpecsFG2">
                                                     <Text style={{fontSize: 12}}>Finish</Text>
-                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '66px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '2px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput"  >{this.props.obj.finish}
+                                                    <Text style={{border: '1px solid black', backgroundColor: 'white', width: '66px', fontSize: 12, height: '16px', paddingLeft: '4px', marginTop: '2px', paddingTop: '2px', paddingBottom: '2px'}} className="orderOptionsSpecsInput"  >{this.props.obj.finish}*
                                                         {/* <option>-</option>
                                                         <option>12</option>
                                                         <option>16</option>
